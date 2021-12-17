@@ -1,0 +1,12 @@
+@import "_nullstyle";
+
+@font-face {
+    font-family: "Gotham Pro";
+    src: local("GothamPro"), url("../../../fonts/GothamPro.woff") format("woff");
+    font-style: normal;
+    font-weight: 400;
+}
+body {
+    font-size: 22px;
+    color: red;
+}
