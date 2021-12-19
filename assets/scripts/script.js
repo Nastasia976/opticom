@@ -158,7 +158,7 @@ $('.bakery').on({
 $('.delivery').on({
     mouseenter: function () {
         $('.popup').css({
-            'top': '250px',
+            'top': '210px',
             'left': '420px'
         });
     }
