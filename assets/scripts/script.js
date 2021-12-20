@@ -171,6 +171,9 @@ $('.fabrica').on({
         });
     }
 });
+$('._icon-search').on('click', function () {
+    $('.search-form__input').focus();
+});
 
 
 

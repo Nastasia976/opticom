@@ -6,13 +6,45 @@
     <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/styles/css/index.css">
-    <link rel="stylesheet" href="assets/styles/css/iconfonts.css">
+    <link rel="stylesheet" href="assets/styles/css/iconsfont.css">
     <title>Оптиком</title>
 </head>
 
 <body>
     <div class="wrapper">
-        <header class="header"></header>
+        <header class="header">
+            <div class="header__conteiner _conteiner">
+                <div class="header__logo logo">
+                    <a href="#" class="logo__item _icon-uniE907"></a>
+                </div>
+                <div class="header__item">
+                    <a href="#" class="header__catalog _icon-catalog"><span>Каталог</span></a>
+                </div>
+                <form action="#" class="header__search-form search-form">
+                    <input type="text" placeholder="Поиск" class="search-form__input">
+                    <button type="submit" class="search-form__button _icon-search"></button>
+                </form>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li class="header__element">
+                            <a href="#" class="header__link _icon-favorite"> <span>Избранное</span> </a>
+                        </li>
+                        <li class="header__element">
+                            <a href="#" class="header__link _icon-compare"> <span>Сравнение</span></a>
+                        </li>
+                        <li class="header__element">
+                            <a href="#" class="header__link _icon-user"><span>Вход</span></a>
+                        </li>
+                        <li class="header__element">
+                            <a href="#" class="header__link _icon-cart basket"><span>Корзина</span> <div class="basket-unit">2</div></a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__burger">
+                    <div class="burger-menu"><span></span></div>
+                </div>
+            </div>
+        </header>
         <main class="main">
             <div class="map">
                 <svg viewBox="0 0 1029 640">

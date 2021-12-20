@@ -117,6 +117,212 @@ body {
   font-size: 18px;
 }
 
+._conteiner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 150%;
+  letter-spacing: 0.06em;
+  background-color: #17625d;
+}
+
+.header a {
+  color: white;
+}
+
+.header__conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__item {
+  margin-left: calc(13px + 63 * (100vw / 1920));
+  padding: 10px 0;
+}
+
+.header__item ._icon-catalog::before {
+  margin-right: 6px;
+}
+
+.header__catalog {
+  margin: 5px 0;
+}
+
+.header__catalog:hover span, .header__catalog:focus span {
+  text-decoration: underline;
+}
+
+.header__menu {
+  margin-left: calc(26px + 100 * (100vw / 1920));
+  padding: 10px 0;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__element {
+  margin: 5px 0;
+  margin-right: calc(15px + 30 * (100vw / 1920));
+}
+
+.header__element:last-child {
+  margin-right: calc(18px + 40 * (100vw / 1920));
+}
+
+.header .basket {
+  position: relative;
+}
+
+.header .basket-unit {
+  content: "";
+  position: absolute;
+  padding: 1px 4px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  line-height: 13px;
+  font-size: 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: -8px;
+  right: -17px;
+  border-radius: 50%;
+  background: #ff8e7d;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header__link {
+  white-space: nowrap;
+}
+
+.header__link::before {
+  margin-right: 8px;
+}
+
+.header__link:hover span, .header__link:focus span {
+  text-decoration: underline;
+}
+
+.header__burger {
+  width: 137px;
+  height: 102px;
+  background-color: #005D55;
+}
+
+.logo {
+  padding: 28px 0 26px;
+}
+
+.logo ._icon-uniE907::before {
+  color: #d4ad67;
+  font-size: 45px;
+}
+
+.search-form {
+  margin-left: calc(15px + 30 * (100vw / 1920));
+  position: relative;
+  max-width: 333px;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.search-form__input {
+  background-color: transparent;
+  width: 100%;
+  padding: 0 23px 2px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.search-form__input::-webkit-input-placeholder {
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.search-form__input:-ms-input-placeholder {
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.search-form__input::-ms-input-placeholder {
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.search-form__input::placeholder {
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.search-form__button {
+  background-color: transparent;
+}
+
+.search-form ._icon-search {
+  color: white;
+  font-size: 13px;
+  font-weight: 300;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.search-form ._icon-search:hover, .search-form ._icon-search:focus {
+  opacity: 0.5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.burger-menu {
+  position: relative;
+  width: 61px;
+  height: 22px;
+}
+
+.burger-menu ::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
 .popup {
   position: absolute;
   z-index: 50;
@@ -155,7 +361,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
-  color: #006D64;
+  color: #006d64;
   font-size: 16px;
   line-height: 19px;
   text-align: center;

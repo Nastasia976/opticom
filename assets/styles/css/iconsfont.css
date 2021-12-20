@@ -1,9 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../../../iconsfont/icomoon.eot');
-  src:  url('../../../iconsfont/icomoon.ttf') format('truetype'),
-    url('../../../iconsfont/icomoon.woff') format('woff'),
-    url('../../../iconsfont/icomoon.svg') format('svg');
+  src:  url('../../../iconsfont/icomoon.eot?d5893g');
+  src:  url('../../../iconsfont/icomoon.eot?d5893g#iefix') format('embedded-opentype'),
+    url('../../../iconsfont/icomoon.ttf?d5893g') format('truetype'),
+    url('../../../iconsfont/icomoon.woff?d5893g') format('woff'),
+    url('../../../iconsfont/icomoon.svg?d5893g#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,6 +25,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+._icon-cart:before {
+  content: "\e909";
+}
+._icon-user:before {
+  content: "\e90a";
+}
+._icon-search:before {
+  content: "\e908";
+}
 ._icon-arrow-advantages:before {
   content: "\e900";
 }
@@ -47,5 +57,4 @@
 }
 ._icon-uniE907:before {
   content: "\e907";
-  color: #d4ad67;
 }
