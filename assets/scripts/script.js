@@ -175,6 +175,25 @@ $('._icon-search').on('click', function () {
     $('.search-form__input').focus();
 });
 
+$('.burger-menu').click(function(){
+    $(this).toggleClass('active');
+});
+
+new Swiper('.slider-title', {
+    slidesPerView: 1,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    speed: 300,
+    loop: true,
+    autoHeight: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+});
+
 
 
 
