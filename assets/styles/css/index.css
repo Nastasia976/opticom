@@ -123,7 +123,6 @@ body {
 }
 
 .header {
-  padding: 0 0 0 20px;
   font-size: 16px;
   font-weight: 300;
   line-height: 150%;
@@ -423,6 +422,7 @@ body {
 @media (max-width: 1375px) {
   .logo {
     margin: 0;
+    padding: 0 0 0 20px;
   }
 }
 
@@ -454,7 +454,14 @@ body {
     margin-left: 20px;
   }
   .logo {
-    padding: 10px 0;
+    padding: 10px 0 10px 20px;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .header__conteiner {
     height: 70px;
@@ -558,24 +565,15 @@ body {
 }
 
 .title-block {
-  padding: 0 0 0 20px;
   background-color: #17625d;
+  margin-top: -1px;
 }
 
 .title-block__conteiner {
   position: relative;
 }
 
-.title-block__conteiner .swiper-pagination {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: absolute;
-  left: 94.1%;
-  top: 39%;
+.swiper-pagination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -583,9 +581,20 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-right: calc(20px + (60 - 20) * ((100vw - 1100px) / (1920 - 1100)));
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
-.title-block__conteiner .swiper-pagination .swiper-pagination-bullet {
+.swiper-pagination .swiper-pagination-bullet {
   width: 20px;
   height: 20px;
   background-color: transparent;
@@ -594,15 +603,15 @@ body {
   cursor: pointer;
 }
 
-.title-block__conteiner .swiper-pagination .swiper-pagination-bullet:not(:last-child) {
+.swiper-pagination .swiper-pagination-bullet:not(:last-child) {
   margin-bottom: 23px;
 }
 
-.title-block__conteiner .swiper-pagination .swiper-pagination-bullet-active {
+.swiper-pagination .swiper-pagination-bullet-active {
   border: 1px solid #005d55;
 }
 
-.title-block__conteiner .swiper-pagination .swiper-pagination-bullet::before {
+.swiper-pagination .swiper-pagination-bullet::before {
   position: absolute;
   content: "";
   width: 10px;
@@ -711,10 +720,10 @@ body {
 
 @media (max-width: 1375px) {
   .slider-title__image {
-    padding: 0 0 0 70px;
+    padding: 0 0 0 90px;
   }
   .slider-title__image .dostavshik {
-    left: 0px;
+    left: 20px;
   }
   .slider-title__items {
     margin-left: 20px;
@@ -743,17 +752,17 @@ body {
   .slider-title__image .dostavshik {
     z-index: 2;
   }
-  .title-block__conteiner .swiper-pagination {
-    top: 70%;
+}
+
+@media (max-width: 1050px) {
+  .swiper-pagination {
+    padding: 0 20px 0 0;
   }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1050px) {
   .title-block {
     padding: 0;
-  }
-  .title-block .swiper-pagination {
-    top: 40%;
   }
   .title-block .slider-title__slide {
     -webkit-box-orient: vertical;
@@ -795,22 +804,30 @@ body {
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 768px) {
   .title-block .swiper-pagination {
     top: 43%;
   }
+  .slider-title .slider-title__logo {
+    margin-left: 20px;
+  }
   .slider-title .slider-title__logo svg {
-    width: 280px;
+    width: 260px;
+  }
+  .slider-title__slide {
+    padding: 30px 0 20px;
   }
   .slider-title__items {
     padding: 0 20px !important;
   }
   .slider-title__image {
     margin-top: 20px;
-    padding: 0 !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .slider-title__image .pogruzchick {
-    max-width: 300px;
+    max-width: 350px;
   }
   .slider-title__image .dostavshik {
     width: 80px;
@@ -818,7 +835,18 @@ body {
   }
 }
 
-@media (max-width: 445px) {
+@media (max-width: 610px) {
+  .slider-title__image {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+  }
+}
+
+@media (max-width: 520px) {
   .slider-title__image {
     -webkit-box-align: end;
         -ms-flex-align: end;
@@ -826,7 +854,7 @@ body {
     -webkit-box-pack: start !important;
         -ms-flex-pack: start !important;
             justify-content: flex-start !important;
-    padding: 30px 0 0 20px !important;
+    padding: 30px 0 16px 20px !important;
   }
   .slider-title .pogruzchick {
     max-width: 220px;
@@ -838,9 +866,35 @@ body {
   }
 }
 
+@media (max-width: 400px) {
+  .swiper-pagination {
+    position: static;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #F9F0E1;
+    margin-top: -2px;
+    padding: 10px 0;
+  }
+  .swiper-pagination .swiper-pagination-bullet:not(:last-child) {
+    margin: 0;
+    margin-right: 10px;
+  }
+}
+
 .contacts-block {
+  margin-top: -2px;
   width: 100%;
   height: 105px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #d5ab71), color-stop(50%, #17625d));
+  background: linear-gradient(90deg, #d5ab71 50%, #17625d 50%);
   height: calc(60px + (105 - 60) * ((100vw - 320px) / (1920 - 320)));
 }
 
@@ -852,6 +906,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  background-color: #F9F0E1;
 }
 
 .contacts-block__items {
@@ -912,13 +967,11 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 0 60px 0 0;
-  padding-right: calc(20px + (60 - 20) * ((100vw - 1100px) / (1920 - 1100)));
+  padding-right: calc(20px + (58 - 20) * ((100vw - 1100px) / (1920 - 1100)));
 }
 
 .contacts-block__scroll .scroll__link {
-  padding: 10px;
-  margin-right: -10px;
+  padding: 0 9px;
 }
 
 .social {
@@ -1084,6 +1137,12 @@ body {
   }
 }
 
+@media (max-width: 520px) {
+  .contacts-block__scroll {
+    display: none;
+  }
+}
+
 @media (max-width: 490px) {
   .contacts {
     -webkit-box-orient: vertical;
@@ -1097,5 +1156,10 @@ body {
   }
   .contacts__item:last-child {
     margin-top: 20px;
+  }
+  .social, .contacts-block__items {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
   }
 }
