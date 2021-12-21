@@ -211,7 +211,21 @@ new Swiper('.swiper-progress', {
             spaceBetween: 30,
         }
     }
-})
+});
+
+
+new Swiper('.our-product-swiper', {
+    breakpoints: {
+        790: {
+            touchRatio: 0,
+        },
+        240: {
+            touchRatio: 10,
+        },
+    },
+});
+
+
 
 
 
