@@ -194,6 +194,25 @@ new Swiper('.slider-title', {
     },
 });
 
+new Swiper('.swiper-progress', {
+    slidesPerView: 2,
+    spaceBetween: 7,
+    navigation: {
+        nextEl: '.progress-next',
+        prevEl: '.progress-prev',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 7,
+        },
+        620: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        }
+    }
+})
+
 
 
 
