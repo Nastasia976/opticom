@@ -76,6 +76,16 @@ h2 {
     a {
         color: black;
     }
+    .search-form {
+        &__input{
+            color: black;
+            border-bottom:  1px solid rgba(60, 60, 60, 0.3);
+        }
+        &__input::placeholder, ._icon-search{
+            color: black;
+        }
+       
+    }
     .header__conteiner {
         position: relative;
         z-index: 100;

@@ -148,6 +148,27 @@ h2 {
   color: black;
 }
 
+.header.scrolled .search-form__input {
+  color: black;
+  border-bottom: 1px solid rgba(60, 60, 60, 0.3);
+}
+
+.header.scrolled .search-form__input::-webkit-input-placeholder, .header.scrolled .search-form ._icon-search {
+  color: black;
+}
+
+.header.scrolled .search-form__input:-ms-input-placeholder, .header.scrolled .search-form ._icon-search {
+  color: black;
+}
+
+.header.scrolled .search-form__input::-ms-input-placeholder, .header.scrolled .search-form ._icon-search {
+  color: black;
+}
+
+.header.scrolled .search-form__input::placeholder, .header.scrolled .search-form ._icon-search {
+  color: black;
+}
+
 .header.scrolled .header__conteiner {
   position: relative;
   z-index: 100;
