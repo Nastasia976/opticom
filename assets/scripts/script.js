@@ -188,11 +188,19 @@ new Swiper('.slider-title', {
     speed: 300,
     loop: true,
     autoHeight: true,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
     autoplay: {
         delay: 5000,
         disableOnInteraction: false,
     },
 });
+
+window.onresize = function(event)
+{
+document.location.reload(true);
+}
 
 new Swiper('.swiper-progress', {
     slidesPerView: 2,
@@ -218,22 +226,36 @@ new Swiper('.swiper-progress', {
 
 $("body").on('click', '[href*="#"]', function(e){
     var fixed_offset = 0;
-    $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+    $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
     e.preventDefault();
-  });
+  });//скролл до нужного блока
+
+
 
   $(window).on("scroll", function () {
     var scrolled = $(this).scrollTop();
-    if( scrolled > 10 ) {
+    if( scrolled > 1 ) {
         $('.header').addClass('scrolled');
+        $('.podlozhka').addClass('active');
     }   
-    if( scrolled <= 10 ) {     
+    if( scrolled <= 1 ) {     
         $('.header').removeClass('scrolled');
+        $('.podlozhka').removeClass('active');
     }
+});//шапка становится фиксированной
+
+/* let sliderBlock = document.querySelector('.slider-title__slide');
+let mySlider = document.querySelector('.slider-title');
+
+sliderBlock.addEventListener("mouseenter", function (e) {
+    mySlider.params.autoplay.disableOnInteraction = false;
+    mySlider.params.autoplay.delay = 500;
+    mySlider.autoplay.start();
 });
 
-
-
+sliderBlock.addEventListener("mouseleave", function (e) {
+    mySlider.autoplay.stop();
+}) */
 
 
 
