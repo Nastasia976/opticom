@@ -1696,6 +1696,11 @@ h2 {
         &__list {
             flex: 1 1 100%;
         }
+        &__link{
+            br{
+                display: none;
+            }
+        }
         &__bottom {
             flex-direction: column;
         }

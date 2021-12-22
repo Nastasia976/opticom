@@ -2165,6 +2165,9 @@ h2 {
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
   }
+  .footer__link br {
+    display: none;
+  }
   .footer__bottom {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
