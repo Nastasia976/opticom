@@ -68,6 +68,21 @@ h2 {
 }
 
 //==========HEADER=================
+.header.scrolled {
+    position: fixed;
+    top: -2px;
+    z-index: 100;
+    width: 100%;
+    a {
+        color: black;
+    }
+    .header__conteiner {
+        position: relative;
+        z-index: 100;
+        background: #ffffff;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.04);
+    }
+}
 .header {
     font-size: 16px;
     font-weight: 300;
@@ -1487,15 +1502,14 @@ h2 {
         display: flex;
     }
 
-    &__contact{
+    &__contact {
         text-align: center;
         flex: 0 1 446px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-       
     }
-    &__contact__body{
+    &__contact__body {
         flex: 1 1 auto;
         display: flex;
         flex-direction: column;
@@ -1516,7 +1530,7 @@ h2 {
         border-top: 1px solid rgba(1, 98, 90, 0.3);
         padding: 16px 0 20px;
     }
-    &__item{
+    &__item {
         position: relative;
     }
     &__item:not(:last-child):before {
@@ -1663,11 +1677,11 @@ h2 {
         }
         &__contact {
             padding: 35px 20px 20px 20px;
-            &__body{
+            &__body {
                 padding: 0;
             }
         }
-        &__item{
+        &__item {
             padding: 20px 0;
         }
         &__item:not(:last-child):before {
@@ -1696,8 +1710,8 @@ h2 {
         &__list {
             flex: 1 1 100%;
         }
-        &__link{
-            br{
+        &__link {
+            br {
                 display: none;
             }
         }

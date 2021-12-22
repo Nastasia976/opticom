@@ -222,7 +222,15 @@ $("body").on('click', '[href*="#"]', function(e){
     e.preventDefault();
   });
 
-
+  $(window).on("scroll", function () {
+    var scrolled = $(this).scrollTop();
+    if( scrolled > 10 ) {
+        $('.header').addClass('scrolled');
+    }   
+    if( scrolled <= 10 ) {     
+        $('.header').removeClass('scrolled');
+    }
+});
 
 
 
