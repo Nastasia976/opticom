@@ -93,6 +93,9 @@ h2 {
         z-index: 100;
         box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.04);
     }
+    .basket-unit{
+        color: white;
+    }
 }
 /* .podlozhka.active{
     height: 102px;
@@ -384,8 +387,18 @@ h2 {
     ._icon-cart::before {
         color: black;
     }
-    .header {
+    .header, .header.scrolled {
         background-color: #fff;
+        .search-form {
+            margin-left: 20px;
+            input::placeholder, .search-form__button{
+                color:  #005D55;
+            }
+            input{
+                border-bottom: 1px solid rgba(0, 93, 85, 0.3);
+            }
+            
+        }
     }
     .logo-mobile {
         display: block;
@@ -395,9 +408,6 @@ h2 {
     }
     ._icon-uniE907::before {
         font-size: 35px !important;
-    }
-    .search-form {
-        margin-left: 20px;
     }
     .logo {
         padding: 10px 0 10px 20px;
@@ -739,7 +749,7 @@ h2 {
             margin-top: 10px !important;
         }
         &__items{
-            padding: 0 20px 0 30px !important;
+            padding: 10px 20px 0 30px !important;
         }
         .pogruzchick {
             max-width: calc(250px + (370 - 250) * ((100vw - 320px) / (610 - 320)));
@@ -956,8 +966,11 @@ h2 {
     .social,
     .contacts-block__items {
         flex: 1 1 50%;
+    }
+    .contacts-block__items{
         padding: 10px !important;
     }
+
 }
 //===========PROGRESS============
 .progress {

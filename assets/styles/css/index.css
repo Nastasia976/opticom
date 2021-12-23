@@ -183,6 +183,10 @@ h2 {
           box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.04);
 }
 
+.header.scrolled .basket-unit {
+  color: white;
+}
+
 /* .podlozhka.active{
     height: 102px;
 } */
@@ -550,8 +554,26 @@ h2 {
   ._icon-cart::before {
     color: black;
   }
-  .header {
+  .header, .header.scrolled {
     background-color: #fff;
+  }
+  .header .search-form, .header.scrolled .search-form {
+    margin-left: 20px;
+  }
+  .header .search-form input::-webkit-input-placeholder, .header .search-form .search-form__button, .header.scrolled .search-form input::-webkit-input-placeholder, .header.scrolled .search-form .search-form__button {
+    color: #005D55;
+  }
+  .header .search-form input:-ms-input-placeholder, .header .search-form .search-form__button, .header.scrolled .search-form input:-ms-input-placeholder, .header.scrolled .search-form .search-form__button {
+    color: #005D55;
+  }
+  .header .search-form input::-ms-input-placeholder, .header .search-form .search-form__button, .header.scrolled .search-form input::-ms-input-placeholder, .header.scrolled .search-form .search-form__button {
+    color: #005D55;
+  }
+  .header .search-form input::placeholder, .header .search-form .search-form__button, .header.scrolled .search-form input::placeholder, .header.scrolled .search-form .search-form__button {
+    color: #005D55;
+  }
+  .header .search-form input, .header.scrolled .search-form input {
+    border-bottom: 1px solid rgba(0, 93, 85, 0.3);
   }
   .logo-mobile {
     display: block;
@@ -561,9 +583,6 @@ h2 {
   }
   ._icon-uniE907::before {
     font-size: 35px !important;
-  }
-  .search-form {
-    margin-left: 20px;
   }
   .logo {
     padding: 10px 0 10px 20px;
@@ -992,7 +1011,7 @@ h2 {
     margin-top: 10px !important;
   }
   .slider-title__items {
-    padding: 0 20px 0 30px !important;
+    padding: 10px 20px 0 30px !important;
   }
   .slider-title .pogruzchick {
     max-width: calc(250px + (370 - 250) * ((100vw - 320px) / (610 - 320)));
@@ -1294,6 +1313,8 @@ h2 {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 50%;
             flex: 1 1 50%;
+  }
+  .contacts-block__items {
     padding: 10px !important;
   }
 }
