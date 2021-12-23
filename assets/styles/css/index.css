@@ -611,8 +611,7 @@ h2 {
 }
 
 .main-block {
-  height: 100vh;
-  padding: 100px 0 0 0;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -620,6 +619,7 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 100px 0 0 0;
 }
 
 .title-block {
@@ -630,11 +630,19 @@ h2 {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   min-width: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .title-block__conteiner {
-  position: relative;
-  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-width: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .swiper-pagination {
@@ -690,21 +698,21 @@ h2 {
 }
 
 .slider-title {
-  position: relative;
-  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .slider-title__wrapper {
-  min-height: 100%;
+  min-height: 100% !important;
 }
 
 .slider-title__slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 115px 0 78px;
   position: relative;
-  min-height: 100% !important;
+  height: 100%;
 }
 
 .slider-title__fon {
@@ -743,6 +751,20 @@ h2 {
   margin-left: 80px;
   position: relative;
   padding: 10px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slider-title__logo {
+  margin-top: -30px;
 }
 
 .slider-title__text {
@@ -972,9 +994,9 @@ h2 {
 .contacts-block {
   margin-top: -2px;
   width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 105px;
-          flex: 1 1 105px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 105px;
+          flex: 0 0 105px;
   background: -webkit-gradient(linear, left top, right top, color-stop(50%, #d5ab71), color-stop(50%, #f9f0e1));
   background: linear-gradient(90deg, #d5ab71 50%, #f9f0e1 50%);
   height: calc(60px + (105 - 60) * ((100vw - 320px) / (1920 - 320)));

@@ -444,21 +444,21 @@ h2 {
 
 //============TITLE-BLOCK=============
 .main-block {
-    height: 100vh;
-    padding: 100px 0 0 0;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding: 100px 0 0 0;
 }
 .title-block {
     background: linear-gradient(90deg, rgb(23, 98, 93) 50%, rgb(249, 240, 225) 50%);
     margin-top: -1px;
     flex: 1 1 auto;
     min-width: 0;
+    display: flex;
     &__conteiner {
-        position: relative;
-        height: 100%;
-    }
-    &__slider {
+        flex: 1 1 auto;
+        min-width: 0;
+        display: flex;
     }
 }
 .swiper-pagination {
@@ -500,17 +500,15 @@ h2 {
     }
 }
 .slider-title {
-    position: relative;
-    height: 100%;
+    flex: 1 1 auto;
     &__wrapper {
-        min-height: 100%;
+        min-height: 100% !important;
     }
 
     &__slide {
         display: flex;
-        padding: 115px 0 78px;
         position: relative;
-        min-height: 100% !important;
+        height: 100%;
     }
     &__fon {
         position: absolute;
@@ -541,9 +539,13 @@ h2 {
         margin-left: 80px;
         position: relative;
         padding: 10px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     &__logo {
+        margin-top: -30px;
     }
 
     &__text {
@@ -745,7 +747,7 @@ h2 {
 .contacts-block {
     margin-top: -2px;
     width: 100%;
-    flex: 1 1 105px;
+    flex: 0 0 105px;
     background: linear-gradient(90deg, rgb(213, 171, 113) 50%, rgb(249, 240, 225) 50%);
     height: calc(60px + (105 - 60) * ((100vw - 320px) / (1920 - 320)));
     &__conteiner {

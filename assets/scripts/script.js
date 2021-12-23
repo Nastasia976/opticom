@@ -187,7 +187,6 @@ new Swiper('.slider-title', {
     },
     speed: 300,
     loop: true,
-    autoHeight: true,
     observer: true,
     observeParents: true,
     observeSlideChildren: true,
@@ -197,10 +196,10 @@ new Swiper('.slider-title', {
     },
 });
 
-window.onresize = function(event)
+/* window.onresize = function(event)
 {
 document.location.reload(true);
-}
+} */
 
 new Swiper('.swiper-progress', {
     slidesPerView: 2,
