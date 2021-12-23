@@ -163,6 +163,14 @@ $('.delivery').on({
         });
     }
 });
+$('.clining').on({
+    mouseenter: function () {
+        $('.popup').css({
+            'top': '170px',
+            'left': '400px'
+        });
+    }
+});
 $('.fabrica').on({
     mouseenter: function () {
         $('.popup').css({
