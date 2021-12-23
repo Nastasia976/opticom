@@ -858,15 +858,15 @@ h2 {
     padding: 0;
   }
   .title-block .slider-title__slide {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    /* flex-direction: column; */
   }
   .title-block .slider-title__items {
     margin-left: 0;
-    width: 100%;
-    padding: 0 0 0 60px;
+    width: 60%;
+    padding: 0 20px 0 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .title-block .slider-title .slider-title__fon {
     width: 100%;
@@ -879,24 +879,51 @@ h2 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    /* order: 2; */
+    position: relative;
+    padding: 0 0 40% 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    /* img {
+                    left: 100px;
+                    left: calc(0px + (100 - 20) * ((100vw - 420px) / (1020 - 420)));
+                } */
   }
   .title-block .slider-title__image img {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    left: 100px;
-    left: calc(0px + (100 - 20) * ((100vw - 420px) / (1020 - 420)));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    bottom: 0;
   }
   .title-block .slider-title__text {
-    margin-top: 20px;
+    margin-top: 0px;
   }
   .title-block .slider-title__button {
-    margin-top: 30px;
+    margin-top: 20px;
   }
   .progress {
     padding: 250px 0 0 0 !important;
+  }
+  .swiper-pagination {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #f9f0e1;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    top: 95% !important;
+    position: absolute;
+  }
+  .swiper-pagination .swiper-pagination-bullet:not(:last-child) {
+    margin: 0;
+    margin-right: 10px;
   }
 }
 
@@ -906,21 +933,25 @@ h2 {
   }
   .slider-title .slider-title__logo {
     margin-left: 30px;
-    /* svg {
-                width: 260px;
-            } */
   }
   .slider-title__slide {
     padding: 30px 0 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .slider-title__items {
-    padding: 0 20px !important;
+    min-width: 100%;
+    padding: 20px 0 0 30px !important;
   }
   .slider-title__image {
-    margin-top: 30px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
   .slider-title__image .pogruzchick {
     max-width: 400px;
@@ -954,6 +985,15 @@ h2 {
     padding: 30px 0 17px 20px !important;
     height: 100%;
   }
+  .slider-title__link {
+    padding: 11px 30px;
+  }
+  .slider-title__button {
+    margin-top: 10px !important;
+  }
+  .slider-title__items {
+    padding: 0 20px 0 30px !important;
+  }
   .slider-title .pogruzchick {
     max-width: calc(250px + (370 - 250) * ((100vw - 320px) / (610 - 320)));
   }
@@ -967,27 +1007,6 @@ h2 {
   }
   .slider-title__logo svg {
     width: 260px !important;
-  }
-}
-
-@media (max-width: 420px) {
-  .swiper-pagination {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    background-color: #f9f0e1;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    top: 95% !important;
-    position: absolute;
-  }
-  .swiper-pagination .swiper-pagination-bullet:not(:last-child) {
-    margin: 0;
-    margin-right: 10px;
   }
 }
 
@@ -1202,6 +1221,9 @@ h2 {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
     position: relative;
   }
   .contacts-block__conteiner .scroll {
@@ -1272,6 +1294,7 @@ h2 {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 50%;
             flex: 1 1 50%;
+    padding: 10px !important;
   }
 }
 
