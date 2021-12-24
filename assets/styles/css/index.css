@@ -1365,7 +1365,7 @@ body.passive {
   width: 66.8%;
   height: 100%;
   right: 0;
-  top: 1px;
+  top: 3px;
 }
 
 .slider-title__image {
@@ -1456,6 +1456,9 @@ body.passive {
 }
 
 @media (max-width: 1375px) {
+  .slider-title__fon {
+    top: 1px;
+  }
   .slider-title__image {
     padding: 0 0 0 90px;
   }
