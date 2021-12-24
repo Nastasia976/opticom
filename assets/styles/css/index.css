@@ -1650,6 +1650,22 @@ body.passive {
   }
 }
 
+@media (max-height: 560px) {
+  .slider-title__text {
+    font-size: 14px;
+  }
+  .slider-title__slide {
+    padding: 30px 0px 20px;
+  }
+  .slider-title__link {
+    padding: 4px 30px;
+    font-size: 14px;
+  }
+  .slider-title__image {
+    min-height: 215px;
+  }
+}
+
 .contacts-block {
   margin-top: -2px;
   width: 100%;

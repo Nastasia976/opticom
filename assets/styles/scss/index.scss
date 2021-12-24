@@ -1271,6 +1271,21 @@ body.passive{
         padding: calc(30px + (50 - 30) * ((100vh - 560px) / (823 - 560))) 0 20px;
     }
 }
+@media (max-height: 560px) {
+    .slider-title__text{
+        font-size: 14px;
+    }
+    .slider-title__slide{
+        padding: 30px 0px 20px;
+    }
+    .slider-title__link {
+        padding: 4px 30px;
+        font-size: 14px;
+    }
+    .slider-title__image{
+        min-height: 215px;
+    }
+}
 //===============CONTACTS-BLOCK================
 .contacts-block {
     margin-top: -2px;
