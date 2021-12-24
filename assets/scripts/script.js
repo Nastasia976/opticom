@@ -209,6 +209,15 @@ $('.header__burger').click(function(){
     $('body').toggleClass('lock');
 });
 
+$('#1catalog-menu').click(function(){
+    $('.catalog-menu').addClass('active');
+    $('body').addClass('passive');
+});
+$('.body-catalog__close').click(function(){
+    $('.catalog-menu').removeClass('active');
+    $('body').removeClass('passive');
+});
+
 $(document).click(function (e) {
     var div = $('.burger, .burger-menu, .header__burger');
     if (!div.is(e.target)
