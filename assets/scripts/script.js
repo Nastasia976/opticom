@@ -1,5 +1,25 @@
 $(document).ready(function () {
-
+    $('.swiper-product').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        variableWidth: true,
+        prevArrow: $('.swiper-product-prev'),
+        nextArrow: $('.swiper-product-next'),эcssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 100,
+        speed: 4000,
+        waitForAnimate: true,
+        responsive: [
+            {
+                breakpoint: 620,
+                settings: {
+                    slidesToShow: 1,
+                    autoplaySpeed: 2000,
+                    speed: 2000,
+                }
+            }
+        ]
+    });
     /* $('.hospital').hover(function () {
         $('.vector').show();
         $('.center svg, .azs svg, .hotels svg, .autoservise svg, .restaurant svg').css("opacity", "1");
@@ -166,8 +186,8 @@ $('.delivery').on({
 $('.clining').on({
     mouseenter: function () {
         $('.popup').css({
-            'top': '170px',
-            'left': '400px'
+            'top': '220px',
+            'left': '430px'
         });
     }
 });
@@ -183,8 +203,19 @@ $('._icon-search').on('click', function () {
     $('.search-form__input').focus();
 });
 
-$('.burger-menu').click(function(){
+$('.header__burger').click(function(){
     $(this).toggleClass('active');
+    $('.burger-menu, .burger__conteiner, .burger').toggleClass('active');
+    $('body').toggleClass('lock');
+});
+
+$(document).click(function (e) {
+    var div = $('.burger, .burger-menu, .header__burger');
+    if (!div.is(e.target)
+        && div.has(e.target).length === 0) {
+        $('.burger, .header__burger, .burger-menu, .burger__conteiner').removeClass('active');
+        $('body').removeClass('lock');
+    }
 });
 
 new Swiper('.slider-title', {
@@ -250,6 +281,20 @@ $("body").on('click', '[href*="#"]', function(e){
         $('.podlozhka').removeClass('active');
     }
 });//шапка становится фиксированной
+
+
+/* $(window).on('resize', function () {
+    if ($(window).width() < 769) {
+        $('.our-product__body').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            variableWidth: true,
+        });
+    }
+}); */
+
+
+
 
 /* let sliderBlock = document.querySelector('.slider-title__slide');
 let mySlider = document.querySelector('.slider-title');
