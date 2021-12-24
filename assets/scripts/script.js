@@ -319,6 +319,11 @@ sliderBlock.addEventListener("mouseleave", function (e) {
 }) */
 
 
+$('._catalog').click(function (e) {
+    $(this).toggleClass('active');
+    $('._hide-footer-list').slideToggle(300)
+
+});
 
 
 

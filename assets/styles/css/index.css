@@ -2923,7 +2923,7 @@ body.passive {
           flex: 0 1 29%;
 }
 
-.footer__el:first-child {
+.footer__el._main {
   margin-bottom: 16px;
   color: #f1f1f1;
   font-weight: 700;
@@ -3111,5 +3111,8 @@ body.passive {
   }
   .footer__social {
     margin-bottom: 20px;
+  }
+  .footer ._hide-footer-list {
+    display: none;
   }
 }

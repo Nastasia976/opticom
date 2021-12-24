@@ -2272,7 +2272,7 @@ body.passive{
     &__list:first-child {
         flex: 0 1 29%;
     }
-    &__el:first-child {
+    &__el._main {
         margin-bottom: 16px;
         color: #f1f1f1;
         font-weight: 700;
@@ -2417,6 +2417,9 @@ body.passive{
         }
         &__social {
             margin-bottom: 20px;
+        }
+        ._hide-footer-list{
+            display: none;
         }
     }
 }
