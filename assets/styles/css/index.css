@@ -181,27 +181,27 @@ h2 {
   background-color: #d89560;
 }
 
-.wrapper {
+.wrapper-links {
   padding: 100px 50px;
 }
 
-.wrapper__title {
+.wrapper-links__title {
   font-family: 'Tinos';
   font-size: 30px;
 }
 
-.wrapper__list {
+.wrapper-links__list {
   margin-top: 30px;
   margin-left: 20px;
 }
 
-.wrapper__el {
+.wrapper-links__el {
   position: relative;
   padding: 0 0 0 18px;
   margin: 10px 0;
 }
 
-.wrapper__el::before {
+.wrapper-links__el::before {
   position: absolute;
   content: '';
   width: 8px;
@@ -214,13 +214,13 @@ h2 {
   background-color: #D4AE67;
 }
 
-.wrapper__link {
+.wrapper-links__link {
   padding: 10px 0 10px 0px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
-.wrapper__link:hover {
+.wrapper-links__link:hover {
   color: #D89560;
   -webkit-transition: 0.4s;
   transition: 0.4s;

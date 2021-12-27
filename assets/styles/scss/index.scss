@@ -88,7 +88,7 @@ h2 {
     transform: translate(0px, 0px);
     background-color: #d89560;
 }
-.wrapper {
+.wrapper-links {
     padding: 100px 50px;
     &__title {
         font-family: 'Tinos';
@@ -125,8 +125,6 @@ h2 {
         color: #D89560;
         transition: 0.4s;
     }
-}
-.wrapper-links {
 }
 
 //==========HEADER=================
