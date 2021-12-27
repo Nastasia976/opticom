@@ -74,6 +74,7 @@ $(document).ready(function () {
             }
         ]
     })
+    
     /* $('.hospital').hover(function () {
         $('.vector').show();
         $('.center svg, .azs svg, .hotels svg, .autoservise svg, .restaurant svg').css("opacity", "1");
@@ -511,4 +512,16 @@ select();
 
 
 
-
+new Swiper('.small-swiper', {
+    direction: 'vertical',
+    slidesPerView: 1,
+    loop: true,
+    pagination: {
+        el: '.small-swiper__dots',
+        clickable: true,
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    }
+})
