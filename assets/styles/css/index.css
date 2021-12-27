@@ -181,6 +181,51 @@ h2 {
   background-color: #d89560;
 }
 
+.wrapper {
+  padding: 100px 50px;
+}
+
+.wrapper__title {
+  font-family: 'Tinos';
+  font-size: 30px;
+}
+
+.wrapper__list {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.wrapper__el {
+  position: relative;
+  padding: 0 0 0 18px;
+  margin: 10px 0;
+}
+
+.wrapper__el::before {
+  position: absolute;
+  content: '';
+  width: 8px;
+  height: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  border-radius: 50%;
+  background-color: #D4AE67;
+}
+
+.wrapper__link {
+  padding: 10px 0 10px 0px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.wrapper__link:hover {
+  color: #D89560;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
 .header.scrolled {
   position: fixed;
   top: -2px;

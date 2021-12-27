@@ -88,6 +88,47 @@ h2 {
     transform: translate(0px, 0px);
     background-color: #d89560;
 }
+.wrapper {
+    padding: 100px 50px;
+    &__title {
+        font-family: 'Tinos';
+        font-size: 30px;
+    }
+
+    &__list {
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+
+    &__el {
+        position: relative;
+        padding: 0 0 0 18px;
+        margin: 10px 0;
+    }
+    &__el::before{
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        left: 0;
+        border-radius: 50%;
+        background-color: #D4AE67;
+    }
+    &__link{
+        padding: 10px 0 10px 0px;
+        transition: 0.4s;
+    }
+    &__link:hover{
+        color: #D89560;
+        transition: 0.4s;
+    }
+}
+.wrapper-links {
+}
+
 //==========HEADER=================
 .header.scrolled {
     position: fixed;
