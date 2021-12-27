@@ -350,17 +350,17 @@ $("body").on('click', '[href*="#sertificates"]', function (e) {
 $(window).on('resize', function () {
     if ($(window).width() < 521) {
         $("body").on('click', '[href*="#description"]', function (e) {
-            var fixed_offset = 10;
+            var fixed_offset = 15;
             $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
             e.preventDefault();
         });
         $("body").on('click', '[href*="#characters"]', function (e) {
-            var fixed_offset = 10;
+            var fixed_offset = 15;
             $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
             e.preventDefault();
         });
         $("body").on('click', '[href*="#sertificates"]', function (e) {
-            var fixed_offset = 10;
+            var fixed_offset = 15;
             $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
             e.preventDefault();
         });
