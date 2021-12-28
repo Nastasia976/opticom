@@ -74,7 +74,7 @@ $(document).ready(function () {
             }
         ]
     })
-    
+
     /* $('.hospital').hover(function () {
         $('.vector').show();
         $('.center svg, .azs svg, .hotels svg, .autoservise svg, .restaurant svg').css("opacity", "1");
@@ -157,120 +157,172 @@ $(document).ready(function () {
         }
     );
 
-});
-$('.school').on({
-    mouseenter: function () {
-        $('.popup').css({
-            'top': '150px',
-            'left': '550px'
-        });
-    }
-});
-$('.hospital').on({
-    mouseenter: function () {
-        $('.popup').css({
-            'top': '40px',
-            'left': '565px'
-        });
-    }
-});
-$('.azs').on({
-    mouseenter: function () {
-        $('.popup').css({
-            'top': '60px',
-            'left': '250px'
-        });
-    }
-});
-$('.autoservise').on({
-    mouseenter: function () {
-        $('.popup').css({
-            'top': '240px',
-            'left': '305px'
-        });
-    }
-});
-$('.hotel').on({
-    mouseenter: function () {
-        $('.popup').css({
-            'top': '175px',
-            'left': '280px'
-        });
-    }
-});
-$('.restaurant').on({
-    mouseenter: function () {
-        $('.popup').css({
-            'top': '190px',
-            'left': '325px'
-        });
-    }
-});
-$('.shop').on({
-    mouseenter: function () {
-        $('.popup').css({
-            'top': '270px',
-            'left': '440px'
-        });
-    }
-});
-$('.office').on({
-    mouseenter: function () {
-        $('.popup').css({
-            'top': '320px',
-            'left': '530px'
-        });
-    }
-});
-$('.bakery').on({
-    mouseenter: function () {
-        $('.popup').css({
-            'top': '380px',
-            'left': '600px'
-        });
-    }
-});
-$('.delivery').on({
-    mouseenter: function () {
-        $('.popup').css({
-            'top': '210px',
-            'left': '420px'
-        });
-    }
-});
-$('.clining').on({
-    mouseenter: function () {
-        $('.popup').css({
-            'top': '220px',
-            'left': '430px'
-        });
-    }
-});
-$('.fabrica').on({
-    mouseenter: function () {
-        $('.popup').css({
-            'top': '180px',
-            'left': '500px'
-        });
-    }
-});
-$('._icon-search').on('click', function () {
-    $('.search-form__input').focus();
-});
 
-$('.header__burger').click(function () {
-    $(this).toggleClass('active');
-    $('.burger-menu, .burger__conteiner, .burger').toggleClass('active');
-    $('body').toggleClass('lock');
-});
+    $('.school').on({
+        mouseenter: function () {
+            $('.popup').css({
+                'top': '150px',
+                'left': '550px'
+            });
+        }
+    });
+    $('.hospital').on({
+        mouseenter: function () {
+            $('.popup').css({
+                'top': '40px',
+                'left': '565px'
+            });
+        }
+    });
+    $('.azs').on({
+        mouseenter: function () {
+            $('.popup').css({
+                'top': '60px',
+                'left': '250px'
+            });
+        }
+    });
+    $('.autoservise').on({
+        mouseenter: function () {
+            $('.popup').css({
+                'top': '240px',
+                'left': '305px'
+            });
+        }
+    });
+    $('.hotel').on({
+        mouseenter: function () {
+            $('.popup').css({
+                'top': '175px',
+                'left': '280px'
+            });
+        }
+    });
+    $('.restaurant').on({
+        mouseenter: function () {
+            $('.popup').css({
+                'top': '190px',
+                'left': '325px'
+            });
+        }
+    });
+    $('.shop').on({
+        mouseenter: function () {
+            $('.popup').css({
+                'top': '270px',
+                'left': '440px'
+            });
+        }
+    });
+    $('.office').on({
+        mouseenter: function () {
+            $('.popup').css({
+                'top': '320px',
+                'left': '530px'
+            });
+        }
+    });
+    $('.bakery').on({
+        mouseenter: function () {
+            $('.popup').css({
+                'top': '380px',
+                'left': '600px'
+            });
+        }
+    });
+    $('.delivery').on({
+        mouseenter: function () {
+            $('.popup').css({
+                'top': '210px',
+                'left': '420px'
+            });
+        }
+    });
+    $('.clining').on({
+        mouseenter: function () {
+            $('.popup').css({
+                'top': '220px',
+                'left': '430px'
+            });
+        }
+    });
+    $('.fabrica').on({
+        mouseenter: function () {
+            $('.popup').css({
+                'top': '180px',
+                'left': '500px'
+            });
+        }
+    });
+    $('._icon-search').on('click', function () {
+        $('.search-form__input').focus();
+    });
 
-$('#1catalog-menu').click(function () {
-    $('.catalog-menu').addClass('active');
-    $('body').addClass('passive');
-});
-$('.body-catalog__close').click(function () {
-    $('.catalog-menu').removeClass('active');
-    $('body').removeClass('passive');
+    $('.header__burger').click(function () {
+        $(this).toggleClass('active');
+        $('.burger-menu, .burger__conteiner, .burger').toggleClass('active');
+        $('body').toggleClass('lock');
+    });
+
+    $('#1catalog-menu').click(function () {
+        $('.catalog-menu').addClass('active');
+        $('body').addClass('passive');
+    });
+    $('.body-catalog__close').click(function () {
+        $('.catalog-menu').removeClass('active');
+        $('body').removeClass('passive');
+    });
+
+    $('._catalog').click(function (e) {
+        $(this).toggleClass('active');
+        $('._hide-footer-list').slideToggle(300)
+
+    });
+
+    $('.heart-out').click(function (e) {
+        $(this).hide().prev().show();
+    });
+    $('.heart-in').click(function (e) {
+        $(this).hide().next().show();
+    });
+
+    $('.choice-about__item').click(function () {
+        $('.choice-about__item').removeClass('active');
+        $(this).toggleClass('active');
+    })
+
+    $('.packing__item').click(function () {
+        $('.packing__item').removeClass('active');
+        $(this).toggleClass('active');
+    })
+    $('.packing-product__item').click(function () {
+        $('.packing-product__item').removeClass('active');
+        $(this).toggleClass('active');
+    })
+
+
+    $('.select__item').click(function (event) {
+        $('.select__item').removeClass('active');
+        $(this).toggleClass('active');
+        $('.select__icon').removeClass('active');
+    });
+    $('.select__header').click(function (event) {
+        $('.select__icon').toggleClass('active');
+    });
+
+    $('._phone').mask('+7 (999) 999-99-99', {
+        autoclear: false
+    });
+
+    $('.button-request').click(function (event) {
+        $('.popup-request').toggleClass('active');
+        $('body').toggleClass('passive');
+    })
+
+    $('.popup__close').click(function (event) {
+        $('.popup-request').removeClass('active');
+        $('body').removeClass('passive');
+    })
 });
 
 $(document).click(function (e) {
@@ -408,33 +460,6 @@ sliderBlock.addEventListener("mouseleave", function (e) {
 }) */
 
 
-$('._catalog').click(function (e) {
-    $(this).toggleClass('active');
-    $('._hide-footer-list').slideToggle(300)
-
-});
-
-$('.heart-out').click(function (e) {
-    $(this).hide().prev().show();
-});
-$('.heart-in').click(function (e) {
-    $(this).hide().next().show();
-});
-
-$('.choice-about__item').click(function () {
-    $('.choice-about__item').removeClass('active');
-    $(this).toggleClass('active');
-})
-
-$('.packing__item').click(function () {
-    $('.packing__item').removeClass('active');
-    $(this).toggleClass('active');
-})
-$('.packing-product__item').click(function () {
-    $('.packing-product__item').removeClass('active');
-    $(this).toggleClass('active');
-})
-
 function counterFunction(count) {
 
     var plus = count.querySelector('._plus');
@@ -463,16 +488,6 @@ var counts = document.querySelectorAll('.amount');
 
 counts.forEach(counterFunction);
 
-
-
-$('.select__item').click(function (event) {
-    $('.select__item').removeClass('active');
-    $(this).toggleClass('active');
-    $('.select__icon').removeClass('active');
-});
-$('.select__header').click(function (event) {
-    $('.select__icon').toggleClass('active');
-});
 
 
 $(document).mouseup(function (e) {
@@ -532,3 +547,4 @@ new Swiper('.small-swiper', {
         },
     },
 })
+
