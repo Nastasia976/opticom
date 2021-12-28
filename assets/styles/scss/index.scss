@@ -218,6 +218,7 @@ h2 {
     }
     &__element:last-child {
         margin-right: calc(37px + (85 - 37) * ((100vw - 1440px) / (1920 - 1440)));
+        position: relative;
     }
     .basket {
         position: relative;
@@ -273,6 +274,143 @@ h2 {
         transition: 0.4s;
     }
 }
+.add-basket {
+    position: absolute;
+    width: 485px;
+    right: -15px;
+    bottom: -320px;
+    background-color: #fff;
+    padding: 12px 25px 29px;
+    visibility: hidden;
+    /* visibility: hidden;
+    opacity: 0;
+    transform: translate(0, -100%);
+    transition: all 0.3s ease 0s; */
+    &__body {
+        margin-top: 30px;
+    }
+    &__top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &__close{
+        cursor: pointer;
+    }
+    &__title {
+        margin-top: 13px;
+        font-size: 18px;
+        line-height: 167%;
+        font-weight: bold;
+        letter-spacing: 0.04em;
+        color: #3b3b3b;
+    }
+    &__add {
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+        cursor: pointer;
+        .add-icon {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #006d66;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .add-icon::before,
+        .add-icon::after {
+            position: absolute;
+            content: "";
+            width: 12px;
+            height: 1px;
+            background-color: #006d66;
+        }
+        .add-icon::after {
+            transform: rotate(-90deg);
+        }
+        span {
+            padding: 0 0 3px 0;
+            border-bottom: 1px dashed rgba(0, 109, 102, 0.4);
+            color: #006d66;
+            font-size: 14px;
+            line-height: 14px;
+            letter-spacing: 0.06em;
+            margin-left: 10px;
+        }
+    }
+
+    &__buttons {
+        margin-top: 34px;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        line-height: 19px;
+        font-family: "Roboto";
+    }
+    &__button1 {
+        background-color: #006d64;
+        padding: 10px 14px;
+        color: white !important;
+    }
+
+    &__button2 {
+        margin-left: 10px;
+        border: 1px solid #006d64;
+        padding: 10px 14px;
+        color: #006d64 !important;
+    }
+}
+/* .add-basket.active{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 0.3s ease 0s;
+} */
+.radiobuttons {
+    display: flex;
+    flex-direction: column;
+    &__item {
+        position: relative;
+        padding: 0 0 0 25px;
+        transition: all 0.3s ease 0s;
+        font-size: 14px;
+        line-height: 157%;
+        color: #2b2b2b;
+        cursor: pointer;
+        input {
+            display: none;
+        }
+    }
+    &__item::before,
+    &__item::after {
+        position: absolute;
+        content: "";
+        border-radius: 50%;
+    }
+    &__item::before {
+        border: 1px solid #d1d1d1;
+        width: 15px;
+        height: 15px;
+        left: 0;
+        top: 3px;
+    }
+    &__item::after {
+        width: 11px;
+        height: 11px;
+        background-color: #01625a;
+        left: 2px;
+        top: 5px;
+        transform: scale(0);
+        transition: all 0.3s ease 0s;
+    }
+    &__item.active::after {
+        transform: scale(1);
+        transition: all 0.3s ease 0s;
+    }
+}
 
 .burger__conteiner {
     height: 100vh;
@@ -283,7 +421,9 @@ h2 {
     transform: translate(-100%, 0);
     transition: 1s;
     opacity: 0;
+    z-index: 300;
 }
+
 .burger__conteiner.active {
     transform: translate(0, 0);
     transition: 1s;
@@ -2452,8 +2592,27 @@ body.passive {
 
     &__body {
         margin-top: 46px;
+        label {
+            display: flex;
+            flex-direction: column;
+            span {
+                color: rgba(37, 37, 37, 0.2);
+                font-size: 12px;
+                line-height: 183%;
+            }
+            input,
+            input::placeholder {
+                color: rgba(37, 37, 37, 0.9);
+                font-size: 18px;
+                line-height: 122%;
+                padding-bottom: 2px;
+                border-bottom: 1px solid rgba(183, 183, 183, 0.2);
+            }
+        }
     }
-
+    &__body._basket {
+        margin-top: 13px;
+    }
     &__text {
         font-size: 16px;
         line-height: 125%;
@@ -2463,7 +2622,7 @@ body.passive {
 
     &__button {
         margin-top: 63px;
-        background-color: #D4AE67;
+        background-color: #d4ae67;
         padding: 13px 37px;
         font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
         line-height: 169%;
@@ -2474,22 +2633,22 @@ body.passive {
         cursor: pointer;
         transition: 0.4s;
     }
-    &__button:hover{
-        background-color: #D89560;
+    &__button:hover {
+        background-color: #d89560;
         transition: 0.4s;
     }
 }
-.popups.active{
+.popups.active {
     transform: scale(1);
     opacity: 1;
     visibility: visible;
 }
-@media(min-width:1920px){
-    .popups{
-        &__button{
+@media (min-width: 1920px) {
+    .popups {
+        &__button {
             font-size: 18px;
         }
-        &__conteiner{
+        &__conteiner {
             padding: 14px 29px 34px;
         }
     }
@@ -3516,7 +3675,12 @@ body.passive {
     }
 }
 //------------POPUP REQUEST---------
-.popup-request {
+.popup-request,
+.popup-reg,
+.popup-reg2,
+.popup-reg3,
+.popup-autoriz,
+.popup-forgot {
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.1);
@@ -3558,6 +3722,17 @@ body.passive {
     .popup__title {
         font-family: "Tinos";
         font-size: calc(26px + (30 - 26) * ((100vw - 320px) / (1920 - 320)));
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span {
+            font-size: 16px;
+            line-height: 16px;
+            letter-spacing: 0.06em;
+            color: #d89560;
+            margin-left: 20px;
+            margin-right: 5px;
+        }
     }
 
     .popup__description {
@@ -3585,7 +3760,65 @@ body.passive {
             margin-bottom: calc(20px + (32 - 20) * ((100vh - 568px) / (800 - 568)));
         }
     }
-
+    .popup__items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 18px;
+        flex-wrap: wrap;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 0.06em;
+        .popup__forget {
+            margin-left: 15px;
+            margin-top: 15px;
+            color: #d4ad67;
+            position: relative;
+            cursor: pointer;
+        }
+        .popup__forget::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            border-bottom: 1px dashed rgba(212, 173, 103, 0.4);
+        }
+        .popup__check {
+            margin-top: 15px;
+            position: relative;
+            padding: 0 0 0 20px;
+            color: rgba(37, 37, 37, 0.9);
+            cursor: pointer;
+            input {
+                position: absolute;
+                left: 0;
+                top: 3px;
+                visibility: hidden;
+                width: fit-content;
+            }
+            .remember-me {
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                border: 1px solid #d1d1d1;
+                left: 0;
+                top: -1px;
+                cursor: pointer;
+                svg {
+                    display: none;
+                    margin-left: 1px;
+                    color: #d4ad67;
+                }
+            }
+            .remember-me.active {
+                svg {
+                    display: block;
+                }
+            }
+        }
+    }
     .popup__agree {
         margin-top: calc(20px + (34 - 20) * ((100vh - 568px) / (800 - 568)));
         font-size: 14px;
@@ -3608,14 +3841,50 @@ body.passive {
         width: 100%;
     }
     .popup__button:hover {
-        border: 1px solid rgba(212, 173, 103, 1);
+        border: 1px solid rgba(216, 149, 96, 0.3);
+        color: #d89560;
+    }
+    .next {
+        margin-top: 54px;
+    }
+    .popup__footer {
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 0.06em;
+        color: #006d66;
+        margin-top: 34px;
+        cursor: pointer;
+        transition: 0.3s;
+        border-bottom: 1px dashed rgba(0, 109, 102, 0.4);
+        width: fit-content;
+        padding: 2px 0 3px 0;
+    }
+
+    .popup__footer:hover {
+        color: #00a793;
+        transition: 0.3s;
+        border-bottom: 1px dashed rgba(0, 167, 147, 0.4);
     }
 }
-.popup-request.active {
+.popup-request.active,
+.popup-reg.active,
+.popup-reg2.active,
+.popup-reg3.active,
+.popup-autoriz.active,
+.popup-forgot.active {
     visibility: visible;
     opacity: 1;
     transform: translate(0, 0);
     transition: all ease 0.5s;
+}
+@media (min-height: 900px) {
+    .pop-up {
+        .popup__form {
+            input:not(:last-child) {
+                margin-bottom: 30px !important;
+            }
+        }
+    }
 }
 @media (max-width: 445px) {
     .popup-request {
@@ -3649,5 +3918,58 @@ body.passive {
         input:not(:last-child) {
             margin-bottom: 20px;
         }
+    }
+}
+//-----------popup-cooki------
+.popup-cooki {
+    max-width: 458px;
+    width: 100%;
+    background-color: #fff;
+    padding: 39px 29px;
+    position: fixed;
+    bottom: 90px;
+    right: calc(50px + (300 - 50) * ((100vw - 1440px) / (1920 - 1440)));
+    z-index: 200;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: all ease-out 1s;
+    margin-left: 20px;
+    &__text {
+        font-size: 16px;
+        line-height: 125%;
+        letter-spacing: 0.01em;
+        color: #1d1d1d;
+        text-shadow: 0px 9.375px 18.75px rgba(0, 0, 0, 0.05);
+    }
+
+    &__button {
+        margin-top: 32px;
+        background-color: #006d64;
+        padding: 10px 14px;
+        font-size: 16px;
+        line-height: 19px;
+        color: white;
+        width: fit-content;
+        font-family: "Pragmatica Extended";
+        cursor: pointer;
+    }
+}
+.popup-cooki.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    transition: all ease-out 1s;
+}
+@media (max-width: 1400px) {
+    .popup-cooki {
+        right: 20px;
+    }
+}
+@media (max-width: 500px) {
+    .popup-cooki {
+        right: 0;
+        padding: 20px;
+        max-width: 100%;
     }
 }

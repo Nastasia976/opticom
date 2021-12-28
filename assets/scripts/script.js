@@ -316,23 +316,103 @@ $(document).ready(function () {
 
     $('.button-request').click(function (event) {
         $('.popup-request').toggleClass('active');
-        $('body').toggleClass('passive');
+        $('body').addClass('passive');
     })
 
-    $('.popup__close').click(function (event) {
-        $('.popup-request').removeClass('active');
+    $('.popup__close, .will-aut, .will-reg').click(function (event) {
+        $('.popup-request, .popup-reg, .popup-reg2, .popup-reg3, .popup-autoriz, .popup-forgot').removeClass('active');
         $('body').removeClass('passive');
     })
 
     $('.form-write__button').click(function (event) {
         $('.popups').toggleClass('active');
-        $('body').toggleClass('passive');
+        $('body').addClass('passive');
     })
     $('.popups__close, .popups__button').click(function (event) {
         $('.popups').removeClass('active');
         $('body').removeClass('passive');
     })
+
+    $('.will-reg').click(function () {
+        $('.popup-reg').toggleClass('active');
+        $('body').addClass('passive');
+    })
+
+    $('.button-next').click(function () {
+        $('.popup-reg').removeClass('active');
+        $('.popup-reg2').toggleClass('active');
+    })
+    $('.button-next2').click(function () {
+        $('.popup-reg2').removeClass('active');
+        $('.popup-reg3').toggleClass('active');
+    })
+    $('.button-reg').click(function () {
+        $('.popup-reg3').removeClass('active');
+        $('.popups-reg').toggleClass('active');
+    })
+
+    $('.header-exit, .will-aut').click(function () {
+        $('.popup-autoriz').toggleClass('active');
+        $('body').addClass('passive');
+    })
+    $('.popup__forget').click(function () {
+        $('.popup-autoriz').removeClass('active');
+        $('.popup-forgot').toggleClass('active');
+    })
+
+    $('.prev-popup').click(function () {
+        $('.popup-autoriz').toggleClass('active');
+        $('.popup-forgot').removeClass('active');
+    })
+
+    $('.button-restore').click(function () {
+        $('.check-your-email').toggleClass('active');
+        $('.popup-forgot').removeClass('active');
+        $('body').addClass('passive');
+    })
+
+    $('.button-accept').click(function () {
+        $('.popup-cooki').removeClass('active');
+    })
+
+    $('.header__element-basket').click(function () {
+        $('.add-basket').css('visibility', 'visible');
+    });
+
+    $('.add-basket__add').click(function () {
+        $('.add-basket').css('display', 'none');
+        $('.create-basket').toggleClass('active');
+    })
+    $('.add-basket__close').click(function () {
+        $('.add-basket').css('visibility', 'hidden');
+    })
 });
+
+$(document).on('click', '.popup__check', function (event) {
+    if($('.remember-me').hasClass('active')){
+        $(this).find('input').attr('checked', false);
+        $('.remember-me').removeClass('active');
+    } else{
+        $(this).find('input').attr('checked', true);
+        $('.remember-me').toggleClass('active');
+    }
+    return false;
+});
+
+$.each($('.radiobuttons__item'), function (index, val) {
+    if ($(this).find('input').prop('checked') == true) {
+        $(this).addClass('active');
+    }
+});
+$(document).on('click', '.radiobuttons__item', function (event) {
+    $(this).parents('.radiobuttons').find('.radiobuttons__item').removeClass('active');
+    $(this).parents('.radiobuttons').find('.radiobuttons__item input').prop('checked', false);
+    $(this).toggleClass('active');
+    $(this).find('input').prop('checked', true);
+    return false;
+});
+
+setTimeout(() => {$('.popup-cooki').addClass('active')}, 5000);
 
 $(document).click(function (e) {
     var div = $('.burger, .burger-menu, .header__burger');
@@ -343,14 +423,14 @@ $(document).click(function (e) {
     }
 });
 
-$(document).mouseup(function (e) {
+/* $(document).mouseup(function (e) {
     var div = $('.popups__conteiner');
     if (!div.is(e.target)
         && div.has(e.target).length === 0) {
         $('.popups').removeClass('active');
         $('body').removeClass('passive');
     }
-});
+}); */
 
 new Swiper('.slider-title', {
     slidesPerView: 1,
