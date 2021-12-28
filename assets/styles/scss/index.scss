@@ -1319,19 +1319,20 @@ body.passive {
                 margin-top: 20px;
             }
         }
-    }
-    .swiper-pagination {
-        flex-direction: row;
-        justify-content: center;
-        background-color: #f9f0e1;
-        align-self: flex-end;
-        top: 95% !important;
-        position: absolute;
-        .swiper-pagination-bullet:not(:last-child) {
-            margin: 0;
-            margin-right: 10px;
+        .swiper-pagination {
+            flex-direction: row;
+            justify-content: center;
+            background-color: #f9f0e1;
+            align-self: flex-end;
+            top: 95% !important;
+            position: absolute;
+            .swiper-pagination-bullet:not(:last-child) {
+                margin: 0;
+                margin-right: 10px;
+            }
         }
     }
+    
 }
 
 @media (max-width: 550px) {

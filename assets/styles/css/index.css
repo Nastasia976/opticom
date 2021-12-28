@@ -1769,7 +1769,7 @@ body.passive {
   .title-block .slider-title__button {
     margin-top: 20px;
   }
-  .swiper-pagination {
+  .title-block .swiper-pagination {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1783,7 +1783,7 @@ body.passive {
     top: 95% !important;
     position: absolute;
   }
-  .swiper-pagination .swiper-pagination-bullet:not(:last-child) {
+  .title-block .swiper-pagination .swiper-pagination-bullet:not(:last-child) {
     margin: 0;
     margin-right: 10px;
   }

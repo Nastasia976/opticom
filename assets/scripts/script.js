@@ -260,7 +260,7 @@ $(document).ready(function () {
 
     $('.header__burger').click(function () {
         $(this).toggleClass('active');
-        $('.burger-menu, .burger__conteiner, .burger').toggleClass('active');
+        $('.burger-menu, .burger__conteiner, .burger').addClass('active');
         $('body').toggleClass('lock');
     });
 
@@ -351,7 +351,7 @@ $(document).ready(function () {
         $('.popups-reg').toggleClass('active');
     })
 
-    $('.header-exit, .will-aut').click(function () {
+    $('.header-exit, .will-aut, .user-exit').click(function () {
         $('.popup-autoriz').toggleClass('active');
         $('body').addClass('passive');
     })
