@@ -260,13 +260,13 @@ $(document).ready(function () {
 
     $('.header__burger').click(function () {
         $(this).toggleClass('active');
-        $('.burger-menu, .burger__conteiner, .burger').addClass('active');
+        $('.burger-menu, .burger__conteiner, .burger').toggleClass('active');
         $('body').toggleClass('lock');
     });
 
     $('#1catalog-menu').click(function () {
-        $('.catalog-menu').addClass('active');
-        $('body').addClass('passive');
+        $('.catalog-menu').toggleClass('active');
+        $('body').toggleClass('passive');
     });
     $('.body-catalog__close').click(function () {
         $('.catalog-menu').removeClass('active');
@@ -277,19 +277,19 @@ $(document).ready(function () {
         $(this).toggleClass('active');
         $('._hide-footer-list').slideToggle(300)
 
-    });
+    }); //каталог в футере
 
     $('.heart-out').click(function (e) {
         $(this).hide().prev().show();
     });
     $('.heart-in').click(function (e) {
         $(this).hide().next().show();
-    });
+    }); //сердечко в карточках
 
     $('.choice-about__item').click(function () {
         $('.choice-about__item').removeClass('active');
         $(this).toggleClass('active');
-    })
+    }) //описание, характеристики, сертификат
 
     $('.packing__item').click(function () {
         $('.packing__item').removeClass('active');
@@ -298,7 +298,7 @@ $(document).ready(function () {
     $('.packing-product__item').click(function () {
         $('.packing-product__item').removeClass('active');
         $(this).toggleClass('active');
-    })
+    })//фасовка
 
 
     $('.select__item').click(function (event) {
@@ -316,7 +316,7 @@ $(document).ready(function () {
 
     $('.button-request').click(function (event) {
         $('.popup-request').toggleClass('active');
-        $('body').addClass('passive');
+        $('body').toggleClass('passive');
     })
 
     $('.popup__close, .will-aut, .will-reg').click(function (event) {
@@ -326,7 +326,7 @@ $(document).ready(function () {
 
     $('.form-write__button').click(function (event) {
         $('.popups').toggleClass('active');
-        $('body').addClass('passive');
+        $('body').toggleClass('passive');
     })
     $('.popups__close, .popups__button').click(function (event) {
         $('.popups').removeClass('active');
@@ -335,7 +335,7 @@ $(document).ready(function () {
 
     $('.will-reg, .user-reg').click(function () {
         $('.popup-reg').toggleClass('active');
-        $('body').addClass('passive');
+        $('body').toggleClass('passive');
     })
 
     $('.button-next').click(function () {
@@ -353,7 +353,7 @@ $(document).ready(function () {
 
     $('.header-exit, .will-aut, .user-exit').click(function () {
         $('.popup-autoriz').toggleClass('active');
-        $('body').addClass('passive');
+        $('body').toggleClass('passive');
     })
     $('.popup__forget').click(function () {
         $('.popup-autoriz').removeClass('active');
@@ -368,7 +368,6 @@ $(document).ready(function () {
     $('.button-restore').click(function () {
         $('.check-your-email').toggleClass('active');
         $('.popup-forgot').removeClass('active');
-        $('body').addClass('passive');
     })
 
     $('.button-accept').click(function () {
@@ -376,23 +375,27 @@ $(document).ready(function () {
     })
 
     $('.header__element-basket').click(function () {
-        $('.add-basket').css('visibility', 'visible');
+        $('.add-basket').toggleClass('active');
     });
 
     $('.add-basket__add').click(function () {
-        $('.add-basket').css('display', 'none');
+        $('.add-basket').removeClass('active');
         $('.create-basket').toggleClass('active');
     })
     $('.add-basket__close').click(function () {
-        $('.add-basket').css('visibility', 'hidden');
+        $('.add-basket').removeClass('active');
     })
+    $('.button-create').click(function () {
+        $('.add-basket').toggleClass('active');
+    });
+
 });
 
 $(document).on('click', '.popup__check', function (event) {
-    if($('.remember-me').hasClass('active')){
+    if ($('.remember-me').hasClass('active')) {
         $(this).find('input').attr('checked', false);
         $('.remember-me').removeClass('active');
-    } else{
+    } else {
         $(this).find('input').attr('checked', true);
         $('.remember-me').toggleClass('active');
     }
@@ -412,16 +415,17 @@ $(document).on('click', '.radiobuttons__item', function (event) {
     return false;
 });
 
-setTimeout(() => {$('.popup-cooki').addClass('active')}, 5000);
 
-$(document).click(function (e) {
+setTimeout(() => { $('.popup-cooki').addClass('active') }, 5000);
+
+/* $(document).click(function (e) {
     var div = $('.burger, .burger-menu, .header__burger');
     if (!div.is(e.target)
         && div.has(e.target).length === 0) {
         $('.burger, .header__burger, .burger-menu, .burger__conteiner').removeClass('active');
         $('body').removeClass('lock');
     }
-});
+}); */
 
 /* $(document).mouseup(function (e) {
     var div = $('.popups__conteiner');
@@ -546,13 +550,13 @@ $(window).on("scroll", function () {
 
 /* let sliderBlock = document.querySelector('.slider-title__slide');
 let mySlider = document.querySelector('.slider-title');
-
+ 
 sliderBlock.addEventListener("mouseenter", function (e) {
     mySlider.params.autoplay.disableOnInteraction = false;
     mySlider.params.autoplay.delay = 500;
     mySlider.autoplay.start();
 });
-
+ 
 sliderBlock.addEventListener("mouseleave", function (e) {
     mySlider.autoplay.stop();
 }) */

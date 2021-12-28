@@ -347,6 +347,7 @@ h2 {
 .header__menu {
   margin-left: calc(20px + (126 - 20) * ((100vw - 1000px) / (1920 - 1000)));
   padding: 10px 0;
+  position: relative;
 }
 
 .header__list {
@@ -365,7 +366,6 @@ h2 {
 
 .header__element:last-child {
   margin-right: calc(37px + (85 - 37) * ((100vw - 1440px) / (1920 - 1440)));
-  position: relative;
 }
 
 .header .basket {
@@ -445,15 +445,16 @@ h2 {
 .add-basket {
   position: absolute;
   width: 485px;
-  right: -15px;
-  bottom: -320px;
+  right: 65px;
+  bottom: -300px;
   background-color: #fff;
   padding: 12px 25px 29px;
   visibility: hidden;
-  /* visibility: hidden;
-    opacity: 0;
-    transform: translate(0, -100%);
-    transition: all 0.3s ease 0s; */
+  opacity: 0;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .add-basket__body {
@@ -563,12 +564,15 @@ h2 {
   color: #006d64 !important;
 }
 
-/* .add-basket.active{
-    visibility: visible;
-    opacity: 1;
-    transform: translate(0, 0);
-    transition: all 0.3s ease 0s;
-} */
+.add-basket.active {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
 .radiobuttons {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -55,42 +55,42 @@
                             <a href="#" class="header__link _icon-cart basket"><span>Корзина</span>
                                 <div class="basket-unit">2</div>
                             </a>
-                            <div class="add-basket">
-                                <div class="add-basket__top">
-                                    <div class="add-basket__title">Ваши корзины</div>
-                                    <div class="add-basket__close">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M19.5 10.2673C19.5 15.2976 15.2642 19.4065 10 19.4065C4.73582 19.4065 0.5 15.2976 0.5 10.2673C0.5 5.23708 4.73582 1.12817 10 1.12817C15.2642 1.12817 19.5 5.23708 19.5 10.2673Z" stroke="#3C3C3C"/>
-                                            <line x1="0.5" y1="-0.5" x2="12.3972" y2="-0.5" transform="matrix(0.719977 0.693998 -0.719977 0.693998 5 6.13574)" stroke="#3C3C3C" stroke-linecap="round"/>
-                                            <line x1="0.5" y1="-0.5" x2="12.3972" y2="-0.5" transform="matrix(-0.719977 0.693998 -0.719977 -0.693998 14.2852 5.44751)" stroke="#3C3C3C" stroke-linecap="round"/>
-                                            </svg>                                            
-                                    </div>
-                                </div>
-                                <div class="add-basket__body radiobuttons">
-                                    <div class="radiobuttons__item active">
-                                        Корзина для бытовой химии
-                                        <input type="radio" value="1" cheked name="nameradio">
-                                    </div>
-                                    <div class="radiobuttons__item">
-                                        Корзина для офисных расходных материалов
-                                        <input type="radio" value="2" name="nameradio">
-                                    </div>
-                                    <div class="radiobuttons__item">
-                                        Корзина для расходных материалов
-                                        <input type="radio" value="3" name="nameradio">
-                                    </div>
-                                </div>
-                                <div class="add-basket__add">
-                                    <div class="add-icon"></div>
-                                        <span>Создать новую корзину</span>                                        
-                                </div>
-                                <div class="add-basket__buttons">
-                                    <a href="#" class="add-basket__button1">Перейти в корзину</a>
-                                    <a href="#" class="add-basket__button2">Перейти на все корзины</a>
-                                </div>
-                            </div>
                         </li>
                     </ul>
+                    <div class="add-basket">
+                        <div class="add-basket__top">
+                            <div class="add-basket__title">Ваши корзины</div>
+                            <div class="add-basket__close">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.5 10.2673C19.5 15.2976 15.2642 19.4065 10 19.4065C4.73582 19.4065 0.5 15.2976 0.5 10.2673C0.5 5.23708 4.73582 1.12817 10 1.12817C15.2642 1.12817 19.5 5.23708 19.5 10.2673Z" stroke="#3C3C3C"/>
+                                    <line x1="0.5" y1="-0.5" x2="12.3972" y2="-0.5" transform="matrix(0.719977 0.693998 -0.719977 0.693998 5 6.13574)" stroke="#3C3C3C" stroke-linecap="round"/>
+                                    <line x1="0.5" y1="-0.5" x2="12.3972" y2="-0.5" transform="matrix(-0.719977 0.693998 -0.719977 -0.693998 14.2852 5.44751)" stroke="#3C3C3C" stroke-linecap="round"/>
+                                    </svg>                                            
+                            </div>
+                        </div>
+                        <div class="add-basket__body radiobuttons" id="radiobuttons">
+                            <div class="radiobuttons__item active" id="radiobuttons__item">
+                                <span>Корзина для бытовой химии</span>
+                                <input type="radio" value="1" cheked name="nameradio">
+                            </div>
+                            <div class="radiobuttons__item" id="radiobuttons__item">
+                                <span>Корзина для офисных расходных материалов</span>
+                                <input type="radio" value="2" name="nameradio">
+                            </div>
+                            <div class="radiobuttons__item" id="radiobuttons__item">
+                                <span>Корзина для расходных материалов</span>
+                                <input type="radio" value="3" name="nameradio">
+                            </div>
+                        </div>
+                        <div class="add-basket__add">
+                            <div class="add-icon"></div>
+                                <span>Создать новую корзину</span>                                        
+                        </div>
+                        <div class="add-basket__buttons">
+                            <a href="#" class="add-basket__button1">Перейти в корзину</a>
+                            <a href="#" class="add-basket__button2">Перейти на все корзины</a>
+                        </div>
+                    </div>
                 </nav>
                 <div class="header__burger">
                     <div class="burger-menu"><span></span></div>
@@ -311,7 +311,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="catalog-menu">
+            <div class="catalog-menu">
                 <div class="catalog-menu__conteiner">
                     <div class="catalog-menu__sidebar sidebar-catalog">
                         <div class="sidebar-catalog__logo">
@@ -539,7 +539,7 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </header>
         <main class="main" id="fullpage">
             <div class="main-block">
@@ -1389,7 +1389,7 @@
                     <div class="popups__body _basket">
                         <label>
                             <span>Название корзины</span>
-                            <input type="text" placeholder="Корзина для">
+                            <input type="text" class="creat-name" placeholder="Корзина для">
                         </label>
                         <div class="popups__button button-create">Создать корзину</div>
                     </div>
