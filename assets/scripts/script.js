@@ -523,5 +523,5 @@ new Swiper('.small-swiper', {
     autoplay: {
         delay: 3000,
         disableOnInteraction: false,
-    }
+    },
 })
