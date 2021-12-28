@@ -2448,11 +2448,10 @@ body.passive {
         position: relative;
         padding: 77px 0 0px calc(0px + (54 - 0) * ((100vw - 1100px) / (1920 - 1100)));
         .small-swiper__dots{
-            /* position: absolute; */
-            /* left: -50px; */
-            height: 90%;
-            margin-top: -150px;
-            margin-left: -70px;
+            position: absolute;
+            left: -50px;
+            height: 75%;
+            top: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -2778,20 +2777,14 @@ body.passive {
 @media (max-width: 1400px) {
     .card-product{
         &__image{
+            .small-swiper{
+                margin-left: 50px;
+            }
             .small-swiper__dots{
-                flex-direction: row;
-                justify-content: flex-end;
-                align-items: flex-end;
-                margin-top: -70px;
-                padding: 0 20px 0 0;
-                .swiper-pagination-bullet{
-                    margin: 0 10px;
-                }
+                left: 0;
             }
         }
     }
-    
-    
 }
 @media (max-width: 1280px) {
     .wrapper-card-product {
@@ -2901,20 +2894,27 @@ body.passive {
         &__image{
             .small-swiper{
                 min-width: 100%;
+                margin-left: 0;
+                margin-top: 30px;
                 .swiper-slide{
+                    padding: 0 0 40% 0;
+                    margin: 30px 0;
+                    min-height: 230px;
                    img{
                        left: 0;
                        right: 0;
                        margin: auto;
+                       min-height: 230px;
                    }
                 }
             }
             .small-swiper__dots{
                 position: absolute;
                 height: fit-content;
-                top: 98%;
+                flex-direction: row;
+                justify-content: flex-end;
+                top: 96%;
                 margin: 0;
-                right: -30px;
                 .swiper-pagination-bullet{
                     margin: 0 10px;
                 }

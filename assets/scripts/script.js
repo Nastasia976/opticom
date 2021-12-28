@@ -513,7 +513,6 @@ select();
 
 
 new Swiper('.small-swiper', {
-    direction: 'vertical',
     slidesPerView: 1,
     loop: true,
     pagination: {
@@ -523,5 +522,13 @@ new Swiper('.small-swiper', {
     autoplay: {
         delay: 3000,
         disableOnInteraction: false,
+    },
+    breakpoints: {
+        200: {
+            direction: 'horizontal',
+        },
+        768: {
+            direction: 'vertical',
+        },
     },
 })
