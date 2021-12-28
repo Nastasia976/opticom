@@ -2764,6 +2764,7 @@ body.passive {
   font-weight: 400;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  cursor: pointer;
 }
 
 .form-write__button:hover, .form-write__button:focus {
@@ -3098,6 +3099,144 @@ body.passive {
   }
   .footer ._hide-footer-list {
     display: none;
+  }
+}
+
+.popups {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s;
+}
+
+.popups__conteiner {
+  max-width: 608px;
+  width: 100%;
+  background-color: #fff;
+  padding: 14px calc(20px + (29 - 20) * ((100vw - 320px) / (1920 - 320))) 34px;
+}
+
+.popups__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.popups__title {
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  color: #3b3b3b;
+  margin-top: 12px;
+}
+
+.popups__close {
+  position: relative;
+  min-width: 20px;
+  height: 20px;
+  border: 2px solid #3c3c3c;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.popups__close::before, .popups__close::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 13px;
+  background-color: #3c3c3c;
+  border-radius: 100px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.popups__close::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.popups__close::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.popups__body {
+  margin-top: 46px;
+}
+
+.popups__text {
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0.01em;
+  text-shadow: 0px 9.375px 18.75px rgba(0, 0, 0, 0.05);
+}
+
+.popups__button {
+  margin-top: 63px;
+  background-color: #D4AE67;
+  padding: 13px 37px;
+  font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+  line-height: 169%;
+  letter-spacing: 0.02em;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.popups__button:hover {
+  background-color: #D89560;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.popups.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (min-width: 1920px) {
+  .popups__button {
+    font-size: 18px;
+  }
+  .popups__conteiner {
+    padding: 14px 29px 34px;
   }
 }
 
@@ -4457,7 +4596,7 @@ body.passive {
 .popup-request .popup__button {
   margin-top: 27px;
   border: 1px solid rgba(212, 173, 103, 0.3);
-  color: #D4AD67;
+  color: #d4ad67;
   font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
   line-height: 122%;
   background-color: transparent;
@@ -4493,7 +4632,8 @@ body.passive {
   .popup-request .popup__body {
     padding: 0 20px 0 20px;
   }
-  .popup-request .popup__form, .popup-request .popup__button {
+  .popup-request .popup__form,
+  .popup-request .popup__button {
     max-width: 100%;
   }
 }
@@ -4502,10 +4642,14 @@ body.passive {
   .popup__body {
     margin-top: 10px !important;
   }
-  .popup__description, .popup__form, .popup__agree {
+  .popup__description,
+  .popup__form,
+  .popup__agree {
     margin-top: 15px !important;
   }
-  .popup__description input:not(:last-child), .popup__form input:not(:last-child), .popup__agree input:not(:last-child) {
+  .popup__description input:not(:last-child),
+  .popup__form input:not(:last-child),
+  .popup__agree input:not(:last-child) {
     margin-bottom: 20px;
   }
 }

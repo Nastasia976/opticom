@@ -323,6 +323,15 @@ $(document).ready(function () {
         $('.popup-request').removeClass('active');
         $('body').removeClass('passive');
     })
+
+    $('.form-write__button').click(function (event) {
+        $('.popups').toggleClass('active');
+        $('body').toggleClass('passive');
+    })
+    $('.popups__close, .popups__button').click(function (event) {
+        $('.popups').removeClass('active');
+        $('body').removeClass('passive');
+    })
 });
 
 $(document).click(function (e) {
@@ -331,6 +340,15 @@ $(document).click(function (e) {
         && div.has(e.target).length === 0) {
         $('.burger, .header__burger, .burger-menu, .burger__conteiner').removeClass('active');
         $('body').removeClass('lock');
+    }
+});
+
+$(document).mouseup(function (e) {
+    var div = $('.popups__conteiner');
+    if (!div.is(e.target)
+        && div.has(e.target).length === 0) {
+        $('.popups').removeClass('active');
+        $('body').removeClass('passive');
     }
 });
 
