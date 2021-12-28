@@ -333,7 +333,7 @@ $(document).ready(function () {
         $('body').removeClass('passive');
     })
 
-    $('.will-reg').click(function () {
+    $('.will-reg, .user-reg').click(function () {
         $('.popup-reg').toggleClass('active');
         $('body').addClass('passive');
     })
