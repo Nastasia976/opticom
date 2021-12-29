@@ -5429,6 +5429,7 @@ body.passive {
 .filter-catalog {
   width: 252px;
   background-color: #fff;
+  display: block;
 }
 
 .filter-catalog__items:not(:last-child) {
@@ -5720,13 +5721,16 @@ body.passive {
     margin-top: 108px;
     padding: 83px 20px;
   }
-  .catalog__wrapper {
+  .best__title {
+    font-size: 28px;
+  }
+  .best .catalog__wrapper {
     margin-top: 86px;
   }
-  .catalog__title {
+  .best .catalog__title {
     margin-top: 46px;
   }
-  .body-catalogs {
+  .best .body-catalogs {
     margin-left: 63px;
   }
 }
@@ -5765,6 +5769,12 @@ body.passive {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
+  }
+}
+
+@media (min-width: 830px) {
+  .filter-catalog {
+    display: block !important;
   }
 }
 

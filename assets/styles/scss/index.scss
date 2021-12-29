@@ -4104,6 +4104,7 @@ body.passive {
 .filter-catalog {
     width: 252px;
     background-color: #fff;
+    display: block;
     &__items {
     }
     &__items:not(:last-child) {
@@ -4313,17 +4314,18 @@ body.passive {
         padding: 83px 20px;
         &__title {
             font-size: 28px;
-    }
-    .catalog {
-        &__wrapper {
-            margin-top: 86px;
         }
-        &__title {
-            margin-top: 46px;
+        .catalog {
+            &__wrapper {
+                margin-top: 86px;
+            }
+            &__title {
+                margin-top: 46px;
+            }
         }
-    }
-    .body-catalogs {
-        margin-left: 63px;
+        .body-catalogs {
+            margin-left: 63px;
+        }
     }
 }
 @media (max-width: 1375px) {
@@ -4354,6 +4356,11 @@ body.passive {
                 flex: 1 1 auto;
             }
         }
+    }
+}
+@media (min-width: 830px) {
+    .filter-catalog {
+        display: block !important;
     }
 }
 @media (max-width: 830px) {
