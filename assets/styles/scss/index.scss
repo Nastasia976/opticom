@@ -3554,60 +3554,99 @@ body.passive {
         border-left: 1px solid #e8e8e8;
         display: flex;
         flex-direction: column;
+        .top-product {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &__available,
+            &__not-available {
+                color: #00a793;
+                font-size: 12px;
+                line-height: 14px;
+                svg {
+                    margin-right: 8px;
+                }
+            }
+            &__not-available {
+                color: #b8b8b8;
+                svg {
+                    opacity: 0.5;
+                }
+            }
+    
+            &__items {
+                display: flex;
+            }
+    
+            &__icon:not(:last-child) {
+                margin-right: 17px;
+            }
+            ._icon-compare::before {
+                font-size: 15px;
+                color: #9e9e9e;
+                transition: 0.3s;
+                cursor: pointer;
+            }
+            ._icon-compare:hover::before {
+                color: #01645c;
+                transition: 0.3s;
+            }
+            .heart-out {
+                color: #00a793;
+                transition: 0.3s;
+                cursor: pointer;
+            }
+            .heart-in {
+                cursor: pointer;
+            }
+            .heart-out:hover {
+                color: #01645c;
+                transition: 0.3s;
+            }
+        }
+        .packing-product {
+            margin-top: 18px;
+            width: fit-content;
+            &__title {
+                font-size: 12px;
+                line-height: 14px;
+                letter-spacing: 0.02em;
+                color: #494949;
+            }
+            &__body {
+                margin-top: 11px;
+                display: flex;
+            }
+            &__item {
+                padding: 5px 11px 4px;
+                font-size: 14px;
+                line-height: 17px;
+                white-space: nowrap;
+            }
+            &__item:not(:first-child) {
+                color: rgba(0, 0, 0, 0.75);
+                cursor: pointer;
+                background: linear-gradient(
+                    180deg,
+                    rgba(230, 230, 230, 0.5) 0%,
+                    rgba(230, 230, 230, 0.5) 0.01%,
+                    rgba(209, 209, 209, 0.5) 100%
+                );
+            }
+            &__item:not(:first-child):hover,
+            &__item.active:not(:first-child) {
+                background: linear-gradient(180deg, rgba(228, 228, 228, 0.5) 0%, rgba(210, 210, 210, 0.5) 100%);
+                color: #696969;
+            }
+            &__item:first-child {
+                background-color: #e1e1de;
+            }
+        }
     }
     &__item:last-child {
         border-right: 1px solid #e8e8e8;
     }
-    .top-product {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        &__available,
-        &__not-available {
-            color: #00a793;
-            font-size: 12px;
-            line-height: 14px;
-            svg {
-                margin-right: 8px;
-            }
-        }
-        &__not-available {
-            color: #b8b8b8;
-            svg {
-                opacity: 0.5;
-            }
-        }
-
-        &__items {
-            display: flex;
-        }
-
-        &__icon:not(:last-child) {
-            margin-right: 17px;
-        }
-        ._icon-compare::before {
-            font-size: 15px;
-            color: #9e9e9e;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-        ._icon-compare:hover::before {
-            color: #01645c;
-            transition: 0.3s;
-        }
-        .heart-out {
-            color: #00a793;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-        .heart-in {
-            cursor: pointer;
-        }
-        .heart-out:hover {
-            color: #01645c;
-            transition: 0.3s;
-        }
-    }
+    
 
     &__image {
         margin-top: 17px;
@@ -3649,44 +3688,7 @@ body.passive {
         flex: 1 1 auto;
     }
 
-    .packing-product {
-        margin-top: 18px;
-        width: fit-content;
-        &__title {
-            font-size: 12px;
-            line-height: 14px;
-            letter-spacing: 0.02em;
-            color: #494949;
-        }
-        &__body {
-            margin-top: 11px;
-            display: flex;
-        }
-        &__item {
-            padding: 5px 11px 4px;
-            font-size: 14px;
-            line-height: 17px;
-            white-space: nowrap;
-        }
-        &__item:not(:first-child) {
-            color: rgba(0, 0, 0, 0.75);
-            cursor: pointer;
-            background: linear-gradient(
-                180deg,
-                rgba(230, 230, 230, 0.5) 0%,
-                rgba(230, 230, 230, 0.5) 0.01%,
-                rgba(209, 209, 209, 0.5) 100%
-            );
-        }
-        &__item:not(:first-child):hover,
-        &__item.active:not(:first-child) {
-            background: linear-gradient(180deg, rgba(228, 228, 228, 0.5) 0%, rgba(210, 210, 210, 0.5) 100%);
-            color: #696969;
-        }
-        &__item:first-child {
-            background-color: #e1e1de;
-        }
-    }
+    
 
     &__price {
         margin-top: 37px;
@@ -4206,41 +4208,11 @@ body.passive {
         .product__item {
             flex: 1 1 33.333%;
             min-width: 280px;
-            .product__top {
-                display: flex;
-                justify-content: space-between;
-            }
-            .top-product__items {
-                display: flex;
-                .top-product__icon {
-                    cursor: pointer;
-                }
-                .top-product__icon:not(:last-child) {
-                    margin-right: 17px;
-                }
-            }
-            ._icon-compare::before{
-                color: #9E9E9E;
-                font-size: 15px;
-            }
-            ._icon-compare:hover::before{
-                color: #00A793;
-            }
-            .heart-out{
-                color: #00A793;
-            }
-            .top-product__available, .top-product__not-available{
-                font-size: 12px;
-                line-height: 14px;
-            }
-            .top-product__available{
-                color: #00A793;
-            }
             .product__image{
                 position: relative;
                 .in-tov-matrix{
                     position: absolute;
-                    top: -22px;
+                    top: -20px;
                     left: 0;
                     z-index: 2;
                     color: #D4AE67;
