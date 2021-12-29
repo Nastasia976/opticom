@@ -4411,6 +4411,10 @@ body.passive {
         span {
             margin-bottom: 15px;
         }
+        .filter-click{
+            display: flex;
+            align-items: flex-end;
+        }
     }
     .filter-catalog1 {
         display: none;

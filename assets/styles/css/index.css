@@ -5823,6 +5823,14 @@ body.passive {
   .filter-burger span {
     margin-bottom: 15px;
   }
+  .filter-burger .filter-click {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
   .filter-catalog1 {
     display: none;
   }

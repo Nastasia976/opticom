@@ -394,7 +394,7 @@ $(document).ready(function () {
         $('.filter-catalog__item input').attr('checked', false);
     })
 
-    $('.filter-burger').click(function () {
+    $('.filter-click').click(function () {
         $('.filter-catalog2').slideToggle();
     })
     $('.fav').click(function () {
