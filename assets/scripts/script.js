@@ -397,7 +397,9 @@ $(document).ready(function () {
     $('.filter-burger').click(function () {
         $('.filter-catalog2').slideToggle();
     })
-
+    $('.fav').click(function () {
+        $(this).toggleClass('active');
+    })
 });
 
 $(document).on('click', '.popup__check', function (event) {

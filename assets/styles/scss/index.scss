@@ -4336,6 +4336,82 @@ body.passive {
 .filter-burger {
     display: none;
 }
+//-------------catalog-list----------
+.body-catalogs {
+    &__body._list{
+        flex-direction: column;
+        .item-list{
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 34px 40px 0px 37px;
+            height: fit-content;
+        }
+        .product__image{
+            flex: 0 1 31%;
+            padding: 0 0 17% 0;
+        }
+        .product__obolochka{
+            display: flex;
+        }
+        .top-product{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .product__elements{
+            flex: 1 1 auto;
+        }
+        .product__bottom{
+            margin-left: 19px;
+        }
+        .top-product__items{
+            order: 1;
+            margin-bottom: 10px;
+        }
+        .top-product__not-available, .top-product__available{
+            order: 2;
+            display: none;
+        }
+        .top-product__not-available.active, .top-product__available.active{
+            display: block;
+        }
+        .product__name{
+            display: flex;
+            align-items: flex-start;
+            margin: 0;
+            max-width: 100%;
+            .top-product__not-available, .top-product__available{
+                margin-top: 4px;
+            }
+        }
+        .name-underline{
+            position: relative;
+            width: fit-content;
+            font-weight: 700;
+            display: block;
+            margin-right: 19px;
+        }
+        
+        .name-underline::after{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: #3B3B3B;
+            left: 0;
+            bottom: 3px;
+        }
+        .product__price{
+            font-weight: 700;
+        }
+    }
+}
+.fav{
+    color: #C4C4C4;
+    cursor: pointer;
+}
+.fav.active{
+    color: #00A793;
+}
 @media (min-width: 1920px) {
     .body-catalogs {
         &__item:first-child {
