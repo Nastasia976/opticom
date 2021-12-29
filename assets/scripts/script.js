@@ -325,7 +325,7 @@ $(document).ready(function () {
     })
 
     $('.form-write__button').click(function (event) {
-        $('.popups').toggleClass('active');
+        $('.send-message').toggleClass('active');
         $('body').toggleClass('passive');
     })
     $('.popups__close, .popups__button').click(function (event) {
