@@ -301,8 +301,8 @@ $(document).ready(function () {
     })//фасовка
 
 
-    $('.select__item').click(function (event) {
-        $('.select__item').removeClass('active');
+    $('.select__item, .select__el').click(function (event) {
+        $('.select__item, .select__el').removeClass('active');
         $(this).toggleClass('active');
         $('.select__icon').removeClass('active');
     });
@@ -625,7 +625,7 @@ $(document).mouseup(function (e) {
 
 let select = function () {
     let selectHeader = document.querySelectorAll('.select__header');
-    let selectItem = document.querySelectorAll('.select__item');
+    let selectItem = document.querySelectorAll('.select__item, .select__el');
 
     selectHeader.forEach(item => {
         item.addEventListener('click', selectToggle)
