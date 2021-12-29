@@ -575,7 +575,7 @@
                         <div class="catalog__elemet">Швейцария</div>
                     </div>
                     <div class="catalog__wrapper">
-                        <div class="catalog__filter filter-catalog" data-da="body-catalogs,2,830">
+                        <div class="catalog__filter filter-catalog filter-catalog1">
                             <div class="filter-catalog__items">
                                 <div class="filter-catalog__name">
                                     Экопреимущества
@@ -739,43 +739,49 @@
                                 <div class="body-catalogs__item">Всего товаров: 128</div>
                                 <div class="body-catalogs__item">
                                     <span>Показывать товаров:</span>
-                                    <select name="unit">
-                                        <option value="6">6</option>
-                                        <option value="9">9</option>
-                                        <option value="12">12</option>
-                                        <option value="15">24</option>
-                                    </select>
+                                    <div class="item-select">
+                                        <select name="unit">
+                                            <option value="6">6</option>
+                                            <option value="9">9</option>
+                                            <option value="12">12</option>
+                                            <option value="15">24</option>
+                                        </select>
+                                    </div>
+                                    
                                 </div>
                                 <div class="body-catalogs__item">
                                     <span>Сортировать:</span>
-                                    <select name="sorter">
-                                        <option value="По умолчанию">По умолчанию</option>
-                                        <option value="По цене">По цене
-                                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M11 5.51025L5.5 0L0 5.51025L0.790735 6.30047L4.94121 2.14032L4.94121 33H6.05879L6.05879 2.14032L10.2093 6.30047L11 5.51025Z" fill="#2B2B2B"/>
-                                                </svg>                                                
-                                        </option>
-                                        <option value="По цене">По цене
-                                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0 6.48975L5.5 12L11 6.48975L10.2093 5.69953L6.05879 9.85968V-21H4.94121V9.85968L0.790735 5.69953L0 6.48975Z" fill="#2B2B2B"/>
-                                                </svg>                                                                                               
-                                        </option>
-
-                                        <option value="По цене">По рейтингу
-                                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M11 5.51025L5.5 0L0 5.51025L0.790735 6.30047L4.94121 2.14032L4.94121 33H6.05879L6.05879 2.14032L10.2093 6.30047L11 5.51025Z" fill="#2B2B2B"/>
-                                                </svg>                                                                                              
-                                        </option>
-                                        <option value="По цене">По рейтингу
-                                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0 6.48975L5.5 12L11 6.48975L10.2093 5.69953L6.05879 9.85968V-21H4.94121V9.85968L0.790735 5.69953L0 6.48975Z" fill="#2B2B2B"/>
-                                                </svg>                                                                                               
-                                        </option>
-                                        <option value="По алфавиту ">По алфавиту</option>
-                                        <option value="По умолчанию">По умолчанию</option>
-                                    </select>
+                                    <div class="item-select _big">
+                                        <select name="sorter">
+                                            <option class="gog" value="По умолчанию">По умолчанию</option>
+                                            <option value="По цене">По цене
+                                                <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11 5.51025L5.5 0L0 5.51025L0.790735 6.30047L4.94121 2.14032L4.94121 33H6.05879L6.05879 2.14032L10.2093 6.30047L11 5.51025Z" fill="#2B2B2B"/>
+                                                    </svg>                                                
+                                            </option>
+                                            <option value="По цене">По цене
+                                                <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 6.48975L5.5 12L11 6.48975L10.2093 5.69953L6.05879 9.85968V-21H4.94121V9.85968L0.790735 5.69953L0 6.48975Z" fill="#2B2B2B"/>
+                                                    </svg>                                                                                               
+                                            </option>
+    
+                                            <option value="По цене">По рейтингу
+                                                <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11 5.51025L5.5 0L0 5.51025L0.790735 6.30047L4.94121 2.14032L4.94121 33H6.05879L6.05879 2.14032L10.2093 6.30047L11 5.51025Z" fill="#2B2B2B"/>
+                                                    </svg>                                                                                              
+                                            </option>
+                                            <option value="По цене">По рейтингу
+                                                <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 6.48975L5.5 12L11 6.48975L10.2093 5.69953L6.05879 9.85968V-21H4.94121V9.85968L0.790735 5.69953L0 6.48975Z" fill="#2B2B2B"/>
+                                                    </svg>                                                                                               
+                                            </option>
+                                            <option value="По алфавиту ">По алфавиту</option>
+                                            <option value="По умолчанию">По умолчанию</option>
+                                        </select>
+                                    </div>
+                                   
                                 </div>
-                                <div class="body-catalogs__item item-icon" data-da="filter-burger,2,445">
+                                <div class="body-catalogs__item item-icon item-icon1">
                                     <div class="body-catalogs__icon active">
                                         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect x="14.1816" width="11.8182" height="11.8182" rx="1" fill="currentColor"/>
@@ -812,6 +818,190 @@
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M16 41C14.3431 41 13 42.3431 13 44C13 45.6569 14.3431 47 16 47H26V45H16C15.4477 45 15 44.5523 15 44C15 43.4477 15.4477 43 16 43H26V41H16ZM32 41V43H48.5C49.0523 43 49.5 43.4477 49.5 44C49.5 44.5523 49.0523 45 48.5 45H32V47H48.5C50.1569 47 51.5 45.6569 51.5 44C51.5 42.3431 50.1569 41 48.5 41H32Z" fill="currentColor"/>
                                     </svg>
                                     <span>Фильтр</span>
+                                    <div class="body-catalogs__item item-icon item-icon2">
+                                        <div class="body-catalogs__icon active">
+                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="14.1816" width="11.8182" height="11.8182" rx="1" fill="currentColor"/>
+                                                <rect x="14.1816" y="14.1819" width="11.8182" height="11.8182" rx="1" fill="currentColor"/>
+                                                <rect width="11.8182" height="11.8182" rx="1" fill="currentColor"/>
+                                                <rect y="14.1819" width="11.8182" height="11.8182" rx="1" fill="currentColor"/>
+                                                </svg>
+                                        </div>
+                                        <div class="body-catalogs__icon">
+                                            <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.818359" width="26" height="4.72727" rx="1" fill="currentColor"/>
+                                                <rect x="0.818359" y="10.6365" width="26" height="4.72727" rx="1" fill="currentColor"/>
+                                                <rect x="0.818359" y="21.2727" width="26" height="4.72727" rx="1" fill="currentColor"/>
+                                                </svg>                                            
+                                        </div>
+                                        <div class="body-catalogs__icon">
+                                            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.63623" width="26" height="2.36364" rx="1" fill="currentColor"/>
+                                                <rect x="0.63623" y="7.99976" width="26" height="2.36364" rx="1" fill="currentColor"/>
+                                                <rect x="0.63623" y="16" width="26" height="2.36364" rx="1" fill="currentColor"/>
+                                                <rect x="0.63623" y="24.0002" width="26" height="2.36364" rx="1" fill="currentColor"/>
+                                                </svg>                                            
+                                        </div>  
+                                    </div>
+                            </div>
+                            <div class="catalog__filter filter-catalog filter-catalog2">
+                                <div class="filter-catalog__items">
+                                    <div class="filter-catalog__name">
+                                        Экопреимущества
+                                    </div>
+                                    <div class="filter-catalog__item">
+                                        <input type="checkbox">
+                                        <label>
+                                            <svg width="12" height="12" viewBox="0 0 14 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.9429 2.39678L5.26248 11.0772C5.18602 11.1536 5.06222 11.1536 4.98594 11.0772L0.0572101 6.14827C-0.01907 6.07216 -0.01907 5.94836 0.0572101 5.87191L1.25483 4.67429C1.33129 4.59801 1.45508 4.59801 1.53136 4.67429L5.12439 8.26714L12.4689 0.922628C12.5455 0.846347 12.669 0.846347 12.7454 0.922628L13.9429 2.12024C14.0193 2.19652 14.0193 2.32014 13.9429 2.39678Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </label>
+                                        <span>Экомаркировка FSC</span>
+                                    </div>
+                                    <div class="filter-catalog__item">
+                                        <input type="checkbox">
+                                        <label>
+                                            <svg width="12" height="12" viewBox="0 0 14 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.9429 2.39678L5.26248 11.0772C5.18602 11.1536 5.06222 11.1536 4.98594 11.0772L0.0572101 6.14827C-0.01907 6.07216 -0.01907 5.94836 0.0572101 5.87191L1.25483 4.67429C1.33129 4.59801 1.45508 4.59801 1.53136 4.67429L5.12439 8.26714L12.4689 0.922628C12.5455 0.846347 12.669 0.846347 12.7454 0.922628L13.9429 2.12024C14.0193 2.19652 14.0193 2.32014 13.9429 2.39678Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </label>
+                                        <span>“Европейский цветок”</span>
+                                    </div>
+                                </div>
+                                <div class="filter-catalog__items">
+                                    <div class="filter-catalog__name">
+                                        Формат листов
+                                    </div>
+                                    <div class="filter-catalog__item">
+                                        <input type="checkbox">
+                                        <label>
+                                            <svg width="12" height="12" viewBox="0 0 14 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.9429 2.39678L5.26248 11.0772C5.18602 11.1536 5.06222 11.1536 4.98594 11.0772L0.0572101 6.14827C-0.01907 6.07216 -0.01907 5.94836 0.0572101 5.87191L1.25483 4.67429C1.33129 4.59801 1.45508 4.59801 1.53136 4.67429L5.12439 8.26714L12.4689 0.922628C12.5455 0.846347 12.669 0.846347 12.7454 0.922628L13.9429 2.12024C14.0193 2.19652 14.0193 2.32014 13.9429 2.39678Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </label>
+                                        <span>А2</span>
+                                    </div>
+                                    <div class="filter-catalog__item">
+                                        <input type="checkbox">
+                                        <label>
+                                            <svg width="12" height="12" viewBox="0 0 14 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.9429 2.39678L5.26248 11.0772C5.18602 11.1536 5.06222 11.1536 4.98594 11.0772L0.0572101 6.14827C-0.01907 6.07216 -0.01907 5.94836 0.0572101 5.87191L1.25483 4.67429C1.33129 4.59801 1.45508 4.59801 1.53136 4.67429L5.12439 8.26714L12.4689 0.922628C12.5455 0.846347 12.669 0.846347 12.7454 0.922628L13.9429 2.12024C14.0193 2.19652 14.0193 2.32014 13.9429 2.39678Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </label>
+                                        <span>А3</span>
+                                    </div>
+                                    <div class="filter-catalog__item">
+                                        <input type="checkbox">
+                                        <label>
+                                            <svg width="12" height="12" viewBox="0 0 14 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.9429 2.39678L5.26248 11.0772C5.18602 11.1536 5.06222 11.1536 4.98594 11.0772L0.0572101 6.14827C-0.01907 6.07216 -0.01907 5.94836 0.0572101 5.87191L1.25483 4.67429C1.33129 4.59801 1.45508 4.59801 1.53136 4.67429L5.12439 8.26714L12.4689 0.922628C12.5455 0.846347 12.669 0.846347 12.7454 0.922628L13.9429 2.12024C14.0193 2.19652 14.0193 2.32014 13.9429 2.39678Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </label>
+                                        <span>А4</span>
+                                    </div>
+                                </div>
+                                <div class="filter-catalog__items">
+                                    <div class="filter-catalog__name">
+                                        Цвет
+                                    </div>
+                                    <div class="filter-catalog__item">
+                                        <input type="checkbox">
+                                        <label>
+                                            <svg width="12" height="12" viewBox="0 0 14 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.9429 2.39678L5.26248 11.0772C5.18602 11.1536 5.06222 11.1536 4.98594 11.0772L0.0572101 6.14827C-0.01907 6.07216 -0.01907 5.94836 0.0572101 5.87191L1.25483 4.67429C1.33129 4.59801 1.45508 4.59801 1.53136 4.67429L5.12439 8.26714L12.4689 0.922628C12.5455 0.846347 12.669 0.846347 12.7454 0.922628L13.9429 2.12024C14.0193 2.19652 14.0193 2.32014 13.9429 2.39678Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </label>
+                                        <span>Белый</span>
+                                    </div>
+                                    <div class="filter-catalog__item">
+                                        <input type="checkbox">
+                                        <label>
+                                            <svg width="12" height="12" viewBox="0 0 14 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.9429 2.39678L5.26248 11.0772C5.18602 11.1536 5.06222 11.1536 4.98594 11.0772L0.0572101 6.14827C-0.01907 6.07216 -0.01907 5.94836 0.0572101 5.87191L1.25483 4.67429C1.33129 4.59801 1.45508 4.59801 1.53136 4.67429L5.12439 8.26714L12.4689 0.922628C12.5455 0.846347 12.669 0.846347 12.7454 0.922628L13.9429 2.12024C14.0193 2.19652 14.0193 2.32014 13.9429 2.39678Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </label>
+                                        <span>Крафт</span>
+                                    </div>
+                                </div>
+                                <div class="filter-catalog__items">
+                                    <div class="filter-catalog__name">
+                                        Страна производства
+                                    </div>
+                                    <div class="filter-catalog__item">
+                                        <input type="checkbox">
+                                        <label>
+                                            <svg width="12" height="12" viewBox="0 0 14 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.9429 2.39678L5.26248 11.0772C5.18602 11.1536 5.06222 11.1536 4.98594 11.0772L0.0572101 6.14827C-0.01907 6.07216 -0.01907 5.94836 0.0572101 5.87191L1.25483 4.67429C1.33129 4.59801 1.45508 4.59801 1.53136 4.67429L5.12439 8.26714L12.4689 0.922628C12.5455 0.846347 12.669 0.846347 12.7454 0.922628L13.9429 2.12024C14.0193 2.19652 14.0193 2.32014 13.9429 2.39678Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </label>
+                                        <span>Россия</span>
+                                    </div>
+                                    <div class="filter-catalog__item">
+                                        <input type="checkbox">
+                                        <label>
+                                            <svg width="12" height="12" viewBox="0 0 14 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.9429 2.39678L5.26248 11.0772C5.18602 11.1536 5.06222 11.1536 4.98594 11.0772L0.0572101 6.14827C-0.01907 6.07216 -0.01907 5.94836 0.0572101 5.87191L1.25483 4.67429C1.33129 4.59801 1.45508 4.59801 1.53136 4.67429L5.12439 8.26714L12.4689 0.922628C12.5455 0.846347 12.669 0.846347 12.7454 0.922628L13.9429 2.12024C14.0193 2.19652 14.0193 2.32014 13.9429 2.39678Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </label>
+                                        <span>Швейцария</span>
+                                    </div>
+                                    <div class="filter-catalog__item">
+                                        <input type="checkbox">
+                                        <label>
+                                            <svg width="12" height="12" viewBox="0 0 14 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.9429 2.39678L5.26248 11.0772C5.18602 11.1536 5.06222 11.1536 4.98594 11.0772L0.0572101 6.14827C-0.01907 6.07216 -0.01907 5.94836 0.0572101 5.87191L1.25483 4.67429C1.33129 4.59801 1.45508 4.59801 1.53136 4.67429L5.12439 8.26714L12.4689 0.922628C12.5455 0.846347 12.669 0.846347 12.7454 0.922628L13.9429 2.12024C14.0193 2.19652 14.0193 2.32014 13.9429 2.39678Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </label>
+                                        <span>Швеция</span>
+                                    </div>
+                                    <div class="filter-catalog__item">
+                                        <input type="checkbox">
+                                        <label>
+                                            <svg width="12" height="12" viewBox="0 0 14 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.9429 2.39678L5.26248 11.0772C5.18602 11.1536 5.06222 11.1536 4.98594 11.0772L0.0572101 6.14827C-0.01907 6.07216 -0.01907 5.94836 0.0572101 5.87191L1.25483 4.67429C1.33129 4.59801 1.45508 4.59801 1.53136 4.67429L5.12439 8.26714L12.4689 0.922628C12.5455 0.846347 12.669 0.846347 12.7454 0.922628L13.9429 2.12024C14.0193 2.19652 14.0193 2.32014 13.9429 2.39678Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </label>
+                                        <span>Австрия</span>
+                                    </div>
+                                </div>
+                                <div class="filter-catalog__buttons">
+                                    <button type="submit" class="filter-catalog__button button-accept">Применить
+                                        фильтр</button>
+                                    <button type="reset" class="filter-catalog__button button-cancel">Сбросить</button>
+                                </div>
                             </div>
                             <div class="body-catalogs__body">
                                 <div class="product__item">

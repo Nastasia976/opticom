@@ -5544,6 +5544,10 @@ body.passive {
           flex: 1 1 auto;
 }
 
+.body-catalogs .filter-catalog2 {
+  display: none;
+}
+
 .body-catalogs__top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5611,7 +5615,36 @@ body.passive {
 .body-catalogs__item select,
 .body-catalogs__item select select {
   margin-left: 20px;
+  background-color: transparent;
   cursor: pointer;
+  border: 1px solid #d1d1d1;
+  position: relative;
+  padding: 0 6px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.body-catalogs .item-select {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+
+.body-catalogs .item-select select {
+  padding: 0 18px 0 6px;
+}
+
+.body-catalogs .item-select._big select {
+  padding: 0 34px 0 6px !important;
+}
+
+.body-catalogs .item-select::after {
+  position: absolute;
+  content: url("../../../img/Polygon8.png");
+  right: 6px;
+  top: 0;
 }
 
 .body-catalogs__item:not(:last-child) {
@@ -5646,6 +5679,10 @@ body.passive {
 
 .item-icon .body-catalogs__icon.active {
   color: #7ecbc2;
+}
+
+.item-icon2 {
+  display: none;
 }
 
 .footer-catalof {
@@ -5772,12 +5809,6 @@ body.passive {
   }
 }
 
-@media (min-width: 830px) {
-  .filter-catalog {
-    display: block !important;
-  }
-}
-
 @media (max-width: 830px) {
   .body-catalogs {
     margin-left: 0;
@@ -5801,7 +5832,7 @@ body.passive {
   .filter-burger span {
     margin-bottom: 15px;
   }
-  .filter-catalog {
+  .filter-catalog1 {
     display: none;
   }
 }
@@ -5813,7 +5844,13 @@ body.passive {
 }
 
 @media (max-width: 445px) {
-  .item-icon {
+  .item-icon1 {
+    display: none;
+  }
+  .item-icon2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     margin-bottom: 10px;
   }
 }
