@@ -306,8 +306,9 @@ $(document).ready(function () {
         $(this).toggleClass('active');
         $('.select__icon').removeClass('active');
     });
-    $('.select__header').click(function (event) {
-        $('.select__icon').toggleClass('active');
+
+    $('.select__header').click(function () {
+        $(this).parent().find('.select__icon').toggleClass('active');
     });
 
     $('._phone').mask('+7 (999) 999-99-99', {

@@ -4233,12 +4233,16 @@ body.passive {
         line-height: 137%;
         display: flex;
         align-items: center;
+        .all-unit{
+            margin-left: 5px;
+        }
         .item-select{
             margin-left: 20px;
             background-color: transparent;
             cursor: pointer;
             position: relative;
             margin-right: 29px;
+            z-index: 2;
             .select__body{
                 position: absolute;
                 z-index: 1;
@@ -4276,6 +4280,7 @@ body.passive {
         .item-select._big{
             width: 152px;
             margin-right: 17px;
+            z-index: 1;
         }
         .select__header{
             display: flex;
@@ -4286,19 +4291,19 @@ body.passive {
             z-index: 2;
             display: flex;
             justify-content: space-between;
+            .select__icon._scale.active{
+                transform: scale(1,-1);
+            }
         }
         .select__icon{
             margin-left: 5px;
         }
     }
-    /* &__item:not(:last-child) {
-        margin-right: 30px;
-    } */
-    /* &__item:first-child {
+    &__item:first-child {
         font-weight: 500;
         flex: 1 1 auto;
         margin-right: calc(30px + (110 - 30) * ((100vw - 1100px) / (1920 - 1100)));
-    } */
+    }
 }
 .item-icon {
     flex: 1 1 auto;
