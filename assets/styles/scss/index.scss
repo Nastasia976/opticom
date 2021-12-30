@@ -4224,7 +4224,7 @@ body.passive {
                     line-height: 12px;
                     display: flex;
                     align-items: center;
-                    svg{
+                    svg {
                         margin-right: 4px;
                     }
                 }
@@ -4563,6 +4563,8 @@ body.passive {
         border: 0;
         padding: 11px 7px 11px 5px;
         font-size: 14px;
+        display: flex;
+        justify-content: space-between;
     }
     .select__body {
         border: 0;
@@ -4864,7 +4866,7 @@ body.passive {
         display: none;
     }
 }
-.sidebar-p-catalog2{
+.sidebar-p-catalog2 {
     margin-top: 15px;
     display: none;
 }
@@ -4890,19 +4892,20 @@ body.passive {
 .compare {
     padding: 125px 0 0;
     &__top {
-        border-bottom: 1px solid #E3E2DC;
+        border-bottom: 1px solid #e3e2dc;
         padding: 0 20px;
         .swiper {
             padding: 0 0 26px 0;
             &__wrapper {
             }
-        
+
             &__slide {
                 display: flex;
                 align-items: center;
             }
-        
-            &__name {}
+
+            &__name {
+            }
         }
     }
     &__conteiner {
@@ -4912,7 +4915,7 @@ body.passive {
         margin-top: 46px;
         padding: 0 20px;
     }
-    .bread-crambs{
+    .bread-crambs {
         padding: 0 20px;
     }
     &__top {
@@ -4920,58 +4923,58 @@ body.passive {
     }
     .control {
         margin-top: 31px;
-        &__conteiner{
+        &__conteiner {
             display: flex;
             align-items: center;
         }
-        &__button{
-            border: 1px solid #006D64;
+        &__button {
+            border: 1px solid #006d64;
             font-size: 16px;
             line-height: 19px;
-            font-family: 'Roboto';
+            font-family: "Roboto";
             width: 175px;
             height: 41px;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: 0.3s;
-            color: #006D64;
+            color: #006d64;
             margin-right: 40px;
         }
-        &__button:hover{
-            border: 1px solid #00AA95;
-            color: #00AA95;
+        &__button:hover {
+            border: 1px solid #00aa95;
+            color: #00aa95;
             transition: 0.3s;
         }
-    
+
         &__item {
             display: flex;
             position: relative;
             cursor: pointer;
-            input{
+            input {
                 position: absolute;
                 visibility: hidden;
             }
-            label{
+            label {
                 width: 15px;
                 height: 15px;
-                border: 1px solid #D1D1D1;
+                border: 1px solid #d1d1d1;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 margin-right: 9px;
                 cursor: pointer;
-                svg{
+                svg {
                     opacity: 0;
                     transform: scale(0);
                     transition: all 0.3s ease 0s;
-                    color: #006D64;
+                    color: #006d64;
                 }
             }
         }
-        &__item.active{
-            label{
-                svg{
+        &__item.active {
+            label {
+                svg {
                     opacity: 1;
                     transform: scale(1);
                     transition: all 0.3s ease 0s;
@@ -4991,3 +4994,216 @@ body.passive {
     cursor: pointer;
 }
 
+.product-compare {
+    margin-top: 33px;
+    &__conteiner {
+        display: flex;
+        padding: 0 99px;
+    }
+
+    &__sidebar {
+        min-width: 315px;
+    }
+    .slider-compare-card{
+        position: relative;
+        .slider-compare__arrow-prev,
+        .slider-compare__arrow-next {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #D4AE67;
+            transition: 0.3s;
+            color: #D4AE67;
+            top: 18%;
+            z-index: 20;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .slider-compare__arrow-prev:hover,
+        .slider-compare__arrow-next:hover{
+            color: #F18070;
+            transition: 0.3s;
+        }
+        .slider-compare__arrow-next {
+            right: 0;
+        }
+    }
+    &__slider {
+        .product__item {
+            border: 0;
+            position: relative;
+            padding: 0 10px 0 0;
+            .product__image {
+                padding: 0 0 54%;
+                margin: 0;
+            }
+            .product__close {
+                position: absolute;
+                top: 0;
+                right: 0px;
+                cursor: pointer;
+            }
+            .product__article {
+            }
+
+            .product__name {
+            }
+
+            .product__description {
+            }
+
+            .product__packing {
+                margin-top: 48px;
+            }
+
+            .product__price {
+                margin-top: 29px;
+            }
+
+            .product__bottom {
+            }
+
+            .product__amount {
+            }
+
+            .product__button {
+                height: 41px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 5px;
+                width: 89px;
+            }
+        }
+        .select-product {
+            display: block;
+            width: 100%;
+            margin-top: 11px;
+            cursor: pointer;
+            .select__header {
+                position: relative;
+                z-index: 2;
+                background-color: #f8f8f8;
+            }
+            .select__body {
+                visibility: hidden;
+                position: absolute;
+                z-index: 1;
+                opacity: 0;
+                width: 100%;
+                transform: translate(0, -50%);
+                transition: all 0.3s ease 0s;
+            }
+            .select__icon {
+                transition: 0.3s;
+            }
+            .select__icon.active {
+                transform: rotate(-180deg);
+                transition: 0.3s;
+            }
+        }
+        .select-product.is-active {
+            .select__body {
+                visibility: visible;
+                opacity: 1;
+                transform: translate(0, 0);
+                transition: all 0.3s ease 0s;
+            }
+        }
+    }
+    &__slider._padding {
+        .swiper-slide {
+            padding: 28px 0 0 0;
+        }
+    }
+    &__slider._advantages {
+        .swiper-slide {
+            padding: 52px 0 0 0;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+.sidebar-compare {
+    &__title {
+        font-size: 26px;
+        height: 28px;
+    }
+
+    &__body {
+    }
+
+    &__model {
+        margin-top: 96px;
+        font-size: 16px;
+        line-height: 137%;
+    }
+
+    &__price {
+        margin-top: 76px;
+        font-size: 16px;
+        line-height: 137%;
+    }
+
+    &__list {
+        margin-top: 24px;
+    }
+
+    &__el {
+        padding: 7px 0px 8px 5px;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 137%;
+    }
+
+    &__mark {
+        margin-top: 24px;
+        font-size: 16px;
+        line-height: 137%;
+    }
+}
+
+.product-compare__slider._padding {
+    .swiper-slide {
+        position: relative;
+        z-index: 2;
+        background-color: #fff;
+        .sidebar-compare__el {
+            padding: 7px 0px 8px 0px;
+            font-size: 16px;
+            line-height: 137%;
+        }
+    }
+    .swiper-slide:not(:last-child) {
+        .sidebar-compare__el {
+            position: relative;
+            z-index: 2;
+        }
+        .sidebar-compare__el.active::after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            right: -100%;
+            top: 0;
+            content: "";
+            background-color: rgba(216, 149, 96, 0.1);
+            z-index: 1;
+        }
+    }
+    .swiper-slide:first-child {
+        .sidebar-compare__el.active::before {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: -100%;
+            top: 0;
+            content: "";
+            background-color: rgba(216, 149, 96, 0.1);
+            z-index: 1;
+        }
+    }
+}

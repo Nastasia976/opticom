@@ -421,6 +421,80 @@ $(document).ready(function () {
         $('.sidebar-p-catalog__items').children('.balance').text(c);
     });
 
+    $('.el1').hover(
+        function () {
+            $('.el1').css("background", "rgba(216, 149, 96, 0.1)").toggleClass('active');
+        },
+        function () {
+            $('.el1').css("background", "rgba(216, 149, 96, 0)").removeClass('active');
+        }
+    );
+    $('.el2').hover(
+        function () {
+            $('.el2').css("background", "rgba(216, 149, 96, 0.1)").toggleClass('active');
+        },
+        function () {
+            $('.el2').css("background", "rgba(216, 149, 96, 0)").removeClass('active');
+        }
+    );
+    $('.el3').hover(
+        function () {
+            $('.el3').css("background", "rgba(216, 149, 96, 0.1)").toggleClass('active');
+        },
+        function () {
+            $('.el3').css("background", "rgba(216, 149, 96, 0)").removeClass('active');
+        }
+    );
+    $('.el4').hover(
+        function () {
+            $('.el4').css("background", "rgba(216, 149, 96, 0.1)").toggleClass('active');
+        },
+        function () {
+            $('.el4').css("background", "rgba(216, 149, 96, 0)").removeClass('active');
+        }
+    );
+    $('.el5').hover(
+        function () {
+            $('.el5').css("background", "rgba(216, 149, 96, 0.1)").toggleClass('active');
+        },
+        function () {
+            $('.el5').css("background", "rgba(216, 149, 96, 0)").removeClass('active');
+        }
+    );
+    $('.el6').hover(
+        function () {
+            $('.el6').css("background", "rgba(216, 149, 96, 0.1)").toggleClass('active');
+        },
+        function () {
+            $('.el6').css("background", "rgba(216, 149, 96, 0)").removeClass('active');
+        }
+    );
+    $('.el7').hover(
+        function () {
+            $('.el7').css("background", "rgba(216, 149, 96, 0.1)").toggleClass('active');
+        },
+        function () {
+            $('.el7').css("background", "rgba(216, 149, 96, 0)").removeClass('active');
+        }
+    );
+    $('.el8').hover(
+        function () {
+            $('.el8').css("background", "rgba(216, 149, 96, 0.1)").toggleClass('active');
+        },
+        function () {
+            $('.el8').css("background", "rgba(216, 149, 96, 0)").removeClass('active');
+        }
+    );
+    $('.el9').hover(
+        function () {
+            $('.el9').css("background", "rgba(216, 149, 96, 0.1)").toggleClass('active');
+        },
+        function () {
+            $('.el9').css("background", "rgba(216, 149, 96, 0)").removeClass('active');
+        }
+    );
+
+
 });
 
 
@@ -532,6 +606,17 @@ new Swiper('.compare__swiper ', {
         draggable: true,
     },
     
+});
+
+let my1 = new Swiper('.slider-compare ', {
+    slidesPerView: 4,
+    freeMode: true,
+    spaceBetween: 24,
+    whatchOverflow: true, 
+    navigation: {
+        nextEl: '.slider-compare__arrow-next',
+        prevEl: '.slider-compare__arrow-prev',
+    },
 });
 
 
