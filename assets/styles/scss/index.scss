@@ -4481,6 +4481,9 @@ body.passive {
 .body-catalogs {
     &__body._list {
         flex-direction: column;
+        .select-product {
+            position: absolute;
+        }
         .item-list {
             flex-direction: row;
             align-items: flex-start;
@@ -4552,7 +4555,6 @@ body.passive {
     }
 }
 .select-product {
-    position: absolute;
     width: 29%;
     min-width: 110px;
     bottom: 20px;
@@ -4804,7 +4806,7 @@ body.passive {
     &__items {
     }
     &__items:not(:last-child) {
-        margin-bottom: 50px;
+        margin-bottom: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
     }
     &__name {
         font-size: 18px;
@@ -4862,6 +4864,10 @@ body.passive {
         display: none;
     }
 }
+.sidebar-p-catalog2{
+    margin-top: 15px;
+    display: none;
+}
 .catalog-without-best {
     margin-bottom: calc(63px + (163 - 63) * ((100vw - 320px) / (1920 - 320)));
 }
@@ -4882,31 +4888,106 @@ body.passive {
 }
 
 .compare {
-    padding: 125px 20px 0;
+    padding: 125px 0 0;
     &__top {
+        border-bottom: 1px solid #E3E2DC;
+        padding: 0 20px;
+        .swiper {
+            padding: 0 0 26px 0;
+            &__wrapper {
+            }
+        
+            &__slide {
+                display: flex;
+                align-items: center;
+            }
+        
+            &__name {}
+        }
     }
     &__conteiner {
         position: relative;
     }
     &__title {
         margin-top: 46px;
+        padding: 0 20px;
     }
-
+    .bread-crambs{
+        padding: 0 20px;
+    }
     &__top {
         margin-top: 72px;
     }
-}
-.swiper-top {
-    .swiper-wrapper {
-    }
-    .swiper-slide {
-    }
-    .compare-unit {
+    .control {
+        margin-top: 31px;
+        &__conteiner{
+            display: flex;
+            align-items: center;
+        }
+        &__button{
+            border: 1px solid #006D64;
+            font-size: 16px;
+            line-height: 19px;
+            font-family: 'Roboto';
+            width: 175px;
+            height: 41px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+            color: #006D64;
+            margin-right: 40px;
+        }
+        &__button:hover{
+            border: 1px solid #00AA95;
+            color: #00AA95;
+            transition: 0.3s;
+        }
+    
+        &__item {
+            display: flex;
+            position: relative;
+            cursor: pointer;
+            input{
+                position: absolute;
+                visibility: hidden;
+            }
+            label{
+                width: 15px;
+                height: 15px;
+                border: 1px solid #D1D1D1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 9px;
+                cursor: pointer;
+                svg{
+                    opacity: 0;
+                    transform: scale(0);
+                    transition: all 0.3s ease 0s;
+                    color: #006D64;
+                }
+            }
+        }
+        &__item.active{
+            label{
+                svg{
+                    opacity: 1;
+                    transform: scale(1);
+                    transition: all 0.3s ease 0s;
+                }
+            }
+        }
     }
 }
 
 .swiper-scrollbar {
+    max-width: 1240px;
+    margin-left: -10px;
+    margin-bottom: -5px;
 }
 .swiper-scrollbar .swiper-scrollbar-drag {
     background-color: #00a793;
+    cursor: pointer;
 }
+

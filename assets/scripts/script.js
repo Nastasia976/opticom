@@ -391,12 +391,12 @@ $(document).ready(function () {
     });
 
     $('.button-cancel ').click(function () {
-        $('.filter-catalog__item').removeClass('active');
-        $('.filter-catalog__item input').attr('checked', false);
+        $('.filter-catalog__item, .control__item').removeClass('active');
+        $('.filter-catalog__item input, .control__item input').attr('checked', false);
     })
 
     $('.filter-click').click(function () {
-        $('.filter-catalog2').slideToggle();
+        $('.filter-catalog2, .sidebar-p-catalog2').slideToggle();
     })
     $('.fav').click(function () {
         $(this).toggleClass('active');
@@ -437,7 +437,7 @@ $(document).on('click', '.popup__check', function (event) {
     return false;
 });//чекбокс в попапе авторизация
 
-$(document).on('click', '.filter-catalog__item', function (event) {
+$(document).on('click', '.filter-catalog__item, .control__item', function (event) {
     if ($(this).hasClass('active')) {
         $(this).removeClass('active').find('input').attr('checked', false);
     } else {
@@ -523,8 +523,10 @@ new Swiper('.swiper-progress', {
     }
 });
 
-new Swiper('.swiper ', {
-    slidesPerView: 5,
+new Swiper('.compare__swiper ', {
+    slidesPerView: 4.4,
+    freeMode: true,
+    spaceBetween: 40,
     scrollbar: {
         el: '.swiper-scrollbar',
         draggable: true,
