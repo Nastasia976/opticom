@@ -615,10 +615,10 @@ counts.forEach(counterFunction);
 
 
 $(document).mouseup(function (e) {
-    var div = $('.select');
+    var div = $('.select, .item-select');
     if (!div.is(e.target)
         && div.has(e.target).length === 0) {
-        $('.select').removeClass('is-active');
+        $('.select, .item-select').removeClass('is-active');
         $('.select__icon').removeClass('active');
     }
 });
@@ -641,7 +641,7 @@ let select = function () {
 
     function selectChoose() {
         let text = this.innerText,
-            select = this.closest('.select'),
+            select = this.closest('.select, .item-select'),
             currentText = select.querySelector('.select__current');
         currentText.innerText = text;
         select.classList.remove('is-active');
