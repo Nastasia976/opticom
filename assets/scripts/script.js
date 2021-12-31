@@ -495,6 +495,20 @@ $(document).ready(function () {
     );
 
 
+
+    $('.spoiler-mobile__item').click(function (event) {
+        if ($('.footer-mobile').hasClass('mobile')) {
+            $('.spoiler-mobile__item').not($(this)).removeClass('active');
+            $('.spoiler-mobile__body').not($(this).next()).slideUp(300);
+
+        } // при нажатии на следующее подменю, текущее закрывается
+        $(this).toggleClass('active').next().slideToggle(300);
+    });
+
+    $('.spoiler-mobile__link').click(function () {
+        $('.spoiler-mobile__item').removeClass('active');
+        $('.spoiler-mobile__body').not($(this).next()).slideUp(300);
+    });
 });
 
 
@@ -597,7 +611,7 @@ new Swiper('.swiper-progress', {
     }
 });
 
-new Swiper('.compare__swiper ', {
+/* new Swiper('.compare__swiper ', {
     slidesPerView: 4.4,
     freeMode: true,
     spaceBetween: 40,
@@ -605,19 +619,36 @@ new Swiper('.compare__swiper ', {
         el: '.swiper-scrollbar',
         draggable: true,
     },
-    
-});
+
+}); */
 
 let my1 = new Swiper('.slider-compare ', {
     slidesPerView: 4,
     freeMode: true,
     spaceBetween: 24,
-    whatchOverflow: true, 
+    whatchOverflow: true,
     navigation: {
         nextEl: '.slider-compare__arrow-next',
         prevEl: '.slider-compare__arrow-prev',
     },
 });
+let my2 = new Swiper('.slider-characters', {
+    slidesPerView: 4,
+    freeMode: true,
+    spaceBetween: 24,
+    whatchOverflow: true,
+})
+/* let my3 = new Swiper('.slider-eco-advantages', {
+    slidesPerView: 4,
+    freeMode: true,
+    spaceBetween: 24,
+    whatchOverflow: true,
+}) */
+
+
+
+my1.controller.control = my2;
+my2.controller.control = my1;
 
 
 $("body").on('click', '[href*="#"]', function (e) {
@@ -793,4 +824,56 @@ new Swiper('.small-swiper', {
 
 
 
+const testimonials = document.querySelector('.scrollbar');
+const scroller = document.querySelector('.scrollbar__body');
+const nextBtn = document.querySelector('.scrollbar__next');
+const itemWidth = document.querySelector('.scrollbar__item').clientWidth;
+const prevBtn = document.querySelector('.scrollbar__prev');
+const shaddow = document.querySelector('.scrollbar__shaddow');
+
+
+nextBtn.addEventListener('click', scrollToNextItem);
+prevBtn.addEventListener('click', scrollToPrevItem);
+
+
+function scrollToNextItem() {
+    if (scroller.scrollLeft < (scroller.scrollWidth - itemWidth)) {
+        // Позиция прокрутки не в начале последнего элемента 
+        scroller.scrollBy({ left: itemWidth, top: 0, behavior: 'smooth' });
+
+    } else {
+        // Достигнут последний элемент 
+        // Вернёмся к первому элементу, установив положение прокрутки на 0 
+        /* scroller.scrollTo({ left: 0, top: 0, behavior: 'smooth' }); */
+    }
+}
+
+
+function scrollToPrevItem() {
+    if (scroller.scrollLeft != 0) {
+        // Позиция прокрутки не в начале первого элемента 
+        scroller.scrollBy({ left: -itemWidth, top: 0, behavior: 'smooth' });
+    } else {
+
+    }
+}
+
+
+$('.scrollbar__body').on("scroll", function () {
+    var scrolled = $(this).scrollLeft();
+    if (scrolled > 1) {
+        prevBtn.style.display = "block";
+    }
+    else {
+        prevBtn.style.display = "none";
+    }
+    if (scroller.offsetWidth + scroller.scrollLeft >= scroller.scrollWidth) {
+        nextBtn.style.display = "none";
+        shaddow.classList.add('active');
+    }
+    if (scroller.offsetWidth + scroller.scrollLeft < scroller.scrollWidth) {
+        nextBtn.style.display = "block";
+        shaddow.classList.remove('active');
+    }
+});
 
