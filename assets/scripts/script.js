@@ -309,6 +309,7 @@ $(document).ready(function () {
 
     $('.select__header').click(function () {
         $(this).parent().find('.select__icon').toggleClass('active');
+        /*  $(this).parent().toggleClass('is-active'); */
     });
 
     $('._phone').mask('+7 (999) 999-99-99', {
@@ -509,6 +510,14 @@ $(document).ready(function () {
         $('.spoiler-mobile__item').removeClass('active');
         $('.spoiler-mobile__body').not($(this).next()).slideUp(300);
     });
+
+    $('.control__button').click(function () {
+        $('.delit-list').addClass('active');
+    });
+    $('.sidebar-compare__title._hide').click(function () {
+        $(this).toggleClass('active').next().slideToggle();
+    });
+
 });
 
 
@@ -611,19 +620,31 @@ new Swiper('.swiper-progress', {
     }
 });
 
-/* new Swiper('.compare__swiper ', {
-    slidesPerView: 4.4,
-    freeMode: true,
-    spaceBetween: 40,
-    scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true,
+
+new Swiper('.small-swiper', {
+    slidesPerView: 1,
+    loop: true,
+    pagination: {
+        el: '.small-swiper__dots',
+        clickable: true,
     },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        200: {
+            direction: 'horizontal',
+        },
+        768: {
+            direction: 'vertical',
+        },
+    },
+});
 
-}); */
-
-let my1 = new Swiper('.slider-compare ', {
-    slidesPerView: 4,
+let myFirst = new Swiper('.slider', {
+    simulateTouch: false,
+    touchRatio: 0,
     freeMode: true,
     spaceBetween: 24,
     whatchOverflow: true,
@@ -631,25 +652,60 @@ let my1 = new Swiper('.slider-compare ', {
         nextEl: '.slider-compare__arrow-next',
         prevEl: '.slider-compare__arrow-prev',
     },
+    breakpoints: {
+        1200: {
+            slidesPerView: 4,
+        },
+        980: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+        },
+        200: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            simulateTouch: true,
+            touchRatio: 2,
+            pagination: {
+                el: '.compare__dots',
+                type: 'fraction',
+                renderFraction: function (currentClass, totalClass) {
+                    return '<span class="' + currentClass + '"></span> ' + '">  из </span>' + '<span class="' + totalClass + '"></span>';
+                },
+            },
+        }
+    },
 });
-let my2 = new Swiper('.slider-characters', {
-    slidesPerView: 4,
-    freeMode: true,
-    spaceBetween: 24,
-    whatchOverflow: true,
-})
-/* let my3 = new Swiper('.slider-eco-advantages', {
-    slidesPerView: 4,
-    freeMode: true,
-    spaceBetween: 24,
-    whatchOverflow: true,
-}) */
 
-
+let my1 = new Swiper('.swiper-mobile', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+});
+let my2 = new Swiper('.fixed__slider-mobile', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+});
 
 my1.controller.control = my2;
 my2.controller.control = my1;
 
+let my3 = new Swiper('.swiper-mobile2', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+});
+let my4 = new Swiper('.fixed__slider-mobile2', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+});
+
+my3.controller.control = my4;
+my4.controller.control = my3;
 
 $("body").on('click', '[href*="#"]', function (e) {
     var fixed_offset = 0;
@@ -703,18 +759,12 @@ $(window).on("scroll", function () {
         $('.header').removeClass('scrolled');
         $('.podlozhka').removeClass('active');
     }
-});//шапка становится фиксированной
-
-
-/* $(window).on('resize', function () {
-    if ($(window).width() < 769) {
-        $('.our-product__body').slick({
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            variableWidth: true,
-        });
+    if (scrolled > 600) {
+        $('.fixed__conteiner, .fixed__conteiner2, .slider-compare__arrow').addClass('active');
+    } else {
+        $('.fixed__conteiner,  .fixed__conteiner2, .slider-compare__arrow').removeClass('active');
     }
-}); */
+});//шапка становится фиксированной
 
 
 
@@ -730,7 +780,7 @@ sliderBlock.addEventListener("mouseenter", function (e) {
  
 sliderBlock.addEventListener("mouseleave", function (e) {
     mySlider.autoplay.stop();
-}) */
+}) */   //попробовать сделать остановку слайдера при наведении мыши
 
 
 function counterFunction(count) {
@@ -763,6 +813,8 @@ counts.forEach(counterFunction);
 
 
 
+
+
 $(document).mouseup(function (e) {
     var div = $('.select, .item-select');
     if (!div.is(e.target)
@@ -771,6 +823,7 @@ $(document).mouseup(function (e) {
         $('.select__icon').removeClass('active');
     }
 });
+
 
 let select = function () {
     let selectHeader = document.querySelectorAll('.select__header');
@@ -790,7 +843,7 @@ let select = function () {
 
     function selectChoose() {
         let text = this.innerText,
-            select = this.closest('.select, .item-select'),
+            select = this.closest('.select'),
             currentText = select.querySelector('.select__current');
         currentText.innerText = text;
         select.classList.remove('is-active');
@@ -800,36 +853,14 @@ select();
 
 
 
-new Swiper('.small-swiper', {
-    slidesPerView: 1,
-    loop: true,
-    pagination: {
-        el: '.small-swiper__dots',
-        clickable: true,
-    },
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
-    breakpoints: {
-        200: {
-            direction: 'horizontal',
-        },
-        768: {
-            direction: 'vertical',
-        },
-    },
-})
-
-
-
-
 const testimonials = document.querySelector('.scrollbar');
-const scroller = document.querySelector('.scrollbar__body');
-const nextBtn = document.querySelector('.scrollbar__next');
-const itemWidth = document.querySelector('.scrollbar__item').clientWidth;
-const prevBtn = document.querySelector('.scrollbar__prev');
-const shaddow = document.querySelector('.scrollbar__shaddow');
+const scroller = testimonials.querySelector('.scrollbar__body');
+const nextBtn = testimonials.querySelector('.scrollbar__next');
+const itemWidth = testimonials.querySelector('.scrollbar__item').clientWidth;
+const prevBtn = testimonials.querySelector('.scrollbar__prev');
+const shaddow = testimonials.querySelector('.scrollbar__shaddow');
+
+
 
 
 nextBtn.addEventListener('click', scrollToNextItem);
@@ -844,9 +875,8 @@ function scrollToNextItem() {
     } else {
         // Достигнут последний элемент 
         // Вернёмся к первому элементу, установив положение прокрутки на 0 
-        /* scroller.scrollTo({ left: 0, top: 0, behavior: 'smooth' }); */
     }
-}
+};
 
 
 function scrollToPrevItem() {
@@ -867,13 +897,17 @@ $('.scrollbar__body').on("scroll", function () {
     else {
         prevBtn.style.display = "none";
     }
-    if (scroller.offsetWidth + scroller.scrollLeft >= scroller.scrollWidth) {
-        nextBtn.style.display = "none";
-        shaddow.classList.add('active');
-    }
-    if (scroller.offsetWidth + scroller.scrollLeft < scroller.scrollWidth) {
-        nextBtn.style.display = "block";
-        shaddow.classList.remove('active');
-    }
 });
 
+
+function isInView(elem) {
+    return $('._last').offset().left - $('.scrollbar__body').scrollLeft() < $(elem).width(); //последний элемент в прокручиваемом блоке
+}
+$('.scrollbar__body').scroll(function () {
+    if (isInView($('._last'))) {
+        $('.scrollbar__next, .scrollbar__shaddow').hide();
+    } else {
+        $('.scrollbar__next, .scrollbar__shaddow').show();
+    }
+    //fire whatever you what 
+})
