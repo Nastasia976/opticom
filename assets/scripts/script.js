@@ -74,6 +74,56 @@ $(document).ready(function () {
             }
         ]
     })
+    $('.sl1').slick({
+        asNavFor: ".sl2, .sl3, .sl4",
+        arrows: false,
+        speed: 50,
+        infinite: false,
+    })
+    $('.sl2').slick({
+        asNavFor: ".sl1, .sl3, .sl4",
+        arrows: false,
+        speed: 50,
+        infinite: false,
+    });
+    $('.sl3').slick({
+        asNavFor: ".sl2, .sl1, .sl4",
+        arrows: false,
+        speed: 50,
+        infinite: false,
+    });
+    $('.sl4').slick({
+        asNavFor: ".sl1, .sl2, .sl3",
+        arrows: false,
+        speed: 50,
+        infinite: false,
+    });
+
+
+    $('.sl5').slick({
+        asNavFor: ".sl6, .sl7, .sl8",
+        arrows: false,
+        speed: 50,
+        infinite: false,
+    })
+    $('.sl6').slick({
+        asNavFor: ".sl7, .sl8, .sl5",
+        arrows: false,
+        speed: 50,
+        infinite: false,
+    });
+    $('.sl7').slick({
+        asNavFor: ".sl8, .sl5, .sl6",
+        arrows: false,
+        speed: 50,
+        infinite: false,
+    });
+    $('.sl8').slick({
+        asNavFor: ".sl5, .sl6, .sl7",
+        arrows: false,
+        speed: 50,
+        infinite: false,
+    });
 
     /* $('.hospital').hover(function () {
         $('.vector').show();
@@ -514,10 +564,12 @@ $(document).ready(function () {
     $('.control__button').click(function () {
         $('.delit-list').addClass('active');
     });
-    $('.sidebar-compare__title._hide').click(function () {
-        $(this).toggleClass('active').next().slideToggle();
+    $('.title-char').click(function () {
+        $('.title-char').toggleClass('active').next().slideToggle();
     });
-
+    $('.title-advantage').click(function () {
+        $('.title-advantage').toggleClass('active').next().slideToggle();
+    });
 });
 
 
@@ -660,7 +712,7 @@ let myFirst = new Swiper('.slider', {
             slidesPerView: 3,
             spaceBetween: 24,
         },
-        768: {
+        769: {
             slidesPerView: 2,
             spaceBetween: 15,
         },
@@ -668,25 +720,27 @@ let myFirst = new Swiper('.slider', {
             slidesPerView: 1,
             spaceBetween: 10,
             simulateTouch: true,
-            touchRatio: 2,
-            pagination: {
-                el: '.compare__dots',
-                type: 'fraction',
-                renderFraction: function (currentClass, totalClass) {
-                    return '<span class="' + currentClass + '"></span> ' + '">  из </span>' + '<span class="' + totalClass + '"></span>';
-                },
-            },
+            touchRatio: 1,
         }
     },
 });
 
-let my1 = new Swiper('.swiper-mobile', {
+/* let my1 = new Swiper('.swiper-mobile', {
     slidesPerView: 1,
     spaceBetween: 10,
+    speed: 1000,
+    pagination: {
+        el: '.compare__dots',
+        type: 'fraction',
+        renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + ' </span> ' + '">  из </span>' + ' из <span class="' + totalClass + '"></span>';
+        },
+    },
 });
 let my2 = new Swiper('.fixed__slider-mobile', {
     slidesPerView: 1,
     spaceBetween: 10,
+    speed: 1000,
 });
 
 my1.controller.control = my2;
@@ -698,14 +752,35 @@ let my3 = new Swiper('.swiper-mobile2', {
     observer: true,
     observeParents: true,
     observeSlideChildren: true,
+    speed: 1000,
+    pagination: {
+        el: '.compare__dots2',
+        type: 'fraction',
+        renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + ' </span> ' + '">  из </span>' + ' из <span class="' + totalClass + '"></span>';
+        },
+    },
 });
 let my4 = new Swiper('.fixed__slider-mobile2', {
     slidesPerView: 1,
     spaceBetween: 10,
+    speed: 1000,
 });
 
 my3.controller.control = my4;
-my4.controller.control = my3;
+my4.controller.control = my3; */
+
+
+/* let m1 = new Swiper('.swiper-mobile', {
+    slidesPerView: 1,
+});
+let m2 = new Swiper('.swiper-mobile2', {
+    slidesPerView: 1,
+}); */
+
+/* m1.controller.control = m2;
+m2.controller.control = m1; */
+
 
 $("body").on('click', '[href*="#"]', function (e) {
     var fixed_offset = 0;
@@ -760,13 +835,20 @@ $(window).on("scroll", function () {
         $('.podlozhka').removeClass('active');
     }
     if (scrolled > 600) {
-        $('.fixed__conteiner, .fixed__conteiner2, .slider-compare__arrow').addClass('active');
+        $('.fixed__conteiner, .slider-compare__arrow').addClass('active');
     } else {
-        $('.fixed__conteiner,  .fixed__conteiner2, .slider-compare__arrow').removeClass('active');
+        $('.fixed__conteiner, .slider-compare__arrow').removeClass('active');
     }
 });//шапка становится фиксированной
 
-
+$(window).on("scroll", function () {
+    var scrolled = $(this).scrollTop();
+    if (scrolled > 650) {
+        $('.fixed__conteiners2, .fixed__conteiners, .compare__dots, .compare__dots2').addClass('active');
+    } else {
+        $('.fixed__conteiners2, .fixed__conteiners, .compare__dots, .compare__dots2').removeClass('active');
+    }
+});
 
 
 /* let sliderBlock = document.querySelector('.slider-title__slide');
