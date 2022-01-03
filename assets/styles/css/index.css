@@ -7308,6 +7308,31 @@ body.passive {
   margin-bottom: 15px;
 }
 
+.compare__dots .custom_paging, .compare__dots2 .custom_paging {
+  position: relative;
+  top: -10px;
+}
+
+.compare__dots .custom_paging li, .compare__dots2 .custom_paging li {
+  opacity: 0;
+  position: absolute;
+  font-size: 14px;
+  color: rgba(43, 43, 43, 0.7);
+}
+
+.compare__dots .custom_paging li.slick-active, .compare__dots2 .custom_paging li.slick-active {
+  opacity: 1;
+}
+
+.compare__dots2 {
+  position: absolute;
+  left: 51%;
+}
+
+.compare__dots2 li {
+  width: 50px;
+}
+
 .product-compare:last-child {
   border-top: 1px solid rgba(227, 226, 220, 0.5);
   position: relative;
@@ -7489,6 +7514,7 @@ body.passive {
     display: block;
     width: 100%;
     padding: 0 15px;
+    position: relative;
   }
   .compare__section {
     display: -webkit-box;
@@ -7501,12 +7527,33 @@ body.passive {
   }
   .swiper-mobile {
     min-width: 0 !important;
-    width: 49%;
+    width: 48.5%;
     min-height: 100%;
+  }
+  .swiper-mobile .slider-compare__image {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .swiper-mobile .product__packing {
+    margin-top: 5px !important;
+  }
+  .swiper-mobile .product__close {
+    z-index: 50;
   }
   .swiper-mobile .slick-track {
     min-height: 100% !important;
     padding: 0 0 30px 0;
+  }
+  .swiper-mobile .slick-list {
+    min-height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .swiper-mobile .product__item {
     display: -webkit-box;
@@ -7530,7 +7577,7 @@ body.passive {
   }
   .title-mobile {
     display: block;
-    margin: 50px 20px 20px 20px;
+    margin: 50px 20px 50px 15px;
   }
   .sidebar-compare__title._hide {
     display: -webkit-box;
@@ -7554,26 +7601,16 @@ body.passive {
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-  .compare__dots,
-  .compare__dots2 {
-    width: 50%;
-    height: 20px;
-    top: 10px;
-    font-size: 12px;
-    opacity: 0.7;
-  }
-  .compare__dots {
-    left: 0;
-  }
-  .compare__dots.active {
-    padding: 0 0 0 15px;
-  }
-  .compare__dots2 {
-    left: 50%;
-  }
   .compare__dots.active, .compare__dots2.active {
     position: fixed;
+    top: 10px;
     z-index: 2000;
+  }
+  .compare__dots.active .custom_paging, .compare__dots2.active .custom_paging {
+    top: 0;
+  }
+  .compare__dots.active .custom_paging li, .compare__dots2.active .custom_paging li {
+    width: 50px;
   }
   .compare__pre-wrapper {
     display: none;

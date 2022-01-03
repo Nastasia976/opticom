@@ -74,11 +74,22 @@ $(document).ready(function () {
             }
         ]
     })
+
     $('.sl1').slick({
         asNavFor: ".sl2, .sl3, .sl4",
         arrows: false,
         speed: 50,
         infinite: false,
+        dots: true,
+        dotsClass: 'custom_paging',
+        customPaging: function (slider, i) {
+            //FYI just have a look at the object to find aviable information
+            //press f12 to access the console
+            //you could also debug or look in the source
+            console.log(slider);
+            return (i + 1) + ' из ' + slider.slideCount;
+        },
+        appendDots: '.compare__dots',
     })
     $('.sl2').slick({
         asNavFor: ".sl1, .sl3, .sl4",
@@ -105,6 +116,16 @@ $(document).ready(function () {
         arrows: false,
         speed: 50,
         infinite: false,
+        dots: true,
+        dotsClass: 'custom_paging',
+        customPaging: function (slider, i) {
+            //FYI just have a look at the object to find aviable information
+            //press f12 to access the console
+            //you could also debug or look in the source
+            console.log(slider);
+            return (i + 1) + ' из ' + slider.slideCount;
+        },
+        appendDots: '.compare__dots2',
     })
     $('.sl6').slick({
         asNavFor: ".sl7, .sl8, .sl5",
@@ -124,64 +145,6 @@ $(document).ready(function () {
         speed: 50,
         infinite: false,
     });
-
-    /* $('.hospital').hover(function () {
-        $('.vector').show();
-        $('.center svg, .azs svg, .hotels svg, .autoservise svg, .restaurant svg').css("opacity", "1");
-    }, function () {
-        $('.vector').hide();
-        $('.center svg, .azs svg, .hotels svg, .autoservise svg, .restaurant svg').css("opacity", "0");
-    });
-
-    $('.center').hover(function () {
-        $('.vector').show();
-        $('.hospital svg, .azs svg, .hotels svg, .autoservise svg, .restaurant svg').css("opacity", "1");
-    }, function () {
-        $('.vector').hide();
-        $('.hospital svg, .azs svg, .hotels svg, .autoservise svg, .restaurant svg').css("opacity", "0");
-    });
-
-    $('.azs').hover(function () {
-        $('.vector').show();
-        $('.hospital svg, .center svg, .hotels svg, .autoservise svg, .restaurant svg').css("opacity", "1");
-    }, function () {
-        $('.vector').hide();
-        $('.hospital svg, .center svg, .hotels svg, .autoservise svg, .restaurant svg').css("opacity", "0");
-    });
-
-    $('.hotels').hover(function () {
-        $('.vector').show();
-        $('.hospital svg, .center svg, .azs svg, .autoservise svg, .restaurant svg').css("opacity", "1");
-    }, function () {
-        $('.vector').hide();
-        $('.hospital svg, .center svg, .azs svg, .autoservise svg, .restaurant svg').css("opacity", "0");
-    });
-
-    $('.autoservise').hover(function () {
-        $('.vector').show();
-        $('.hospital svg, .center svg, .azs svg, .hotels svg, .restaurant svg').css("opacity", "1");
-    }, function () {
-        $('.vector').hide();
-        $('.hospital svg, .center svg, .azs svg, .hotels svg, .restaurant svg').css("opacity", "0");
-    });
-
-    $('.restaurant').hover(function () {
-        $('.vector').show();
-        $('.hospital svg, .center svg, .azs svg, .hotels svg, .autoservise svg').css("opacity", "1");
-    }, function () {
-        $('.vector').hide();
-        $('.hospital svg, .center svg, .azs svg, .hotels svg, .autoservise svg').css("opacity", "0");
-    }); */
-
-    /* $('.point').hover(function () {
-        $('.vector').show();
-        $('.hide-svg').css("opacity", "1");
-        $(this).addClass('active').prev().css("opacity", "0");
-    }, function () {
-        $('.vector').hide();
-        $(this).removeClass('active').prev().css("opacity", "1");
-    }); */
-
 
     $('.small-location').hover(
         function () {
@@ -565,10 +528,14 @@ $(document).ready(function () {
         $('.delit-list').addClass('active');
     });
     $('.title-char').click(function () {
-        $('.title-char').toggleClass('active').next().slideToggle();
+        $(this).toggleClass('active').next().slideToggle();
+        $('.sl2').slick('reinit');
+        $('.sl6').slick('reinit');
     });
     $('.title-advantage').click(function () {
-        $('.title-advantage').toggleClass('active').next().slideToggle();
+        $(this).toggleClass('active').next().slideToggle();
+        $('.sl3').slick('reinit');
+        $('.sl7').slick('reinit');
     });
 });
 
@@ -843,7 +810,7 @@ $(window).on("scroll", function () {
 
 $(window).on("scroll", function () {
     var scrolled = $(this).scrollTop();
-    if (scrolled > 650) {
+    if (scrolled > 620) {
         $('.fixed__conteiners2, .fixed__conteiners, .compare__dots, .compare__dots2').addClass('active');
     } else {
         $('.fixed__conteiners2, .fixed__conteiners, .compare__dots, .compare__dots2').removeClass('active');
