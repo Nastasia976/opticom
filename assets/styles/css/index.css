@@ -7098,11 +7098,13 @@ body.passive {
 .fixed__conteiners {
   left: 0px;
   margin: 0;
-  padding: 20px 15px 0px 15px;
+  top: 0;
+  padding: 20px 10px 0px 15px;
 }
 
 .fixed__conteiners2 {
   left: 50%;
+  top: 0;
   padding: 20px 15px 0px 10px;
 }
 
@@ -7110,7 +7112,7 @@ body.passive {
   position: absolute;
   content: '';
   left: -5px;
-  top: 0px;
+  top: -0.5px;
   height: 100%;
   width: 5px;
   background-color: #fff;
