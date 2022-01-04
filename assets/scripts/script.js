@@ -748,6 +748,18 @@ let m2 = new Swiper('.swiper-mobile2', {
 /* m1.controller.control = m2;
 m2.controller.control = m1; */
 
+new Swiper('.blog-swiper', {
+    slidesPerView: "auto",
+    freeMode: true,
+    scrollbar: {
+        el: ".swiper-scrollbar",
+    },
+    mousewheel: true,
+    navigation: {
+        nextEl: '.top-block__arrow',
+    },
+});
+
 
 $("body").on('click', '[href*="#"]', function (e) {
     var fixed_offset = 0;
@@ -911,9 +923,9 @@ const shaddow = testimonials.querySelector('.scrollbar__shaddow');
 
 
 
-
 nextBtn.addEventListener('click', scrollToNextItem);
 prevBtn.addEventListener('click', scrollToPrevItem);
+
 
 
 function scrollToNextItem() {
@@ -960,7 +972,6 @@ $('.scrollbar__body').scroll(function () {
     }
     //fire whatever you what 
 })
-
 
 
 
