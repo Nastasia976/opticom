@@ -5387,7 +5387,7 @@ body.passive {
 }
 .fixed__conteiners2::before {
     position: absolute;
-    content: '';
+    content: "";
     left: -5px;
     top: -0.5px;
     height: 100%;
@@ -5845,5 +5845,104 @@ body.passive {
         button {
             margin-bottom: 20px;
         }
+    }
+}
+///////////////////////////////////////////////////////////
+//============pageContacts======================
+.wrapper-contacts {
+    .main {
+        padding: 125px 0 0 0;
+    }
+    .footer{
+        margin-top: 100px;
+    }
+}
+.bread-crambs {
+    padding: 0 20px;
+    &__conteier {
+    }
+
+    &__list {
+    }
+
+    &__link {
+    }
+}
+.page-contacts {
+    padding: 0 20px;
+    &__conteiner {
+    }
+
+    &__title {
+        margin-top: 46px;
+    }
+
+    &__top {
+        margin-top: 37px;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    &__items {
+        width: fit-content;
+        margin-top: 30px;
+    }
+    &__items:not(:last-child) {
+        margin-right: 26px;
+    }
+    &__items:not(:first-child) {
+        padding: 0 40px 0 0;
+    }
+
+    &__name {
+        color: #b6b6b6;
+        font-size: 16px;
+        line-height: 137%;
+        margin-bottom: 9px;
+    }
+
+    &__item {
+        display: flex;
+    }
+
+    &__icon {
+        border: 1px solid #f4f4f4;
+        min-width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 25px;
+    }
+
+    &__text {
+        padding: 13px 0 0 0;
+        line-height: 133%;
+        max-width: 370px;
+        span {
+            color: #00aa95;
+            font-size: 14px;
+            line-height: 157%;
+        }
+    }
+}
+.map {
+    margin-top: 61px;
+    width: 100%;
+}
+
+@media(max-width:610px){
+    .page-contacts__items{
+        margin-right: 0 !important;
+        padding: 0 !important;
+    }
+    .page-contacts__icon{
+        margin-right: 15px;
+    }
+    .page-contacts__top{
+        margin-top: 20px;
+        flex-direction: column;
     }
 }

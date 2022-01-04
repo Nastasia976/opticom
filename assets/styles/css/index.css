@@ -7110,7 +7110,7 @@ body.passive {
 
 .fixed__conteiners2::before {
   position: absolute;
-  content: '';
+  content: "";
   left: -5px;
   top: -0.5px;
   height: 100%;
@@ -7691,5 +7691,116 @@ body.passive {
   }
   .control__conteiner button {
     margin-bottom: 20px;
+  }
+}
+
+.wrapper-contacts .main {
+  padding: 125px 0 0 0;
+}
+
+.wrapper-contacts .footer {
+  margin-top: 100px;
+}
+
+.bread-crambs {
+  padding: 0 20px;
+}
+
+.page-contacts {
+  padding: 0 20px;
+}
+
+.page-contacts__title {
+  margin-top: 46px;
+}
+
+.page-contacts__top {
+  margin-top: 37px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.page-contacts__items {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 30px;
+}
+
+.page-contacts__items:not(:last-child) {
+  margin-right: 26px;
+}
+
+.page-contacts__items:not(:first-child) {
+  padding: 0 40px 0 0;
+}
+
+.page-contacts__name {
+  color: #b6b6b6;
+  font-size: 16px;
+  line-height: 137%;
+  margin-bottom: 9px;
+}
+
+.page-contacts__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.page-contacts__icon {
+  border: 1px solid #f4f4f4;
+  min-width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 25px;
+}
+
+.page-contacts__text {
+  padding: 13px 0 0 0;
+  line-height: 133%;
+  max-width: 370px;
+}
+
+.page-contacts__text span {
+  color: #00aa95;
+  font-size: 14px;
+  line-height: 157%;
+}
+
+.map {
+  margin-top: 61px;
+  width: 100%;
+}
+
+@media (max-width: 610px) {
+  .page-contacts__items {
+    margin-right: 0 !important;
+    padding: 0 !important;
+  }
+  .page-contacts__icon {
+    margin-right: 15px;
+  }
+  .page-contacts__top {
+    margin-top: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }

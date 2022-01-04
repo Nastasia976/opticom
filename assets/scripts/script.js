@@ -78,7 +78,7 @@ $(document).ready(function () {
     $('.sl1').slick({
         asNavFor: ".sl2, .sl3, .sl4",
         arrows: false,
-        speed: 50,
+        speed: 100,
         infinite: false,
         dots: true,
         dotsClass: 'custom_paging',
@@ -94,19 +94,19 @@ $(document).ready(function () {
     $('.sl2').slick({
         asNavFor: ".sl1, .sl3, .sl4",
         arrows: false,
-        speed: 50,
+        speed: 100,
         infinite: false,
     });
     $('.sl3').slick({
         asNavFor: ".sl2, .sl1, .sl4",
         arrows: false,
-        speed: 50,
+        speed: 100,
         infinite: false,
     });
     $('.sl4').slick({
         asNavFor: ".sl1, .sl2, .sl3",
         arrows: false,
-        speed: 50,
+        speed: 100,
         infinite: false,
     });
 
@@ -114,7 +114,7 @@ $(document).ready(function () {
     $('.sl5').slick({
         asNavFor: ".sl6, .sl7, .sl8",
         arrows: false,
-        speed: 50,
+        speed: 100,
         infinite: false,
         dots: true,
         dotsClass: 'custom_paging',
@@ -130,19 +130,19 @@ $(document).ready(function () {
     $('.sl6').slick({
         asNavFor: ".sl7, .sl8, .sl5",
         arrows: false,
-        speed: 50,
+        speed: 100,
         infinite: false,
     });
     $('.sl7').slick({
         asNavFor: ".sl8, .sl5, .sl6",
         arrows: false,
-        speed: 50,
+        speed: 100,
         infinite: false,
     });
     $('.sl8').slick({
         asNavFor: ".sl5, .sl6, .sl7",
         arrows: false,
-        speed: 50,
+        speed: 100,
         infinite: false,
     });
 
@@ -960,3 +960,7 @@ $('.scrollbar__body').scroll(function () {
     }
     //fire whatever you what 
 })
+
+
+
+
