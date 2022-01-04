@@ -420,12 +420,12 @@ $(document).ready(function () {
 
     $('.sidebar-p-catalog__more').click(function () {
         $(this).hide().next().show();
-        $('.sidebar-p-catalog__link._last ~ .sidebar-p-catalog__link').slideToggle(500);
+        $(this).parent().find('.sidebar-p-catalog__link._last ~ .sidebar-p-catalog__link').slideToggle(500);
     })
 
     $('.roll-up').click(function () {
         $(this).hide().prev().show();
-        $('.sidebar-p-catalog__link._last ~ .sidebar-p-catalog__link').slideToggle(500);
+        $(this).parent().find('.sidebar-p-catalog__link._last ~ .sidebar-p-catalog__link').slideToggle(500);
     })
 
     $('.sidebar-p-catalog__items').each(function () {
