@@ -7754,6 +7754,10 @@ body.passive {
   display: flex;
 }
 
+.page-contacts__item._bottom {
+  margin-top: 5px;
+}
+
 .page-contacts__icon {
   border: 1px solid #f4f4f4;
   min-width: 45px;
@@ -7772,7 +7776,7 @@ body.passive {
 }
 
 .page-contacts__text {
-  padding: 13px 0 0 0;
+  padding: 10px 0 0 0;
   line-height: 133%;
   max-width: 370px;
 }
