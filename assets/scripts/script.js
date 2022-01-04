@@ -146,6 +146,37 @@ $(document).ready(function () {
         infinite: false,
     });
 
+    $('.publication__slider').slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        prevArrow: $('.publication__prev'),
+        nextArrow: $('.publication__next'),
+        waitForAnimate: false,
+        responsive: [
+            {
+                breakpoint: 1250,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 945,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 645,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+    
+
+    
     $('.small-location').hover(
         function () {
             $('.location').css("opacity", "1");
@@ -759,6 +790,13 @@ new Swiper('.blog-swiper', {
         nextEl: '.top-block__arrow',
     },
 });
+/* new Swiper('.publication__slider', {
+    slidesPerView: 4,
+    navigation: {
+        nextEl: '.publication__next',
+        prevEl: '.publication__prev',
+    },
+}); */
 
 
 $("body").on('click', '[href*="#"]', function (e) {
