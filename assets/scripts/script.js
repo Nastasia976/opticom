@@ -466,7 +466,88 @@ $(document).ready(function () {
         $('.sidebar-p-catalog__items').children('.balance').text(c);
     });
 
+
+    $('.el').hover(
+        function () {
+            $(this).toggleClass('active');
+        },
+        function () {
+            $(this).removeClass('active');
+        }
+    );
     $('.el1').hover(
+        function () {
+            $('.elem1').toggleClass('active');
+        },
+        function () {
+            $('.elem1').removeClass('active');
+        }
+    );
+    $('.el2').hover(
+        function () {
+            $('.elem2').toggleClass('active');
+        },
+        function () {
+            $('.elem2').removeClass('active');
+        }
+    );
+    $('.el3').hover(
+        function () {
+            $('.elem3').toggleClass('active');
+        },
+        function () {
+            $('.elem3').removeClass('active');
+        }
+    );
+    $('.el4').hover(
+        function () {
+            $('.elem4').toggleClass('active');
+        },
+        function () {
+            $('.elem4').removeClass('active');
+        }
+    );
+    $('.el5').hover(
+        function () {
+            $('.elem5').toggleClass('active');
+        },
+        function () {
+            $('.elem5').removeClass('active');
+        }
+    );
+    $('.el6').hover(
+        function () {
+            $('.elem6').toggleClass('active');
+        },
+        function () {
+            $('.elem6').removeClass('active');
+        }
+    );
+    $('.el7').hover(
+        function () {
+            $('.elem7').toggleClass('active');
+        },
+        function () {
+            $('.elem7').removeClass('active');
+        }
+    );
+    $('.el8').hover(
+        function () {
+            $('.elem8').toggleClass('active');
+        },
+        function () {
+            $('.elem8').removeClass('active');
+        }
+    );
+    $('.el9').hover(
+        function () {
+            $('.elem9').toggleClass('active');
+        },
+        function () {
+            $('.elem9').removeClass('active');
+        }
+    );
+    /* $('.el1').hover(
         function () {
             $('.el1').css("background", "rgba(216, 149, 96, 0.1)").toggleClass('active');
         },
@@ -537,7 +618,7 @@ $(document).ready(function () {
         function () {
             $('.el9').css("background", "rgba(216, 149, 96, 0)").removeClass('active');
         }
-    );
+    ); */
 
 
 
