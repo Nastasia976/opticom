@@ -6597,6 +6597,11 @@ body.passive {
     .footer {
         margin-top: calc(80px + (160 - 80) * ((100vw - 320px) / (1920 - 320)));
     }
+    .header {
+        .search-form {
+            margin-left: calc(20px + (70 - 20) * ((100vw - 1020px) / (1920 - 1020)));
+        }
+    }
 }
 .vacancies {
     display: flex;
@@ -6657,7 +6662,9 @@ body.passive {
         margin-left: calc(30px + (94 - 30) * ((100vw - 768px) / (1920 - 768)));
         display: flex;
     }
-
+    &__body._column {
+        flex-direction: column;
+    }
     &__item:last-child {
         margin-left: 46px;
         .right-vacancies__text {
@@ -6678,6 +6685,7 @@ body.passive {
         max-width: 275px;
     }
 }
+
 @media (max-width: 1375px) {
     .vacancies {
         &__left {
@@ -6686,6 +6694,9 @@ body.passive {
         &__right {
             padding: 150px 20px 53px 0;
         }
+    }
+    .left-vacanci{
+        padding: 110px 0px 0 20px !important;
     }
 }
 @media (max-width: 1030px) {
@@ -6717,8 +6728,13 @@ body.passive {
     }
 }
 @media (max-width: 610px) {
-    .left-vacancies {
-        padding: 80px 20px 0;
+    .left-vacancies, .left-vacanci {
+        padding: 80px 20px 0 !important;
+    }
+    .left-vacanci{
+        &__body{
+            margin: 0 !important;
+        }
     }
     .right-vacancies {
         &__image {
@@ -6736,6 +6752,121 @@ body.passive {
         }
         &__item:last-child {
             margin-left: 20px;
+        }
+    }
+}
+//=============vacanci=====
+.vacanci{
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid #e3e2dc;
+    &__left {
+        padding: 125px 0px 0 20px;
+        flex: 0 1 50%;
+    }
+
+    &__right {
+        padding: 205px 20px 104px 0;
+        background-color: #f5f5f1;
+        flex: 0 1 50%;
+    }
+}
+.left-vacanci{
+    display: flex;
+    justify-content: flex-end;
+    .bread-crambs {
+        padding: 0;
+    }
+    &__body {
+        margin-right: calc(30px + (94 - 30) * ((100vw - 768px) / (1920 - 768)));
+        flex: 0 1 510px;
+    }
+    &__date {
+        font-size: 14px;
+        margin-top: 10px;
+        line-height: 157%;
+        letter-spacing: 0.06em;
+        color: #666666;
+    }
+    &__image {
+        margin-top: 66px;
+        position: relative;
+        padding: 0 0 55% 0;
+        img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    }
+    &__link {
+        margin-top: 28px;
+        width: fit-content;
+        border: 1px solid rgba(0, 0, 0, 0.07);
+        display: flex;
+        align-items: center;
+        border-radius: 2px;
+        letter-spacing: 0.02em;
+        font-size: 18px;
+        line-height: 133%;
+        color: #535353;
+        padding: 12px calc(25px + (35 - 25) * ((100vw - 320px) / (1920 - 320))) 9px;
+        svg {
+            margin-right: 10px;
+        }
+    }
+}
+.right-vacanci{
+    &__body {
+        margin-left: calc(30px + (94 - 30) * ((100vw - 768px) / (1920 - 768)));
+        display: flex;
+        flex-direction: column;
+    }
+    &__salary {
+        font-size: 26px;
+        line-height: 108%;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: calc(26px + (40 - 26) * ((100vw - 320px) / (1920 - 320)));
+        line-height: 118%;
+        text-decoration: underline;
+        margin-top: 24px;
+    }
+    &__text {
+        margin-top: 48px;
+        font-size: 16px;
+        line-height: 137%;
+        letter-spacing: 0.06em;
+        color: #3b3b3b;
+        max-width: 475px;
+    }
+    &__button {
+        margin-top: 60px;
+        cursor: pointer;
+        width: fit-content;
+    }
+}
+@media(max-width:768px){
+    .vacanci{
+        flex-direction: column;
+        .right-vacanci, .left-vacanci{
+            width: 100%;
+            justify-content: flex-start;
+        }
+        .left-vacanci{
+            margin-bottom: 30px;
+            &__image{
+                margin-top: 30px;
+            }
+        }
+        .right-vacanci{
+            padding: 50px 20px;
+            &__body{
+                margin: 0;
+            }
         }
     }
 }
@@ -6758,21 +6889,24 @@ body.passive {
 
     &__item {
         flex: 0 1 calc(50% - 24px);
-        padding: calc(30px + (44 - 30) * ((100vw - 768px) / (1920 - 768))) calc(20px + (41 - 20) * ((100vw - 768px) / (1920 - 768))) calc(30px + (52 - 30) * ((100vw - 768px) / (1920 - 768))) calc(30px + (52 - 30) * ((100vw - 768px) / (1920 - 768)));
+        padding: calc(30px + (44 - 30) * ((100vw - 768px) / (1920 - 768)))
+            calc(20px + (41 - 20) * ((100vw - 768px) / (1920 - 768)))
+            calc(30px + (52 - 30) * ((100vw - 768px) / (1920 - 768)))
+            calc(30px + (52 - 30) * ((100vw - 768px) / (1920 - 768)));
         display: flex;
         flex-direction: column;
     }
     &__item:nth-child(odd) {
         background-color: #f9fbf5;
     }
-    &__item:nth-child(odd):hover{
-        background-color: #F7F8F3;
+    &__item:nth-child(odd):hover {
+        background-color: #f7f8f3;
     }
     &__item:nth-child(even) {
         background-color: #f2f8f5;
     }
-    &__item:nth-child(even):hover{
-        background-color: #F7FCFB;
+    &__item:nth-child(even):hover {
+        background-color: #f7fcfb;
     }
     &__date {
         text-align: right;
@@ -6809,33 +6943,128 @@ body.passive {
         transition: 0.3s;
         display: block;
     }
-    &__link:hover{
+    &__link:hover {
         transition: 0.3s;
-        border: 1px solid #00AA95;
-        color: #00AA95;
-    }
-
-    &__footer {
+        border: 1px solid #00aa95;
+        color: #00aa95;
     }
 }
-.footer-catalof {
-    &__items {
-    }
-
-    &__item {
-    }
-}
-.active {
-}
-@media(max-width:700px){
-    .our-vacancies{
-        &__body{
+@media (max-width: 700px) {
+    .our-vacancies {
+        &__body {
             flex-direction: column;
             margin-right: 0;
             margin-top: 40px;
         }
-        &__item{
+        &__item {
             padding: 15px 20px 30px;
+        }
+    }
+}
+//----about-vacancie--------
+.about-vacanci {
+    &__top {
+        padding: 15px 20px 0;
+        border-top: 1px solid #e3e2dc;
+        border-bottom: 1px solid #e3e2dc;
+    }
+
+    &__conteiner {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        padding: 15px 0 24px;
+        font-size: 18px;
+        line-height: 21px;
+        color: #3b3b3b;
+    }
+    &__item:not(:last-child) {
+        margin-right: calc(40px + (69 - 40) * ((100vw - 520px) / (1920 - 520)));
+    }
+    &__item.active {
+        border-bottom: 2px solid #00a793;
+    }
+    &__body {
+        padding: 32px 20px 50px;
+        display: flex;
+        flex-direction: column;
+        ._conteiner2{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__items {
+        margin-top: 54px;
+    }
+
+    &__name {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 117%;
+        letter-spacing: 0.04em;
+        color: #01645c;
+    }
+
+    &__list {
+        margin-top: 22px;
+    }
+
+    &__el {
+        font-size: 16px;
+        line-height: 137%;
+        letter-spacing: 0.06em;
+        color: #3b3b3b;
+        padding: 0 0 0 21px;
+        position: relative;
+    }
+    &__el::before {
+        position: absolute;
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #f18070;
+        top: 10px;
+        left: 0;
+    }
+
+    &__bottom {
+        padding: 0 20px;
+        ._conteiner2{
+            display: flex; 
+            align-items: center;
+        }
+        .left-vacanci {
+            &__link {
+                margin-top: 0;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &__up {
+        border: 1px solid #006d66;
+        border-radius: 2px;
+        line-height: 133%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #006d66;
+        padding: 12px 30px 9px;
+    }
+}
+@media(max-width:520px){
+    .about-vacanci__top{
+        display: none;
+    }
+    .about-vacanci{
+        .select{
+            margin-top: 70px;
+        }
+        &__body{
+            padding: 0px 20px 50px;
         }
     }
 }

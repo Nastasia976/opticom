@@ -547,81 +547,6 @@ $(document).ready(function () {
             $('.elem9').removeClass('active');
         }
     );
-    /* $('.el1').hover(
-        function () {
-            $('.el1').css("background", "rgba(216, 149, 96, 0.1)").toggleClass('active');
-        },
-        function () {
-            $('.el1').css("background", "rgba(216, 149, 96, 0)").removeClass('active');
-        }
-    );
-    $('.el2').hover(
-        function () {
-            $('.el2').css("background", "rgba(216, 149, 96, 0.1)").toggleClass('active');
-        },
-        function () {
-            $('.el2').css("background", "rgba(216, 149, 96, 0)").removeClass('active');
-        }
-    );
-    $('.el3').hover(
-        function () {
-            $('.el3').css("background", "rgba(216, 149, 96, 0.1)").toggleClass('active');
-        },
-        function () {
-            $('.el3').css("background", "rgba(216, 149, 96, 0)").removeClass('active');
-        }
-    );
-    $('.el4').hover(
-        function () {
-            $('.el4').css("background", "rgba(216, 149, 96, 0.1)").toggleClass('active');
-        },
-        function () {
-            $('.el4').css("background", "rgba(216, 149, 96, 0)").removeClass('active');
-        }
-    );
-    $('.el5').hover(
-        function () {
-            $('.el5').css("background", "rgba(216, 149, 96, 0.1)").toggleClass('active');
-        },
-        function () {
-            $('.el5').css("background", "rgba(216, 149, 96, 0)").removeClass('active');
-        }
-    );
-    $('.el6').hover(
-        function () {
-            $('.el6').css("background", "rgba(216, 149, 96, 0.1)").toggleClass('active');
-        },
-        function () {
-            $('.el6').css("background", "rgba(216, 149, 96, 0)").removeClass('active');
-        }
-    );
-    $('.el7').hover(
-        function () {
-            $('.el7').css("background", "rgba(216, 149, 96, 0.1)").toggleClass('active');
-        },
-        function () {
-            $('.el7').css("background", "rgba(216, 149, 96, 0)").removeClass('active');
-        }
-    );
-    $('.el8').hover(
-        function () {
-            $('.el8').css("background", "rgba(216, 149, 96, 0.1)").toggleClass('active');
-        },
-        function () {
-            $('.el8').css("background", "rgba(216, 149, 96, 0)").removeClass('active');
-        }
-    );
-    $('.el9').hover(
-        function () {
-            $('.el9').css("background", "rgba(216, 149, 96, 0.1)").toggleClass('active');
-        },
-        function () {
-            $('.el9').css("background", "rgba(216, 149, 96, 0)").removeClass('active');
-        }
-    ); */
-
-
-
     $('.spoiler-mobile__item').click(function (event) {
         if ($('.footer-mobile').hasClass('mobile')) {
             $('.spoiler-mobile__item').not($(this)).removeClass('active');
@@ -804,62 +729,6 @@ let myFirst = new Swiper('.slider', {
     },
 });
 
-/* let my1 = new Swiper('.swiper-mobile', {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    speed: 1000,
-    pagination: {
-        el: '.compare__dots',
-        type: 'fraction',
-        renderFraction: function (currentClass, totalClass) {
-            return '<span class="' + currentClass + ' </span> ' + '">  из </span>' + ' из <span class="' + totalClass + '"></span>';
-        },
-    },
-});
-let my2 = new Swiper('.fixed__slider-mobile', {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    speed: 1000,
-});
-
-my1.controller.control = my2;
-my2.controller.control = my1;
-
-let my3 = new Swiper('.swiper-mobile2', {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    observer: true,
-    observeParents: true,
-    observeSlideChildren: true,
-    speed: 1000,
-    pagination: {
-        el: '.compare__dots2',
-        type: 'fraction',
-        renderFraction: function (currentClass, totalClass) {
-            return '<span class="' + currentClass + ' </span> ' + '">  из </span>' + ' из <span class="' + totalClass + '"></span>';
-        },
-    },
-});
-let my4 = new Swiper('.fixed__slider-mobile2', {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    speed: 1000,
-});
-
-my3.controller.control = my4;
-my4.controller.control = my3; */
-
-
-/* let m1 = new Swiper('.swiper-mobile', {
-    slidesPerView: 1,
-});
-let m2 = new Swiper('.swiper-mobile2', {
-    slidesPerView: 1,
-}); */
-
-/* m1.controller.control = m2;
-m2.controller.control = m1; */
-
 new Swiper('.blog-swiper', {
     slidesPerView: "auto",
     freeMode: true,
@@ -871,14 +740,6 @@ new Swiper('.blog-swiper', {
         nextEl: '.top-block__arrow',
     },
 });
-/* new Swiper('.publication__slider', {
-    slidesPerView: 4,
-    navigation: {
-        nextEl: '.publication__next',
-        prevEl: '.publication__prev',
-    },
-}); */
-
 
 $("body").on('click', '[href*="#"]', function (e) {
     var fixed_offset = 0;
@@ -886,17 +747,7 @@ $("body").on('click', '[href*="#"]', function (e) {
     e.preventDefault();
 });//скролл до нужного блока
 
-$("body").on('click', '[href*="#description"]', function (e) {
-    var fixed_offset = 100;
-    $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
-    e.preventDefault();
-});
-$("body").on('click', '[href*="#characters"]', function (e) {
-    var fixed_offset = 100;
-    $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
-    e.preventDefault();
-});
-$("body").on('click', '[href*="#sertificates"]', function (e) {
+$("body").on('click', '[href*="#description"], [href*="#characters"], [href*="#sertificates"], [href*="#duties"], [href*="#our-wishes"], [href*="#we-offer"]', function (e) {
     var fixed_offset = 100;
     $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
     e.preventDefault();
