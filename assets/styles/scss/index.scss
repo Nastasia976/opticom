@@ -3937,7 +3937,7 @@ body.passive {
     }
 
     .popup__body {
-        margin-top: calc(20px + (69 - 20) * ((100vh - 568px) / (800 - 568)));
+        margin-top: calc(20px + (49 - 20) * ((100vh - 568px) / (800 - 568)));
         padding: 0 calc(20px + (71 - 20) * ((100vw - 320px) / (1920 - 320)));
     }
 
@@ -3980,6 +3980,105 @@ body.passive {
         input:not(:last-child) {
             margin-bottom: calc(20px + (32 - 20) * ((100vh - 568px) / (800 - 568)));
         }
+        input:focus{
+            ::placeholder{
+                transform: scale(0.5) translate(-20px, -20px);
+                transition: 0.5s;
+            }
+        }
+        input.scale::placeholder{
+            transform: translate(0, -15px);
+            transition: 0.5s;
+            font-size: 12px;
+            border: 0;
+        }
+        .label-file {
+            display: flex;
+            align-items: center;
+            color: rgba(0, 109, 102, 0.9);
+            font-size: 16px;
+            line-height: 100%;
+            cursor: pointer;
+            svg {
+                margin-right: 16px;
+            }
+        }
+        .comment {
+            position: relative;
+        }
+        .for-comment {
+        }
+        .textarea {
+            position: absolute;
+            width: 100%;
+            z-index: 2;
+            top: 0;
+            margin-bottom: 15px;
+            background: #ffffff;
+            border: 1px solid #e8e8e8;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.14);
+            padding: 23px 0 0 0;
+            visibility: hidden;
+            opacity: 0;
+            height: 1px;
+            transition: 0.4s;
+            .current-text {
+                position: absolute;
+                bottom: 21px;
+                right: 29px;
+                font-size: 12px;
+                line-height: 183%;
+                color: #bebebe;
+            }
+            textarea {
+                width: 100%;
+                height: 70%;
+                resize: none;
+                font-weight: 300;
+                padding: 0px 20px 0px 29px;
+                font-size: 15px;
+                line-height: 147%;
+                color: #484848;
+            }
+            textarea::-webkit-scrollbar {
+                display: none;
+            }
+            .ready-textarea {
+                font-size: 16px;
+                line-height: 137%;
+                color: #d4ad67;
+                position: absolute;
+                left: 30px;
+                bottom: 26px;
+            }
+            .placeholder-textarea{
+                display: none;
+                position: absolute;
+                top: 0;
+                font-size: 16px;
+                line-height: 137%;
+                color: rgba(37, 37, 37, 0.9);
+            }
+        }
+        .textarea.active {
+            visibility: visible;
+            opacity: 1;
+            height: 190px;
+            transition: 0.4s;
+        }
+        .textarea.static {
+            position: static;
+            height: 50px;
+            border: 0;
+            border-bottom: 1px solid rgba(183, 183, 183, 0.2);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
+            textarea{
+                padding: 0;
+                height: 100%;
+            }
+        }
+    }
+    .form-popup {
     }
     .popup__items {
         display: flex;
@@ -6695,7 +6794,7 @@ body.passive {
             padding: 150px 20px 53px 0;
         }
     }
-    .left-vacanci{
+    .left-vacanci {
         padding: 110px 0px 0 20px !important;
     }
 }
@@ -6728,11 +6827,12 @@ body.passive {
     }
 }
 @media (max-width: 610px) {
-    .left-vacancies, .left-vacanci {
+    .left-vacancies,
+    .left-vacanci {
         padding: 80px 20px 0 !important;
     }
-    .left-vacanci{
-        &__body{
+    .left-vacanci {
+        &__body {
             margin: 0 !important;
         }
     }
@@ -6756,7 +6856,7 @@ body.passive {
     }
 }
 //=============vacanci=====
-.vacanci{
+.vacanci {
     display: flex;
     position: relative;
     border-bottom: 1px solid #e3e2dc;
@@ -6771,7 +6871,7 @@ body.passive {
         flex: 0 1 50%;
     }
 }
-.left-vacanci{
+.left-vacanci {
     display: flex;
     justify-content: flex-end;
     .bread-crambs {
@@ -6792,7 +6892,7 @@ body.passive {
         margin-top: 66px;
         position: relative;
         padding: 0 0 55% 0;
-        img{
+        img {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -6818,7 +6918,7 @@ body.passive {
         }
     }
 }
-.right-vacanci{
+.right-vacanci {
     &__body {
         margin-left: calc(30px + (94 - 30) * ((100vw - 768px) / (1920 - 768)));
         display: flex;
@@ -6849,22 +6949,23 @@ body.passive {
         width: fit-content;
     }
 }
-@media(max-width:768px){
-    .vacanci{
+@media (max-width: 768px) {
+    .vacanci {
         flex-direction: column;
-        .right-vacanci, .left-vacanci{
+        .right-vacanci,
+        .left-vacanci {
             width: 100%;
             justify-content: flex-start;
         }
-        .left-vacanci{
+        .left-vacanci {
             margin-bottom: 30px;
-            &__image{
+            &__image {
                 margin-top: 30px;
             }
         }
-        .right-vacanci{
+        .right-vacanci {
             padding: 50px 20px;
-            &__body{
+            &__body {
                 margin: 0;
             }
         }
@@ -6989,7 +7090,7 @@ body.passive {
         padding: 32px 20px 50px;
         display: flex;
         flex-direction: column;
-        ._conteiner2{
+        ._conteiner2 {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -7033,8 +7134,8 @@ body.passive {
 
     &__bottom {
         padding: 0 20px;
-        ._conteiner2{
-            display: flex; 
+        ._conteiner2 {
+            display: flex;
             align-items: center;
         }
         .left-vacanci {
@@ -7055,15 +7156,15 @@ body.passive {
         padding: 12px 30px 9px;
     }
 }
-@media(max-width:520px){
-    .about-vacanci__top{
+@media (max-width: 520px) {
+    .about-vacanci__top {
         display: none;
     }
-    .about-vacanci{
-        .select{
+    .about-vacanci {
+        .select {
             margin-top: 70px;
         }
-        &__body{
+        &__body {
             padding: 0px 20px 50px;
         }
     }

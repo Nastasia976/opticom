@@ -365,7 +365,7 @@ $(document).ready(function () {
         $('body').toggleClass('passive');
     })
 
-    $('.popup__close, .will-aut, .will-reg').click(function (event) {
+    $('.popup__close, .will-aut, .will-reg, .send-response').click(function (event) {
         $('.popup-request, .popup-reg, .popup-reg2, .popup-reg3, .popup-autoriz, .popup-forgot').removeClass('active');
         $('body').removeClass('passive');
     })
@@ -445,7 +445,12 @@ $(document).ready(function () {
     })
     $('.fav').click(function () {
         $(this).toggleClass('active');
-    })
+    });
+
+    $('.request').click(function () {
+        $('.popup-request').toggleClass('active');
+    });
+    
 
     //-------results-search---
 
@@ -814,6 +819,45 @@ sliderBlock.addEventListener("mouseleave", function (e) {
 }) */   //попробовать сделать остановку слайдера при наведении мыши
 
 
+function isInView(elem) {
+    return $('._last').offset().left - $('.scrollbar__body').scrollLeft() < $(elem).width(); //последний элемент в прокручиваемом блоке
+}
+$('.scrollbar__body').scroll(function () {
+    if (isInView($('._last'))) {
+        $('.scrollbar__next, .scrollbar__shaddow').hide();
+    } else {
+        $('.scrollbar__next, .scrollbar__shaddow').show();
+    }
+    //fire whatever you what 
+})
+
+//функция вывода названия прикрепленного файла, если файлов больше чем 1 - выводится количество
+function readyInputFile()
+{
+    var inputs = document.querySelectorAll('.inputfile');
+    Array.prototype.forEach.call(inputs, function(input) {
+        var label = input.nextElementSibling,
+            labelVal = label.innerHTML;
+
+        input.addEventListener('change', function(e)
+        {
+            console.log(this.files);
+            var fileName = '';
+            if(this.files && this.files.length > 1)
+                fileName = (this.getAttribute( 'data-multiple-caption') || '' ).replace('{count}', this.files.length++);
+            else
+            fileName = this.files[0].name;
+            if(fileName)
+                label.querySelector('span').innerHTML = fileName;
+            else
+                label.innerHTML = labelVal;
+        });
+    });
+};
+document.addEventListener("DOMContentLoaded", readyInputFile);
+
+
+
 function counterFunction(count) {
 
     var plus = count.querySelector('._plus');
@@ -882,6 +926,60 @@ let select = function () {
 };
 select();
 
+//счетчик textarea
+/* $(document).ready(function(){
+    var maxCount = 1000;
+
+    $("#counter").html(maxCount);
+
+    $("#review-text").keyup(function() {
+    var revText = this.value.length;
+
+        if (this.value.length > maxCount)
+            {
+            this.value = this.value.substr(0, maxCount);
+            }
+        var cnt = (maxCount - revText);
+        if(cnt <= 0){$("#counter").html('0');}
+        else {$("#counter").html(cnt);}
+
+    });
+});  */
+
+$('#review-text').keyup(function(){
+    $('#counter').text(this.value.length++);
+})
+
+$('.for-comment, textarea').click(function(){
+    $('.textarea').addClass('active').removeClass('static');
+    $('.ready-textarea').show();
+    $('.current-text').show();
+    $('.placeholder-textarea').hide();
+})
+$('.ready-textarea').click(function(){
+    $(this).hide().next().hide();
+    $('.textarea').addClass('static');
+    $('.for-comment').hide();
+    $('.placeholder-textarea').show();
+    if($('#review-text').val().trim().length < 1){
+        $('.for-comment').show();
+        $('.placeholder-textarea').hide();
+        $('.textarea').removeClass('active').removeClass('static');
+    }
+})
+
+$('input').focus(function(){
+    $('input').removeClass('scale');
+    $(this).addClass('scale');
+})
+
+$(document).mouseup(function (e) {
+    var div = $('input');
+    if (!div.is(e.target)
+        && div.has(e.target).length === 0) {
+        $('input').removeClass('scale');
+    }
+});
 
 
 const testimonials = document.querySelector('.scrollbar');
@@ -929,19 +1027,5 @@ $('.scrollbar__body').on("scroll", function () {
         prevBtn.style.display = "none";
     }
 });
-
-
-function isInView(elem) {
-    return $('._last').offset().left - $('.scrollbar__body').scrollLeft() < $(elem).width(); //последний элемент в прокручиваемом блоке
-}
-$('.scrollbar__body').scroll(function () {
-    if (isInView($('._last'))) {
-        $('.scrollbar__next, .scrollbar__shaddow').hide();
-    } else {
-        $('.scrollbar__next, .scrollbar__shaddow').show();
-    }
-    //fire whatever you what 
-})
-
 
 
