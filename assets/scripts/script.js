@@ -174,9 +174,9 @@ $(document).ready(function () {
             }
         ]
     });
-    
 
-    
+
+
     $('.small-location').hover(
         function () {
             $('.location').css("opacity", "1");
@@ -450,7 +450,7 @@ $(document).ready(function () {
     $('.request').click(function () {
         $('.popup-request').toggleClass('active');
     });
-    
+
 
     //-------results-search---
 
@@ -832,22 +832,20 @@ $('.scrollbar__body').scroll(function () {
 })
 
 //функция вывода названия прикрепленного файла, если файлов больше чем 1 - выводится количество
-function readyInputFile()
-{
+function readyInputFile() {
     var inputs = document.querySelectorAll('.inputfile');
-    Array.prototype.forEach.call(inputs, function(input) {
+    Array.prototype.forEach.call(inputs, function (input) {
         var label = input.nextElementSibling,
             labelVal = label.innerHTML;
 
-        input.addEventListener('change', function(e)
-        {
+        input.addEventListener('change', function (e) {
             console.log(this.files);
             var fileName = '';
-            if(this.files && this.files.length > 1)
-                fileName = (this.getAttribute( 'data-multiple-caption') || '' ).replace('{count}', this.files.length++);
+            if (this.files && this.files.length > 1)
+                fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length++);
             else
-            fileName = this.files[0].name;
-            if(fileName)
+                fileName = this.files[0].name;
+            if (fileName)
                 label.querySelector('span').innerHTML = fileName;
             else
                 label.innerHTML = labelVal;
@@ -926,60 +924,51 @@ let select = function () {
 };
 select();
 
-//счетчик textarea
-/* $(document).ready(function(){
-    var maxCount = 1000;
 
-    $("#counter").html(maxCount);
-
-    $("#review-text").keyup(function() {
-    var revText = this.value.length;
-
-        if (this.value.length > maxCount)
-            {
-            this.value = this.value.substr(0, maxCount);
-            }
-        var cnt = (maxCount - revText);
-        if(cnt <= 0){$("#counter").html('0');}
-        else {$("#counter").html(cnt);}
-
+$(document).ready(function () {
+    $('#review-text').keyup(function () {
+        $('#counter').text(this.value.length++);
     });
-});  */
-
-$('#review-text').keyup(function(){
-    $('#counter').text(this.value.length++);
-})
-
-$('.for-comment, textarea').click(function(){
-    $('.textarea').addClass('active').removeClass('static');
-    $('.ready-textarea').show();
-    $('.current-text').show();
-    $('.placeholder-textarea').hide();
-})
-$('.ready-textarea').click(function(){
-    $(this).hide().next().hide();
-    $('.textarea').addClass('static');
-    $('.for-comment').hide();
-    $('.placeholder-textarea').show();
-    if($('#review-text').val().trim().length < 1){
-        $('.for-comment').show();
+    $('.placeholder-textarea, textarea').click(function () {
+        $('.textarea').addClass('active').removeClass('static');
+        $('.ready-textarea').show();
+        $('.current-text').show();
         $('.placeholder-textarea').hide();
-        $('.textarea').removeClass('active').removeClass('static');
-    }
-})
-
-$('input').focus(function(){
-    $('input').removeClass('scale');
-    $(this).addClass('scale');
-})
-
+        $('textarea').focus();
+    });
+    $('.for-comment').focus(function () {
+        $('.textarea').addClass('active');
+        $('.ready-textarea').show();
+        $('.current-text').show();
+        $('.placeholder-textarea').hide();
+        $('textarea').focus();
+    })
+    $('.ready-textarea').click(function () {
+        $(this).hide().next().hide();
+        $('.textarea').removeClass('active');
+        $('.placeholder-textarea').show();
+        $('.placeholder-textarea').removeClass('scale')
+        if ($('#review-text').val().trim().length > 0) {
+            $('.placeholder-textarea').addClass('scale');
+            $('.textarea').removeClass('active');
+        }
+    });
+});
 $(document).mouseup(function (e) {
-    var div = $('input');
+    var div = $('.textarea');
     if (!div.is(e.target)
         && div.has(e.target).length === 0) {
-        $('input').removeClass('scale');
+        $('.textarea').removeClass('active');
+        $('.ready-textarea').hide().next().hide();
+        $('.placeholder-textarea').show();
+        $('.placeholder-textarea').removeClass('scale')
+        if ($('#review-text').val().trim().length > 0) {
+            $('.placeholder-textarea').addClass('scale');
+            $('.textarea').removeClass('active');
+        }
     }
 });
+
 
 
 const testimonials = document.querySelector('.scrollbar');

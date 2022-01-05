@@ -788,11 +788,19 @@
                             цены данного товара.</div>
                         <div class="popup__form">
                             <form action="" class="form-popup">
-                                <input type="text" required placeholder="Ваше имя*">
-                                <input class="_phone" required type="text" placeholder="Телефон*">
-                                <input type="text" placeholder="E-mail">
+                                <div class="inputsection">
+                                    <input class="some-input" type="text" required>
+                                    <label class="placeholder">Ваше имя*</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="_phone some-input" required type="text">
+                                    <label class="placeholder">Телефон*</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input" required type="text">
+                                    <label class="placeholder">E-mail</label>
+                                </div>
                                 <div class="comment">
-                                    <input class="for-comment" type="text" placeholder="Комментарий">
                                     <div class="textarea">
                                         <span class="placeholder-textarea">Комментарий</span>
                                         <textarea maxlength="1000" class="review-text" name="review-text" rows="7"
