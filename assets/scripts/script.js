@@ -975,6 +975,13 @@ $(document).ready(function () {
         }
     });
 });
+
+//==============delivery-page=============
+$(document).ready(function () {
+    $('.delyvery-page__header').click(function(){
+        $(this).toggleClass('active').next().slideToggle();
+    });
+});
 $(document).mouseup(function (e) {
     var div = $('.textarea');
     if (!div.is(e.target)

@@ -7401,7 +7401,7 @@ body.passive {
             margin-top: calc(20px + (38 - 20) * ((100vh - 580px) / (1080 - 580)));
         }
     }
-    .disinfection-title.active{
+    .disinfection-title.active {
         padding: calc(50px + (120 - 50) * ((100vh - 600px) / (1080 - 600))) 0 0;
         .disinfection-title__description,
         .disinfection-title__button {
@@ -7447,7 +7447,7 @@ body.passive {
             margin: 0;
             background-color: rgba(243, 248, 255, 0.7);
             box-shadow: 0px 19px 45px -6px rgba(243, 248, 255, 0.7);
-            background: linear-gradient(180deg, rgba(243, 248, 255,0.7) 48%, rgba(243, 248, 255, 0.5));
+            background: linear-gradient(180deg, rgba(243, 248, 255, 0.7) 48%, rgba(243, 248, 255, 0.5));
         }
         &__image {
             padding: 0 0 70% 0 !important;
@@ -7481,7 +7481,7 @@ body.passive {
     .disinfection-title {
         padding: 90px 0 0 0;
     }
-    .disinfection-title.active{
+    .disinfection-title.active {
         padding: 55px 0 0;
         .disinfection-title__description,
         .disinfection-title__button {
@@ -8052,14 +8052,14 @@ body.passive {
         &__item {
             flex: 1 1 100%;
         }
-        &__text{
+        &__text {
             max-width: 300px;
         }
     }
 }
 //-----write-us
 .wrapper-disinfection {
-    .footer{
+    .footer {
         margin-top: 107px;
     }
     .write-us {
@@ -8070,18 +8070,18 @@ body.passive {
             top: calc(-10px + (-100 - (-10)) * ((100vw - 320px) / (1920 - 320)));
             z-index: 2;
         }
-        &__fon2{
+        &__fon2 {
             position: absolute;
             top: 240px;
         }
-        &__fon3{
+        &__fon3 {
             left: 0;
             bottom: -10px;
             position: absolute;
             z-index: 1;
         }
         &__description {
-            margin-top:  calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
+            margin-top: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
             font-size: 14px;
             line-height: 17px;
             text-align: center;
@@ -8090,12 +8090,171 @@ body.passive {
             max-width: 545px;
             padding: 0 15px;
         }
-        &__form{
+        &__form {
             z-index: 4;
             margin-top: 20px;
             padding: 47px 20px 150px;
-            .form-write__item:first-child{
+            .form-write__item:first-child {
                 margin-top: 20px;
+            }
+        }
+    }
+}
+//////////////////////////////////////////////////
+//===============delyvery-page==============
+.delyvery-page {
+    padding: 125px 0 0 0;
+    &__conteiner {
+    }
+
+    &__title {
+        padding: 0 20px;
+    }
+
+    &__wrapper {
+        margin-top: 67px;
+    }
+
+    &__header {
+        position: relative;
+        padding: 0 0 9% 0;
+        height: 119px;
+        min-height: 119px;
+        cursor: pointer;
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__header.active {
+        .delyvery-page__name._red {
+            background-color: rgba(241, 128, 112, 1);
+        }
+        .delyvery-page__name._green {
+            background-color: rgba(0, 109, 102, 1);
+        }
+        .delyvery-page__name._grey {
+            background-color: rgba(194, 199, 188, 1);
+        }
+        .delyvery-page__close {
+            visibility: visible;
+            opacity: 1;
+            transform: scale(1);
+            transition: all 0.5s ease-out 0s;
+        }
+    }
+    &__name._red {
+        background-color: rgba(241, 128, 112, 0.8);
+        transition: all 0.5s ease-out 0s;
+    }
+    &__name._green {
+        background-color: rgba(0, 109, 102, 0.8);
+        transition: all 0.5s ease-out 0s;
+    }
+    &__name._grey {
+        background-color: rgba(194, 199, 188, 0.8);
+        transition: all 0.5s ease-out 0s;
+    }
+
+    &__name {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 10px calc(20px + (57 - 20) * ((100vw - 320px) / (1920 - 320)));
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.7s ease-out 0s;
+        span {
+            display: block;
+            width: fit-content;
+            font-weight: 500;
+            font-size: calc(20px + (26 - 20) * ((100vw - 320px) / (1920 - 320)));
+            line-height: 120%;
+            color: #fff;
+            text-decoration: underline;
+            margin-right: 35px;
+            br {
+                display: none;
+            }
+        }
+    }
+    &__close {
+        min-width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        position: relative;
+        border: 1px solid #fff;
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(0);
+        transition: all 0.5s ease-out 0s;
+    }
+    &__close::before {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        content: "";
+        width: 17.5px;
+        height: 1px;
+        background-color: #fff;
+    }
+    &__body {
+        display: none;
+        background-color: #f1f0eb;
+        padding: 44px 20px 68px calc(20px + (57 - 20) * ((100vw - 320px) / (1920 - 320)));
+        p {
+            margin-top: 23px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 137%;
+            padding: 0 0 0 21px;
+        }
+    }
+    &__list {
+    }
+
+    &__el {
+        position: relative;
+        font-size: 16px;
+        line-height: 137%;
+        padding: 0 0 0 21px;
+    }
+    &__el::before {
+        position: absolute;
+        content: "";
+        width: 6px;
+        height: 6px;
+        background-color: #f18070;
+        top: 5px;
+        left: 0;
+    }
+    &__el:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 1375px) {
+    .delyvery-page {
+        padding: 110px 0 0 0;
+    }
+}
+@media (max-width: 610px) {
+    .delyvery-page {
+        padding: 80px 0 0 0;
+    }
+}
+@media (max-width: 445px) {
+    .delyvery-page__name {
+        span {
+            br {
+                display: block;
             }
         }
     }
