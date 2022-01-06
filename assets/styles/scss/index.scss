@@ -49,15 +49,19 @@ body.lock {
     overflow: hidden;
 }
 h2 {
-    font-size: 52px;
     font-size: calc(30px + (52 - 30) * ((100vw - 320px) / (1920 - 320)));
     line-height: 95%;
     letter-spacing: 0.01em;
     font-family: "Tinos";
-    font-weight: 400;
+    font-weight: 300;
     color: #3c3c3c;
     text-shadow: 0px 12.6087px 25.2174px rgba(0, 0, 0, 0.05);
     margin-top: 46px;
+}
+h3 {
+    color: #3c3c3c;
+    font-size: calc(26px + (42 - 26) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 300;
 }
 .wrapper {
     overflow: hidden;
@@ -7281,6 +7285,11 @@ body.passive {
 //==============DISINFECTION==============
 .wrapper-disinfection {
     color: #2b2b2b;
+    h3 {
+        letter-spacing: 0.01em;
+        color: #3c3c3c;
+        text-shadow: 0px 12.6087px 25.2174px rgba(0, 0, 0, 0.05);
+    }
 }
 .disinfection-title {
     display: flex;
@@ -7348,7 +7357,6 @@ body.passive {
         right: 0;
         display: flex;
         align-items: center;
-        line-height: 117%;
         padding: 27px 44px 27px 54px;
         letter-spacing: 0.01em;
         background: #006d66;
@@ -7358,6 +7366,7 @@ body.passive {
         span {
             margin: 0 calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
             font-size: calc(10px + (18 - 10) * ((100vw - 320px) / (1920 - 320)));
+            line-height: 117%;
         }
     }
 
@@ -7498,7 +7507,7 @@ body.passive {
     }
 
     &__body {
-        margin-top: 78px;
+        margin-top: calc(40px + (78 - 40) * ((100vw - 320px) / (1920 - 320)));
         display: flex;
         column-gap: 24px;
         flex-wrap: wrap;
@@ -7560,23 +7569,25 @@ body.passive {
     .weoffer {
         &__body {
             flex-direction: column;
+            gap: 14px;
         }
         &__item {
-            padding: calc(40px + (94 - 40) * ((100vw - 320px) / (610 - 320))) 33px
+            padding: calc(30px + (94 - 30) * ((100vw - 320px) / (610 - 320))) 33px
                 calc(40px + (51 - 40) * ((100vw - 320px) / (610 - 320)));
         }
         &__number {
-            font-size: calc(40px + (50 - 40) * ((100vw - 320px) / (610 - 320)));
+            font-size: calc(36px + (50 - 36) * ((100vw - 320px) / (610 - 320)));
         }
         &__name {
-            font-size: calc(22px + (24 - 22) * ((100vw - 320px) / (610 - 320)));
+            font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (610 - 320)));
         }
     }
 }
 //-----our-client
 .our-client {
-    margin-top: 113px;
+    margin-top: calc(80px + (113 - 80) * ((100vw - 320px) / (1920 - 320)));
     &__title {
+        padding: 0 20px;
         h2 {
             margin-top: 0;
         }
@@ -7861,7 +7872,8 @@ body.passive {
 }
 //----------cold-mist
 .cold-mist {
-    padding: 113px 20px;
+    padding: calc(80px + (113 - 80) * ((100vw - 320px) / (1920 - 320))) 20px
+        calc(50px + (113 - 50) * ((100vw - 320px) / (1920 - 320)));
     background-color: rgba(243, 248, 255, 0.6);
     position: relative;
     overflow: hidden;
@@ -7885,7 +7897,7 @@ body.passive {
         position: relative;
         flex: 0 1 38.2%;
         width: 100%;
-        padding: 0 0 30% 0;
+        padding: 0 0 30.3% 0;
         img {
             position: absolute;
             width: 100%;
@@ -7895,10 +7907,11 @@ body.passive {
     }
 
     &__items {
-        padding-left: calc(30px + (158 - 30) * ((100vw - 1100px) / (1920 - 1100)));
+        padding-left: calc(30px + (158 - 30) * ((100vw - 900px) / (1920 - 900)));
         display: flex;
         flex-wrap: wrap;
-        flex: 0 1 71.8%;
+        flex: 0 1 61.8%;
+        margin-top: -29px;
     }
 
     &__item {
@@ -7907,14 +7920,17 @@ body.passive {
         position: relative;
         line-height: 122%;
     }
-    &__item::before{
+    &__item::before {
         position: absolute;
-        content: '';
+        content: "";
         width: 6px;
         height: 6px;
-        background-color: #00AA95;
+        background-color: #00aa95;
         top: 3px;
         left: 0;
+    }
+    &__item {
+        margin-top: 29px;
     }
 }
 .cloud {
@@ -7922,6 +7938,138 @@ body.passive {
     bottom: -3px;
     right: 0;
 }
-.cloud2{
-    color: rgba(255,255,255,0.8);
+.cloud2 {
+    color: rgba(255, 255, 255, 0.8);
+}
+@media (max-width: 1020px) {
+    .cold-mist {
+        &__body {
+            flex-direction: column;
+            margin-top: 50px;
+        }
+        &__image {
+            padding: 0 0 50% 0;
+        }
+        &__items {
+            margin-top: 0;
+        }
+        &__item {
+            padding: 0 10px 0 21px;
+        }
+    }
+}
+@media (max-width: 545px) {
+    .cold-mist {
+        &__items {
+            flex-direction: column;
+        }
+        &__item {
+            padding: 0 0 0 21px;
+        }
+    }
+}
+//---------equipment
+.equipment {
+    margin-top: calc(80px + (113 - 80) * ((100vw - 320px) / (1920 - 320)));
+    padding: 0 20px;
+    &__conteiner {
+    }
+
+    &__title {
+    }
+
+    &__body {
+        margin-top: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        text-align: center;
+        padding: 0 calc(5px + (25 - 5) * ((100vw - 320px) / (1920 - 320)));
+        flex: 0 1 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 29px;
+    }
+
+    &__icon {
+        width: 71px;
+        height: 71px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+        border: 1px solid #f4f4f4;
+    }
+
+    &__text {
+        margin-top: calc(14px + (34 - 14) * ((100vw - 320px) / (1920 - 320)));
+        line-height: 117%;
+    }
+}
+@media (max-width: 1100px) {
+    .equipment {
+        &__item {
+            flex: 0 1 50%;
+            br {
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 545px) {
+    .equipment {
+        &__item {
+            flex: 1 1 100%;
+        }
+        &__text{
+            max-width: 300px;
+        }
+    }
+}
+//-----write-us
+.wrapper-disinfection {
+    .footer{
+        margin-top: 107px;
+    }
+    .write-us {
+        margin-top: calc(110px + (163 - 110) * ((100vw - 320px) / (1920 - 320)));
+        position: relative;
+        &__fon1 {
+            position: absolute;
+            top: calc(-10px + (-100 - (-10)) * ((100vw - 320px) / (1920 - 320)));
+            z-index: 2;
+        }
+        &__fon2{
+            position: absolute;
+            top: 240px;
+        }
+        &__fon3{
+            left: 0;
+            bottom: -10px;
+            position: absolute;
+            z-index: 1;
+        }
+        &__description {
+            margin-top:  calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            letter-spacing: 0.06em;
+            color: #3b3b3b;
+            max-width: 545px;
+            padding: 0 15px;
+        }
+        &__form{
+            z-index: 4;
+            margin-top: 20px;
+            padding: 47px 20px 150px;
+            .form-write__item:first-child{
+                margin-top: 20px;
+            }
+        }
+    }
 }
