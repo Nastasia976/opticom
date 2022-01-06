@@ -775,6 +775,10 @@ $(window).on('resize', function () {
             $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
             e.preventDefault();
         });
+        $('.disinfection-title').addClass('active');
+    }
+    if ($(window).width() > 521) {
+        $('.disinfection-title').removeClass('active');
     }
 });
 

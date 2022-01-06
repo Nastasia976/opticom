@@ -7347,7 +7347,6 @@ body.passive {
         margin-top: 43px;
         .button-main {
             white-space: nowrap;
-            padding: 13px 33px;
         }
     }
 
@@ -7402,6 +7401,19 @@ body.passive {
             margin-top: calc(20px + (38 - 20) * ((100vh - 580px) / (1080 - 580)));
         }
     }
+    .disinfection-title.active{
+        padding: calc(50px + (120 - 50) * ((100vh - 600px) / (1080 - 600))) 0 0;
+        .disinfection-title__description,
+        .disinfection-title__button {
+            margin-top: calc(10px + (80 - 10) * ((100vh - 600px) / (1080 - 600)));
+        }
+        .disinfection-title__button {
+            .button-main {
+                white-space: nowrap;
+                padding: calc(7px + (14 - 7) * ((100vh - 600px) / (1080 - 600))) 33px;
+            }
+        }
+    }
 }
 @media (max-width: 1440px) {
     .disinfection-title {
@@ -7434,6 +7446,8 @@ body.passive {
             padding: 20px;
             margin: 0;
             background-color: rgba(243, 248, 255, 0.7);
+            box-shadow: 0px 19px 45px -6px rgba(243, 248, 255, 0.7);
+            background: linear-gradient(180deg, rgba(243, 248, 255,0.7) 48%, rgba(243, 248, 255, 0.5));
         }
         &__image {
             padding: 0 0 70% 0 !important;
@@ -7467,7 +7481,20 @@ body.passive {
     .disinfection-title {
         padding: 90px 0 0 0;
     }
+    .disinfection-title.active{
+        padding: 55px 0 0;
+        .disinfection-title__description,
+        .disinfection-title__button {
+            margin-top: 15px;
+        }
+        .disinfection-title__button {
+            .button-main {
+                padding: 7px 33px;
+            }
+        }
+    }
 }
+
 @media (max-width: 695px) {
     .disinfection-title {
         &__bottom {
