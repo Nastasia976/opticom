@@ -1702,6 +1702,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="popup-reg pop-up">
                 <div class="popup__conteiner">
                     <div class="popup__top">
@@ -1803,11 +1804,26 @@
                         <div class="popup__title">Регистрация <span>Шаг 1 из 3</span></div>
                         <div class="popup__form">
                             <form action="" class="form-popup">
-                                <input type="text" required placeholder="Ваше имя*">
-                                <input class="_phone" required type="text" placeholder="Телефон*">
-                                <input type="text" placeholder="E-mail">
-                                <input class="password-input reg-inp" type="password" placeholder="Пароль">
-                                <input class="password-input2 reg-inp" type="password" placeholder="Повторите пароль">
+                                <div class="inputsection">
+                                    <input class="some-input" type="text" required >
+                                    <label class="placeholder">Ваше имя*</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input _phone" type="text" required>
+                                    <label class="placeholder">Телефон*</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input" type="text" required>
+                                    <label class="placeholder">E-mail</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input password-input reg-inp" type="password" required>
+                                    <label class="placeholder">Пароль</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input password-input2 reg-inp" type="password" required>
+                                    <label class="placeholder">Повторите пароль</label>
+                                </div>
                             </form>
                             <button class="popup__button next button-next">Продолжить</button>
                             <div class="popup__footer will-aut">Уже зарегистрированы? Авторизуйтесь</div>
@@ -1916,8 +1932,14 @@
                         <div class="popup__title">Регистрация <span>Шаг 2 из 3</span></div>
                         <div class="popup__form">
                             <form action="" class="form-popup">
-                                <input type="number" required placeholder="ИНН*">
-                                <input type="text" required placeholder="Наименование организации*">
+                                <div class="inputsection">
+                                    <input class="some-input" type="number" required >
+                                    <label class="placeholder">ИНН*</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input" type="text" required >
+                                    <label class="placeholder">Наименование организации*</label>
+                                </div>
                             </form>
                             <button class="popup__button next button-next2">Продолжить</button>
                         </div>
@@ -2025,12 +2047,30 @@
                         <div class="popup__title">Регистрация <span>Шаг 3 из 3</span></div>
                         <div class="popup__form">
                             <form action="" class="form-popup">
-                                <input type="text" required placeholder="Страна*">
-                                <input type="text" required placeholder="Регион*">
-                                <input type="text" required placeholder="Населенный пункт*">
-                                <input type="text" required placeholder="Улица*">
-                                <input type="text" required placeholder="Дом*">
-                                <input type="text" required placeholder="Офис*">
+                                <div class="inputsection">
+                                    <input class="some-input" type="text" required >
+                                    <label class="placeholder">Страна*</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input" type="text" required >
+                                    <label class="placeholder">Регион*</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input" type="text" required >
+                                    <label class="placeholder">Населенный пункт*</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input" type="text" required >
+                                    <label class="placeholder">Улица*</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input" type="text" required >
+                                    <label class="placeholder">Дом*</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input" type="text" required >
+                                    <label class="placeholder">Офис*</label>
+                                </div>
                             </form>
                             <div class="popup__agree">Нажимая на кнопку “Отправить”, Вы соглашаетесь с условиями
                                 обработки персональных данных</div>
@@ -2046,7 +2086,7 @@
                         <div class="popups__close"></div>
                     </div>
                     <div class="popups__body">
-                        <div class="popups__text">Для завершения регистрации с вами свяжется менеджер.</div>
+                        <div class="popups__text">Для завершения регистрации с вами свяжется менеджер.</div>
                         <div class="popups__button">Хорошо</div>
                     </div>
                 </div>
@@ -2152,11 +2192,18 @@
                         <div class="popup__title">Авторизация</div>
                         <div class="popup__form">
                             <form action="" class="form-popup">
-                                <input type="text" placeholder="E-mail">
-                                <input class="password-input reg-inp" type="password" placeholder="Пароль">
+                                <div class="inputsection">
+                                    <input class="some-input" type="text" required tabindex="10">
+                                    <label class="placeholder">E-mail</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input password-input reg-inp" type="password" required  tabindex="11">
+                                    <label class="placeholder">Пароль</label>
+                                </div>
                             </form>
                             <div class="popup__items">
                                 <div class="popup__check">
+                                    <input id="remember" type="checkbox" class="member-input"  tabindex="12">
                                     <label class="remember-me" for="remember">
                                         <svg width="12" height="12" viewBox="0 0 14 12" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -2166,11 +2213,10 @@
                                         </svg>
                                     </label>
                                     <span>Запомнить меня</span>
-                                    <input id="remember" type="checkbox">
                                 </div>
-                                <div class="popup__forget">Забыли пароль?</div>
+                                <button class="popup__forget" tabindex="13">Забыли пароль?</button>
                             </div>
-                            <button class="popup__button">Войти</button>
+                            <button class="popup__button" tabindex="14">Войти</button>
                             <div class="popup__footer will-reg">Нет аккаунта? Зарегистрируйтесь</div>
                         </div>
                     </div>
@@ -2279,7 +2325,10 @@
                             пароля</div>
                         <div class="popup__form">
                             <form action="" class="form-popup">
-                                <input type="text" placeholder="E-mail">
+                                <div class="inputsection">
+                                    <input class="some-input" type="text" required>
+                                    <label class="placeholder">E-mail</label>
+                                </div>
                             </form>
                             <button class="popup__button button-restore">Восстановить пароль</button>
                         </div>
@@ -2287,6 +2336,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="popups check-your-email">
                 <div class="popups__conteiner">
                     <div class="popups__top">

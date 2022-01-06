@@ -1357,19 +1357,22 @@
                             <h2>Пишите нам</h2>
                         </div>
                         <form class="write-us__form form-write">
-                            <div class="form-write__item">
-                                <input type="text" placeholder="Ваше имя*">
+                            <div class="inputsection form-write__item">
+                                <input class="some-input" type="text" required tabindex="15">
+                                <label class="placeholder">Ваше имя*</label>
                             </div>
-                            <div class="form-write__item">
-                                <input type="text" placeholder="Email или телефон*">
+                            <div class="inputsection form-write__item">
+                                <input class="some-input _phone" type="text" required tabindex="16">
+                                <label class="placeholder">Email или телефон*</label>
                             </div>
-                            <div class="form-write__item">
-                                <input type="text" placeholder="Тема">
+                            <div class="inputsection form-write__item">
+                                <input class="some-input" type="text" required tabindex="17">
+                                <label class="placeholder">Тема</label>
                             </div>
                             <div class="form-write__agree">
                                 Нажимая на кнопку “Отправить”, Вы соглашаетесьс условиями обработки персональных данных
                             </div>
-                            <div class="form-write__button">Отправить</div>
+                            <div class="form-write__button" tabindex="18">Отправить</div>
                         </form>
                     </div>
                 </div>

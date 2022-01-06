@@ -2930,9 +2930,11 @@ body.passive {
 }
 
 .form-write__item {
-  padding: 60px 20px 2px;
+  margin-top: 60px;
+  padding: 0px 20px 2px;
   border-bottom: 1px solid rgba(183, 183, 183, 0.2);
   text-align: center;
+  position: relative;
 }
 
 .form-write__item input,
@@ -2978,6 +2980,37 @@ body.passive {
 .form-write__item input {
   width: 100%;
   background-color: transparent;
+}
+
+.form-write__item input:focus ~ .placeholder {
+  top: -20px !important;
+  font-size: 12px;
+  opacity: 0.6;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.form-write__item input:not(:focus) ~ .placeholder {
+  top: 0;
+  opacity: 1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  font-size: 16px;
+}
+
+.form-write__item input:valid ~ .placeholder {
+  top: -10px;
+  font-size: 12px;
+  opacity: 0.6;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.form-write__item .placeholder {
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 10px !important;
 }
 
 .form-write__agree {
@@ -5286,22 +5319,22 @@ body.passive {
   -webkit-appearance: none;
 }
 
-.popup-request .popup__form input[type='number'],
+.popup-request .popup__form input[type="number"],
 .popup-request .popup__form input[type="number"]:hover,
 .popup-request .popup__form input[type="number"]:focus,
-.popup-reg .popup__form input[type='number'],
+.popup-reg .popup__form input[type="number"],
 .popup-reg .popup__form input[type="number"]:hover,
 .popup-reg .popup__form input[type="number"]:focus,
-.popup-reg2 .popup__form input[type='number'],
+.popup-reg2 .popup__form input[type="number"],
 .popup-reg2 .popup__form input[type="number"]:hover,
 .popup-reg2 .popup__form input[type="number"]:focus,
-.popup-reg3 .popup__form input[type='number'],
+.popup-reg3 .popup__form input[type="number"],
 .popup-reg3 .popup__form input[type="number"]:hover,
 .popup-reg3 .popup__form input[type="number"]:focus,
-.popup-autoriz .popup__form input[type='number'],
+.popup-autoriz .popup__form input[type="number"],
 .popup-autoriz .popup__form input[type="number"]:hover,
 .popup-autoriz .popup__form input[type="number"]:focus,
-.popup-forgot .popup__form input[type='number'],
+.popup-forgot .popup__form input[type="number"],
 .popup-forgot .popup__form input[type="number"]:hover,
 .popup-forgot .popup__form input[type="number"]:focus {
   -webkit-appearance: none;
@@ -5344,7 +5377,8 @@ body.passive {
   max-height: fit-content !important;
 }
 
-.popup-request .popup__form .inputsection input, .popup-request .popup__form .inputsection .placeholder,
+.popup-request .popup__form .inputsection input,
+.popup-request .popup__form .inputsection .placeholder,
 .popup-reg .popup__form .inputsection input,
 .popup-reg .popup__form .inputsection .placeholder,
 .popup-reg2 .popup__form .inputsection input,
@@ -5403,32 +5437,6 @@ body.passive {
 .popup-reg3 .popup__form .inputsection input:valid ~ .placeholder,
 .popup-autoriz .popup__form .inputsection input:valid ~ .placeholder,
 .popup-forgot .popup__form .inputsection input:valid ~ .placeholder {
-  top: -10px;
-  font-size: 12px;
-  opacity: 0.6;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.popup-request .popup__form .inputsection .placeholder,
-.popup-reg .popup__form .inputsection .placeholder,
-.popup-reg2 .popup__form .inputsection .placeholder,
-.popup-reg3 .popup__form .inputsection .placeholder,
-.popup-autoriz .popup__form .inputsection .placeholder,
-.popup-forgot .popup__form .inputsection .placeholder {
-  position: absolute;
-  left: 0;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  pointer-events: none;
-}
-
-.popup-request .popup__form .inputsection .placeholder.scale,
-.popup-reg .popup__form .inputsection .placeholder.scale,
-.popup-reg2 .popup__form .inputsection .placeholder.scale,
-.popup-reg3 .popup__form .inputsection .placeholder.scale,
-.popup-autoriz .popup__form .inputsection .placeholder.scale,
-.popup-forgot .popup__form .inputsection .placeholder.scale {
   top: -10px;
   font-size: 12px;
   opacity: 0.6;
@@ -5668,7 +5676,7 @@ body.passive {
 .popup-reg3 .popup__items .popup__forget:focus,
 .popup-autoriz .popup__items .popup__forget:focus,
 .popup-forgot .popup__items .popup__forget:focus {
-  color: #D7945F;
+  color: #d7945f;
   font-size: 13px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -5712,7 +5720,7 @@ body.passive {
 .popup-reg3 .popup__items .popup__check .member-input:focus ~ .remember-me,
 .popup-autoriz .popup__items .popup__check .member-input:focus ~ .remember-me,
 .popup-forgot .popup__items .popup__check .member-input:focus ~ .remember-me {
-  border: 1px solid #3C3C3C;
+  border: 1px solid #3c3c3c;
   opacity: 0.7;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -5787,7 +5795,8 @@ body.passive {
   width: 100%;
 }
 
-.popup-request .popup__button:hover, .popup-request .popup__button:focus,
+.popup-request .popup__button:hover,
+.popup-request .popup__button:focus,
 .popup-reg .popup__button:hover,
 .popup-reg .popup__button:focus,
 .popup-reg2 .popup__button:hover,
@@ -5844,6 +5853,22 @@ body.passive {
   border-bottom: 1px dashed rgba(0, 167, 147, 0.4);
 }
 
+.placeholder {
+  position: absolute;
+  left: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  pointer-events: none;
+}
+
+.placeholder.scale {
+  top: -10px;
+  font-size: 12px;
+  opacity: 0.6;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
 .popup-request.active,
 .popup-reg.active,
 .popup-reg2.active,
@@ -5888,9 +5913,10 @@ body.passive {
   .popup-request .popup__body {
     padding: 0 20px 0 20px;
   }
-  .popup-request .popup__form,
-  .popup-request .popup__button {
+  .popup__form,
+  .popup__button {
     max-width: 100%;
+    min-width: 100% !important;
   }
 }
 
