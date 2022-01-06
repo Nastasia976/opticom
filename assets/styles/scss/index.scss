@@ -2724,11 +2724,14 @@ body.passive {
 
     &__close {
         position: relative;
-        min-width: 20px;
-        height: 20px;
+        min-width: 22px;
+        height: 22px;
         border: 2px solid #3c3c3c;
         border-radius: 50%;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     &__close::before,
     &__close::after {
@@ -3931,6 +3934,9 @@ body.passive {
         top: 26px;
         right: 26px;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         svg {
             width: fit-content;
         }
@@ -3966,20 +3972,7 @@ body.passive {
     }
 
     .popup__form {
-        margin-top: calc(20px + (34 - 20) * ((100vh - 568px) / (800 - 568)));
-        /* input,
-        input::placeholder {
-            width: 100%;
-            padding: 10px 0 2px 0;
-            font-size: 16px;
-            line-height: 137%;
-            color: #252525;
-            font-weight: 300;
-            border-bottom: 1px solid rgba(183, 183, 183, 0.2);
-        } */
-        /* input:not(:last-child) {
-            margin-bottom: calc(20px + (32 - 20) * ((100vh - 568px) / (800 - 568)));
-        } */
+        margin-top: calc(25px + (34 - 25) * ((100vh - 568px) / (800 - 568)));
         input:focus {
             ::placeholder {
                 transform: scale(0.5) translate(-20px, -20px);
@@ -3991,6 +3984,26 @@ body.passive {
             transition: 0.5s;
             font-size: 12px;
             border: 0;
+        }
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none; // Yeah, yeah everybody write about it
+        }
+        
+        input[type='number'],
+        input[type="number"]:hover,
+        input[type="number"]:focus {
+            appearance: none;
+            -moz-appearance: textfield;
+        }
+        .inputfile{
+            width: 1px;
+            height: 1px;
+            position: absolute;
+            opacity: 0;
+        }
+        .inputfile:focus ~ .label-file{
+            opacity: 0.6;
         }
         .inputsection {
             width: 100%;
@@ -4039,7 +4052,7 @@ body.passive {
             }
         }
         .inputsection:not(:last-child) {
-            margin-bottom: calc(20px + (32 - 20) * ((100vh - 568px) / (800 - 568)));
+            margin-bottom: calc(25px + (32 - 25) * ((100vh - 568px) / (800 - 568)));
         }
         .label-file {
             display: flex;
@@ -4059,19 +4072,6 @@ body.passive {
         .for-comment {
         }
         .textarea {
-            /* position: absolute;
-            width: 100%;
-            z-index: 2;
-            top: 0;
-            margin-bottom: 15px;
-            background: #ffffff;
-            border: 1px solid #e8e8e8;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.14);
-            padding: 23px 0 0 0;
-            visibility: hidden;
-            opacity: 0;
-            height: 1px;
-            transition: 0.4s; */
             position: relative;
             border-bottom: 1px solid rgba(183, 183, 183, 0.2);
             height: 25px;
@@ -4137,17 +4137,6 @@ body.passive {
                 height: 73%;
             }
         }
-        /*  .textarea.static {
-            height: 50px;
-            position: relative;
-            border: 0;
-            border-bottom: 1px solid rgba(183, 183, 183, 0.2);
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
-            textarea{
-                padding: 0;
-                height: 100%;
-            }
-        } */
     }
     .form-popup {
     }
@@ -4166,6 +4155,10 @@ body.passive {
             color: #d4ad67;
             position: relative;
             cursor: pointer;
+            font-size: 12px;
+            line-height: 12px;
+            font-weight: 300;
+            transition: 0.3s;
         }
         .popup__forget::after {
             position: absolute;
@@ -4176,6 +4169,12 @@ body.passive {
             left: 0;
             border-bottom: 1px dashed rgba(212, 173, 103, 0.4);
         }
+        .popup__forget:focus{
+            color: #D7945F;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+        
         .popup__check {
             margin-top: 15px;
             position: relative;
@@ -4186,8 +4185,16 @@ body.passive {
                 position: absolute;
                 left: 0;
                 top: 3px;
-                visibility: hidden;
+                width: 1px;
+                height: 1px;
+                opacity: 0;
                 width: fit-content;
+                transition: 0.3s;
+            }
+            .member-input:focus ~ .remember-me{
+                border: 1px solid #3C3C3C;
+                opacity: 0.7;
+                transition: 0.3s;
             }
             .remember-me {
                 width: 15px;
@@ -4197,6 +4204,7 @@ body.passive {
                 left: 0;
                 top: -1px;
                 cursor: pointer;
+                transition: 0.3s;
                 svg {
                     display: none;
                     margin-left: 1px;
@@ -4231,7 +4239,7 @@ body.passive {
         max-width: 320px;
         width: 100%;
     }
-    .popup__button:hover {
+    .popup__button:hover, .popup__button:focus {
         border: 1px solid rgba(216, 149, 96, 0.3);
         color: #d89560;
     }
@@ -4274,8 +4282,8 @@ body.passive {
 @media (min-height: 900px) {
     .pop-up {
         .popup__form {
-            input:not(:last-child) {
-                /* margin-bottom: 30px !important; */
+            .inputsection:not(:last-child) {
+                margin-bottom: 30px !important;
             }
         }
     }
@@ -4308,9 +4316,9 @@ body.passive {
     .popup__description,
     .popup__form,
     .popup__agree {
-        margin-top: 15px !important;
-        input:not(:last-child) {
-            margin-bottom: 20px;
+        margin-top: 25px !important;
+        .inputsection:not(:last-child) {
+            margin-bottom: 25px;
         }
     }
 }

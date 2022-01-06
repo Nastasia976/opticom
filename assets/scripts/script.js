@@ -930,18 +930,35 @@ $(document).ready(function () {
         $('#counter').text(this.value.length++);
     });
     $('.placeholder-textarea, textarea').click(function () {
-        $('.textarea').addClass('active').removeClass('static');
-        $('.ready-textarea').show();
-        $('.current-text').show();
-        $('.placeholder-textarea').hide();
-        $('textarea').focus();
-    });
-    $('.for-comment').focus(function () {
         $('.textarea').addClass('active');
         $('.ready-textarea').show();
         $('.current-text').show();
         $('.placeholder-textarea').hide();
         $('textarea').focus();
+    });
+    $('.review-text').focus(function () {
+        $('.textarea').addClass('active');
+        $('.ready-textarea').show();
+        $('.current-text').show();
+        $('.placeholder-textarea').hide();
+        $('textarea').focus();
+    })
+    $('.member-input').focus(function () {
+        $(this).toggleClass('active');
+    })
+    $('.member-input').focusout(function () {
+        $(this).removeClass('active');
+    })
+    
+    $('.review-text').focusout(function(){
+        $('.ready-textarea').hide().next().hide();
+        $('.textarea').removeClass('active');
+        $('.placeholder-textarea').show();
+        $('.placeholder-textarea').removeClass('scale')
+        if ($('#review-text').val().trim().length > 0) {
+            $('.placeholder-textarea').addClass('scale');
+            $('.textarea').removeClass('active');
+        }
     })
     $('.ready-textarea').click(function () {
         $(this).hide().next().hide();

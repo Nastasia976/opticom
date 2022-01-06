@@ -3548,11 +3548,20 @@ body.passive {
 
 .popups__close {
   position: relative;
-  min-width: 20px;
-  height: 20px;
+  min-width: 22px;
+  height: 22px;
   border: 2px solid #3c3c3c;
   border-radius: 50%;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .popups__close::before, .popups__close::after {
@@ -5075,6 +5084,15 @@ body.passive {
   top: 26px;
   right: 26px;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .popup-request .popup__close svg,
@@ -5150,31 +5168,7 @@ body.passive {
 .popup-reg3 .popup__form,
 .popup-autoriz .popup__form,
 .popup-forgot .popup__form {
-  margin-top: calc(20px + (34 - 20) * ((100vh - 568px) / (800 - 568)));
-  /* input,
-        input::placeholder {
-            width: 100%;
-            padding: 10px 0 2px 0;
-            font-size: 16px;
-            line-height: 137%;
-            color: #252525;
-            font-weight: 300;
-            border-bottom: 1px solid rgba(183, 183, 183, 0.2);
-        } */
-  /* input:not(:last-child) {
-            margin-bottom: calc(20px + (32 - 20) * ((100vh - 568px) / (800 - 568)));
-        } */
-  /*  .textarea.static {
-            height: 50px;
-            position: relative;
-            border: 0;
-            border-bottom: 1px solid rgba(183, 183, 183, 0.2);
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
-            textarea{
-                padding: 0;
-                height: 100%;
-            }
-        } */
+  margin-top: calc(25px + (34 - 25) * ((100vh - 568px) / (800 - 568)));
 }
 
 .popup-request .popup__form input:focus ::-webkit-input-placeholder,
@@ -5275,6 +5269,65 @@ body.passive {
   transition: 0.5s;
   font-size: 12px;
   border: 0;
+}
+
+.popup-request .popup__form input[type="number"]::-webkit-outer-spin-button,
+.popup-request .popup__form input[type="number"]::-webkit-inner-spin-button,
+.popup-reg .popup__form input[type="number"]::-webkit-outer-spin-button,
+.popup-reg .popup__form input[type="number"]::-webkit-inner-spin-button,
+.popup-reg2 .popup__form input[type="number"]::-webkit-outer-spin-button,
+.popup-reg2 .popup__form input[type="number"]::-webkit-inner-spin-button,
+.popup-reg3 .popup__form input[type="number"]::-webkit-outer-spin-button,
+.popup-reg3 .popup__form input[type="number"]::-webkit-inner-spin-button,
+.popup-autoriz .popup__form input[type="number"]::-webkit-outer-spin-button,
+.popup-autoriz .popup__form input[type="number"]::-webkit-inner-spin-button,
+.popup-forgot .popup__form input[type="number"]::-webkit-outer-spin-button,
+.popup-forgot .popup__form input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.popup-request .popup__form input[type='number'],
+.popup-request .popup__form input[type="number"]:hover,
+.popup-request .popup__form input[type="number"]:focus,
+.popup-reg .popup__form input[type='number'],
+.popup-reg .popup__form input[type="number"]:hover,
+.popup-reg .popup__form input[type="number"]:focus,
+.popup-reg2 .popup__form input[type='number'],
+.popup-reg2 .popup__form input[type="number"]:hover,
+.popup-reg2 .popup__form input[type="number"]:focus,
+.popup-reg3 .popup__form input[type='number'],
+.popup-reg3 .popup__form input[type="number"]:hover,
+.popup-reg3 .popup__form input[type="number"]:focus,
+.popup-autoriz .popup__form input[type='number'],
+.popup-autoriz .popup__form input[type="number"]:hover,
+.popup-autoriz .popup__form input[type="number"]:focus,
+.popup-forgot .popup__form input[type='number'],
+.popup-forgot .popup__form input[type="number"]:hover,
+.popup-forgot .popup__form input[type="number"]:focus {
+  -webkit-appearance: none;
+          appearance: none;
+  -moz-appearance: textfield;
+}
+
+.popup-request .popup__form .inputfile,
+.popup-reg .popup__form .inputfile,
+.popup-reg2 .popup__form .inputfile,
+.popup-reg3 .popup__form .inputfile,
+.popup-autoriz .popup__form .inputfile,
+.popup-forgot .popup__form .inputfile {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  opacity: 0;
+}
+
+.popup-request .popup__form .inputfile:focus ~ .label-file,
+.popup-reg .popup__form .inputfile:focus ~ .label-file,
+.popup-reg2 .popup__form .inputfile:focus ~ .label-file,
+.popup-reg3 .popup__form .inputfile:focus ~ .label-file,
+.popup-autoriz .popup__form .inputfile:focus ~ .label-file,
+.popup-forgot .popup__form .inputfile:focus ~ .label-file {
+  opacity: 0.6;
 }
 
 .popup-request .popup__form .inputsection,
@@ -5389,7 +5442,7 @@ body.passive {
 .popup-reg3 .popup__form .inputsection:not(:last-child),
 .popup-autoriz .popup__form .inputsection:not(:last-child),
 .popup-forgot .popup__form .inputsection:not(:last-child) {
-  margin-bottom: calc(20px + (32 - 20) * ((100vh - 568px) / (800 - 568)));
+  margin-bottom: calc(25px + (32 - 25) * ((100vh - 568px) / (800 - 568)));
 }
 
 .popup-request .popup__form .label-file,
@@ -5435,19 +5488,6 @@ body.passive {
 .popup-reg3 .popup__form .textarea,
 .popup-autoriz .popup__form .textarea,
 .popup-forgot .popup__form .textarea {
-  /* position: absolute;
-            width: 100%;
-            z-index: 2;
-            top: 0;
-            margin-bottom: 15px;
-            background: #ffffff;
-            border: 1px solid #e8e8e8;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.14);
-            padding: 23px 0 0 0;
-            visibility: hidden;
-            opacity: 0;
-            height: 1px;
-            transition: 0.4s; */
   position: relative;
   border-bottom: 1px solid rgba(183, 183, 183, 0.2);
   height: 25px;
@@ -5600,6 +5640,11 @@ body.passive {
   color: #d4ad67;
   position: relative;
   cursor: pointer;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 300;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .popup-request .popup__items .popup__forget::after,
@@ -5615,6 +5660,18 @@ body.passive {
   bottom: -5px;
   left: 0;
   border-bottom: 1px dashed rgba(212, 173, 103, 0.4);
+}
+
+.popup-request .popup__items .popup__forget:focus,
+.popup-reg .popup__items .popup__forget:focus,
+.popup-reg2 .popup__items .popup__forget:focus,
+.popup-reg3 .popup__items .popup__forget:focus,
+.popup-autoriz .popup__items .popup__forget:focus,
+.popup-forgot .popup__items .popup__forget:focus {
+  color: #D7945F;
+  font-size: 13px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .popup-request .popup__items .popup__check,
@@ -5639,10 +5696,26 @@ body.passive {
   position: absolute;
   left: 0;
   top: 3px;
-  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.popup-request .popup__items .popup__check .member-input:focus ~ .remember-me,
+.popup-reg .popup__items .popup__check .member-input:focus ~ .remember-me,
+.popup-reg2 .popup__items .popup__check .member-input:focus ~ .remember-me,
+.popup-reg3 .popup__items .popup__check .member-input:focus ~ .remember-me,
+.popup-autoriz .popup__items .popup__check .member-input:focus ~ .remember-me,
+.popup-forgot .popup__items .popup__check .member-input:focus ~ .remember-me {
+  border: 1px solid #3C3C3C;
+  opacity: 0.7;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .popup-request .popup__items .popup__check .remember-me,
@@ -5658,6 +5731,8 @@ body.passive {
   left: 0;
   top: -1px;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .popup-request .popup__items .popup__check .remember-me svg,
@@ -5712,12 +5787,17 @@ body.passive {
   width: 100%;
 }
 
-.popup-request .popup__button:hover,
+.popup-request .popup__button:hover, .popup-request .popup__button:focus,
 .popup-reg .popup__button:hover,
+.popup-reg .popup__button:focus,
 .popup-reg2 .popup__button:hover,
+.popup-reg2 .popup__button:focus,
 .popup-reg3 .popup__button:hover,
+.popup-reg3 .popup__button:focus,
 .popup-autoriz .popup__button:hover,
-.popup-forgot .popup__button:hover {
+.popup-autoriz .popup__button:focus,
+.popup-forgot .popup__button:hover,
+.popup-forgot .popup__button:focus {
   border: 1px solid rgba(216, 149, 96, 0.3);
   color: #d89560;
 }
@@ -5789,8 +5869,8 @@ body.passive {
 }
 
 @media (min-height: 900px) {
-  .pop-up .popup__form input:not(:last-child) {
-    /* margin-bottom: 30px !important; */
+  .pop-up .popup__form .inputsection:not(:last-child) {
+    margin-bottom: 30px !important;
   }
 }
 
@@ -5821,12 +5901,12 @@ body.passive {
   .popup__description,
   .popup__form,
   .popup__agree {
-    margin-top: 15px !important;
+    margin-top: 25px !important;
   }
-  .popup__description input:not(:last-child),
-  .popup__form input:not(:last-child),
-  .popup__agree input:not(:last-child) {
-    margin-bottom: 20px;
+  .popup__description .inputsection:not(:last-child),
+  .popup__form .inputsection:not(:last-child),
+  .popup__agree .inputsection:not(:last-child) {
+    margin-bottom: 25px;
   }
 }
 
