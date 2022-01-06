@@ -949,13 +949,13 @@ $(document).ready(function () {
     $('.member-input').focusout(function () {
         $(this).removeClass('active');
     })
-    
-    $('.review-text').focusout(function(){
+
+    $('.review-text').focusout(function () {
         $('.ready-textarea').hide().next().hide();
         $('.textarea').removeClass('active');
         $('.placeholder-textarea').show();
         $('.placeholder-textarea').removeClass('scale')
-        if ($('#review-text').val().trim().length > 0) {
+        if ($('#review-text').val().length > 0) {
             $('.placeholder-textarea').addClass('scale');
             $('.textarea').removeClass('active');
         }
@@ -965,7 +965,7 @@ $(document).ready(function () {
         $('.textarea').removeClass('active');
         $('.placeholder-textarea').show();
         $('.placeholder-textarea').removeClass('scale')
-        if ($('#review-text').val().trim().length > 0) {
+        if ($('#review-text').val().length > 0) {
             $('.placeholder-textarea').addClass('scale');
             $('.textarea').removeClass('active');
         }
@@ -979,7 +979,7 @@ $(document).mouseup(function (e) {
         $('.ready-textarea').hide().next().hide();
         $('.placeholder-textarea').show();
         $('.placeholder-textarea').removeClass('scale')
-        if ($('#review-text').val().trim().length > 0) {
+        if ($('#review-text').val().length > 0) {
             $('.placeholder-textarea').addClass('scale');
             $('.textarea').removeClass('active');
         }
@@ -988,12 +988,23 @@ $(document).mouseup(function (e) {
 
 
 
+$('.scrollbar__body').on("scroll", function () {
+    var scrolled = $(this).scrollLeft();
+    if (scrolled > 1) {
+        prevBtn.style.display = "block";
+    }
+    else {
+        prevBtn.style.display = "none";
+    }
+});
+
+
 const testimonials = document.querySelector('.scrollbar');
-const scroller = testimonials.querySelector('.scrollbar__body');
-const nextBtn = testimonials.querySelector('.scrollbar__next');
-const itemWidth = testimonials.querySelector('.scrollbar__item').clientWidth;
-const prevBtn = testimonials.querySelector('.scrollbar__prev');
-const shaddow = testimonials.querySelector('.scrollbar__shaddow');
+const scroller = document.querySelector('.scrollbar__body');
+const nextBtn = document.querySelector('.scrollbar__next');
+const itemWidth = document.querySelector('.scrollbar__item').clientWidth;
+const prevBtn = document.querySelector('.scrollbar__prev');
+const shaddow = document.querySelector('.scrollbar__shaddow');
 
 
 
@@ -1022,16 +1033,3 @@ function scrollToPrevItem() {
 
     }
 }
-
-
-$('.scrollbar__body').on("scroll", function () {
-    var scrolled = $(this).scrollLeft();
-    if (scrolled > 1) {
-        prevBtn.style.display = "block";
-    }
-    else {
-        prevBtn.style.display = "none";
-    }
-});
-
-
