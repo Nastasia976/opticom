@@ -10749,6 +10749,10 @@ body.passive {
   padding: 0 0 0 21px;
 }
 
+.delyvery-page__list br {
+  display: none;
+}
+
 .delyvery-page__el {
   position: relative;
   font-size: 16px;
@@ -10784,6 +10788,9 @@ body.passive {
 
 @media (max-width: 445px) {
   .delyvery-page__name span br {
+    display: block;
+  }
+  .delyvery-page__list br {
     display: block;
   }
 }

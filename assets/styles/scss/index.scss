@@ -8219,6 +8219,9 @@ body.passive {
         }
     }
     &__list {
+        br{
+            display: none;
+        }
     }
 
     &__el {
@@ -8256,6 +8259,11 @@ body.passive {
             br {
                 display: block;
             }
+        }
+    }
+    .delyvery-page__list{
+        br{
+            display: block;
         }
     }
 }
