@@ -10613,6 +10613,10 @@ body.passive {
   padding: 0 20px;
 }
 
+.delyvery-page__title h3 {
+  margin-top: 0;
+}
+
 .delyvery-page__wrapper {
   margin-top: 67px;
 }
