@@ -746,13 +746,42 @@ new Swiper('.blog-swiper', {
     },
 });
 
+new Swiper('.scrollbar', {
+    slidesPerView: "auto",
+    freeMode: true,
+    scrollbar: {
+        el: ".swiper-scrollbar",
+    },
+    mousewheel: true,
+    navigation: {
+        nextEl: '.scrollbar__next',
+        prevEl: '.scrollbar__prev'
+    },
+});
+/* $(document).ready(function () {
+    if($('.scrollbar__next').hasClass('swiper-button-disabled')){
+        $('.scrollbar__shaddow').hide();
+    }
+}); */
+
+
+/* let myArrNext = document.querySelector('.scrollbar__next');
+let myShaddow = document.querySelector('.scrollbar__shaddow')
+
+function myArrows() {
+    if(myArrNext.classList.get('swiper-button-disabled')){
+        myShaddow.add('active');
+    }
+}
+myArrows() */
+
 $("body").on('click', '[href*="#"]', function (e) {
     var fixed_offset = 0;
     $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
     e.preventDefault();
 });//скролл до нужного блока
 
-$("body").on('click', '[href*="#description"], [href*="#characters"], [href*="#sertificates"], [href*="#duties"], [href*="#our-wishes"], [href*="#we-offer"]', function (e) {
+$("body").on('click', '[href*="#description"], [href*="#characters"], [href*="#sertificates"], [href*="#duties"], [href*="#our-wishes"], [href*="#we-offer"], [href*="#weoffer"]', function (e) {
     var fixed_offset = 100;
     $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
     e.preventDefault();
@@ -760,25 +789,11 @@ $("body").on('click', '[href*="#description"], [href*="#characters"], [href*="#s
 
 $(window).on('resize', function () {
     if ($(window).width() < 521) {
-        $("body").on('click', '[href*="#description"]', function (e) {
+        $("body").on('click', '[href*="#description"], [href*="#characters"], [href*="#sertificates"]', function (e) {
             var fixed_offset = 15;
             $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
             e.preventDefault();
         });
-        $("body").on('click', '[href*="#characters"]', function (e) {
-            var fixed_offset = 15;
-            $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
-            e.preventDefault();
-        });
-        $("body").on('click', '[href*="#sertificates"]', function (e) {
-            var fixed_offset = 15;
-            $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
-            e.preventDefault();
-        });
-        $('.disinfection-title').addClass('active');
-    }
-    if ($(window).width() > 521) {
-        $('.disinfection-title').removeClass('active');
     }
 });
 
@@ -920,7 +935,7 @@ let select = function () {
 
     function selectChoose() {
         let text = this.innerText,
-            select = this.closest('.select'),
+            select = this.closest('.select, .item-select'),
             currentText = select.querySelector('.select__current');
         currentText.innerText = text;
         select.classList.remove('is-active');
@@ -982,7 +997,7 @@ $(document).ready(function () {
         $(this).toggleClass('active').next().slideToggle();
     });
 });
-$(document).mouseup(function (e) {
+/* $(document).mouseup(function (e) {
     var div = $('.textarea');
     if (!div.is(e.target)
         && div.has(e.target).length === 0) {
@@ -995,11 +1010,11 @@ $(document).mouseup(function (e) {
             $('.textarea').removeClass('active');
         }
     }
-});
+}); */
 
 
 
-$('.scrollbar__body').on("scroll", function () {
+/* $('.scrollbar__body').on("scroll", function () {
     var scrolled = $(this).scrollLeft();
     if (scrolled > 1) {
         prevBtn.style.display = "block";
@@ -1043,4 +1058,13 @@ function scrollToPrevItem() {
     } else {
 
     }
-}
+} */
+
+//-----activities-------
+
+$(document).ready(function () {
+    $('.activities__item').click(function(){
+        $('.kind').toggleClass('active');
+        $('body').toggleClass('passive');
+    });
+});
