@@ -781,7 +781,7 @@ $("body").on('click', '[href*="#"]', function (e) {
     e.preventDefault();
 });//скролл до нужного блока
 
-$("body").on('click', '[href*="#description"], [href*="#characters"], [href*="#sertificates"], [href*="#duties"], [href*="#our-wishes"], [href*="#we-offer"], [href*="#weoffer"]', function (e) {
+$("body").on('click', '[href*="#description"], [href*="#characters"], [href*="#sertificates"], [href*="#duties"], [href*="#our-wishes"], [href*="#we-offer"], [href*="#weoffer"], [href*="#expert"]', function (e) {
     var fixed_offset = 100;
     $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
     e.preventDefault();
@@ -791,6 +791,15 @@ $(window).on('resize', function () {
     if ($(window).width() < 521) {
         $("body").on('click', '[href*="#description"], [href*="#characters"], [href*="#sertificates"]', function (e) {
             var fixed_offset = 15;
+            $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
+            e.preventDefault();
+        });
+    }
+});
+$(window).on('resize', function () {
+    if ($(window).width() < 521) {
+        $("body").on('click', '[href*="#weoffer"], [href*="#expert"]', function (e) {
+            var fixed_offset = 0;
             $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
             e.preventDefault();
         });
@@ -997,68 +1006,6 @@ $(document).ready(function () {
         $(this).toggleClass('active').next().slideToggle();
     });
 });
-/* $(document).mouseup(function (e) {
-    var div = $('.textarea');
-    if (!div.is(e.target)
-        && div.has(e.target).length === 0) {
-        $('.textarea').removeClass('active');
-        $('.ready-textarea').hide().next().hide();
-        $('.placeholder-textarea').show();
-        $('.placeholder-textarea').removeClass('scale')
-        if ($('#review-text').val().length > 0) {
-            $('.placeholder-textarea').addClass('scale');
-            $('.textarea').removeClass('active');
-        }
-    }
-}); */
-
-
-
-/* $('.scrollbar__body').on("scroll", function () {
-    var scrolled = $(this).scrollLeft();
-    if (scrolled > 1) {
-        prevBtn.style.display = "block";
-    }
-    else {
-        prevBtn.style.display = "none";
-    }
-});
-
-
-const testimonials = document.querySelector('.scrollbar');
-const scroller = document.querySelector('.scrollbar__body');
-const nextBtn = document.querySelector('.scrollbar__next');
-const itemWidth = document.querySelector('.scrollbar__item').clientWidth;
-const prevBtn = document.querySelector('.scrollbar__prev');
-const shaddow = document.querySelector('.scrollbar__shaddow');
-
-
-
-nextBtn.addEventListener('click', scrollToNextItem);
-prevBtn.addEventListener('click', scrollToPrevItem);
-
-
-
-function scrollToNextItem() {
-    if (scroller.scrollLeft < (scroller.scrollWidth - itemWidth)) {
-        // Позиция прокрутки не в начале последнего элемента 
-        scroller.scrollBy({ left: itemWidth, top: 0, behavior: 'smooth' });
-
-    } else {
-        // Достигнут последний элемент 
-        // Вернёмся к первому элементу, установив положение прокрутки на 0 
-    }
-};
-
-
-function scrollToPrevItem() {
-    if (scroller.scrollLeft != 0) {
-        // Позиция прокрутки не в начале первого элемента 
-        scroller.scrollBy({ left: -itemWidth, top: 0, behavior: 'smooth' });
-    } else {
-
-    }
-} */
 
 //-----activities-------
 
