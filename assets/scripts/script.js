@@ -86,7 +86,6 @@ $(document).ready(function () {
             //FYI just have a look at the object to find aviable information
             //press f12 to access the console
             //you could also debug or look in the source
-            console.log(slider);
             return (i + 1) + ' из ' + slider.slideCount;
         },
         appendDots: '.compare__dots',
@@ -122,7 +121,6 @@ $(document).ready(function () {
             //FYI just have a look at the object to find aviable information
             //press f12 to access the console
             //you could also debug or look in the source
-            console.log(slider);
             return (i + 1) + ' из ' + slider.slideCount;
         },
         appendDots: '.compare__dots2',
@@ -747,7 +745,12 @@ new Swiper('.blog-swiper', {
     },
 });
 
-new Swiper('.scrollbar', {
+var sliderIndex = 8;
+let myShaddow = document.querySelector('.scrollbar__shaddow');
+let mySlideScroll = document.querySelector('._last-slide');
+let myArN = document.querySelector('.scrollbar__next');
+
+let myScroll = new Swiper('.scrollbar', {
     slidesPerView: "auto",
     freeMode: true,
     scrollbar: {
@@ -759,22 +762,28 @@ new Swiper('.scrollbar', {
         prevEl: '.scrollbar__prev'
     },
 });
+
+myScroll.on('reachEnd', function () { //когда слайдер коснется последнего слайда
+    myShaddow.style.display = 'none';
+});
+myScroll.on('fromEdge', function () { //когда слайдер уйдет от последнего или первого слайда
+    myShaddow.style.display = 'block';
+    
+});
+
+
 /* $(document).ready(function () {
-    if($('.scrollbar__next').hasClass('swiper-button-disabled')){
-        $('.scrollbar__shaddow').hide();
-    }
+    $('.scrollbar').scroll(function(){
+        if($('.scrollbar__next').hasClass('swiper-button-disabled')){
+            $('.scrollbar__shaddow').hide();
+        }else{
+            $('.scrollbar__shaddow').show();
+        }
+    })
 }); */
 
 
-/* let myArrNext = document.querySelector('.scrollbar__next');
-let myShaddow = document.querySelector('.scrollbar__shaddow')
 
-function myArrows() {
-    if(myArrNext.classList.get('swiper-button-disabled')){
-        myShaddow.add('active');
-    }
-}
-myArrows() */
 
 $("body").on('click', '[href*="#"]', function (e) {
     var fixed_offset = 0;
