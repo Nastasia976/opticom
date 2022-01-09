@@ -4594,7 +4594,7 @@ body.passive {
         }
         label {
             width: 15px;
-            height: 15px;
+            height: 14px;
             border: 1px solid #d1d1d1;
             display: flex;
             align-items: center;
@@ -4647,13 +4647,24 @@ body.passive {
         text-align: center;
     }
     .button-accept {
-        background: linear-gradient(180deg, #006d64 0%, #006d64 100%);
+        background: #006d64;
         color: rgba(255, 255, 255, 0.95);
+        transition: 0.3s;
+    }
+    .button-accept:hover{
+        background: #00AA95;
+        transition: 0.3s;
     }
     .button-cancel {
         margin-top: 17px;
         border: 1px solid #006d64;
         color: #006d64;
+        transition: 0.3s;
+    }
+    .button-cancel:hover{
+        transition: 0.3s;
+        border: 1px solid #00AA95;
+        color: #00AA95;
     }
 }
 
@@ -7182,10 +7193,15 @@ body.passive {
         font-size: 18px;
         line-height: 133%;
         color: #535353;
+        transition: 0.3s;
         padding: 12px calc(25px + (35 - 25) * ((100vw - 320px) / (1920 - 320))) 9px;
         svg {
             margin-right: 10px;
         }
+    }
+    &__link:hover{
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
     }
 }
 .right-vacanci {
@@ -7349,7 +7365,7 @@ body.passive {
         align-items: center;
     }
     &__item {
-        padding: 15px 0 24px;
+        padding: 15px 0 25px;
         font-size: 18px;
         line-height: 21px;
         color: #3b3b3b;
@@ -7428,6 +7444,12 @@ body.passive {
         letter-spacing: 0.02em;
         color: #006d66;
         padding: 12px 30px 9px;
+        transition: 0.3s;
+    }
+    &__up:hover{
+        border: 1px solid #00AA95;
+        color: #00AA95;
+        transition: 0.3s;
     }
 }
 @media (max-width: 520px) {
@@ -7507,6 +7529,7 @@ body.passive {
 
     &__button {
         margin-top: 43px;
+        cursor: pointer;
         .button-main {
             white-space: nowrap;
         }

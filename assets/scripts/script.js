@@ -655,8 +655,8 @@ setTimeout(() => { $('.multy-basket').addClass('active') }, 1500);
         $('body').removeClass('passive');
     }
 }); */
-
-new Swiper('.slider-title', {
+let myMainBtn = document.querySelector('.main-button')
+let mySliderTitle = new Swiper('.slider-title', {
     slidesPerView: 1,
     pagination: {
         el: '.swiper-pagination',
@@ -669,8 +669,17 @@ new Swiper('.slider-title', {
     observeSlideChildren: true,
     autoplay: {
         delay: 5000,
-        disableOnInteraction: false,
+        disableOnInteraction: true,
     },
+});
+
+myMainBtn.addEventListener("mouseenter", function (e) {
+    console.log('ok')
+    mySliderTitle.autoplay.stop();
+});
+myMainBtn.addEventListener("mouseleave", function (e) {
+    mySliderTitle.params.autoplay.delay = 5000;
+    mySliderTitle.autoplay.start();
 });
 
 /* window.onresize = function(event)
