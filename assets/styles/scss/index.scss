@@ -2653,6 +2653,70 @@ body.passive {
         color: #006d66;
     }
 }
+.our-adres {
+    background: #ffffff;
+    box-shadow: 0px -5px 14px rgba(0, 0, 0, 0.08);
+    padding: 21px 20px 30px 20px;
+    transition: all 0.5s ease-in-out 0s;
+    bottom: -100%;
+    position: fixed;
+    min-width: 100%;
+    .popups__close_x {
+        position: relative;
+        height: 25px;
+    }
+    .popups__close_x::before,
+    .popups__close_x::after {
+        position: absolute;
+        content: "";
+        width: 27px;
+        height: 0.6px;
+        background-color: #777777;
+        right: 0;
+        top: 10px;
+    }
+    .popups__close_x::before {
+        transform: rotate(45deg);
+    }
+    .popups__close_x::after {
+        transform: rotate(-45deg);
+    }
+
+    .popups__title {
+        font-size: 16px;
+        line-height: 137%;
+        letter-spacing: 0.06em;
+        color: #000000;
+        opacity: 0.95;
+        margin-top: 0px;
+    }
+
+    .popups__item {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 30px;
+    }
+    .popups__item:last-child {
+        margin-top: 25px;
+    }
+
+    .popups__icon {
+        margin-right: 14px;
+    }
+
+    .popups__text {
+        font-size: 13px;
+        line-height: 138%;
+        letter-spacing: 0.06em;
+        color: #000000;
+        opacity: 0.75;
+        max-width: 250px;
+    }
+}
+.our-adres.active {
+    bottom: 0;
+    transition: all 0.3s ease-in-out 0s;
+}
 
 @media (max-width: 1220px) {
     .footer {
@@ -9644,9 +9708,9 @@ body.passive {
         transition: 0.3s;
         width: fit-content;
     }
-    &__link:hover{
-        border: 1px solid #00AA95;
-        color: #00AA95;
+    &__link:hover {
+        border: 1px solid #00aa95;
+        color: #00aa95;
         transition: 0.3s;
     }
 }
@@ -9694,8 +9758,8 @@ body.passive {
         cursor: pointer;
         transition: 0.3s;
     }
-    &__button:hover{
-        background-color: #00AA95;
+    &__button:hover {
+        background-color: #00aa95;
         transition: 0.3s;
     }
 }
@@ -9730,9 +9794,9 @@ body.passive {
         cursor: pointer;
         transition: 0.3s;
     }
-    &__contact:hover{
-        border: 1px solid #00AA95;
-        color: #00AA95;
+    &__contact:hover {
+        border: 1px solid #00aa95;
+        color: #00aa95;
         transition: 0.3s;
     }
 
@@ -9746,9 +9810,9 @@ body.passive {
         font-size: 18px;
         transition: 0.3s;
     }
-    &__button:hover{
+    &__button:hover {
         transition: 0.3s;
-        background-color: #D89560;
+        background-color: #d89560;
     }
 }
 
@@ -9797,7 +9861,7 @@ body.passive {
             font-weight: bold;
             letter-spacing: 0.04em;
         }
-        .top-product__available{
+        .top-product__available {
             white-space: nowrap;
             margin-right: 10px;
             transform: translate(0, 5px);
@@ -9838,9 +9902,10 @@ body.passive {
         font-family: "Roboto";
         transition: 0.3s;
     }
-    &__to-clear:hover, &__unload:hover{
-        border: 1px solid #00AA95;
-        color: #00AA95;
+    &__to-clear:hover,
+    &__unload:hover {
+        border: 1px solid #00aa95;
+        color: #00aa95;
         transition: 0.3s;
     }
 
@@ -9869,8 +9934,8 @@ body.passive {
         font-weight: 300;
         transition: 0.3s;
     }
-    .product__button._del:hover{
-        background-color: #F18070;
+    .product__button._del:hover {
+        background-color: #f18070;
         transition: 0.3s;
     }
 }
@@ -9921,8 +9986,8 @@ body.passive {
         font-weight: 300;
         transition: 0.3s;
     }
-    &__button:hover{
-        background-color: #D89560;
+    &__button:hover {
+        background-color: #d89560;
         transition: 0.3s;
     }
 }

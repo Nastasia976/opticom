@@ -564,6 +564,23 @@ $(document).ready(function () {
         $('.spoiler-mobile__body').not($(this).next()).slideUp(300);
     });
 
+    $('.footer-mobile__map').click(function(){
+        $('.our-adres').toggleClass('active');
+        $('body').toggleClass('passive');
+    });
+    $('.popups__close_x').click(function(){
+        $('.our-adres').removeClass('active');
+        $('body').removeClass('passive');
+    });
+    $(document).mouseup(function (e) {
+        var div = $('.our-adres');
+        if (!div.is(e.target)
+            && div.has(e.target).length === 0) {
+            $('.our-adres').removeClass('active');
+            $('body').removeClass('passive');
+        }
+    });
+
     $('.control__button').click(function () {
         $('.delit-list').addClass('active');
     });
