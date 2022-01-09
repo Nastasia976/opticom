@@ -673,14 +673,14 @@ let mySliderTitle = new Swiper('.slider-title', {
     },
 });
 
-myMainBtn.addEventListener("mouseenter", function (e) {
-    console.log('ok')
+/* myMainBtn.addEventListener('mouseenter', function () {
+    console.log('ok');
     mySliderTitle.autoplay.stop();
 });
-myMainBtn.addEventListener("mouseleave", function (e) {
+myMainBtn.addEventListener('mouseleave', function () {
     mySliderTitle.params.autoplay.delay = 5000;
     mySliderTitle.autoplay.start();
-});
+}); */
 
 /* window.onresize = function(event)
 {
