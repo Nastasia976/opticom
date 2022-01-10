@@ -10650,6 +10650,11 @@ body.passive {
             width: 100%;
         }
     }
+    &__body._reconciling{
+        .order-card {
+            padding: 28px 20px 31px calc(20px + (26 - 20) * ((100vw - 320px) / (1920 - 320)));
+        }
+    }
     &__body.active{
         display: flex;
     }
@@ -10665,8 +10670,12 @@ body.passive {
         flex-wrap: wrap;
     }
     &__about{
-        margin-top: 17px;
+        margin-top: 7px;
         display: flex;
+        flex-wrap: wrap;
+        .order-card__item{
+            margin-top: 10px;
+        }
         .order-card__item:not(:last-child){
             margin-right: 24px;
         }
@@ -10754,7 +10763,7 @@ body.passive {
     font-weight: 300;
 }
 .green-bg_big {
-    padding: 10px calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320))) 12px;
+    padding: 12px calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320))) 10x;
 }
 .green-bg:hover, .green-bg_big:hover{
     background-color: #00AA95;
@@ -10777,7 +10786,7 @@ body.passive {
 @media(max-width:445px){
     .order-card{
         &__item{
-            flex: 0 1 50%;
+            flex: 1 1 50%;
         }
         &__item:first-child{
             flex: 1 1 auto;
@@ -10786,9 +10795,6 @@ body.passive {
 }
 @media(max-width:340px){
     .order-card{
-        &__item{
-            flex: 1 1 50%;
-        }
         button{
             width: 100%;
         }
