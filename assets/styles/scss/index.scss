@@ -2680,7 +2680,6 @@ button {
     .popups__close_x::after {
         transform: rotate(-45deg);
     }
-
     .popups__title {
         font-size: 16px;
         line-height: 137%;
@@ -2781,7 +2780,7 @@ button {
 
 .popups {
     width: 100%;
-    height: 100vh;
+    min-height: 100%;
     background-color: rgba(0, 0, 0, 0.1);
     position: fixed;
     opacity: 0;
@@ -2830,6 +2829,9 @@ button {
         align-items: center;
         justify-content: center;
     }
+    &__close:hover{
+        border: 2px solid #01645C;
+    }
     &__close::before,
     &__close::after {
         position: absolute;
@@ -2850,6 +2852,10 @@ button {
     &__close::after {
         transform: rotate(45deg);
     }
+    &__close:hover::before,
+    &__close:hover::after{
+        background-color: #01645C;
+    } 
     &__description {
         margin-top: 8px;
         font-size: 16px;
@@ -4012,9 +4018,9 @@ button {
 .popup-autoriz,
 .popup-forgot {
     width: 100%;
-    height: 100vh;
+    min-height: 100%;
     background-color: rgba(0, 0, 0, 0.1);
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
@@ -4023,11 +4029,11 @@ button {
     transition: all ease 0.5s;
     overflow: auto;
     .popup__conteiner {
-        position: relative;
+        position: absolute;
         max-width: 462px;
         width: 100%;
         background-color: #fff;
-        min-height: 100vh;
+        min-height: 100%;
         padding: 0 0 30px 0;
         transform: translate(-100%, 0);
         transition: all ease 0.5s;
@@ -10371,18 +10377,6 @@ button {
     }
 }
 .popups.multy-basket {
-    .popups__conteiner {
-    }
-
-    .popups__top {
-    }
-
-    .popups__title {
-    }
-
-    .popups__close {
-    }
-
     .popups__body {
         margin-top: 33px;
     }

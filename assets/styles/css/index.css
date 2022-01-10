@@ -3610,7 +3610,7 @@ button {
 
 .popups {
   width: 100%;
-  height: 100vh;
+  min-height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
   position: fixed;
   opacity: 0;
@@ -3684,6 +3684,10 @@ button {
           justify-content: center;
 }
 
+.popups__close:hover {
+  border: 2px solid #01645C;
+}
+
 .popups__close::before, .popups__close::after {
   position: absolute;
   content: "";
@@ -3706,6 +3710,10 @@ button {
 .popups__close::after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.popups__close:hover::before, .popups__close:hover::after {
+  background-color: #01645C;
 }
 
 .popups__description {
@@ -5169,9 +5177,9 @@ button {
 .popup-autoriz,
 .popup-forgot {
   width: 100%;
-  height: 100vh;
+  min-height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
@@ -5188,11 +5196,11 @@ button {
 .popup-reg3 .popup__conteiner,
 .popup-autoriz .popup__conteiner,
 .popup-forgot .popup__conteiner {
-  position: relative;
+  position: absolute;
   max-width: 462px;
   width: 100%;
   background-color: #fff;
-  min-height: 100vh;
+  min-height: 100%;
   padding: 0 0 30px 0;
   -webkit-transform: translate(-100%, 0);
           transform: translate(-100%, 0);
