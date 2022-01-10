@@ -13752,7 +13752,7 @@ button {
 }
 
 .order-card__print, .order-card__more {
-  font-size: 16px;
+  font-size: calc(15.5px + (16 - 15.5) * ((100vw - 320px) / (1920 - 320)));
   line-height: 137%;
 }
 
@@ -13831,7 +13831,7 @@ button {
 }
 
 .green-bg_big {
-  padding: 12px calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320))) 10x;
+  padding: 12px calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320))) 10px;
 }
 
 .green-bg:hover,
@@ -13953,6 +13953,9 @@ button {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
+  }
+  .order-card__print span {
+    margin-right: 0;
   }
 }
 

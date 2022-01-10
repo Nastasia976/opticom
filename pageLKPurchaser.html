@@ -581,10 +581,10 @@
                                     <li class="sidebar-lk__el">
                                         <div class="sidebar-lk__link">Корзины
                                             <svg class="arrow-lk" width="8" height="6" viewBox="0 0 8 6" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M4 6L0.535899 -6.52533e-07L7.4641 -4.68497e-08L4 6Z"
-                                                        fill="#D2D2D2" />
-                                                </svg>
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4 6L0.535899 -6.52533e-07L7.4641 -4.68497e-08L4 6Z"
+                                                    fill="#D2D2D2" />
+                                            </svg>
                                         </div>
                                         <ul class="sub-menu-lk">
                                             <li class="sub-menu-lk__el">
@@ -651,7 +651,8 @@
                                 <div class="select__header">
                                     <span class="select__current">Согласованные заказы</span>
                                     <div class="select__icon">
-                                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M12.0148 0.733398L7 5.70046L1.98517 0.733398L0.4375 2.26628L7 8.76628L13.5625 2.26628L12.0148 0.733398Z"
                                                 fill="currentColor" />
@@ -661,7 +662,8 @@
                                 <div class="select__body">
                                     <div class="select__item body-lk__tab active agreed-tab">Согласованные заказы</div>
                                     <div class="select__item body-lk__tab inconsistent-tab">Несогласованные заказы</div>
-                                    <div class="select__item body-lk__tab orders-tab">Ожидающие согласования заказы</div>
+                                    <div class="select__item body-lk__tab orders-tab">Ожидающие согласования заказы
+                                    </div>
                                 </div>
                             </div>
                             <div class="body-lk__body agreed-orders active">
@@ -1232,7 +1234,7 @@
                     <div class="popups__body">
                         <div class="popups__text">Менеджер свяжется с вами в ближайшее время по указанным контактным
                             данным</div>
-                        <div class="popups__button">Хорошо</div>
+                        <button class="popups__button _ok">Хорошо</button>
                     </div>
                 </div>
             </div>
@@ -1242,13 +1244,13 @@
                         <div class="popups__title">Создать новую корзину</div>
                         <div class="popups__close"></div>
                     </div>
-                    <div class="popups__body _basket">
+                    <form method="post" class="popups__body _basket">
                         <label>
                             <span>Название корзины</span>
-                            <input type="text" class="creat-name" placeholder="Корзина для">
+                            <input type="text" class="creat-name" placeholder="Корзина для" required>
                         </label>
-                        <div class="popups__button button-create">Создать корзину</div>
-                    </div>
+                        <button type="submit" class="popups__button button-create">Создать корзину</button>
+                    </form>
                 </div>
             </div>
             <div class="popup-reg pop-up">

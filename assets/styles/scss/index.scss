@@ -10727,7 +10727,7 @@ button {
 
     &__print,
     &__more {
-        font-size: 16px;
+        font-size: calc(15.5px + (16 - 15.5) * ((100vw - 320px) / (1920 - 320)));
         line-height: 137%;
     }
     &__print {
@@ -10793,13 +10793,14 @@ button {
     font-weight: 300;
 }
 .green-bg_big {
-    padding: 12px calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320))) 10x;
+    padding: 12px calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320))) 10px;
 }
 .green-bg:hover,
 .green-bg_big:hover {
     background-color: #00aa95;
     transition: 0.3s;
 }
+//------popup----
 .registration-claim {
     .popups__body {
         margin-top: calc(30px + (46 - 30) * ((100vw - 320px) / (1920 - 320)));
@@ -10890,6 +10891,11 @@ button {
         }
         &__item:first-child {
             flex: 1 1 auto;
+        }
+        &__print{
+            span{
+                margin-right: 0;
+            }
         }
     }
 }

@@ -823,13 +823,13 @@
                         <div class="popups__title">Создать новую корзину</div>
                         <div class="popups__close"></div>
                     </div>
-                    <div class="popups__body _basket">
+                    <form method="post" class="popups__body _basket">
                         <label>
                             <span>Название корзины</span>
-                            <input type="text" class="creat-name" placeholder="Корзина для">
+                            <input type="text" class="creat-name" placeholder="Корзина для" required>
                         </label>
-                        <div class="popups__button button-create">Создать корзину</div>
-                    </div>
+                        <button type="submit" class="popups__button button-create">Создать корзину</button>
+                    </form>
                 </div>
             </div>
 

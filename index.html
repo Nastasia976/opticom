@@ -1364,13 +1364,11 @@
                     <img src="img/write-us/Конверт2.png" alt="write-us">
                 </div>
                 <div class="write-us__conteiner _conteiner">
-
-
                     <div class="write-us__body">
                         <div class="write-us__title">
                             <h2>Пишите нам</h2>
                         </div>
-                        <form class="write-us__form form-write">
+                        <form method="post" class="write-us__form form-write">
                             <div class="inputsection form-write__item">
                                 <input class="some-input" type="text" required tabindex="15">
                                 <label class="placeholder">Ваше имя*</label>
@@ -1386,7 +1384,7 @@
                             <div class="form-write__agree">
                                 Нажимая на кнопку “Отправить”, Вы соглашаетесьс условиями обработки персональных данных
                             </div>
-                            <div class="form-write__button" tabindex="18">Отправить</div>
+                            <button type="submit" class="form-write__button" tabindex="18">Отправить</button>
                         </form>
                     </div>
                 </div>
@@ -1401,27 +1399,25 @@
                     <div class="popups__body">
                         <div class="popups__text">Менеджер свяжется с вами в ближайшее время по указанным контактным
                             данным</div>
-                        <div class="popups__button">Хорошо</div>
+                        <button class="popups__button _ok">Хорошо</button>
                     </div>
                 </div>
             </div>
-
             <div class="popups create-basket">
                 <div class="popups__conteiner">
                     <div class="popups__top">
                         <div class="popups__title">Создать новую корзину</div>
                         <div class="popups__close"></div>
                     </div>
-                    <div class="popups__body _basket">
+                    <form method="post" class="popups__body _basket">
                         <label>
                             <span>Название корзины</span>
-                            <input type="text" class="creat-name" placeholder="Корзина для">
+                            <input type="text" class="creat-name" placeholder="Корзина для" required>
                         </label>
-                        <div class="popups__button button-create">Создать корзину</div>
-                    </div>
+                        <button type="submit" class="popups__button button-create">Создать корзину</button>
+                    </form>
                 </div>
             </div>
-
             <div class="popup-reg pop-up">
                 <div class="popup__conteiner">
                     <div class="popup__top">
