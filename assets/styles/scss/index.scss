@@ -4607,9 +4607,10 @@ button {
                 transition: all 0.3s ease 0s;
             }
         }
-    }
-    &__item.active {
-        label::before {
+        label::before{
+            transform: scale(0);
+            opacity: 0;
+            transition: all 0.3s ease 0s;
             position: absolute;
             content: "";
             width: 11px;
@@ -4620,6 +4621,13 @@ button {
             left: 0;
             right: 0;
             margin: auto;
+        }
+    }
+    &__item.active {
+        label::before {
+            transition: all 0.3s ease 0s;
+            transform: scale(1);
+            opacity: 1;
         }
     }
     &__item:not(:last-child) {

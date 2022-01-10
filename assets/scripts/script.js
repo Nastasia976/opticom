@@ -429,10 +429,7 @@ $(document).ready(function () {
     })
     $('.add-basket__close').click(function () {
         $('.add-basket').removeClass('active');
-    })
-    /* $('.button-create').click(function () {
-        $('.add-basket').toggleClass('active');
-    }); */
+    });
 
     $('.button-cancel ').click(function () {
         $('.filter-catalog__item, .control__item').removeClass('active');
