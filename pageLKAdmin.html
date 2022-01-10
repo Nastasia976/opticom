@@ -579,14 +579,41 @@
                                         <a href="#" class="sidebar-lk__link active">Заказы</a>
                                     </li>
                                     <li class="sidebar-lk__el">
-                                        <a href="#" class="sidebar-lk__link">Корзины
+                                        <div class="sidebar-lk__link">Корзины
                                             <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M4 6L0.535899 -6.52533e-07L7.4641 -4.68497e-08L4 6Z"
-                                                    fill="#D2D2D2" />
-                                            </svg>
-                                        </a>
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4 6L0.535899 -6.52533e-07L7.4641 -4.68497e-08L4 6Z"
+                                                        fill="#D2D2D2" />
+                                                </svg>
+                                        </div>
+                                        <ul class="sub-menu-lk">
+                                            <li class="sub-menu-lk__el">
+                                                <a href="#" class="sub-menu-lk__link">Корзина для бытовой химии</a>
+                                            </li>
+                                            <li class="sub-menu-lk__el">
+                                                <a href="#" class="sub-menu-lk__link">Корзина для продуктов питания</a>
+                                            </li>
+                                        </ul>
                                     </li>
+                                    <!-- <li class="sidebar-lk__el">
+                                        <div class="sidebar-lk__link item-select">
+                                            <div class="select__header">
+                                                <span class="select__current">Корзины</span>
+                                                <div class="select__icon">
+                                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4 6L0.535899 -6.52533e-07L7.4641 -4.68497e-08L4 6Z"
+                                                        fill="#D2D2D2" />
+                                                </svg>
+                                                </div>
+                                            </div>
+                                            <div class="select__body">
+                                                <div class="select__item">Корзины</div>
+                                                <div class="select__item">Корзина для бытовой химии</div>
+                                                <div class="select__item">Корзина для продуктов питания</div>
+                                            </div>
+                                        </div>
+                                    </li> -->
                                     <li class="sidebar-lk__el">
                                         <a href="#" class="sidebar-lk__link">Избранное</a>
                                     </li>
@@ -641,6 +668,22 @@
                                 <div class="body-lk__tab active agreed-tab">Согласованные заказы</div>
                                 <div class="body-lk__tab orders-tab">Ожидающие согласования заказы</div>
                             </div>
+                            <div class="select">
+                                <div class="select__header">
+                                    <span class="select__current">Согласованные заказы</span>
+                                    <div class="select__icon">
+                                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.0148 0.733398L7 5.70046L1.98517 0.733398L0.4375 2.26628L7 8.76628L13.5625 2.26628L12.0148 0.733398Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="select__body">
+                                    <div class="select__item body-lk__tab active agreed-tab">Согласованные заказы</div>
+                                    <div class="select__item body-lk__tab orders-tab">Ожидающие согласования заказы</div>
+                                </div>
+                            </div>
                             <div class="body-lk__body agreed-orders active">
                                 <div class="body-lk__items order-card">
                                     <div class="order-card__top">
@@ -686,7 +729,7 @@
                                     </div>
                                     <div class="order-card__bottom">
                                         <button class="green-bg">Повторить заказ</button>
-                                        <button class="green-border">Оформить претензию</button>
+                                        <button class="green-border claim">Оформить претензию</button>
                                     </div>
                                 </div>
                                 <div class="body-lk__items order-card">
@@ -733,7 +776,7 @@
                                     </div>
                                     <div class="order-card__bottom">
                                         <button class="green-bg">Повторить заказ</button>
-                                        <button class="green-border">Оформить претензию</button>
+                                        <button class="green-border claim">Оформить претензию</button>
                                     </div>
                                 </div>
                                 <div class="body-lk__items order-card">
@@ -780,7 +823,7 @@
                                     </div>
                                     <div class="order-card__bottom">
                                         <button class="green-bg">Повторить заказ</button>
-                                        <button class="green-border">Оформить претензию</button>
+                                        <button class="green-border claim">Оформить претензию</button>
                                     </div>
                                 </div>
                                 <div class="body-lk__items order-card">
@@ -827,7 +870,7 @@
                                     </div>
                                     <div class="order-card__bottom">
                                         <button class="green-bg">Повторить заказ</button>
-                                        <button class="green-border">Оформить претензию</button>
+                                        <button class="green-border claim">Оформить претензию</button>
                                     </div>
                                 </div>
                                 <div class="body-lk__items order-card">
@@ -874,7 +917,7 @@
                                     </div>
                                     <div class="order-card__bottom">
                                         <button class="green-bg">Повторить заказ</button>
-                                        <button class="green-border">Оформить претензию</button>
+                                        <button class="green-border claim">Оформить претензию</button>
                                     </div>
                                 </div>
                             </div>
@@ -1137,7 +1180,25 @@
 
 
 
-
+            <div class="popups registration-claim">
+                <div class="popups__conteiner">
+                    <div class="popups__top">
+                        <div class="popups__title">Оформление претензии</div>
+                        <div class="popups__close"></div>
+                    </div>
+                    <div class="popups__body">
+                        <div class="inputsection">
+                            <input class="some-input" type="text" required>
+                            <label class="placeholder">Номер заказа</label>
+                        </div>
+                        <div class="inputsection">
+                            <input class="some-input" type="text" required>
+                            <label class="placeholder">Текст претензии</label>
+                        </div>
+                        <div class="popups__button">Отправить</div>
+                    </div>
+                </div>
+            </div>
 
             <div class="popups _delit delit-basket">
                 <div class="popups__conteiner">

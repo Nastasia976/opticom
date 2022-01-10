@@ -372,7 +372,7 @@ $(document).ready(function () {
         $('.send-message').toggleClass('active');
         $('body').toggleClass('passive');
     })
-    $('.popups__close, .popups__button').click(function (event) {
+    $('.popups__close').click(function (event) {
         $('.popups').removeClass('active');
         $('body').removeClass('passive');
     })
@@ -1102,6 +1102,17 @@ $(document).ready(function () {
         var textContent = $(this).text();
         $('.order-status').text(textContent);
     });
+
+    $('.claim').click(function() {
+        $('.registration-claim').toggleClass('active');
+        $('body').toggleClass('passive');
+    });
+
+    $('.sidebar-lk__el').click(function() {
+        $('.sub-menu-lk').slideToggle();
+    });
+
+    
    
 });
 
