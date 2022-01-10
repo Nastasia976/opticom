@@ -13553,6 +13553,19 @@ button {
   cursor: pointer;
 }
 
+.sidebar-lk__link svg {
+  margin-left: 5px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.sidebar-lk__link .arrow-lk.active {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
 .sidebar-lk__link.active {
   font-weight: bold;
 }

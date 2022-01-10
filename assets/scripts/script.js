@@ -1110,6 +1110,7 @@ $(document).ready(function () {
 
     $('.sidebar-lk__el').click(function() {
         $('.sub-menu-lk').slideToggle();
+        $('.arrow-lk').toggleClass('active');
     });
 
     

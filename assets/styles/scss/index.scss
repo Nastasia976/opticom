@@ -10572,6 +10572,14 @@ button {
         font-size: 16px;
         line-height: 137%;
         cursor: pointer;
+        svg{
+            margin-left: 5px;
+            transition: 0.2s;
+        }
+        .arrow-lk.active{
+            transform: scale(1, -1);
+            transition: 0.2s;
+        }
     }
     &__link.active {
         font-weight: bold;
