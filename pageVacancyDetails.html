@@ -787,7 +787,7 @@
                         <div class="popup__description">Введите ваши данные и наш менеджер свяжется с вами для уточнения
                             цены данного товара.</div>
                         <div class="popup__form">
-                            <form action="" class="form-popup">
+                            <form method="post" class="form-popup">
                                 <div class="inputsection">
                                     <input class="some-input" type="text" required tabindex="1">
                                     <label class="placeholder">Ваше имя*</label>
@@ -818,13 +818,18 @@
                                             d="M19.9097 7.64374L9.23721 18.1977C7.46884 19.9466 4.60149 19.9466 2.83313 18.1977C1.06477 16.4489 1.06477 13.6138 2.83313 11.8649L12.4389 2.36638C13.618 1.20069 15.5289 1.20069 16.7081 2.36638C17.8872 3.53203 17.8872 5.42262 16.7081 6.58828L7.10226 16.0868C6.51306 16.67 5.55728 16.67 4.96732 16.0868C4.37812 15.5044 4.37812 14.5591 4.96732 13.9759L13.5056 5.53279L12.4381 4.47733L3.90062 12.9211C2.72146 14.0868 2.72146 15.9774 3.90062 17.143C5.07978 18.3087 6.99059 18.3087 8.16975 17.143L17.7755 7.64449C19.5439 5.89563 19.5439 3.06054 17.7755 1.31164C16.0071 -0.437214 13.1398 -0.437214 11.3715 1.31164L1.23193 11.3379L1.26867 11.3746C-0.573178 13.7164 -0.411259 17.1018 1.76567 19.2539C3.94261 21.4061 7.36465 21.5673 9.73345 19.7449L9.7702 19.7817L20.9764 8.69995L19.9097 7.64374Z"
                                             fill="#006D66" />
                                     </svg>
-                                    <span>Прикрепить файл</span>
+                                    <span class="text-add-file">Прикрепить файл</span>
+                                    <button class="close-hide">
+                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.1425 0L11 0.85751L0.857841 11L0.000359834 10.1425L10.1425 0Z" fill="#CBCBCB"/>
+                                            <path d="M0.857482 0L0 0.85751L10.1422 11L10.9996 10.1425L0.857482 0Z" fill="#CBCBCB"/>
+                                            </svg> 
+                                    </button>                                       
                                 </label>
-
+                                <div class="popup__agree">Нажимая на кнопку “Отправить”, Вы соглашаетесь с условиями
+                                    обработки персональных данных</div>
+                                <button type="submit" class="popup__button send-response" tabindex="6">Отправить</button>
                             </form>
-                            <div class="popup__agree">Нажимая на кнопку “Отправить”, Вы соглашаетесь с условиями
-                                обработки персональных данных</div>
-                            <button class="popup__button send-response" tabindex="6">Отправить</button>
                         </div>
                     </div>
                 </div>
@@ -874,7 +879,6 @@
                     </form>
                 </div>
             </div>
-
             <div class="popup-reg pop-up">
                 <div class="popup__conteiner">
                     <div class="popup__top">
@@ -975,9 +979,9 @@
                     <div class="popup__body">
                         <div class="popup__title">Регистрация <span>Шаг 1 из 3</span></div>
                         <div class="popup__form">
-                            <form action="" class="form-popup">
+                            <form method="post" class="form-popup">
                                 <div class="inputsection">
-                                    <input class="some-input" type="text" required>
+                                    <input class="some-input valid-input" type="text" required>
                                     <label class="placeholder">Ваше имя*</label>
                                 </div>
                                 <div class="inputsection">
@@ -996,8 +1000,8 @@
                                     <input class="some-input password-input2 reg-inp" type="password" required>
                                     <label class="placeholder">Повторите пароль</label>
                                 </div>
+                                <button type="submit" class="popup__button next button-next">Продолжить</button>
                             </form>
-                            <button class="popup__button next button-next">Продолжить</button>
                             <div class="popup__footer will-aut">Уже зарегистрированы? Авторизуйтесь</div>
                         </div>
                     </div>
@@ -1103,17 +1107,17 @@
                     <div class="popup__body">
                         <div class="popup__title">Регистрация <span>Шаг 2 из 3</span></div>
                         <div class="popup__form">
-                            <form action="" class="form-popup">
+                            <form method="post" class="form-popup">
                                 <div class="inputsection">
-                                    <input class="some-input" type="number" required>
+                                    <input class="some-input valid-input" type="number" required>
                                     <label class="placeholder">ИНН*</label>
                                 </div>
                                 <div class="inputsection">
                                     <input class="some-input" type="text" required>
                                     <label class="placeholder">Наименование организации*</label>
                                 </div>
+                                <button class="popup__button next button-next2">Продолжить</button>
                             </form>
-                            <button class="popup__button next button-next2">Продолжить</button>
                         </div>
                     </div>
                 </div>
@@ -1218,7 +1222,7 @@
                     <div class="popup__body">
                         <div class="popup__title">Регистрация <span>Шаг 3 из 3</span></div>
                         <div class="popup__form">
-                            <form action="" class="form-popup">
+                            <form method="post" class="form-popup">
                                 <div class="inputsection">
                                     <input class="some-input" type="text" required>
                                     <label class="placeholder">Страна*</label>
@@ -1243,10 +1247,10 @@
                                     <input class="some-input" type="text" required>
                                     <label class="placeholder">Офис*</label>
                                 </div>
+                                <div class="popup__agree">Нажимая на кнопку “Отправить”, Вы соглашаетесь с условиями
+                                    обработки персональных данных</div>
+                                <button type="submit" class="popup__button button-reg">Зарегистрироваться</button>
                             </form>
-                            <div class="popup__agree">Нажимая на кнопку “Отправить”, Вы соглашаетесь с условиями
-                                обработки персональных данных</div>
-                            <button class="popup__button button-reg">Зарегистрироваться</button>
                         </div>
                     </div>
                 </div>
@@ -1259,7 +1263,7 @@
                     </div>
                     <div class="popups__body">
                         <div class="popups__text">Для завершения регистрации с вами свяжется менеджер.</div>
-                        <div class="popups__button">Хорошо</div>
+                        <div class="popups__button _ok">Хорошо</div>
                     </div>
                 </div>
             </div>
@@ -1363,7 +1367,7 @@
                     <div class="popup__body">
                         <div class="popup__title">Авторизация</div>
                         <div class="popup__form">
-                            <form action="" class="form-popup">
+                            <form method="post" class="form-popup">
                                 <div class="inputsection">
                                     <input class="some-input" type="text" required tabindex="10">
                                     <label class="placeholder">E-mail</label>
@@ -1373,23 +1377,16 @@
                                         tabindex="11">
                                     <label class="placeholder">Пароль</label>
                                 </div>
-                            </form>
-                            <div class="popup__items">
-                                <div class="popup__check">
-                                    <input id="remember" type="checkbox" class="member-input" tabindex="12">
-                                    <label class="remember-me" for="remember">
-                                        <svg width="12" height="12" viewBox="0 0 14 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M13.9429 2.39678L5.26248 11.0772C5.18602 11.1536 5.06222 11.1536 4.98594 11.0772L0.0572101 6.14827C-0.01907 6.07216 -0.01907 5.94836 0.0572101 5.87191L1.25483 4.67429C1.33129 4.59801 1.45508 4.59801 1.53136 4.67429L5.12439 8.26714L12.4689 0.922628C12.5455 0.846347 12.669 0.846347 12.7454 0.922628L13.9429 2.12024C14.0193 2.19652 14.0193 2.32014 13.9429 2.39678Z"
-                                                fill="currentColor" />
-                                        </svg>
-                                    </label>
-                                    <span>Запомнить меня</span>
+                                <div class="popup__items">
+                                    <div class="popup__check">
+                                        <input id="remember" type="checkbox" class="member-input" tabindex="12">
+                                        <label class="remember-me" for="remember"></label>
+                                        <span>Запомнить меня</span>
+                                    </div>
+                                    <button class="popup__forget" tabindex="13">Забыли пароль?</button>
                                 </div>
-                                <button class="popup__forget" tabindex="13">Забыли пароль?</button>
-                            </div>
-                            <button class="popup__button" tabindex="14">Войти</button>
+                                <button type="submit" class="popup__button" tabindex="14">Войти</button>
+                            </form>
                             <div class="popup__footer will-reg">Нет аккаунта? Зарегистрируйтесь</div>
                         </div>
                     </div>
@@ -1497,20 +1494,18 @@
                         <div class="popup__description">На указанный e-mail будет отправлена ссылка для восстановления
                             пароля</div>
                         <div class="popup__form">
-                            <form action="" class="form-popup">
+                            <form method="post" class="form-popup">
                                 <div class="inputsection">
                                     <input class="some-input" type="text" required>
                                     <label class="placeholder">E-mail</label>
                                 </div>
+                                <button type="submit" class="popup__button button-restore">Восстановить пароль</button>
                             </form>
-                            <button class="popup__button button-restore">Восстановить пароль</button>
                         </div>
                         <div class="popup__footer prev-popup">Назад</div>
                     </div>
                 </div>
             </div>
-
-
             <div class="popups check-your-email">
                 <div class="popups__conteiner">
                     <div class="popups__top">
@@ -1520,7 +1515,7 @@
                     <div class="popups__body">
                         <div class="popups__text">Ссылка на сброс пароля отправлена на <br> Вашу почту, указанную при
                             регистрации.</div>
-                        <div class="popups__button">Хорошо</div>
+                        <div class="popups__button _ok">Хорошо</div>
                     </div>
                 </div>
             </div>

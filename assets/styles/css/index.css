@@ -5322,106 +5322,6 @@ button {
   margin-top: calc(25px + (34 - 25) * ((100vh - 568px) / (800 - 568)));
 }
 
-.popup-request .popup__form input:focus ::-webkit-input-placeholder,
-.popup-reg .popup__form input:focus ::-webkit-input-placeholder,
-.popup-reg2 .popup__form input:focus ::-webkit-input-placeholder,
-.popup-reg3 .popup__form input:focus ::-webkit-input-placeholder,
-.popup-autoriz .popup__form input:focus ::-webkit-input-placeholder,
-.popup-forgot .popup__form input:focus ::-webkit-input-placeholder {
-  -webkit-transform: scale(0.5) translate(-20px, -20px);
-          transform: scale(0.5) translate(-20px, -20px);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.popup-request .popup__form input:focus :-ms-input-placeholder,
-.popup-reg .popup__form input:focus :-ms-input-placeholder,
-.popup-reg2 .popup__form input:focus :-ms-input-placeholder,
-.popup-reg3 .popup__form input:focus :-ms-input-placeholder,
-.popup-autoriz .popup__form input:focus :-ms-input-placeholder,
-.popup-forgot .popup__form input:focus :-ms-input-placeholder {
-  transform: scale(0.5) translate(-20px, -20px);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.popup-request .popup__form input:focus ::-ms-input-placeholder,
-.popup-reg .popup__form input:focus ::-ms-input-placeholder,
-.popup-reg2 .popup__form input:focus ::-ms-input-placeholder,
-.popup-reg3 .popup__form input:focus ::-ms-input-placeholder,
-.popup-autoriz .popup__form input:focus ::-ms-input-placeholder,
-.popup-forgot .popup__form input:focus ::-ms-input-placeholder {
-  transform: scale(0.5) translate(-20px, -20px);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.popup-request .popup__form input:focus ::placeholder,
-.popup-reg .popup__form input:focus ::placeholder,
-.popup-reg2 .popup__form input:focus ::placeholder,
-.popup-reg3 .popup__form input:focus ::placeholder,
-.popup-autoriz .popup__form input:focus ::placeholder,
-.popup-forgot .popup__form input:focus ::placeholder {
-  -webkit-transform: scale(0.5) translate(-20px, -20px);
-          transform: scale(0.5) translate(-20px, -20px);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.popup-request .popup__form input.scale::-webkit-input-placeholder,
-.popup-reg .popup__form input.scale::-webkit-input-placeholder,
-.popup-reg2 .popup__form input.scale::-webkit-input-placeholder,
-.popup-reg3 .popup__form input.scale::-webkit-input-placeholder,
-.popup-autoriz .popup__form input.scale::-webkit-input-placeholder,
-.popup-forgot .popup__form input.scale::-webkit-input-placeholder {
-  -webkit-transform: translate(0, -15px);
-          transform: translate(0, -15px);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  font-size: 12px;
-  border: 0;
-}
-
-.popup-request .popup__form input.scale:-ms-input-placeholder,
-.popup-reg .popup__form input.scale:-ms-input-placeholder,
-.popup-reg2 .popup__form input.scale:-ms-input-placeholder,
-.popup-reg3 .popup__form input.scale:-ms-input-placeholder,
-.popup-autoriz .popup__form input.scale:-ms-input-placeholder,
-.popup-forgot .popup__form input.scale:-ms-input-placeholder {
-  transform: translate(0, -15px);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  font-size: 12px;
-  border: 0;
-}
-
-.popup-request .popup__form input.scale::-ms-input-placeholder,
-.popup-reg .popup__form input.scale::-ms-input-placeholder,
-.popup-reg2 .popup__form input.scale::-ms-input-placeholder,
-.popup-reg3 .popup__form input.scale::-ms-input-placeholder,
-.popup-autoriz .popup__form input.scale::-ms-input-placeholder,
-.popup-forgot .popup__form input.scale::-ms-input-placeholder {
-  transform: translate(0, -15px);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  font-size: 12px;
-  border: 0;
-}
-
-.popup-request .popup__form input.scale::placeholder,
-.popup-reg .popup__form input.scale::placeholder,
-.popup-reg2 .popup__form input.scale::placeholder,
-.popup-reg3 .popup__form input.scale::placeholder,
-.popup-autoriz .popup__form input.scale::placeholder,
-.popup-forgot .popup__form input.scale::placeholder {
-  -webkit-transform: translate(0, -15px);
-          transform: translate(0, -15px);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  font-size: 12px;
-  border: 0;
-}
-
 .popup-request .popup__form input[type="number"]::-webkit-outer-spin-button,
 .popup-request .popup__form input[type="number"]::-webkit-inner-spin-button,
 .popup-reg .popup__form input[type="number"]::-webkit-outer-spin-button,
@@ -5481,87 +5381,6 @@ button {
   opacity: 0.6;
 }
 
-.popup-request .popup__form .inputsection,
-.popup-reg .popup__form .inputsection,
-.popup-reg2 .popup__form .inputsection,
-.popup-reg3 .popup__form .inputsection,
-.popup-autoriz .popup__form .inputsection,
-.popup-forgot .popup__form .inputsection {
-  width: 100%;
-  position: relative;
-  border-bottom: 1px solid rgba(183, 183, 183, 0.2);
-  max-height: -webkit-fit-content !important;
-  max-height: -moz-fit-content !important;
-  max-height: fit-content !important;
-}
-
-.popup-request .popup__form .inputsection input,
-.popup-request .popup__form .inputsection .placeholder,
-.popup-reg .popup__form .inputsection input,
-.popup-reg .popup__form .inputsection .placeholder,
-.popup-reg2 .popup__form .inputsection input,
-.popup-reg2 .popup__form .inputsection .placeholder,
-.popup-reg3 .popup__form .inputsection input,
-.popup-reg3 .popup__form .inputsection .placeholder,
-.popup-autoriz .popup__form .inputsection input,
-.popup-autoriz .popup__form .inputsection .placeholder,
-.popup-forgot .popup__form .inputsection input,
-.popup-forgot .popup__form .inputsection .placeholder {
-  font-size: 16px;
-  line-height: 137%;
-  color: #252525;
-  font-weight: 300;
-  width: 100%;
-}
-
-.popup-request .popup__form .inputsection input,
-.popup-reg .popup__form .inputsection input,
-.popup-reg2 .popup__form .inputsection input,
-.popup-reg3 .popup__form .inputsection input,
-.popup-autoriz .popup__form .inputsection input,
-.popup-forgot .popup__form .inputsection input {
-  padding: 10px 0 2px 0;
-}
-
-.popup-request .popup__form .inputsection input:focus ~ .placeholder,
-.popup-reg .popup__form .inputsection input:focus ~ .placeholder,
-.popup-reg2 .popup__form .inputsection input:focus ~ .placeholder,
-.popup-reg3 .popup__form .inputsection input:focus ~ .placeholder,
-.popup-autoriz .popup__form .inputsection input:focus ~ .placeholder,
-.popup-forgot .popup__form .inputsection input:focus ~ .placeholder {
-  top: -10px;
-  font-size: 12px;
-  opacity: 0.6;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.popup-request .popup__form .inputsection input:not(:focus) ~ .placeholder,
-.popup-reg .popup__form .inputsection input:not(:focus) ~ .placeholder,
-.popup-reg2 .popup__form .inputsection input:not(:focus) ~ .placeholder,
-.popup-reg3 .popup__form .inputsection input:not(:focus) ~ .placeholder,
-.popup-autoriz .popup__form .inputsection input:not(:focus) ~ .placeholder,
-.popup-forgot .popup__form .inputsection input:not(:focus) ~ .placeholder {
-  top: 0;
-  opacity: 1;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  font-size: 16px;
-}
-
-.popup-request .popup__form .inputsection input:valid ~ .placeholder,
-.popup-reg .popup__form .inputsection input:valid ~ .placeholder,
-.popup-reg2 .popup__form .inputsection input:valid ~ .placeholder,
-.popup-reg3 .popup__form .inputsection input:valid ~ .placeholder,
-.popup-autoriz .popup__form .inputsection input:valid ~ .placeholder,
-.popup-forgot .popup__form .inputsection input:valid ~ .placeholder {
-  top: -10px;
-  font-size: 12px;
-  opacity: 0.6;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
 .popup-request .popup__form .inputsection:not(:last-child),
 .popup-reg .popup__form .inputsection:not(:last-child),
 .popup-reg2 .popup__form .inputsection:not(:last-child),
@@ -5597,6 +5416,17 @@ button {
 .popup-autoriz .popup__form .label-file svg,
 .popup-forgot .popup__form .label-file svg {
   margin-right: 16px;
+}
+
+.popup-request .popup__form .label-file .close-hide,
+.popup-reg .popup__form .label-file .close-hide,
+.popup-reg2 .popup__form .label-file .close-hide,
+.popup-reg3 .popup__form .label-file .close-hide,
+.popup-autoriz .popup__form .label-file .close-hide,
+.popup-forgot .popup__form .label-file .close-hide {
+  margin-left: 14px;
+  margin-top: 3px;
+  display: none;
 }
 
 .popup-request .popup__form .comment,
@@ -5762,7 +5592,7 @@ button {
 .popup-autoriz .popup__items .popup__forget,
 .popup-forgot .popup__items .popup__forget {
   margin-left: 15px;
-  margin-top: 15px;
+  margin-top: 20px;
   color: #d4ad67;
   position: relative;
   cursor: pointer;
@@ -5808,7 +5638,6 @@ button {
 .popup-forgot .popup__items .popup__check {
   margin-top: 15px;
   position: relative;
-  padding: 0 0 0 20px;
   color: rgba(37, 37, 37, 0.9);
   cursor: pointer;
 }
@@ -5852,33 +5681,29 @@ button {
 .popup-forgot .popup__items .popup__check .remember-me {
   width: 15px;
   height: 15px;
-  position: absolute;
+  position: relative;
   border: 1px solid #d1d1d1;
   left: 0;
-  top: -1px;
+  top: 3px;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  display: inline-block;
 }
 
-.popup-request .popup__items .popup__check .remember-me svg,
-.popup-reg .popup__items .popup__check .remember-me svg,
-.popup-reg2 .popup__items .popup__check .remember-me svg,
-.popup-reg3 .popup__items .popup__check .remember-me svg,
-.popup-autoriz .popup__items .popup__check .remember-me svg,
-.popup-forgot .popup__items .popup__check .remember-me svg {
-  display: none;
-  margin-left: 1px;
-  color: #d4ad67;
-}
-
-.popup-request .popup__items .popup__check .remember-me.active svg,
-.popup-reg .popup__items .popup__check .remember-me.active svg,
-.popup-reg2 .popup__items .popup__check .remember-me.active svg,
-.popup-reg3 .popup__items .popup__check .remember-me.active svg,
-.popup-autoriz .popup__items .popup__check .remember-me.active svg,
-.popup-forgot .popup__items .popup__check .remember-me.active svg {
-  display: block;
+.popup-request .popup__items .popup__check .remember-me.active::before,
+.popup-reg .popup__items .popup__check .remember-me.active::before,
+.popup-reg2 .popup__items .popup__check .remember-me.active::before,
+.popup-reg3 .popup__items .popup__check .remember-me.active::before,
+.popup-autoriz .popup__items .popup__check .remember-me.active::before,
+.popup-forgot .popup__items .popup__check .remember-me.active::before {
+  position: absolute;
+  content: "";
+  width: 11px;
+  height: 11px;
+  background-color: #006d64;
+  left: 1px;
+  top: 1px;
 }
 
 .popup-request .popup__agree,
@@ -5971,16 +5796,66 @@ button {
   border-bottom: 1px dashed rgba(0, 167, 147, 0.4);
 }
 
-.placeholder {
-  position: absolute;
-  left: 0;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  pointer-events: none;
+/* .placeholder {
+    position: absolute;
+    left: 0;
+    transition: 0.4s;
+    pointer-events: none;
+    bottom: 0;
+}
+.placeholder.scale {
+    top: -10px;
+    font-size: 12px;
+    opacity: 0.6;
+    transition: 0.4s;
+} */
+.inputsection {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid rgba(183, 183, 183, 0.2);
+  max-height: -webkit-fit-content !important;
+  max-height: -moz-fit-content !important;
+  max-height: fit-content !important;
 }
 
-.placeholder.scale {
-  top: -10px;
+.inputsection .placeholder {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.inputsection input,
+.inputsection .placeholder {
+  font-size: 16px;
+  line-height: 137%;
+  color: #252525;
+  font-weight: 300;
+  width: 100%;
+}
+
+.inputsection input {
+  padding: 10px 0 2px 0;
+}
+
+.inputsection input:focus ~ .placeholder {
+  bottom: 25px;
+  font-size: 12px;
+  opacity: 0.6;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.inputsection input:not(:focus) ~ .placeholder {
+  bottom: 0;
+  opacity: 1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  font-size: 16px;
+}
+
+.inputsection input:valid ~ .placeholder {
+  bottom: 25px;
   font-size: 12px;
   opacity: 0.6;
   -webkit-transition: 0.4s;
@@ -6256,14 +6131,6 @@ button {
           transform: scale(0);
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-}
-
-.filter-catalog__item.active label {
-  /* svg {
-                opacity: 1;
-                transform: scale(1);
-                transition: all 0.3s ease 0s;
-            } */
 }
 
 .filter-catalog__item.active label::before {

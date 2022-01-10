@@ -4088,18 +4088,6 @@ button {
 
     .popup__form {
         margin-top: calc(25px + (34 - 25) * ((100vh - 568px) / (800 - 568)));
-        input:focus {
-            ::placeholder {
-                transform: scale(0.5) translate(-20px, -20px);
-                transition: 0.5s;
-            }
-        }
-        input.scale::placeholder {
-            transform: translate(0, -15px);
-            transition: 0.5s;
-            font-size: 12px;
-            border: 0;
-        }
         input[type="number"]::-webkit-outer-spin-button,
         input[type="number"]::-webkit-inner-spin-button {
             -webkit-appearance: none; // Yeah, yeah everybody write about it
@@ -4120,41 +4108,6 @@ button {
         .inputfile:focus ~ .label-file {
             opacity: 0.6;
         }
-        .inputsection {
-            width: 100%;
-            position: relative;
-            border-bottom: 1px solid rgba(183, 183, 183, 0.2);
-            max-height: fit-content !important;
-            input,
-            .placeholder {
-                font-size: 16px;
-                line-height: 137%;
-                color: #252525;
-                font-weight: 300;
-                width: 100%;
-            }
-            input {
-                padding: 10px 0 2px 0;
-            }
-            input:focus ~ .placeholder {
-                top: -10px;
-                font-size: 12px;
-                opacity: 0.6;
-                transition: 0.4s;
-            }
-            input:not(:focus) ~ .placeholder {
-                top: 0;
-                opacity: 1;
-                transition: 0.4s;
-                font-size: 16px;
-            }
-            input:valid ~ .placeholder {
-                top: -10px;
-                font-size: 12px;
-                opacity: 0.6;
-                transition: 0.4s;
-            }
-        }
         .inputsection:not(:last-child) {
             margin-bottom: calc(25px + (32 - 25) * ((100vh - 568px) / (800 - 568)));
         }
@@ -4168,6 +4121,11 @@ button {
             cursor: pointer;
             svg {
                 margin-right: 16px;
+            }
+            .close-hide{
+                margin-left: 14px;
+                margin-top: 3px;
+                display: none;
             }
         }
         .comment {
@@ -4255,7 +4213,7 @@ button {
         letter-spacing: 0.06em;
         .popup__forget {
             margin-left: 15px;
-            margin-top: 15px;
+            margin-top: 20px;
             color: #d4ad67;
             position: relative;
             cursor: pointer;
@@ -4282,7 +4240,6 @@ button {
         .popup__check {
             margin-top: 15px;
             position: relative;
-            padding: 0 0 0 20px;
             color: rgba(37, 37, 37, 0.9);
             cursor: pointer;
             input {
@@ -4303,22 +4260,22 @@ button {
             .remember-me {
                 width: 15px;
                 height: 15px;
-                position: absolute;
+                position: relative;
                 border: 1px solid #d1d1d1;
                 left: 0;
-                top: -1px;
+                top: 3px;
                 cursor: pointer;
                 transition: 0.3s;
-                svg {
-                    display: none;
-                    margin-left: 1px;
-                    color: #d4ad67;
-                }
+                display: inline-block;
             }
-            .remember-me.active {
-                svg {
-                    display: block;
-                }
+            .remember-me.active::before {
+                position: absolute;
+                content: "";
+                width: 11px;
+                height: 11px;
+                background-color: #006d64;
+                left: 1px;
+                top: 1px;
             }
         }
     }
@@ -4370,17 +4327,59 @@ button {
         border-bottom: 1px dashed rgba(0, 167, 147, 0.4);
     }
 }
-.placeholder {
+/* .placeholder {
     position: absolute;
     left: 0;
     transition: 0.4s;
     pointer-events: none;
+    bottom: 0;
 }
 .placeholder.scale {
     top: -10px;
     font-size: 12px;
     opacity: 0.6;
     transition: 0.4s;
+} */
+.inputsection {
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid rgba(183, 183, 183, 0.2);
+    max-height: fit-content !important;
+    .placeholder{
+        pointer-events: none;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    input,
+    .placeholder {
+        font-size: 16px;
+        line-height: 137%;
+        color: #252525;
+        font-weight: 300;
+        width: 100%;
+    }
+    input {
+        padding: 10px 0 2px 0;
+    }
+    input:focus ~ .placeholder {
+        bottom: 25px;
+        font-size: 12px;
+        opacity: 0.6;
+        transition: 0.4s;
+    }
+    input:not(:focus) ~ .placeholder {
+        bottom: 0;
+        opacity: 1;
+        transition: 0.4s;
+        font-size: 16px;
+    }
+    input:valid ~ .placeholder {
+        bottom: 25px;
+        font-size: 12px;
+        opacity: 0.6;
+        transition: 0.4s;
+    }
 }
 .popup-request.active,
 .popup-reg.active,
@@ -4610,13 +4609,6 @@ button {
         }
     }
     &__item.active {
-        label {
-            /* svg {
-                opacity: 1;
-                transform: scale(1);
-                transition: all 0.3s ease 0s;
-            } */
-        }
         label::before {
             position: absolute;
             content: "";
