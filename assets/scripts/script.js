@@ -610,7 +610,7 @@ $(document).on('click', '.popup__check', function (event) {
     return false;
 });//чекбокс в попапе авторизация
 
-$(document).on('click', '.filter-catalog__item, .control__item', function (event) {
+$(document).on('click', '.filter-catalog__item, .control__item, .sidebar-lk__item', function (event) {
     if ($(this).hasClass('active')) {
         $(this).removeClass('active').find('input').attr('checked', false);
     } else {
@@ -1075,3 +1075,33 @@ $(document).ready(function () {
         $('body').toggleClass('passive');
     });
 });
+
+//--------lk-----------
+$(document).ready(function () {
+    $('.agreed-tab').click(function(){
+        $('.body-lk__tab').removeClass('active');
+        $('.body-lk__body').removeClass('active');
+        $('.agreed-orders').addClass('active');
+        $(this).addClass('active');
+        var textContent = $(this).text();
+        $('.order-status').text(textContent);
+    });
+    $('.inconsistent-tab').click(function(){
+        $('.body-lk__tab').removeClass('active');
+        $('.body-lk__body').removeClass('active');
+        $('.inconsistent-orders').addClass('active');
+        $(this).addClass('active');
+        var textContent = $(this).text();
+        $('.order-status').text(textContent);
+    });
+    $('.orders-tab').click(function(){
+        $('.body-lk__tab').removeClass('active');
+        $('.body-lk__body').removeClass('active');
+        $('.orders-pending').addClass('active');
+        $(this).addClass('active');
+        var textContent = $(this).text();
+        $('.order-status').text(textContent);
+    });
+   
+});
+
