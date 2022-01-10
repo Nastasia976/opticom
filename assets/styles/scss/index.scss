@@ -10441,7 +10441,7 @@ button {
     background-color: #f7f7f7;
     height: fit-content;
     &__top {
-        padding: 22px 20px 18px 28px;
+        padding: 22px 20px 18px calc(20px + (26 - 20) * ((100vw - 320px) / (1920 - 320)));
         border-bottom: 1px solid rgba(0, 109, 100, 0.04);
     }
 
@@ -10503,45 +10503,7 @@ button {
 
     &__el {
         position: relative;
-        padding: 0 20px 0 28px;
-        /* .item-select{
-            min-width: 100%;
-        }
-        .select__header{
-            min-width: 100%;
-            padding: 0;
-            align-items: flex-start;
-            justify-content: flex-start;
-            background-color: transparent;
-            border: 0;
-            cursor: pointer;
-        }
-        .select__body{
-            left: 0;
-            padding: 0;
-            background-color: #fff;
-            border: 0;
-            margin-top: 10px;
-            min-width: 100%;
-            box-shadow: 0px 6px 18px -4px rgba(0,0,0, 0.6);
-        }
-        .select__item{
-            padding: 4px 0;
-            cursor: pointer;
-            padding: 4px 20px 4px 28px;
-            min-width: 100%;
-        }
-        .select__icon{
-            margin-left: 5px;
-        }
-        .item-select.is-active{
-            .select__body{
-                display: block;
-                visibility: visible;
-                opacity: 1;
-                max-width: 243px;
-            }
-        } */
+        padding: 0 20px 0 calc(20px + (26 - 20) * ((100vw - 320px) / (1920 - 320)));
         .sub-menu-lk {
             display: none;
             position: absolute;
@@ -10557,7 +10519,7 @@ button {
                 line-height: 137%;
             }
             &__link{
-                padding: 4px 20px 4px 28px;
+                padding: 4px 20px 4px calc(20px + (26 - 20) * ((100vw - 320px) / (1920 - 320)));
                 display: block;
             }
             &__link:hover{
@@ -10587,7 +10549,7 @@ button {
 
     &__items {
         background-color: #f1f1f1;
-        padding: 12px 20px 20px 28px;
+        padding: 12px 20px 20px calc(20px + (26 - 20) * ((100vw - 320px) / (1920 - 320)));
         .sidebar-lk__link {
             padding: 4px 0;
         }
@@ -10640,7 +10602,7 @@ button {
     }
 
     &__bottom {
-        padding: 9px 20px 30px 28px;
+        padding: 9px 20px 30px calc(20px + (26 - 20) * ((100vw - 320px) / (1920 - 320)));
     }
 
     &__button {
@@ -10674,7 +10636,6 @@ button {
         letter-spacing: 0.04em;
         color: #3b3b3b;
     }
-
     &__tabs {
         margin-top: 14px;
         display: flex;
@@ -10840,18 +10801,6 @@ button {
     transition: 0.3s;
 }
 .registration-claim {
-    .popups__conteiner {
-    }
-
-    .popups__top {
-    }
-
-    .popups__title {
-    }
-
-    .popups__close {
-    }
-
     .popups__body {
         margin-top: calc(30px + (46 - 30) * ((100vw - 320px) / (1920 - 320)));
         .inputsection {
@@ -10861,15 +10810,12 @@ button {
             height: 18px;
             height: fit-content;
             border-bottom: 1px solid rgba(183, 183, 183, 0.2);
-            /* border: 1px solid red; */
             .placeholder {
                 height: fit-content;
-                /* border: 1px solid blue; */
                 font-size: 18px;
                 line-height: 137%;
             }
             input {
-                /* border: 1px solid black; */
                 padding: 7px 0 2px;
                 font-size: 18px;
                 line-height: 137%;
@@ -10924,9 +10870,15 @@ button {
         }
         .select__header {
             align-items: flex-start;
+            font-size: 16px;
+            padding: 10px 20px 10px calc(20px + (26 - 20) * ((100vw - 320px) / (1920 - 320)));
             .select__icon {
                 margin-left: 10px;
             }
+        }
+        .select__item{
+            font-size: 14px;
+            padding: 10px 20px 10px calc(20px + (26 - 20) * ((100vw - 320px) / (1920 - 320)));
         }
     }
 }
