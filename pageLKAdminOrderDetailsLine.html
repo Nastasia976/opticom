@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="wrapper wrapper-basket">
+    <div class="wrapper wrapper-lk">
         <header class="header white">
             <div class="header__conteiner">
                 <div class="header__logo logo">
@@ -552,77 +552,601 @@
             <div class="bread-crambs">
                 <div class="bread-crambs__conteier _conteiner2">
                     <p class="bread-crambs__list">
-                        <a href="#" class="bread-crambs__link">Главная</a>
-                        <span>Корзины</span>
+                        <a href="#" class="bread-crambs__link">Личный кабинет</a>
+                        <a href="#" class="bread-crambs__link">Заказы</a>
+                        <span>Заказ № 569 от 14.01.2021</span>
                     </p>
                 </div>
             </div>
-            <div class="basket-order">
-                <div class="basket-order__conteiner _conteiner2">
-                    <a href="#" class="basket-order__link">
-                        <svg width="41" height="8" viewBox="0 0 41 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M0.646446 3.64645C0.451183 3.84171 0.451183 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM41 3.5L1 3.5V4.5L41 4.5V3.5Z"
-                                fill="currentColor" />
-                        </svg>
-                        Вернуться в корзину
-                    </a>
-                    <div class="basket-order__title">
-                        <h3>Оформление заказа</h3>
+            <div class="personal-area">
+                <div class="personal-area__conteiner _conteiner2">
+                    <div class="personal-area__title">
+                        <h3>Личный кабинет</h3>
                     </div>
-                    <div class="basket-order__sub-title">Выбор адреса доставки</div>
-                    <form method="post" class="basket-order__body">
-                        <div class="basket-order__items">
-                            <div class="basket-order__name _selected">
-                                г. Краснодар <span>(выбран)</span>
+                    <div class="personal-area__wrapper">
+                        <div class="personal-area__sidebar sidebar-lk">
+                            <div class="sidebar-lk__top">
+                                <div class="sidebar-lk__icon">
+                                    <div class="sidebar-lk__icon__letter">o</div>
+                                </div>
+                                <div class="sidebar-lk__who">Администратор</div>
+                                <div class="sidebar-lk__name">Иванова Ольга</div>
+                                <div class="sidebar-lk__e-mail">ivanovaolga@tander.ru</div>
                             </div>
-                            <div class="basket-order__item">
-                                <div class="basket-order__adres">
-                                    <span>Адрес</span>
-                                    <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д. 5/1, оф. 109</p>
+                            <div class="sidebar-lk__body">
+                                <ul class="sidebar-lk__list">
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link active">Заказы</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <div class="sidebar-lk__link">Корзины
+                                            <svg class="arrow-lk" width="8" height="6" viewBox="0 0 8 6" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4 6L0.535899 -6.52533e-07L7.4641 -4.68497e-08L4 6Z"
+                                                    fill="#D2D2D2" />
+                                            </svg>
+                                        </div>
+                                        <ul class="sub-menu-lk">
+                                            <li class="sub-menu-lk__el">
+                                                <a href="#" class="sub-menu-lk__link">Корзина для бытовой химии</a>
+                                            </li>
+                                            <li class="sub-menu-lk__el">
+                                                <a href="#" class="sub-menu-lk__link">Корзина для продуктов питания</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Избранное</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Сотрудники</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Управление</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Быстрый заказ</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Информация о поставках</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Адреса доставки</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Товарная матрица</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Личные данные</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Уведомления</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sidebar-lk__items">
+                                <a href="#" class="sidebar-lk__link">Запросить акт сверки</a>
+                                <div class="sidebar-lk__link_claim">Оформить претензию</div>
+                                <div class="sidebar-lk__item">
+                                    <input type="checkbox">
+                                    <label class="for-inp"></label>
+                                    <span>Использовать мультикорзины</span>
                                 </div>
-                                <div class="basket-order__details details-order">
-                                    <div class="details-order__name">Бюджет</div>
-                                    <div class="details-order__sense">100 000 Р</div>
-                                </div>
-                                <div class="basket-order__details details-order">
-                                    <div class="details-order__name">Номер телефона</div>
-                                    <div class="details-order__sense">+7 952 000-12-64</div>
+                            </div>
+                            <div class="sidebar-lk__bottom">
+                                <div class="sidebar-lk__who">Ваш менеджер</div>
+                                <div class="sidebar-lk__name">Петров Сергей</div>
+                                <div class="sidebar-lk__e-mail">ivanovaolga@tander.ru</div>
+                                <div class="sidebar-lk__tel">+7 (952) 217-56-12</div>
+                                <div class="sidebar-lk__button">
+                                    <button class="green-border">Связаться</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="basket-order__items">
-                            <div class="basket-order__name">
-                                г. Ставрополь
+                        <div class="personal-area__body body-lk">
+                            <a href="#" class="body-lk__come-back">
+                                <svg width="41" height="8" viewBox="0 0 41 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.646446 3.64645C0.451183 3.84171 0.451183 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM41 3.5L1 3.5V4.5L41 4.5V3.5Z"
+                                        fill="black" fill-opacity="0.18" />
+                                </svg>
+                                Вернуться назад</a>
+                            <div class="body-lk__items order-card">
+                                <div class="order-card__top">
+                                    <div class="order-card__order">
+                                        <span class="order-card__number">Заказ № 569</span>
+                                        <div class="order-card__date">от 14.01.2021</div>
+                                    </div>
+                                    <div class="order-card__print _ordering">
+                                        <span>Ожидает согласования</span>
+                                        <div class="repeat-oreder">
+                                            <img src="img/repeating1.png" alt="repeat">
+                                            Повторить заказ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidebar-lk__top about-purchaser">
+                                    <div class="sidebar-lk__icon">
+                                        <div class="sidebar-lk__icon__letter">o</div>
+                                    </div>
+                                    <div class="about-purchaser__items">
+                                        <div class="sidebar-lk__name">Иванов Константин</div>
+                                        <div class="about-purchaser__item">
+                                            <div class="sidebar-lk__who">Закупщик</div>
+                                            <div class="sidebar-lk__e-mail">konstant.1989@gmail.com</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-card__items">
+                                    <div class="order-card__item">
+                                        <div class="order-card__name">Адрес доставки</div>
+                                        <div class="order-card__value">г. Волгоград, ул. Северная, д. 56, оф. 459
+                                        </div>
+                                    </div>
+                                    <div class="order-card__item">
+                                        <div class="order-card__name">Дата доставки</div>
+                                        <div class="order-card__value">12 декабря 2021</div>
+                                    </div>
+                                    <div class="order-card__item">
+                                        <div class="order-card__name">Сумма</div>
+                                        <div class="order-card__value">129 999 Р</div>
+                                    </div>
+                                    <div class="order-card__item">
+                                        <div class="order-card__name">Товаров</div>
+                                        <div class="order-card__value">5</div>
+                                    </div>
+                                </div>
+                                <div class="order-card__bottom">
+                                    <button class="green-bg">Согласовать заказ</button>
+                                    <button class="green-border">Отклонить</button>
+                                </div>
                             </div>
-                            <div class="basket-order__item">
-                                <div class="basket-order__adres">
-                                    <span>Адрес</span>
-                                    <p>Россия, Ставропольский край, г. Ставрополь, ул. Монтажников, д. 5/1, оф. 109</p>
+                            <div class="body-catalogs__body _line">
+                                <div class="product__item item-line">
+                                    <div class="product__elements">
+                                        <div class="product__name">Ph средство для очистки стеклянных поверхностей,
+                                            750мл</div>
+                                        <div class="product__description">
+                                            Эффективно удаляет пыль, грязь, следы от пальцев и другие загрязнения
+                                        </div>
+
+                                        <div class="product__obolochka">
+                                            <div class="product__packing packing-product">
+                                                <div class="packing-product__body">
+                                                    <div class="packing-product__item">1 шт.</div>
+                                                    <div class="packing-product__item">упак. 10 шт.</div>
+                                                    <div class="packing-product__item">кор. 100 шт.</div>
+                                                </div>
+                                            </div>
+                                            <div class="product__price">120 руб. / шт.</div>
+                                            <div class="product__bottom">
+                                                <div class="product__amount amount">
+                                                    <button onclick="inc(-1)" class="amount__item _minus">-</button>
+                                                    <input value="1" class="amount__numbers">
+                                                    <button onclick="inc(1)" class="amount__item _plus">+</button>
+                                                </div>
+                                                <button type="submit" class="product__button">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__top top-product">
+                                        <div class="top-product__items">
+                                            <div class="top-product__icon">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M17.2051 1.74048C17.1968 1.50336 17.0405 1.29701 16.8145 1.22479C14.5877 0.513485 12.4688 0.186763 10.5168 0.25369C8.03106 0.338834 5.77868 1.06136 3.82189 2.40146C0.769748 4.49429 -0.0131994 8.68176 2.07679 11.7363C2.27844 12.0306 2.50084 12.3054 2.74121 12.5601L1.87434 17.1964C1.8173 17.5015 2.0184 17.7951 2.32349 17.8521C2.62859 17.9092 2.92218 17.7081 2.97923 17.403L3.7246 13.4165C4.50805 13.9737 5.41013 14.3591 6.38394 14.5412C8.1483 14.8711 9.93382 14.4947 11.4114 13.4816C13.7211 11.8996 13.8193 9.14337 13.9681 7.61405C14.195 5.27925 14.391 3.26284 16.8516 2.28226C17.0719 2.1944 17.2135 1.97764 17.2051 1.74048V1.74048ZM4.45725 3.32868C6.76672 1.74711 9.50047 1.12164 12.617 1.45544C11.1796 1.85095 9.73153 2.54894 8.40064 3.5144C5.79117 5.40736 3.92689 8.0958 3.05901 11.1792C1.2554 8.63819 1.883 5.09382 4.45725 3.32868V3.32868ZM12.8492 7.5053C12.6549 9.50472 12.4712 11.3932 10.7759 12.5543C9.54589 13.3977 8.05951 13.7109 6.59045 13.4363C5.60357 13.2518 4.70513 12.8166 3.96585 12.1779C4.66841 9.0477 6.46391 6.30798 9.06065 4.42419C10.2538 3.55869 11.5834 2.9083 12.9058 2.54336C13.5505 2.36541 14.1878 2.2567 14.8005 2.21811C14.2623 2.69301 13.8492 3.27404 13.553 3.96983C13.0864 5.0659 12.9658 6.30602 12.8492 7.5053V7.5053Z"
+                                                        fill="#00A793" />
+                                                </svg>
+                                            </div>
+                                            <div class="top-product__icon">
+                                                <svg class="fav" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M8.21334 15.2555C3.80059 12.4031 0.948242 9.04742 0.948242 5.64977C0.948242 2.66319 3.012 0.616211 5.62945 0.616211C7.1563 0.616211 8.34757 1.31252 9.04388 2.3444C9.74858 1.30413 10.9315 0.616211 12.4667 0.616211C15.0758 0.616211 17.1395 2.66319 17.1395 5.64977C17.1395 9.04742 14.2872 12.4031 9.88281 15.2555C9.59757 15.44 9.27039 15.6162 9.04388 15.6162C8.81737 15.6162 8.49019 15.44 8.21334 15.2555Z"
+                                                        fill="currentColor" />
+                                                </svg>
+                                            </div>
+                                            <div class="top-product__icon _icon-compare"></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="basket-order__details details-order">
-                                    <div class="details-order__name">Бюджет</div>
-                                    <div class="details-order__sense">100 000 Р</div>
+                                <div class="product__item item-line">
+                                    <div class="product__elements">
+                                        <div class="product__name">Ph средство для очистки стеклянных поверхностей,
+                                            750мл</div>
+                                        <div class="product__description">
+                                            Эффективно удаляет пыль, грязь, следы от пальцев и другие загрязнения
+                                        </div>
+
+                                        <div class="product__obolochka">
+                                            <div class="product__packing packing-product">
+                                                <div class="packing-product__body">
+                                                    <div class="packing-product__item">1 шт.</div>
+                                                    <div class="packing-product__item">упак. 10 шт.</div>
+                                                    <div class="packing-product__item">кор. 100 шт.</div>
+                                                </div>
+                                            </div>
+                                            <div class="product__price">120 руб. / шт.</div>
+                                            <div class="product__bottom">
+                                                <div class="product__amount amount">
+                                                    <button onclick="inc(-1)" class="amount__item _minus">-</button>
+                                                    <input value="1" class="amount__numbers">
+                                                    <button onclick="inc(1)" class="amount__item _plus">+</button>
+                                                </div>
+                                                <button type="submit" class="product__button">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__top top-product">
+                                        <div class="top-product__items">
+                                            <div class="top-product__icon">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M17.2051 1.74048C17.1968 1.50336 17.0405 1.29701 16.8145 1.22479C14.5877 0.513485 12.4688 0.186763 10.5168 0.25369C8.03106 0.338834 5.77868 1.06136 3.82189 2.40146C0.769748 4.49429 -0.0131994 8.68176 2.07679 11.7363C2.27844 12.0306 2.50084 12.3054 2.74121 12.5601L1.87434 17.1964C1.8173 17.5015 2.0184 17.7951 2.32349 17.8521C2.62859 17.9092 2.92218 17.7081 2.97923 17.403L3.7246 13.4165C4.50805 13.9737 5.41013 14.3591 6.38394 14.5412C8.1483 14.8711 9.93382 14.4947 11.4114 13.4816C13.7211 11.8996 13.8193 9.14337 13.9681 7.61405C14.195 5.27925 14.391 3.26284 16.8516 2.28226C17.0719 2.1944 17.2135 1.97764 17.2051 1.74048V1.74048ZM4.45725 3.32868C6.76672 1.74711 9.50047 1.12164 12.617 1.45544C11.1796 1.85095 9.73153 2.54894 8.40064 3.5144C5.79117 5.40736 3.92689 8.0958 3.05901 11.1792C1.2554 8.63819 1.883 5.09382 4.45725 3.32868V3.32868ZM12.8492 7.5053C12.6549 9.50472 12.4712 11.3932 10.7759 12.5543C9.54589 13.3977 8.05951 13.7109 6.59045 13.4363C5.60357 13.2518 4.70513 12.8166 3.96585 12.1779C4.66841 9.0477 6.46391 6.30798 9.06065 4.42419C10.2538 3.55869 11.5834 2.9083 12.9058 2.54336C13.5505 2.36541 14.1878 2.2567 14.8005 2.21811C14.2623 2.69301 13.8492 3.27404 13.553 3.96983C13.0864 5.0659 12.9658 6.30602 12.8492 7.5053V7.5053Z"
+                                                        fill="#00A793" />
+                                                </svg>
+                                            </div>
+                                            <div class="top-product__icon">
+                                                <svg class="fav" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M8.21334 15.2555C3.80059 12.4031 0.948242 9.04742 0.948242 5.64977C0.948242 2.66319 3.012 0.616211 5.62945 0.616211C7.1563 0.616211 8.34757 1.31252 9.04388 2.3444C9.74858 1.30413 10.9315 0.616211 12.4667 0.616211C15.0758 0.616211 17.1395 2.66319 17.1395 5.64977C17.1395 9.04742 14.2872 12.4031 9.88281 15.2555C9.59757 15.44 9.27039 15.6162 9.04388 15.6162C8.81737 15.6162 8.49019 15.44 8.21334 15.2555Z"
+                                                        fill="currentColor" />
+                                                </svg>
+                                            </div>
+                                            <div class="top-product__icon _icon-compare"></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="basket-order__details details-order">
-                                    <div class="details-order__name">Номер телефона</div>
-                                    <div class="details-order__sense">+7 952 000-12-64</div>
+                                <div class="product__item item-line">
+                                    <div class="product__elements">
+                                        <div class="product__name">Ph средство для очистки стеклянных поверхностей,
+                                            750мл</div>
+                                        <div class="product__description">
+                                            Эффективно удаляет пыль, грязь, следы от пальцев и другие загрязнения
+                                        </div>
+
+                                        <div class="product__obolochka">
+                                            <div class="product__packing packing-product">
+                                                <div class="packing-product__body">
+                                                    <div class="packing-product__item">1 шт.</div>
+                                                    <div class="packing-product__item">упак. 10 шт.</div>
+                                                    <div class="packing-product__item">кор. 100 шт.</div>
+                                                </div>
+                                            </div>
+                                            <div class="product__price">120 руб. / шт.</div>
+                                            <div class="product__bottom">
+                                                <div class="product__amount amount">
+                                                    <button onclick="inc(-1)" class="amount__item _minus">-</button>
+                                                    <input value="1" class="amount__numbers">
+                                                    <button onclick="inc(1)" class="amount__item _plus">+</button>
+                                                </div>
+                                                <button type="submit" class="product__button">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__top top-product">
+                                        <div class="top-product__items">
+                                            <div class="top-product__icon">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M17.2051 1.74048C17.1968 1.50336 17.0405 1.29701 16.8145 1.22479C14.5877 0.513485 12.4688 0.186763 10.5168 0.25369C8.03106 0.338834 5.77868 1.06136 3.82189 2.40146C0.769748 4.49429 -0.0131994 8.68176 2.07679 11.7363C2.27844 12.0306 2.50084 12.3054 2.74121 12.5601L1.87434 17.1964C1.8173 17.5015 2.0184 17.7951 2.32349 17.8521C2.62859 17.9092 2.92218 17.7081 2.97923 17.403L3.7246 13.4165C4.50805 13.9737 5.41013 14.3591 6.38394 14.5412C8.1483 14.8711 9.93382 14.4947 11.4114 13.4816C13.7211 11.8996 13.8193 9.14337 13.9681 7.61405C14.195 5.27925 14.391 3.26284 16.8516 2.28226C17.0719 2.1944 17.2135 1.97764 17.2051 1.74048V1.74048ZM4.45725 3.32868C6.76672 1.74711 9.50047 1.12164 12.617 1.45544C11.1796 1.85095 9.73153 2.54894 8.40064 3.5144C5.79117 5.40736 3.92689 8.0958 3.05901 11.1792C1.2554 8.63819 1.883 5.09382 4.45725 3.32868V3.32868ZM12.8492 7.5053C12.6549 9.50472 12.4712 11.3932 10.7759 12.5543C9.54589 13.3977 8.05951 13.7109 6.59045 13.4363C5.60357 13.2518 4.70513 12.8166 3.96585 12.1779C4.66841 9.0477 6.46391 6.30798 9.06065 4.42419C10.2538 3.55869 11.5834 2.9083 12.9058 2.54336C13.5505 2.36541 14.1878 2.2567 14.8005 2.21811C14.2623 2.69301 13.8492 3.27404 13.553 3.96983C13.0864 5.0659 12.9658 6.30602 12.8492 7.5053V7.5053Z"
+                                                        fill="#00A793" />
+                                                </svg>
+                                            </div>
+                                            <div class="top-product__icon">
+                                                <svg class="fav" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M8.21334 15.2555C3.80059 12.4031 0.948242 9.04742 0.948242 5.64977C0.948242 2.66319 3.012 0.616211 5.62945 0.616211C7.1563 0.616211 8.34757 1.31252 9.04388 2.3444C9.74858 1.30413 10.9315 0.616211 12.4667 0.616211C15.0758 0.616211 17.1395 2.66319 17.1395 5.64977C17.1395 9.04742 14.2872 12.4031 9.88281 15.2555C9.59757 15.44 9.27039 15.6162 9.04388 15.6162C8.81737 15.6162 8.49019 15.44 8.21334 15.2555Z"
+                                                        fill="currentColor" />
+                                                </svg>
+                                            </div>
+                                            <div class="top-product__icon _icon-compare"></div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="product__item item-line">
+                                    <div class="product__elements">
+                                        <div class="product__name">Ph средство для очистки стеклянных поверхностей,
+                                            750мл</div>
+                                        <div class="product__description">
+                                            Эффективно удаляет пыль, грязь, следы от пальцев и другие загрязнения
+                                        </div>
+
+                                        <div class="product__obolochka">
+                                            <div class="product__packing packing-product">
+                                                <div class="packing-product__body">
+                                                    <div class="packing-product__item">1 шт.</div>
+                                                    <div class="packing-product__item">упак. 10 шт.</div>
+                                                    <div class="packing-product__item">кор. 100 шт.</div>
+                                                </div>
+                                            </div>
+                                            <div class="product__price">120 руб. / шт.</div>
+                                            <div class="product__bottom">
+                                                <div class="product__amount amount">
+                                                    <button onclick="inc(-1)" class="amount__item _minus">-</button>
+                                                    <input value="1" class="amount__numbers">
+                                                    <button onclick="inc(1)" class="amount__item _plus">+</button>
+                                                </div>
+                                                <button type="submit" class="product__button">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__top top-product">
+                                        <div class="top-product__items">
+                                            <div class="top-product__icon">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M17.2051 1.74048C17.1968 1.50336 17.0405 1.29701 16.8145 1.22479C14.5877 0.513485 12.4688 0.186763 10.5168 0.25369C8.03106 0.338834 5.77868 1.06136 3.82189 2.40146C0.769748 4.49429 -0.0131994 8.68176 2.07679 11.7363C2.27844 12.0306 2.50084 12.3054 2.74121 12.5601L1.87434 17.1964C1.8173 17.5015 2.0184 17.7951 2.32349 17.8521C2.62859 17.9092 2.92218 17.7081 2.97923 17.403L3.7246 13.4165C4.50805 13.9737 5.41013 14.3591 6.38394 14.5412C8.1483 14.8711 9.93382 14.4947 11.4114 13.4816C13.7211 11.8996 13.8193 9.14337 13.9681 7.61405C14.195 5.27925 14.391 3.26284 16.8516 2.28226C17.0719 2.1944 17.2135 1.97764 17.2051 1.74048V1.74048ZM4.45725 3.32868C6.76672 1.74711 9.50047 1.12164 12.617 1.45544C11.1796 1.85095 9.73153 2.54894 8.40064 3.5144C5.79117 5.40736 3.92689 8.0958 3.05901 11.1792C1.2554 8.63819 1.883 5.09382 4.45725 3.32868V3.32868ZM12.8492 7.5053C12.6549 9.50472 12.4712 11.3932 10.7759 12.5543C9.54589 13.3977 8.05951 13.7109 6.59045 13.4363C5.60357 13.2518 4.70513 12.8166 3.96585 12.1779C4.66841 9.0477 6.46391 6.30798 9.06065 4.42419C10.2538 3.55869 11.5834 2.9083 12.9058 2.54336C13.5505 2.36541 14.1878 2.2567 14.8005 2.21811C14.2623 2.69301 13.8492 3.27404 13.553 3.96983C13.0864 5.0659 12.9658 6.30602 12.8492 7.5053V7.5053Z"
+                                                        fill="#00A793" />
+                                                </svg>
+                                            </div>
+                                            <div class="top-product__icon">
+                                                <svg class="fav" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M8.21334 15.2555C3.80059 12.4031 0.948242 9.04742 0.948242 5.64977C0.948242 2.66319 3.012 0.616211 5.62945 0.616211C7.1563 0.616211 8.34757 1.31252 9.04388 2.3444C9.74858 1.30413 10.9315 0.616211 12.4667 0.616211C15.0758 0.616211 17.1395 2.66319 17.1395 5.64977C17.1395 9.04742 14.2872 12.4031 9.88281 15.2555C9.59757 15.44 9.27039 15.6162 9.04388 15.6162C8.81737 15.6162 8.49019 15.44 8.21334 15.2555Z"
+                                                        fill="currentColor" />
+                                                </svg>
+                                            </div>
+                                            <div class="top-product__icon _icon-compare"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product__item item-line">
+                                    <div class="product__elements">
+                                        <div class="product__name">Ph средство для очистки стеклянных поверхностей,
+                                            750мл</div>
+                                        <div class="product__description">
+                                            Эффективно удаляет пыль, грязь, следы от пальцев и другие загрязнения
+                                        </div>
+
+                                        <div class="product__obolochka">
+                                            <div class="product__packing packing-product">
+                                                <div class="packing-product__body">
+                                                    <div class="packing-product__item">1 шт.</div>
+                                                    <div class="packing-product__item">упак. 10 шт.</div>
+                                                    <div class="packing-product__item">кор. 100 шт.</div>
+                                                </div>
+                                            </div>
+                                            <div class="product__price">120 руб. / шт.</div>
+                                            <div class="product__bottom">
+                                                <div class="product__amount amount">
+                                                    <button onclick="inc(-1)" class="amount__item _minus">-</button>
+                                                    <input value="1" class="amount__numbers">
+                                                    <button onclick="inc(1)" class="amount__item _plus">+</button>
+                                                </div>
+                                                <button type="submit" class="product__button">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__top top-product">
+                                        <div class="top-product__items">
+                                            <div class="top-product__icon">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M17.2051 1.74048C17.1968 1.50336 17.0405 1.29701 16.8145 1.22479C14.5877 0.513485 12.4688 0.186763 10.5168 0.25369C8.03106 0.338834 5.77868 1.06136 3.82189 2.40146C0.769748 4.49429 -0.0131994 8.68176 2.07679 11.7363C2.27844 12.0306 2.50084 12.3054 2.74121 12.5601L1.87434 17.1964C1.8173 17.5015 2.0184 17.7951 2.32349 17.8521C2.62859 17.9092 2.92218 17.7081 2.97923 17.403L3.7246 13.4165C4.50805 13.9737 5.41013 14.3591 6.38394 14.5412C8.1483 14.8711 9.93382 14.4947 11.4114 13.4816C13.7211 11.8996 13.8193 9.14337 13.9681 7.61405C14.195 5.27925 14.391 3.26284 16.8516 2.28226C17.0719 2.1944 17.2135 1.97764 17.2051 1.74048V1.74048ZM4.45725 3.32868C6.76672 1.74711 9.50047 1.12164 12.617 1.45544C11.1796 1.85095 9.73153 2.54894 8.40064 3.5144C5.79117 5.40736 3.92689 8.0958 3.05901 11.1792C1.2554 8.63819 1.883 5.09382 4.45725 3.32868V3.32868ZM12.8492 7.5053C12.6549 9.50472 12.4712 11.3932 10.7759 12.5543C9.54589 13.3977 8.05951 13.7109 6.59045 13.4363C5.60357 13.2518 4.70513 12.8166 3.96585 12.1779C4.66841 9.0477 6.46391 6.30798 9.06065 4.42419C10.2538 3.55869 11.5834 2.9083 12.9058 2.54336C13.5505 2.36541 14.1878 2.2567 14.8005 2.21811C14.2623 2.69301 13.8492 3.27404 13.553 3.96983C13.0864 5.0659 12.9658 6.30602 12.8492 7.5053V7.5053Z"
+                                                        fill="#00A793" />
+                                                </svg>
+                                            </div>
+                                            <div class="top-product__icon">
+                                                <svg class="fav" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M8.21334 15.2555C3.80059 12.4031 0.948242 9.04742 0.948242 5.64977C0.948242 2.66319 3.012 0.616211 5.62945 0.616211C7.1563 0.616211 8.34757 1.31252 9.04388 2.3444C9.74858 1.30413 10.9315 0.616211 12.4667 0.616211C15.0758 0.616211 17.1395 2.66319 17.1395 5.64977C17.1395 9.04742 14.2872 12.4031 9.88281 15.2555C9.59757 15.44 9.27039 15.6162 9.04388 15.6162C8.81737 15.6162 8.49019 15.44 8.21334 15.2555Z"
+                                                        fill="currentColor" />
+                                                </svg>
+                                            </div>
+                                            <div class="top-product__icon _icon-compare"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product__item item-line">
+                                    <div class="product__elements">
+                                        <div class="product__name">Ph средство для очистки стеклянных поверхностей,
+                                            750мл</div>
+                                        <div class="product__description">
+                                            Эффективно удаляет пыль, грязь, следы от пальцев и другие загрязнения
+                                        </div>
+
+                                        <div class="product__obolochka">
+                                            <div class="product__packing packing-product">
+                                                <div class="packing-product__body">
+                                                    <div class="packing-product__item">1 шт.</div>
+                                                    <div class="packing-product__item">упак. 10 шт.</div>
+                                                    <div class="packing-product__item">кор. 100 шт.</div>
+                                                </div>
+                                            </div>
+                                            <div class="product__price">120 руб. / шт.</div>
+                                            <div class="product__bottom">
+                                                <div class="product__amount amount">
+                                                    <button onclick="inc(-1)" class="amount__item _minus">-</button>
+                                                    <input value="1" class="amount__numbers">
+                                                    <button onclick="inc(1)" class="amount__item _plus">+</button>
+                                                </div>
+                                                <button type="submit" class="product__button">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__top top-product">
+                                        <div class="top-product__items">
+                                            <div class="top-product__icon">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M17.2051 1.74048C17.1968 1.50336 17.0405 1.29701 16.8145 1.22479C14.5877 0.513485 12.4688 0.186763 10.5168 0.25369C8.03106 0.338834 5.77868 1.06136 3.82189 2.40146C0.769748 4.49429 -0.0131994 8.68176 2.07679 11.7363C2.27844 12.0306 2.50084 12.3054 2.74121 12.5601L1.87434 17.1964C1.8173 17.5015 2.0184 17.7951 2.32349 17.8521C2.62859 17.9092 2.92218 17.7081 2.97923 17.403L3.7246 13.4165C4.50805 13.9737 5.41013 14.3591 6.38394 14.5412C8.1483 14.8711 9.93382 14.4947 11.4114 13.4816C13.7211 11.8996 13.8193 9.14337 13.9681 7.61405C14.195 5.27925 14.391 3.26284 16.8516 2.28226C17.0719 2.1944 17.2135 1.97764 17.2051 1.74048V1.74048ZM4.45725 3.32868C6.76672 1.74711 9.50047 1.12164 12.617 1.45544C11.1796 1.85095 9.73153 2.54894 8.40064 3.5144C5.79117 5.40736 3.92689 8.0958 3.05901 11.1792C1.2554 8.63819 1.883 5.09382 4.45725 3.32868V3.32868ZM12.8492 7.5053C12.6549 9.50472 12.4712 11.3932 10.7759 12.5543C9.54589 13.3977 8.05951 13.7109 6.59045 13.4363C5.60357 13.2518 4.70513 12.8166 3.96585 12.1779C4.66841 9.0477 6.46391 6.30798 9.06065 4.42419C10.2538 3.55869 11.5834 2.9083 12.9058 2.54336C13.5505 2.36541 14.1878 2.2567 14.8005 2.21811C14.2623 2.69301 13.8492 3.27404 13.553 3.96983C13.0864 5.0659 12.9658 6.30602 12.8492 7.5053V7.5053Z"
+                                                        fill="#00A793" />
+                                                </svg>
+                                            </div>
+                                            <div class="top-product__icon">
+                                                <svg class="fav" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M8.21334 15.2555C3.80059 12.4031 0.948242 9.04742 0.948242 5.64977C0.948242 2.66319 3.012 0.616211 5.62945 0.616211C7.1563 0.616211 8.34757 1.31252 9.04388 2.3444C9.74858 1.30413 10.9315 0.616211 12.4667 0.616211C15.0758 0.616211 17.1395 2.66319 17.1395 5.64977C17.1395 9.04742 14.2872 12.4031 9.88281 15.2555C9.59757 15.44 9.27039 15.6162 9.04388 15.6162C8.81737 15.6162 8.49019 15.44 8.21334 15.2555Z"
+                                                        fill="currentColor" />
+                                                </svg>
+                                            </div>
+                                            <div class="top-product__icon _icon-compare"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product__item item-line">
+                                    <div class="product__elements">
+                                        <div class="product__name">Ph средство для очистки стеклянных поверхностей,
+                                            750мл</div>
+                                        <div class="product__description">
+                                            Эффективно удаляет пыль, грязь, следы от пальцев и другие загрязнения
+                                        </div>
+
+                                        <div class="product__obolochka">
+                                            <div class="product__packing packing-product">
+                                                <div class="packing-product__body">
+                                                    <div class="packing-product__item">1 шт.</div>
+                                                    <div class="packing-product__item">упак. 10 шт.</div>
+                                                    <div class="packing-product__item">кор. 100 шт.</div>
+                                                </div>
+                                            </div>
+                                            <div class="product__price">120 руб. / шт.</div>
+                                            <div class="product__bottom">
+                                                <div class="product__amount amount">
+                                                    <button onclick="inc(-1)" class="amount__item _minus">-</button>
+                                                    <input value="1" class="amount__numbers">
+                                                    <button onclick="inc(1)" class="amount__item _plus">+</button>
+                                                </div>
+                                                <button type="submit" class="product__button">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__top top-product">
+                                        <div class="top-product__items">
+                                            <div class="top-product__icon">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M17.2051 1.74048C17.1968 1.50336 17.0405 1.29701 16.8145 1.22479C14.5877 0.513485 12.4688 0.186763 10.5168 0.25369C8.03106 0.338834 5.77868 1.06136 3.82189 2.40146C0.769748 4.49429 -0.0131994 8.68176 2.07679 11.7363C2.27844 12.0306 2.50084 12.3054 2.74121 12.5601L1.87434 17.1964C1.8173 17.5015 2.0184 17.7951 2.32349 17.8521C2.62859 17.9092 2.92218 17.7081 2.97923 17.403L3.7246 13.4165C4.50805 13.9737 5.41013 14.3591 6.38394 14.5412C8.1483 14.8711 9.93382 14.4947 11.4114 13.4816C13.7211 11.8996 13.8193 9.14337 13.9681 7.61405C14.195 5.27925 14.391 3.26284 16.8516 2.28226C17.0719 2.1944 17.2135 1.97764 17.2051 1.74048V1.74048ZM4.45725 3.32868C6.76672 1.74711 9.50047 1.12164 12.617 1.45544C11.1796 1.85095 9.73153 2.54894 8.40064 3.5144C5.79117 5.40736 3.92689 8.0958 3.05901 11.1792C1.2554 8.63819 1.883 5.09382 4.45725 3.32868V3.32868ZM12.8492 7.5053C12.6549 9.50472 12.4712 11.3932 10.7759 12.5543C9.54589 13.3977 8.05951 13.7109 6.59045 13.4363C5.60357 13.2518 4.70513 12.8166 3.96585 12.1779C4.66841 9.0477 6.46391 6.30798 9.06065 4.42419C10.2538 3.55869 11.5834 2.9083 12.9058 2.54336C13.5505 2.36541 14.1878 2.2567 14.8005 2.21811C14.2623 2.69301 13.8492 3.27404 13.553 3.96983C13.0864 5.0659 12.9658 6.30602 12.8492 7.5053V7.5053Z"
+                                                        fill="#00A793" />
+                                                </svg>
+                                            </div>
+                                            <div class="top-product__icon">
+                                                <svg class="fav" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M8.21334 15.2555C3.80059 12.4031 0.948242 9.04742 0.948242 5.64977C0.948242 2.66319 3.012 0.616211 5.62945 0.616211C7.1563 0.616211 8.34757 1.31252 9.04388 2.3444C9.74858 1.30413 10.9315 0.616211 12.4667 0.616211C15.0758 0.616211 17.1395 2.66319 17.1395 5.64977C17.1395 9.04742 14.2872 12.4031 9.88281 15.2555C9.59757 15.44 9.27039 15.6162 9.04388 15.6162C8.81737 15.6162 8.49019 15.44 8.21334 15.2555Z"
+                                                        fill="currentColor" />
+                                                </svg>
+                                            </div>
+                                            <div class="top-product__icon _icon-compare"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product__item item-line">
+                                    <div class="product__elements">
+                                        <div class="product__name">Ph средство для очистки стеклянных поверхностей,
+                                            750мл</div>
+                                        <div class="product__description">
+                                            Эффективно удаляет пыль, грязь, следы от пальцев и другие загрязнения
+                                        </div>
+
+                                        <div class="product__obolochka">
+                                            <div class="product__packing packing-product">
+                                                <div class="packing-product__body">
+                                                    <div class="packing-product__item">1 шт.</div>
+                                                    <div class="packing-product__item">упак. 10 шт.</div>
+                                                    <div class="packing-product__item">кор. 100 шт.</div>
+                                                </div>
+                                            </div>
+                                            <div class="product__price">120 руб. / шт.</div>
+                                            <div class="product__bottom">
+                                                <div class="product__amount amount">
+                                                    <button onclick="inc(-1)" class="amount__item _minus">-</button>
+                                                    <input value="1" class="amount__numbers">
+                                                    <button onclick="inc(1)" class="amount__item _plus">+</button>
+                                                </div>
+                                                <button type="submit" class="product__button">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__top top-product">
+                                        <div class="top-product__items">
+                                            <div class="top-product__icon">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M17.2051 1.74048C17.1968 1.50336 17.0405 1.29701 16.8145 1.22479C14.5877 0.513485 12.4688 0.186763 10.5168 0.25369C8.03106 0.338834 5.77868 1.06136 3.82189 2.40146C0.769748 4.49429 -0.0131994 8.68176 2.07679 11.7363C2.27844 12.0306 2.50084 12.3054 2.74121 12.5601L1.87434 17.1964C1.8173 17.5015 2.0184 17.7951 2.32349 17.8521C2.62859 17.9092 2.92218 17.7081 2.97923 17.403L3.7246 13.4165C4.50805 13.9737 5.41013 14.3591 6.38394 14.5412C8.1483 14.8711 9.93382 14.4947 11.4114 13.4816C13.7211 11.8996 13.8193 9.14337 13.9681 7.61405C14.195 5.27925 14.391 3.26284 16.8516 2.28226C17.0719 2.1944 17.2135 1.97764 17.2051 1.74048V1.74048ZM4.45725 3.32868C6.76672 1.74711 9.50047 1.12164 12.617 1.45544C11.1796 1.85095 9.73153 2.54894 8.40064 3.5144C5.79117 5.40736 3.92689 8.0958 3.05901 11.1792C1.2554 8.63819 1.883 5.09382 4.45725 3.32868V3.32868ZM12.8492 7.5053C12.6549 9.50472 12.4712 11.3932 10.7759 12.5543C9.54589 13.3977 8.05951 13.7109 6.59045 13.4363C5.60357 13.2518 4.70513 12.8166 3.96585 12.1779C4.66841 9.0477 6.46391 6.30798 9.06065 4.42419C10.2538 3.55869 11.5834 2.9083 12.9058 2.54336C13.5505 2.36541 14.1878 2.2567 14.8005 2.21811C14.2623 2.69301 13.8492 3.27404 13.553 3.96983C13.0864 5.0659 12.9658 6.30602 12.8492 7.5053V7.5053Z"
+                                                        fill="#00A793" />
+                                                </svg>
+                                            </div>
+                                            <div class="top-product__icon">
+                                                <svg class="fav" width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M8.21334 15.2555C3.80059 12.4031 0.948242 9.04742 0.948242 5.64977C0.948242 2.66319 3.012 0.616211 5.62945 0.616211C7.1563 0.616211 8.34757 1.31252 9.04388 2.3444C9.74858 1.30413 10.9315 0.616211 12.4667 0.616211C15.0758 0.616211 17.1395 2.66319 17.1395 5.64977C17.1395 9.04742 14.2872 12.4031 9.88281 15.2555C9.59757 15.44 9.27039 15.6162 9.04388 15.6162C8.81737 15.6162 8.49019 15.44 8.21334 15.2555Z"
+                                                        fill="currentColor" />
+                                                </svg>
+                                            </div>
+                                            <div class="top-product__icon _icon-compare"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="body-catalogs__footer footer-catalof">
+                                <div class="footer-catalof__items">
+                                    <a href="#" class="footer-catalof__item">1</a>
+                                    <a href="#" class="footer-catalof__item">2</a>
+                                    <a href="#" class="footer-catalof__item active">3</a>
+                                    <a href="#" class="footer-catalof__item">4</a>
+                                    <a href="#" class="footer-catalof__item">5</a>
+                                    <a href="#" class="footer-catalof__item">...</a>
+                                    <a href="#" class="footer-catalof__item">10</a>
+                                    <a href="#" class="footer-catalof__item">12</a>
+                                </div>
+
                             </div>
                         </div>
-                        <div class="basket-order__button">Выбрать</div>
-                        <div class="basket-order__comment comment-basket">
-                            <div class="comment-basket__title">Комментарий к заказу</div>
-                            <div class="inputsection">
-                                <input class="basket-input" type="text" required>
-                                <label class="placeholder">Тект комментария</label>
-                            </div>
-                            <button type="submit" class="comment-basket__button">Оформить заказ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="popups registration-claim">
+                <div class="popups__conteiner">
+                    <div class="popups__top">
+                        <div class="popups__title">Оформление претензии</div>
+                        <div class="popups__close"></div>
+                    </div>
+                    <form method="post" class="popups__body">
+                        <div class="inputsection">
+                            <input class="some-input" type="text" required>
+                            <label class="placeholder">Номер заказа</label>
                         </div>
+                        <div class="inputsection">
+                            <input class="some-input" type="text" required>
+                            <label class="placeholder">Текст претензии</label>
+                        </div>
+                        <button type="submit" class="popups__button">Отправить</button>
                     </form>
                 </div>
             </div>
-
+            <div class="popups _delit delit-basket">
+                <div class="popups__conteiner">
+                    <div class="popups__top">
+                        <div class="popups__title">Удалить корзину?</div>
+                        <div class="popups__close"></div>
+                    </div>
+                    <div class="popups__body">
+                        <div class="popups__text">Отменить действие будет невозможно</div>
+                    </div>
+                    <div class="popups__bottom">
+                        <button class="popups__button popups__button_yes"><span>Да</span></button>
+                        <button class="popups__button popups__button_no"><span>Нет</span></button>
+                    </div>
+                </div>
+            </div>
             <div class="our-adres">
                 <div class="popups__close_x"></div>
                 <div class="popups__title">Наши адреса</div>
@@ -650,37 +1174,6 @@
                     <div class="popups__text">Санкт-Петербург, Большой Сампсониевский пр-т, д.50</div>
                 </div>
             </div>
-
-
-            <div class="popups order-sent">
-                <div class="popups__conteiner">
-                    <div class="popups__top">
-                        <img src="img/the-order-has-been-sent.png" alt="the-order-has-been-sent">
-                        <div class="popups__title">Ваш заказ отправлен</div>
-                        <div class="popups__close"></div>
-                    </div>
-                    <div class="popups__body">
-                        <div class="popups__text">Для получения заказа нужна печать и/или доверенность</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="popups _delit delit-basket">
-                <div class="popups__conteiner">
-                    <div class="popups__top">
-                        <div class="popups__title">Удалить корзину?</div>
-                        <div class="popups__close"></div>
-                    </div>
-                    <div class="popups__body">
-                        <div class="popups__text">Отменить действие будет невозможно</div>
-                    </div>
-                    <div class="popups__bottom">
-                        <button class="popups__button popups__button_yes"><span>Да</span></button>
-                        <button class="popups__button popups__button_no"><span>Нет</span></button>
-                    </div>
-                </div>
-            </div>
-
             <div class="popups send-message">
                 <div class="popups__conteiner">
                     <div class="popups__top">
@@ -1343,9 +1836,9 @@
                         <div class="popups__close"></div>
                     </div>
                     <div class="popups__body">
-                        <div class="popups__text">Ссылка на сброс пароля отправлена на <br> Вашу почту, указанную при
+                        <div class="popups__text">Ссылка на сброс пароля отправлена на <br> Вашу почту, указанную при
                             регистрации.</div>
-                        <div class="popups__button _ok">Хорошо</div>
+                        <div class="popups__button">Хорошо</div>
                     </div>
                 </div>
             </div>

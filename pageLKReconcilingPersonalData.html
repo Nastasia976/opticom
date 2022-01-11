@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="wrapper wrapper-basket">
+    <div class="wrapper wrapper-lk">
         <header class="header white">
             <div class="header__conteiner">
                 <div class="header__logo logo">
@@ -552,77 +552,320 @@
             <div class="bread-crambs">
                 <div class="bread-crambs__conteier _conteiner2">
                     <p class="bread-crambs__list">
-                        <a href="#" class="bread-crambs__link">Главная</a>
-                        <span>Корзины</span>
+                        <a href="#" class="bread-crambs__link">Личный кабинет</a>
+                        <a href="#" class="bread-crambs__link">Заказы</a>
+                        <span>Заказ № 569 от 14.01.2021</span>
                     </p>
                 </div>
             </div>
-            <div class="basket-order">
-                <div class="basket-order__conteiner _conteiner2">
-                    <a href="#" class="basket-order__link">
-                        <svg width="41" height="8" viewBox="0 0 41 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M0.646446 3.64645C0.451183 3.84171 0.451183 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM41 3.5L1 3.5V4.5L41 4.5V3.5Z"
-                                fill="currentColor" />
-                        </svg>
-                        Вернуться в корзину
-                    </a>
-                    <div class="basket-order__title">
-                        <h3>Оформление заказа</h3>
+            <div class="personal-area">
+                <div class="personal-area__conteiner _conteiner2">
+                    <div class="personal-area__title">
+                        <h3>Личный кабинет</h3>
                     </div>
-                    <div class="basket-order__sub-title">Выбор адреса доставки</div>
-                    <form method="post" class="basket-order__body">
-                        <div class="basket-order__items">
-                            <div class="basket-order__name _selected">
-                                г. Краснодар <span>(выбран)</span>
+                    <div class="personal-area__wrapper">
+                        <div class="personal-area__sidebar sidebar-lk">
+                            <div class="sidebar-lk__top">
+                                <div class="sidebar-lk__icon">
+                                    <div class="sidebar-lk__icon__letter">o</div>
+                                </div>
+                                <div class="sidebar-lk__who">Согласующий</div>
+                                <div class="sidebar-lk__name">Иванова Ольга</div>
+                                <div class="sidebar-lk__e-mail">ivanovaolga@tander.ru</div>
                             </div>
-                            <div class="basket-order__item">
-                                <div class="basket-order__adres">
-                                    <span>Адрес</span>
-                                    <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д. 5/1, оф. 109</p>
+                            <div class="sidebar-lk__body">
+                                <ul class="sidebar-lk__list">
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link active">Заказы</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <div class="sidebar-lk__link">Корзины
+                                            <svg class="arrow-lk" width="8" height="6" viewBox="0 0 8 6" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4 6L0.535899 -6.52533e-07L7.4641 -4.68497e-08L4 6Z"
+                                                    fill="#D2D2D2" />
+                                            </svg>
+                                        </div>
+                                        <ul class="sub-menu-lk">
+                                            <li class="sub-menu-lk__el">
+                                                <a href="#" class="sub-menu-lk__link">Корзина для бытовой химии</a>
+                                            </li>
+                                            <li class="sub-menu-lk__el">
+                                                <a href="#" class="sub-menu-lk__link">Корзина для продуктов питания</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Избранное</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Закупщики</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Управление</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Быстрый заказ</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Информация о поставках</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Адреса доставки</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Товарная матрица</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Личные данные</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Уведомления</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sidebar-lk__items">
+                                <a href="#" class="sidebar-lk__link">Запросить акт сверки</a>
+                                <div class="sidebar-lk__link_claim">Оформить претензию</div>
+                                <div class="sidebar-lk__item">
+                                    <input type="checkbox">
+                                    <label class="for-inp"></label>
+                                    <span>Использовать мультикорзины</span>
                                 </div>
-                                <div class="basket-order__details details-order">
-                                    <div class="details-order__name">Бюджет</div>
-                                    <div class="details-order__sense">100 000 Р</div>
-                                </div>
-                                <div class="basket-order__details details-order">
-                                    <div class="details-order__name">Номер телефона</div>
-                                    <div class="details-order__sense">+7 952 000-12-64</div>
+                            </div>
+                            <div class="sidebar-lk__bottom">
+                                <div class="sidebar-lk__who">Ваш менеджер</div>
+                                <div class="sidebar-lk__name">Петров Сергей</div>
+                                <div class="sidebar-lk__e-mail">ivanovaolga@tander.ru</div>
+                                <div class="sidebar-lk__tel">+7 (952) 217-56-12</div>
+                                <div class="sidebar-lk__button">
+                                    <button class="green-border">Связаться</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="basket-order__items">
-                            <div class="basket-order__name">
-                                г. Ставрополь
-                            </div>
-                            <div class="basket-order__item">
-                                <div class="basket-order__adres">
-                                    <span>Адрес</span>
-                                    <p>Россия, Ставропольский край, г. Ставрополь, ул. Монтажников, д. 5/1, оф. 109</p>
+                        <div class="personal-area__body body-lk">
+                            <a href="#" class="body-lk__come-back">
+                                <svg width="41" height="8" viewBox="0 0 41 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.646446 3.64645C0.451183 3.84171 0.451183 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM41 3.5L1 3.5V4.5L41 4.5V3.5Z"
+                                        fill="black" fill-opacity="0.18" />
+                                </svg>
+                                Вернуться назад
+                            </a>
+                            <div class="body-lk__title">Иванов Константин</div>
+                            <form method="post" class="personal-d">
+                                <div class="personal-d__about">
+                                    <div class="personal-d__contract">Договор №152 от 20.05.2017</div>
+                                    <div class="personal-d__indebtedness">Дебиторская задолженность: 159 653 ₽ </div>
                                 </div>
-                                <div class="basket-order__details details-order">
-                                    <div class="details-order__name">Бюджет</div>
-                                    <div class="details-order__sense">100 000 Р</div>
+                                <div class="order-card__items">
+                                    <div class="order-card__item">
+                                        <div class="order-card__name">E-mail:</div>
+                                        <div class="order-card__value">konstant.1989@gmail.com</div>
+                                    </div>
+                                    <div class="order-card__item">
+                                        <div class="order-card__name">Уровень прав:</div>
+                                        <div class="order-card__value">Закупщик</div>
+                                    </div>
+                                    <div class="order-card__item">
+                                        <div class="order-card__name">Номер телефона</div>
+                                        <div class="order-card__value">+7 964 827-31-57</div>
+                                    </div>
                                 </div>
-                                <div class="basket-order__details details-order">
-                                    <div class="details-order__name">Номер телефона</div>
-                                    <div class="details-order__sense">+7 952 000-12-64</div>
+                                <div class="body-lk__tabs">
+                                    <a href="#" class="body-lk__tab active agreed-tab">Личные данные</a>
+                                    <a href="#" class="body-lk__tab orders-tab">Заказы</a>
+                                    <a href="#" class="body-lk__tab orders-tab">Быстрый заказ</a>
+                                    <a href="#" class="body-lk__tab orders-tab">Адрес доставки</a>
                                 </div>
-                            </div>
+                                <div class="personal-d__form">
+                                    <div class="personal-d__title">Личные данные</div>
+                                    <div class="inputsection">
+                                        <input class="some-input _phone" type="text" required>
+                                        <label class="placeholder">Номер телефона</label>
+                                    </div>
+                                    <div class="inputsection">
+                                        <input class="some-input password-input reg-inp" type="password" required>
+                                        <label class="placeholder">Пароль</label>
+                                    </div>
+                                    <div class="inputsection">
+                                        <input class="some-input" type="text" required>
+                                        <label class="placeholder">E-mail</label>
+                                    </div>
+                                </div>
+                                <div class="personal-d__title">Реквизиты</div>
+                                <div class="personal-d__form">
+                                    <div class="inputsection">
+                                        <input class="some-input" type="text" required>
+                                        <label class="placeholder">Наименование организации</label>
+                                    </div>
+                                    <div class="inputsection">
+                                        <input class="some-input" type="text" required>
+                                        <label class="placeholder">Договор</label>
+                                    </div>
+                                    <div class="inputsection">
+                                        <input class="some-input valid-input" type="number" required>
+                                        <label class="placeholder">ИНН</label>
+                                    </div>
+                                    <div class="inputsection">
+                                        <input class="some-input valid-input" type="number" required>
+                                        <label class="placeholder">КПП</label>
+                                    </div>
+                                    <div class="inputsection">
+                                        <input class="some-input valid-input" type="number" required>
+                                        <label class="placeholder">БИК</label>
+                                    </div>
+                                    <div class="inputsection">
+                                        <input class="some-input valid-input" type="number" required>
+                                        <label class="placeholder">Р/С</label>
+                                    </div>
+                                    <div class="inputsection">
+                                        <input class="some-input" type="text" required>
+                                        <label class="placeholder">Банк</label>
+                                    </div>
+                                    <div class="inputsection">
+                                        <input class="some-input valid-input" type="number" required>
+                                        <label class="placeholder">К/С</label>
+                                    </div>
+                                    <div class="inputsection">
+                                        <input class="some-input" type="text" required>
+                                        <label class="placeholder">Юридический адрес</label>
+                                    </div>
+                                    <div class="inputsection">
+                                        <input class="some-input" type="text" required>
+                                        <label class="placeholder">Почтовый адрес</label>
+                                    </div>
+                                </div>
+                                <div class="personal-d__title">Адреса доставки</div>
+                                <div class="basket-order__body">
+                                    <div class="personal-d__result">
+                                        <div class="basket-order__items _first">
+                                            <div class="basket-order__name _selected">
+                                                г. Краснодар <span>(выбран)</span>
+                                            </div>
+                                            <div class="basket-order__item">
+                                                <div class="basket-order__adres">
+                                                    <span>Адрес</span>
+                                                    <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д. 5/1, оф. 109</p>
+                                                </div>
+                                                <div class="basket-order__details details-order">
+                                                    <div class="details-order__name">Бюджет</div>
+                                                    <div class="details-order__sense">100 000 Р</div>
+                                                </div>
+                                                <div class="basket-order__details details-order">
+                                                    <div class="details-order__name">Номер телефона</div>
+                                                    <div class="details-order__sense">+7 952 000-12-64</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="basket-order__items">
+                                            <div class="basket-order__name">
+                                                г. Ставрополь
+                                            </div>
+                                            <div class="basket-order__item">
+                                                <div class="basket-order__adres">
+                                                    <span>Адрес</span>
+                                                    <p>Россия, Ставропольский край, г. Ставрополь, ул. Монтажников, д. 5/1, оф. 109</p>
+                                                </div>
+                                                <div class="basket-order__details details-order">
+                                                    <div class="details-order__name">Бюджет</div>
+                                                    <div class="details-order__sense">100 000 Р</div>
+                                                </div>
+                                                <div class="basket-order__details details-order">
+                                                    <div class="details-order__name">Номер телефона</div>
+                                                    <div class="details-order__sense">+7 952 000-12-64</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="personal-d__bottom">
+                                        <button class="green-border _first">Выбрать</button>
+                                        <div class="green-border _edit ">Редактировать</div>
+                                    </div>
+                                    <div class="basket-order__items lk_add-adres">
+                                        <form name="form" method="post" class="form-lk">
+                                            <div class="basket-order__name elem-city">
+                                                г. Москва
+                                            </div>
+                                            <div class="basket-order__item">
+                                                <div class="basket-order__big-section">
+                                                    <div class="inputsection">
+                                                        <input name="input" class="some-input input-region" type="text" required>
+                                                        <label class="placeholder">Регион</label>
+                                                    </div>
+                                                </div>
+                                                <div class="inputsection">
+                                                    <input name="input" class="some-input input-region" type="text" required>
+                                                    <label class="placeholder">Бюджет</label>
+                                                </div>
+                                                <div class="inputsection">
+                                                    <input name="input" class="some-input input-region" type="text" required>
+                                                    <label class="placeholder">Номер телефона</label>
+                                                </div>
+                                            </div>
+                                            <div class="wrapper-inputsection">
+                                                <div class="inputsection">
+                                                    <input name="input" class="some-input input-city" type="text" required>
+                                                    <label class="placeholder">Город</label>
+                                                </div>
+                                                <div class="inputsection">
+                                                    <input name="input" class="some-input input-street" type="text" required>
+                                                    <label class="placeholder">Улица</label>
+                                                </div>
+                                                <div class="inputsection">
+                                                    <input name="input" class="some-input input-house" type="text" required>
+                                                    <label class="placeholder">Дом</label>
+                                                </div>
+                                                <div class="inputsection">
+                                                    <input name="input" class="some-input input-room" type="text" required>
+                                                    <label class="placeholder">Офис или квартира</label>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="green-border _first save-changes">Сохранить изменения</button>
+                                            <button type="reset" class="green-border">Отменить редактирование</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <div class="basket-order__button">Выбрать</div>
-                        <div class="basket-order__comment comment-basket">
-                            <div class="comment-basket__title">Комментарий к заказу</div>
-                            <div class="inputsection">
-                                <input class="basket-input" type="text" required>
-                                <label class="placeholder">Тект комментария</label>
-                            </div>
-                            <button type="submit" class="comment-basket__button">Оформить заказ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="popups registration-claim">
+                <div class="popups__conteiner">
+                    <div class="popups__top">
+                        <div class="popups__title">Оформление претензии</div>
+                        <div class="popups__close"></div>
+                    </div>
+                    <form method="post" class="popups__body">
+                        <div class="inputsection">
+                            <input class="some-input" type="text" required>
+                            <label class="placeholder">Номер заказа</label>
                         </div>
+                        <div class="inputsection">
+                            <input class="some-input" type="text" required>
+                            <label class="placeholder">Текст претензии</label>
+                        </div>
+                        <button type="submit" class="popups__button">Отправить</button>
                     </form>
                 </div>
             </div>
-
+            <div class="popups _delit delit-basket">
+                <div class="popups__conteiner">
+                    <div class="popups__top">
+                        <div class="popups__title">Удалить корзину?</div>
+                        <div class="popups__close"></div>
+                    </div>
+                    <div class="popups__body">
+                        <div class="popups__text">Отменить действие будет невозможно</div>
+                    </div>
+                    <div class="popups__bottom">
+                        <button class="popups__button popups__button_yes"><span>Да</span></button>
+                        <button class="popups__button popups__button_no"><span>Нет</span></button>
+                    </div>
+                </div>
+            </div>
             <div class="our-adres">
                 <div class="popups__close_x"></div>
                 <div class="popups__title">Наши адреса</div>
@@ -650,37 +893,6 @@
                     <div class="popups__text">Санкт-Петербург, Большой Сампсониевский пр-т, д.50</div>
                 </div>
             </div>
-
-
-            <div class="popups order-sent">
-                <div class="popups__conteiner">
-                    <div class="popups__top">
-                        <img src="img/the-order-has-been-sent.png" alt="the-order-has-been-sent">
-                        <div class="popups__title">Ваш заказ отправлен</div>
-                        <div class="popups__close"></div>
-                    </div>
-                    <div class="popups__body">
-                        <div class="popups__text">Для получения заказа нужна печать и/или доверенность</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="popups _delit delit-basket">
-                <div class="popups__conteiner">
-                    <div class="popups__top">
-                        <div class="popups__title">Удалить корзину?</div>
-                        <div class="popups__close"></div>
-                    </div>
-                    <div class="popups__body">
-                        <div class="popups__text">Отменить действие будет невозможно</div>
-                    </div>
-                    <div class="popups__bottom">
-                        <button class="popups__button popups__button_yes"><span>Да</span></button>
-                        <button class="popups__button popups__button_no"><span>Нет</span></button>
-                    </div>
-                </div>
-            </div>
-
             <div class="popups send-message">
                 <div class="popups__conteiner">
                     <div class="popups__top">
@@ -1343,9 +1555,9 @@
                         <div class="popups__close"></div>
                     </div>
                     <div class="popups__body">
-                        <div class="popups__text">Ссылка на сброс пароля отправлена на <br> Вашу почту, указанную при
+                        <div class="popups__text">Ссылка на сброс пароля отправлена на <br> Вашу почту, указанную при
                             регистрации.</div>
-                        <div class="popups__button _ok">Хорошо</div>
+                        <div class="popups__button">Хорошо</div>
                     </div>
                 </div>
             </div>
