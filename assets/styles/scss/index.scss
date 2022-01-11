@@ -10157,7 +10157,7 @@ input[type="number"]:focus {
             line-height: 137%;
             color: #252525;
         }
-        span{
+        span {
             color: rgba(37, 37, 37, 0.2);
             font-size: 12px;
             line-height: 183%;
@@ -11040,17 +11040,12 @@ input[type="number"]:focus {
     &__contract {
         margin-right: 12px;
     }
-
-    &__indebtedness {
-    }
     .order-card__items {
         margin-top: 16px;
     }
-
     .body-lk__tabs {
         margin-top: 28px;
     }
-
     &__title {
         margin-top: 24px;
         font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
@@ -11059,7 +11054,6 @@ input[type="number"]:focus {
         letter-spacing: 0.04em;
         font-weight: bold;
     }
-
     &__form {
         display: flex;
         flex-wrap: wrap;
@@ -11069,20 +11063,76 @@ input[type="number"]:focus {
             flex: 0 1 calc(50% - 22px);
         }
     }
-    &__bottom{
+    &__bottom {
         display: flex;
-        ._edit{
+        ._edit {
             cursor: pointer;
         }
     }
-    &__result{
+    &__result {
         width: 100%;
-        .basket-order__item{
+        .basket-order__item {
             min-width: 100%;
-            display: flex;
-            .basket-order__adres{
+            .basket-order__adres {
                 flex: 1 1 100%;
+                margin-top: 0 !important;
+                p{
+                    border-bottom: 1px solid rgba(183, 183, 183, 0.2);
+                    max-width: 607px;
+                }
             }
+        }
+    }
+    .basket-order__item{
+        display: flex;
+        width: 100%;
+        input{
+            font-size: 16px;
+            font-weight: 300;
+            border-bottom: 1px solid rgba(183, 183, 183, 0.2);
+        }
+        input:focus ~ .placeholder {
+            top: -15px;
+            font-size: 12px;
+            opacity: 0.6;
+            transition: 0.4s;
+        }
+        input:not(:focus) ~ .placeholder {
+            top: 0;
+            opacity: 1;
+            transition: 0.4s;
+            font-size: 16px;
+        }
+        input:valid ~ .placeholder {
+            top: -15px;
+            font-size: 12px;
+            opacity: 0.6;
+            transition: 0.4s;
+        }
+        .placeholder{
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+            pointer-events: none;
+        }
+        .region-input{
+            width: 100%;
+            max-width: 607px;
+        }
+        .basket-order__adres{
+            flex: 1 1 auto;
+            position: relative;
+            margin-top: 20px;
+        }
+    }
+    .details-orders{
+        position: relative;
+        .input-budget{
+            width: 72px;
+            margin-right: 30px;
+        }
+        .input-number-lk{
+            max-width: 130px;
         }
     }
     .green-border {
@@ -11091,28 +11141,7 @@ input[type="number"]:focus {
     .green-border._first {
         margin-right: 15px;
     }
-    .basket-order__item{
-        width: 100%;
-        display: flex;
-        .basket-order__big-section{
-            flex: 1 1 auto;
-        }
-        .details-order{
-            position: relative;
-            .placeholder{
-                position: absolute;
-                left: 0;
-                bottom: 0;
-            }
-        }
-        .inputsection {
-            .placeholder{
-                bottom: 0;
-                font-size: 16px;
-            }
-        }
-    }
-    .wrapper-inputsection{
+    .wrapper-inputsection {
         .inputsection {
             margin-top: 26px;
             flex: 0 1 calc(50% - 22px);
@@ -11130,60 +11159,12 @@ input[type="number"]:focus {
         border-bottom: 0;
     }
 }
-.lk_add-adres{
+.lk_add-adres {
     display: none;
 }
-.order-card {
-    &__items {
-    }
-
-    &__item {
-    }
-
-    &__name {
-    }
-
-    &__value {
-    }
+input:focus ~ .placeholder, input:valid ~ .placeholder {
+    color: rgba(37, 37, 37, 0.2);
 }
-.inputsection {
-}
-.some-input {
-}
-.placeholder {
-}
-.password-input {
-}
-.reg-inp {
-}
-.valid-input {
-}
-.basket-order {
-    &__body {
-    }
-
-    &__items {
-    }
-
-    &__name {
-    }
-
-    &__item {
-    }
-
-    &__details {
-    }
-}
-.basket-input {
-}
-.details-order {
-    &__name {
-    }
-
-    &__sense {
-    }
-}
-
 @media (max-width: 920px) {
     .personal-d {
         .basket-order__item {

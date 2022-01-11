@@ -679,10 +679,10 @@
                                     <a href="#" class="body-lk__tab orders-tab">Быстрый заказ</a>
                                     <a href="#" class="body-lk__tab orders-tab">Адрес доставки</a>
                                 </div>
+                                <div class="personal-d__title">Личные данные</div>
                                 <div class="personal-d__form">
-                                    <div class="personal-d__title">Личные данные</div>
                                     <div class="inputsection">
-                                        <input class="some-input _phone" type="text" required>
+                                        <input class="some-input _phone" onfocus="this.value = ''" value="+7 928 736 52 91" type="text" required>
                                         <label class="placeholder">Номер телефона</label>
                                     </div>
                                     <div class="inputsection">
@@ -690,14 +690,14 @@
                                         <label class="placeholder">Пароль</label>
                                     </div>
                                     <div class="inputsection">
-                                        <input class="some-input" type="text" required>
+                                        <input class="some-input" type="text" onfocus="this.value = ''" value="konstant.1989@gmail" required>
                                         <label class="placeholder">E-mail</label>
                                     </div>
                                 </div>
                                 <div class="personal-d__title">Реквизиты</div>
                                 <div class="personal-d__form">
                                     <div class="inputsection">
-                                        <input class="some-input" type="text" required>
+                                        <input class="some-input" type="text" value="Тандер" required>
                                         <label class="placeholder">Наименование организации</label>
                                     </div>
                                     <div class="inputsection">
@@ -784,41 +784,41 @@
                                         <div class="green-border _edit ">Редактировать</div>
                                     </div>
                                     <div class="basket-order__items lk_add-adres">
-                                        <form name="form" method="post" class="form-lk">
-                                            <div class="basket-order__name elem-city">
+                                        <form method="post">
+                                            <div class="basket-order__name">
                                                 г. Москва
                                             </div>
                                             <div class="basket-order__item">
-                                                <div class="basket-order__big-section">
-                                                    <div class="inputsection">
-                                                        <input name="input" class="some-input input-region" type="text" required>
-                                                        <label class="placeholder">Регион</label>
+                                                <div class="basket-order__adres">
+                                                    <div class="basket-order__details details-orders">
+                                                        <input class="region-input" type="tel" onfocus="this.value = ''" required value="Краснодарский край">
+                                                        <div class="placeholder">Регион</div>
                                                     </div>
                                                 </div>
-                                                <div class="inputsection">
-                                                    <input name="input" class="some-input input-region" type="text" required>
-                                                    <label class="placeholder">Бюджет</label>
+                                                <div class="basket-order__details details-orders">
+                                                    <input class="input-budget" type="tel" onfocus="this.value = ''" required value="100 000 Р">
+                                                    <div class="placeholder">Бюджет</div>
                                                 </div>
-                                                <div class="inputsection">
-                                                    <input name="input" class="some-input input-region" type="text" required>
-                                                    <label class="placeholder">Номер телефона</label>
+                                                <div class="basket-order__details details-orders">
+                                                    <input class="some-input input-number-lk _phone" onfocus="this.value = ''" value="+7 952 000-12-64" type="text" required>
+                                                    <div class="placeholder">Номер телефона</div>
                                                 </div>
                                             </div>
                                             <div class="wrapper-inputsection">
                                                 <div class="inputsection">
-                                                    <input name="input" class="some-input input-city" type="text" required>
+                                                    <input name="input" class="some-input input-city" onfocus="this.value = ''" value="Краснодар" type="text" required>
                                                     <label class="placeholder">Город</label>
                                                 </div>
                                                 <div class="inputsection">
-                                                    <input name="input" class="some-input input-street" type="text" required>
+                                                    <input name="input" class="some-input input-street" onfocus="this.value = ''" value="Монтажников" type="text" required>
                                                     <label class="placeholder">Улица</label>
                                                 </div>
                                                 <div class="inputsection">
-                                                    <input name="input" class="some-input input-house" type="text" required>
+                                                    <input name="input" class="some-input input-house" onfocus="this.value = ''" value="5/1" type="text" required>
                                                     <label class="placeholder">Дом</label>
                                                 </div>
                                                 <div class="inputsection">
-                                                    <input name="input" class="some-input input-room" type="text" required>
+                                                    <input name="input" class="some-input input-room" onfocus="this.value = ''" value="109" type="text" required>
                                                     <label class="placeholder">Офис или квартира</label>
                                                 </div>
                                             </div>
