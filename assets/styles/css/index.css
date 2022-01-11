@@ -2559,6 +2559,11 @@ input[type="number"]:focus {
           transform: skew(57deg);
 }
 
+.our-product__title,
+.swiper-product__title {
+  padding: 0 20px;
+}
+
 .our-product__body,
 .swiper-product__body {
   display: -webkit-box;
