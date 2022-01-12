@@ -2331,6 +2331,7 @@ input[type="number"]:focus {
             font-size: 12px;
             opacity: 0.6;
             transition: 0.4s;
+            color: rgba(37, 37, 37, 0.2);
         }
         input:not(:focus) ~ .placeholder {
             top: 0;
@@ -2343,6 +2344,7 @@ input[type="number"]:focus {
             font-size: 12px;
             opacity: 0.6;
             transition: 0.4s;
+            color: rgba(37, 37, 37, 0.2);
         }
         .placeholder {
             left: 0;
@@ -4398,18 +4400,21 @@ input[type="number"]:focus {
         font-size: 12px;
         opacity: 0.6;
         transition: 0.4s;
+        color: rgba(37, 37, 37, 0.2) ;
     }
     input:not(:focus) ~ .placeholder {
         bottom: 0;
         opacity: 1;
         transition: 0.4s;
         font-size: 16px;
+        color: #252525;
     }
     input:valid ~ .placeholder {
         bottom: 25px;
         font-size: 12px;
         opacity: 0.6;
         transition: 0.4s;
+        color: rgba(37, 37, 37, 0.2) ;
     }
 }
 .popup-request.active,
@@ -10229,6 +10234,7 @@ input[type="number"]:focus {
             height: fit-content;
             position: absolute;
             font-size: 18px;
+            color: #252525;
         }
     }
     input:focus ~ .placeholder {
@@ -10236,18 +10242,21 @@ input[type="number"]:focus {
         font-size: 12px;
         opacity: 0.6;
         transition: 0.4s;
+        color: rgba(37, 37, 37, 0.2);
     }
     input:not(:focus) ~ .placeholder {
         top: 20;
         opacity: 1;
         transition: 0.4s;
         font-size: 18px;
+        color: #252525;
     }
     input:valid ~ .placeholder {
         top: 0px;
         font-size: 12px;
         opacity: 0.6;
         transition: 0.4s;
+        color: rgba(37, 37, 37, 0.2);
     }
 }
 
@@ -10787,6 +10796,9 @@ input[type="number"]:focus {
         }
     }
     &__form._purchaser{
+        .placeholder{
+            color: rgba(37, 37, 37, 0.9) !important;
+        }
         input{
             pointer-events: none;
         }
@@ -10977,6 +10989,7 @@ input[type="number"]:focus {
                 font-size: 12px;
                 opacity: 0.6;
                 transition: 0.4s;
+                color: rgba(37, 37, 37, 0.2);
             }
             input:not(:focus) ~ .placeholder {
                 top: 0;
@@ -10989,6 +11002,7 @@ input[type="number"]:focus {
                 font-size: 12px;
                 opacity: 0.6;
                 transition: 0.4s;
+                color: rgba(37, 37, 37, 0.2);
             }
         }
         .inputsection {
@@ -11128,6 +11142,7 @@ input[type="number"]:focus {
             font-size: 12px;
             opacity: 0.6;
             transition: 0.4s;
+            color: rgba(37, 37, 37, 0.2);
         }
         input:not(:focus) ~ .placeholder {
             top: 0;
@@ -11140,6 +11155,7 @@ input[type="number"]:focus {
             font-size: 12px;
             opacity: 0.6;
             transition: 0.4s;
+            color: rgba(37, 37, 37, 0.2);
         }
         .placeholder {
             position: absolute;
@@ -11195,7 +11211,7 @@ input[type="number"]:focus {
     display: none;
 }
 .placeholder {
-    color: rgba(37, 37, 37, 0.2) !important;
+    color: rgba(37, 37, 37, 0.2);
 }
 @media (max-width: 920px) {
     .personal-d {
@@ -11213,4 +11229,13 @@ input[type="number"]:focus {
             flex: 1 1 100%;
         }
     }
+}
+.wrapper-lk-reconciling{
+
+}
+.personal-data-wrapper{
+    display: none;
+}
+.personal-data-wrapper.active{
+    display: block;
 }

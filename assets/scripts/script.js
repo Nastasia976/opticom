@@ -377,6 +377,9 @@ $(document).ready(function () {
     $('._phone').mask('+7 (999) 999-99-99', {
         autoclear: false
     });
+    $('._phone2').mask('+7 999 999-99-99', {
+        autoclear: false
+    });
 
     $('.button-request').click(function (event) {
         $('.popup-request').toggleClass('active');
@@ -833,7 +836,7 @@ myScroll.on('fromEdge', function () { //когда слайдер уйдет о�
 
 
 /* $("body").on('click', '[href="#"]', function (e) {
-    var fixed_offset = 0;
+    var fixed_offset = 100;
     $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
     e.preventDefault();
 }); *///скролл до нужного блока
@@ -1143,6 +1146,23 @@ $(document).ready(function () {
     $('._edit').click(function () {
         $('.lk_add-adres').show();
     })
+    $('.orders-tab').click(function(){
+        $(this).toggleClass('active')
+        $('.personal-data-wrapper').removeClass('active');
+    });
+
+    $('#personal-data-tab').click(function (){
+        $('#personal-data').toggleClass('active');
+    });
+    $('#orders-tab').click(function (){
+        $('#orders').toggleClass('active');
+    });
+    $('#quick-order-tab').click(function (){
+        $('#quick-order').toggleClass('active');
+    });
+    $('#delivery-address-tab').click(function (){
+        $('#delivery-address').toggleClass('active');
+    });
 
 });
 

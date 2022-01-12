@@ -3025,6 +3025,7 @@ input[type="number"]:focus {
   opacity: 0.6;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  color: rgba(37, 37, 37, 0.2);
 }
 
 .form-write__item input:not(:focus) ~ .placeholder {
@@ -3041,6 +3042,7 @@ input[type="number"]:focus {
   opacity: 0.6;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  color: rgba(37, 37, 37, 0.2);
 }
 
 .form-write__item .placeholder {
@@ -5857,6 +5859,7 @@ input[type="number"]:focus {
   opacity: 0.6;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  color: rgba(37, 37, 37, 0.2);
 }
 
 .inputsection input:not(:focus) ~ .placeholder {
@@ -5865,6 +5868,7 @@ input[type="number"]:focus {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   font-size: 16px;
+  color: #252525;
 }
 
 .inputsection input:valid ~ .placeholder {
@@ -5873,6 +5877,7 @@ input[type="number"]:focus {
   opacity: 0.6;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  color: rgba(37, 37, 37, 0.2);
 }
 
 .popup-request.active,
@@ -12947,6 +12952,7 @@ input[type="number"]:focus {
   height: fit-content;
   position: absolute;
   font-size: 18px;
+  color: #252525;
 }
 
 .basket-order__item input:focus ~ .placeholder,
@@ -12956,6 +12962,7 @@ input[type="number"]:focus {
   opacity: 0.6;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  color: rgba(37, 37, 37, 0.2);
 }
 
 .basket-order__item input:not(:focus) ~ .placeholder,
@@ -12965,6 +12972,7 @@ input[type="number"]:focus {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   font-size: 18px;
+  color: #252525;
 }
 
 .basket-order__item input:valid ~ .placeholder,
@@ -12974,6 +12982,7 @@ input[type="number"]:focus {
   opacity: 0.6;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  color: rgba(37, 37, 37, 0.2);
 }
 
 .basket-input,
@@ -13702,6 +13711,10 @@ input[type="number"]:focus {
           flex: 0 1 calc(50% - 22px);
 }
 
+.body-lk__form._purchaser .placeholder {
+  color: rgba(37, 37, 37, 0.9) !important;
+}
+
 .body-lk__form._purchaser input {
   pointer-events: none;
 }
@@ -13944,6 +13957,7 @@ input[type="number"]:focus {
   opacity: 0.6;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  color: rgba(37, 37, 37, 0.2);
 }
 
 .registration-claim .popups__body .inputsection input:not(:focus) ~ .placeholder {
@@ -13960,6 +13974,7 @@ input[type="number"]:focus {
   opacity: 0.6;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  color: rgba(37, 37, 37, 0.2);
 }
 
 .registration-claim .popups__body .inputsection {
@@ -14131,6 +14146,7 @@ input[type="number"]:focus {
   opacity: 0.6;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  color: rgba(37, 37, 37, 0.2);
 }
 
 .personal-d .basket-order__item input:not(:focus) ~ .placeholder {
@@ -14147,6 +14163,7 @@ input[type="number"]:focus {
   opacity: 0.6;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  color: rgba(37, 37, 37, 0.2);
 }
 
 .personal-d .basket-order__item .placeholder {
@@ -14216,7 +14233,7 @@ input[type="number"]:focus {
 }
 
 .placeholder {
-  color: rgba(37, 37, 37, 0.2) !important;
+  color: rgba(37, 37, 37, 0.2);
 }
 
 @media (max-width: 920px) {
@@ -14232,4 +14249,12 @@ input[type="number"]:focus {
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
   }
+}
+
+.personal-data-wrapper {
+  display: none;
+}
+
+.personal-data-wrapper.active {
+  display: block;
 }
