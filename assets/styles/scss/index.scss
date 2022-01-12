@@ -73,14 +73,11 @@ h3 {
     max-width: 1440px;
     margin: 0 auto;
 }
-button {
-    background-color: transparent;
-    font-weight: 300;
-}
-input{
+input, button, textarea{
     font-size: 18px;
     font-weight: 300;
     font-family: "Pragmatica";
+    background-color: transparent;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -10353,11 +10350,13 @@ input[type="number"]:focus {
     }
 }
 @media (max-width: 920px) {
-    .basket-order__item {
-        flex-direction: column;
-        align-items: flex-start;
-        .inputsection {
-            margin-bottom: 20px;
+    .wrapper-basket{
+        .basket-order__item {
+            flex-direction: column;
+            align-items: flex-start;
+            .inputsection {
+                margin-bottom: 20px;
+            }
         }
     }
 }
@@ -11112,6 +11111,11 @@ input[type="number"]:focus {
     }
     &__bottom {
         display: flex;
+        flex-wrap: wrap;
+        margin-top: 14px;
+        .green-border{
+            margin-top: 10px !important;
+        }
         ._edit {
             cursor: pointer;
         }
@@ -11171,11 +11175,11 @@ input[type="number"]:focus {
         .basket-order__adres {
             flex: 1 1 auto;
             position: relative;
-            margin-top: 20px;
         }
     }
     .details-orders {
         position: relative;
+        margin-top: 20px;
         .input-budget {
             width: 72px;
             margin-right: 30px;
@@ -11234,6 +11238,13 @@ input[type="number"]:focus {
 .wrapper-lk-reconciling{
 
 }
+.personal-d__indebtedness{
+    display: flex;
+    flex-wrap: wrap;
+    span{
+        white-space: nowrap;
+    }
+}
 .personal-data-wrapper{
     display: none;
     margin-top: 24px;
@@ -11251,12 +11262,41 @@ input[type="number"]:focus {
 .personal-data-wrapper.active{
     display: block;
 }
+@media(max-width:900px){
+    .wrapper-lk{
+        .basket-order__item{
+            flex-direction: column;
+            align-items: flex-start;
+            .details-orders{
+                min-width: 100%;
+                input{
+                    min-width: 100%;
+                }
+            }
+            .details-orders:not(:first-child){
+                margin-top: 40px;
+            }
+            .details-orders:first-child{
+                margin-top: 30px;
+            }
+        }
+    }
+}
 @media(max-width:545px){
     .personal-d__tabs{
         flex-direction: column;
         align-items: flex-start;
         .order-tab {
             width: 100%;
+        }
+    }
+    .personal-d__result{
+        .basket-order__item{
+            .basket-order__adres{
+                p{
+                    border-bottom: 0;
+                }
+            }
         }
     }
 }
