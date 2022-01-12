@@ -1146,7 +1146,8 @@ $(document).ready(function () {
     $('._edit').click(function () {
         $('.lk_add-adres').show();
     })
-    $('.orders-tab').click(function(){
+    $('.order-tab').click(function(){
+        $('.order-tab').removeClass('active');
         $(this).toggleClass('active')
         $('.personal-data-wrapper').removeClass('active');
     });
@@ -1154,7 +1155,7 @@ $(document).ready(function () {
     $('#personal-data-tab').click(function (){
         $('#personal-data').toggleClass('active');
     });
-    $('#orders-tab').click(function (){
+    $('#order-tab').click(function (){
         $('#orders').toggleClass('active');
     });
     $('#quick-order-tab').click(function (){
