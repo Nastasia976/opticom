@@ -74,6 +74,25 @@ $(document).ready(function () {
             }
         ]
     })
+    $('.progress-slider').slick({
+        slidesToShow: 4,
+        prevArrow: $('.progress-prev'),
+        nextArrow: $('.progress-next'),
+        responsive: [
+            {
+                breakpoint: 630,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+        ]
+    })
 
     $('.sl1').slick({
         asNavFor: ".sl2, .sl3, .sl4",
