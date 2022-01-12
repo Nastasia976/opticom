@@ -76,6 +76,7 @@ $(document).ready(function () {
     })
     $('.progress-slider').slick({
         slidesToShow: 4,
+        infinite: false,
         prevArrow: $('.progress-prev'),
         nextArrow: $('.progress-next'),
         responsive: [
