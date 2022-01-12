@@ -13702,6 +13702,10 @@ input[type="number"]:focus {
           flex: 0 1 calc(50% - 22px);
 }
 
+.body-lk__form._purchaser input {
+  pointer-events: none;
+}
+
 .body-lk__form:last-child {
   padding: 38px 0 calc(0px + (62 - 0) * ((100vw - 320px)) / (1920 - 320)) 0;
 }
