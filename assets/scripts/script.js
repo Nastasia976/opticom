@@ -1167,4 +1167,27 @@ $(document).ready(function () {
 
 });
 
+//=========personal-data-wrapper
 
+$(document).ready(function () {
+    $('.quick-order__icon').click(function(){
+        $('.quick-order__icon').removeClass('active');
+        $(this).addClass('active');
+        if($('._grid').hasClass('active')){
+            $('.body-catalogs__body').removeClass('active').hide();
+            $('.body-catalogs__body._grid').addClass('active').show();
+        }
+        if($('.quick-order__icon._list').hasClass('active')){
+            $('.body-catalogs__body').removeClass('active').hide();
+            $('.body-catalogs__body._list').addClass('active').show();
+        }
+        if($('.quick-order__icon._line').hasClass('active')){
+            $('.body-catalogs__body').removeClass('active').hide();
+            $('.body-catalogs__body._line').addClass('active').show();
+        }
+    });
+
+    $('.product__button').click(function(){
+        $(this).css('background-color', '#00AA95').text('В корзине');
+    });
+});
