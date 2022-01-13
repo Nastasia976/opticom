@@ -12879,6 +12879,12 @@ input[type="number"]:focus {
   font-weight: bold;
 }
 
+.basket-order__adres {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
 .basket-order__adres p {
   font-size: 16px;
   line-height: 137%;
@@ -12899,7 +12905,17 @@ input[type="number"]:focus {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 4px;
+  min-width: 100%;
+}
+
+.basket-order__more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .basket-order__button {
@@ -13138,6 +13154,9 @@ input[type="number"]:focus {
   }
   .wrapper-basket .basket-order__item .inputsection {
     margin-bottom: 20px;
+  }
+  .wrapper-basket .basket-order__item .details-order {
+    margin-top: 20px;
   }
 }
 
@@ -14263,7 +14282,7 @@ input[type="number"]:focus {
   .wrapper-lk .basket-order__item .details-orders:first-child {
     margin-top: 30px;
   }
-  .wrapper-lk .personal-d__result .basket-order__items .basket-order__item .basket-order__details:not(:first-child) {
+  .wrapper-lk .personal-d__result .basket-order__items .basket-order__item .basket-order__details:not(:first-child), .wrapper-lk .body-lk__delivery-adresses .basket-order__items .basket-order__item .basket-order__details:not(:first-child) {
     margin-top: 20px;
     margin-right: 0;
   }
@@ -14335,6 +14354,10 @@ input[type="number"]:focus {
 }
 
 .personal-data-wrapper.active {
+  display: block;
+}
+
+.personal-data-wrapper.body-lk__quick-order {
   display: block;
 }
 
@@ -14515,4 +14538,8 @@ input[type="number"]:focus {
   background: #F8F8F8;
   border-radius: 2px;
   padding: 3px 5px;
+}
+
+.body-lk__delivery-adresses .basket-order__items {
+  margin-top: 22px;
 }

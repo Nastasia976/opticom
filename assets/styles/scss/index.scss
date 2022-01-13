@@ -10181,6 +10181,7 @@ input[type="number"]:focus {
         }
     }
     &__adres {
+        flex: 1 1 auto;
         p {
             font-size: 16px;
             line-height: 137%;
@@ -10196,7 +10197,12 @@ input[type="number"]:focus {
     &__item {
         display: flex;
         align-items: flex-end;
+        justify-content: space-between;
         margin-top: 4px;
+        min-width: 100%;
+    }
+    &__more{
+        display: flex;
     }
     &__button {
         padding: 10px 14px;
@@ -10356,6 +10362,9 @@ input[type="number"]:focus {
             align-items: flex-start;
             .inputsection {
                 margin-bottom: 20px;
+            }
+            .details-order{
+                margin-top: 20px;
             }
         }
     }
@@ -11239,7 +11248,7 @@ input[type="number"]:focus {
                 margin-top: 30px;
             }
         }
-        .personal-d__result{
+        .personal-d__result, .body-lk__delivery-adresses{
             .basket-order__items {
                 .basket-order__item{
                     .basket-order__details:not(:first-child) {
@@ -11277,6 +11286,7 @@ input[type="number"]:focus {
         white-space: nowrap;
     }
 }
+
 .personal-data-wrapper {
     display: none;
     margin-top: 24px;
@@ -11310,6 +11320,9 @@ input[type="number"]:focus {
     }
 }
 .personal-data-wrapper.active {
+    display: block;
+}
+.personal-data-wrapper.body-lk__quick-order{
     display: block;
 }
 /* @media (max-width: 900px) {
@@ -11457,4 +11470,10 @@ input[type="number"]:focus {
     background: #F8F8F8;
     border-radius: 2px;
     padding: 3px 5px;
+}
+//========================================
+.body-lk__delivery-adresses{
+    .basket-order__items{
+        margin-top: 22px;
+    }
 }
