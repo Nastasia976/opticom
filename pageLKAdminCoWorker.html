@@ -554,7 +554,7 @@
                     <p class="bread-crambs__list">
                         <a href="#" class="bread-crambs__link">Личный кабинет</a>
                         <a href="#" class="bread-crambs__link">Заказы</a>
-                        <span class="order-status">Согласованные заказы</span>
+                        <span>Ожидающие согласования заказы</span>
                     </p>
                 </div>
             </div>
@@ -569,7 +569,7 @@
                                 <div class="sidebar-lk__icon">
                                     <div class="sidebar-lk__icon__letter">o</div>
                                 </div>
-                                <div class="sidebar-lk__who">Закупщик</div>
+                                <div class="sidebar-lk__who">Администратор</div>
                                 <div class="sidebar-lk__name">Иванова Ольга</div>
                                 <div class="sidebar-lk__e-mail">ivanovaolga@tander.ru</div>
                             </div>
@@ -597,6 +597,9 @@
                                     </li>
                                     <li class="sidebar-lk__el">
                                         <a href="#" class="sidebar-lk__link">Избранное</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Сотрудники</a>
                                     </li>
                                     <li class="sidebar-lk__el">
                                         <a href="#" class="sidebar-lk__link">Управление</a>
@@ -636,508 +639,365 @@
                                 <div class="sidebar-lk__e-mail">ivanovaolga@tander.ru</div>
                                 <div class="sidebar-lk__tel">+7 (952) 217-56-12</div>
                                 <div class="sidebar-lk__button">
-                                    <button class="green-border contact-with-manager">Связаться</button>
+                                    <button class="green-border">Связаться</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="personal-area__body body-lk">
+                        <div class="personal-area__body body-lk co-worker-body">
                             <div class="body-lk__title">Заказы</div>
-                            <div class="body-lk__tabs">
-                                <div class="body-lk__tab active agreed-tab">Согласованные заказы</div>
-                                <div class="body-lk__tab inconsistent-tab">Несогласованные заказы</div>
-                                <div class="body-lk__tab orders-tab">Ожидающие согласования заказы</div>
-                            </div>
-                            <div class="select select-tab">
-                                <div class="select__header">
-                                    <span class="select__current">Согласованные заказы</span>
-                                    <div class="select__icon">
-                                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M12.0148 0.733398L7 5.70046L1.98517 0.733398L0.4375 2.26628L7 8.76628L13.5625 2.26628L12.0148 0.733398Z"
-                                                fill="currentColor" />
-                                        </svg>
-                                    </div>
+                            <div class="co-worker">
+                                <div class="co-worker__tab">
+                                    <div class="co-worker__item co-worker_purchaser active">Закупщики</div>
+                                    <div class="co-worker__item co-worker_reconciling">Согласующие</div>
                                 </div>
-                                <div class="select__body">
-                                    <div class="select__item body-lk__tab active agreed-tab">Согласованные заказы</div>
-                                    <div class="select__item body-lk__tab inconsistent-tab">Несогласованные заказы</div>
-                                    <div class="select__item body-lk__tab orders-tab">Ожидающие согласования заказы
-                                    </div>
+                                <div class="co-worker__button">
+                                    <button class="green-border">Добавить нового сотрудника</button>
                                 </div>
                             </div>
-                            <div class="body-lk__body agreed-orders active">
-                                <div class="body-lk__items order-card">
-                                    <div class="order-card__top">
-                                        <div class="order-card__order">
-                                            <span class="order-card__number">Заказ № 569</span>
-                                            <div class="order-card__date">от 14.01.2021</div>
+                            <div class="body-lk__items order-card order-card-purchaser active">
+                                <div class="buyers">
+                                    <div class="sidebar-lk__top about-purchaser">
+                                        <div class="sidebar-lk__icon">
+                                            <div class="sidebar-lk__icon__letter">o</div>
                                         </div>
-                                        <p class="order-card__print"><span>Нужна доверенность или печать</span> <a
-                                                href="#" class="order-card__more">Подробнее о заказе</a></p>
+                                        <div class="about-purchaser__items">
+                                            <div class="sidebar-lk__name">Иванов Константин</div>
+                                            <div class="about-purchaser__item">
+                                                <div class="sidebar-lk__who">Договор №152 от 20.05.2017</div>
+                                                <a href="#" class="sidebar-lk__about-p">Подробная информация о
+                                                    закупщике</a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="order-card__items">
                                         <div class="order-card__item">
-                                            <div class="order-card__name">Адрес доставки</div>
-                                            <div class="order-card__value">г. Волгоград, ул. Северная, д. 56, оф. 459
-                                            </div>
+                                            <div class="order-card__name">E-mail:</div>
+                                            <div class="order-card__value">konstant.1989@gmail.com</div>
                                         </div>
                                         <div class="order-card__item">
-                                            <div class="order-card__name">Сумма</div>
-                                            <div class="order-card__value">129 999 Р</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Товаров</div>
-                                            <div class="order-card__value">5</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Статус</div>
-                                            <div class="order-card__value">Согласован</div>
+                                            <div class="order-card__name">Дебеторская задолженность</div>
+                                            <div class="order-card__value">159 653 ₽</div>
                                         </div>
                                     </div>
-                                    <div class="order-card__bottom">
-                                        <button class="green-bg">Повторить заказ</button>
-                                        <button class="green-border claim">Оформить претензию</button>
+                                    <div class="buyers__wrap">
+                                        <div class="buyers__name">Адрес доставки</div>
+                                        <div class="buyers__items">
+                                            <div class="buyers__adres">
+                                                <div class="buyers__clue">Адрес</div>
+                                                <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д. 5/1,
+                                                    оф. 109</p>
+                                            </div>
+                                            <div class="buyers__item">
+                                                <div class="buyers__clue">Бюджет</div>
+                                                <span>100 000 Р</span>
+                                            </div>
+                                            <div class="buyers__item">
+                                                <div class="buyers__clue">Номер телефона</div>
+                                                <span>+7 952 000-12-64</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="body-lk__items order-card">
-                                    <div class="order-card__top">
-                                        <div class="order-card__order">
-                                            <span class="order-card__number">Заказ № 569</span>
-                                            <div class="order-card__date">от 14.01.2021</div>
+                                <div class="buyers">
+                                    <div class="sidebar-lk__top about-purchaser">
+                                        <div class="sidebar-lk__icon">
+                                            <div class="sidebar-lk__icon__letter">o</div>
                                         </div>
-                                        <p class="order-card__print"><span>Нужна доверенность или печать</span> <a
-                                                href="#" class="order-card__more">Подробнее о заказе</a></p>
+                                        <div class="about-purchaser__items">
+                                            <div class="sidebar-lk__name">Иванов Константин</div>
+                                            <div class="about-purchaser__item">
+                                                <div class="sidebar-lk__who">Договор №152 от 20.05.2017</div>
+                                                <a href="#" class="sidebar-lk__about-p">Подробная информация о
+                                                    закупщике</a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="order-card__items">
                                         <div class="order-card__item">
-                                            <div class="order-card__name">Адрес доставки</div>
-                                            <div class="order-card__value">г. Волгоград, ул. Северная, д. 56, оф. 459
-                                            </div>
+                                            <div class="order-card__name">E-mail:</div>
+                                            <div class="order-card__value">konstant.1989@gmail.com</div>
                                         </div>
                                         <div class="order-card__item">
-                                            <div class="order-card__name">Сумма</div>
-                                            <div class="order-card__value">129 999 Р</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Товаров</div>
-                                            <div class="order-card__value">5</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Статус</div>
-                                            <div class="order-card__value">Согласован</div>
+                                            <div class="order-card__name">Дебеторская задолженность</div>
+                                            <div class="order-card__value">159 653 ₽</div>
                                         </div>
                                     </div>
-                                    <div class="order-card__bottom">
-                                        <button class="green-bg">Повторить заказ</button>
-                                        <button class="green-border claim">Оформить претензию</button>
+                                    <div class="buyers__wrap">
+                                        <div class="buyers__name">Адрес доставки</div>
+                                        <div class="buyers__items">
+                                            <div class="buyers__adres">
+                                                <div class="buyers__clue">Адрес</div>
+                                                <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д. 5/1,
+                                                    оф. 109</p>
+                                            </div>
+                                            <div class="buyers__item">
+                                                <div class="buyers__clue">Бюджет</div>
+                                                <span>100 000 Р</span>
+                                            </div>
+                                            <div class="buyers__item">
+                                                <div class="buyers__clue">Номер телефона</div>
+                                                <span>+7 952 000-12-64</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="body-lk__items order-card">
-                                    <div class="order-card__top">
-                                        <div class="order-card__order">
-                                            <span class="order-card__number">Заказ № 569</span>
-                                            <div class="order-card__date">от 14.01.2021</div>
+                                <div class="buyers">
+                                    <div class="sidebar-lk__top about-purchaser">
+                                        <div class="sidebar-lk__icon">
+                                            <div class="sidebar-lk__icon__letter">o</div>
                                         </div>
-                                        <p class="order-card__print"><span>Нужна доверенность или печать</span> <a
-                                                href="#" class="order-card__more">Подробнее о заказе</a></p>
+                                        <div class="about-purchaser__items">
+                                            <div class="sidebar-lk__name">Иванов Константин</div>
+                                            <div class="about-purchaser__item">
+                                                <div class="sidebar-lk__who">Договор №152 от 20.05.2017</div>
+                                                <a href="#" class="sidebar-lk__about-p">Подробная информация о
+                                                    закупщике</a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="order-card__items">
                                         <div class="order-card__item">
-                                            <div class="order-card__name">Адрес доставки</div>
-                                            <div class="order-card__value">г. Волгоград, ул. Северная, д. 56, оф. 459
-                                            </div>
+                                            <div class="order-card__name">E-mail:</div>
+                                            <div class="order-card__value">konstant.1989@gmail.com</div>
                                         </div>
                                         <div class="order-card__item">
-                                            <div class="order-card__name">Сумма</div>
-                                            <div class="order-card__value">129 999 Р</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Товаров</div>
-                                            <div class="order-card__value">5</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Статус</div>
-                                            <div class="order-card__value">Согласован</div>
+                                            <div class="order-card__name">Дебеторская задолженность</div>
+                                            <div class="order-card__value">159 653 ₽</div>
                                         </div>
                                     </div>
-                                    <div class="order-card__bottom">
-                                        <button class="green-bg">Повторить заказ</button>
-                                        <button class="green-border claim">Оформить претензию</button>
+                                    <div class="buyers__wrap">
+                                        <div class="buyers__name">Адрес доставки</div>
+                                        <div class="buyers__items">
+                                            <div class="buyers__adres">
+                                                <div class="buyers__clue">Адрес</div>
+                                                <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д. 5/1,
+                                                    оф. 109</p>
+                                            </div>
+                                            <div class="buyers__item">
+                                                <div class="buyers__clue">Бюджет</div>
+                                                <span>100 000 Р</span>
+                                            </div>
+                                            <div class="buyers__item">
+                                                <div class="buyers__clue">Номер телефона</div>
+                                                <span>+7 952 000-12-64</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="body-lk__items order-card">
-                                    <div class="order-card__top">
-                                        <div class="order-card__order">
-                                            <span class="order-card__number">Заказ № 569</span>
-                                            <div class="order-card__date">от 14.01.2021</div>
+                                <div class="buyers">
+                                    <div class="sidebar-lk__top about-purchaser">
+                                        <div class="sidebar-lk__icon">
+                                            <div class="sidebar-lk__icon__letter">o</div>
                                         </div>
-                                        <p class="order-card__print"><span>Нужна доверенность или печать</span> <a
-                                                href="#" class="order-card__more">Подробнее о заказе</a></p>
+                                        <div class="about-purchaser__items">
+                                            <div class="sidebar-lk__name">Иванов Константин</div>
+                                            <div class="about-purchaser__item">
+                                                <div class="sidebar-lk__who">Договор №152 от 20.05.2017</div>
+                                                <a href="#" class="sidebar-lk__about-p">Подробная информация о
+                                                    закупщике</a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="order-card__items">
                                         <div class="order-card__item">
-                                            <div class="order-card__name">Адрес доставки</div>
-                                            <div class="order-card__value">г. Волгоград, ул. Северная, д. 56, оф. 459
+                                            <div class="order-card__name">E-mail:</div>
+                                            <div class="order-card__value">konstant.1989@gmail.com</div>
+                                        </div>
+                                        <div class="order-card__item">
+                                            <div class="order-card__name">Дебеторская задолженность</div>
+                                            <div class="order-card__value">159 653 ₽</div>
+                                        </div>
+                                    </div>
+                                    <div class="buyers__wrap">
+                                        <div class="buyers__name">Адрес доставки</div>
+                                        <div class="buyers__items">
+                                            <div class="buyers__adres">
+                                                <div class="buyers__clue">Адрес</div>
+                                                <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д. 5/1,
+                                                    оф. 109</p>
+                                            </div>
+                                            <div class="buyers__item">
+                                                <div class="buyers__clue">Бюджет</div>
+                                                <span>100 000 Р</span>
+                                            </div>
+                                            <div class="buyers__item">
+                                                <div class="buyers__clue">Номер телефона</div>
+                                                <span>+7 952 000-12-64</span>
                                             </div>
                                         </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Сумма</div>
-                                            <div class="order-card__value">129 999 Р</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Товаров</div>
-                                            <div class="order-card__value">5</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Статус</div>
-                                            <div class="order-card__value">Согласован</div>
-                                        </div>
-                                    </div>
-                                    <div class="order-card__bottom">
-                                        <button class="green-bg">Повторить заказ</button>
-                                        <button class="green-border claim">Оформить претензию</button>
-                                    </div>
-                                </div>
-                                <div class="body-lk__items order-card">
-                                    <div class="order-card__top">
-                                        <div class="order-card__order">
-                                            <span class="order-card__number">Заказ № 569</span>
-                                            <div class="order-card__date">от 14.01.2021</div>
-                                        </div>
-                                        <p class="order-card__print"><span>Нужна доверенность или печать</span> <a
-                                                href="#" class="order-card__more">Подробнее о заказе</a></p>
-                                    </div>
-                                    <div class="order-card__items">
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Адрес доставки</div>
-                                            <div class="order-card__value">г. Волгоград, ул. Северная, д. 56, оф. 459
-                                            </div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Сумма</div>
-                                            <div class="order-card__value">129 999 Р</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Товаров</div>
-                                            <div class="order-card__value">5</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Статус</div>
-                                            <div class="order-card__value">Согласован</div>
-                                        </div>
-                                    </div>
-                                    <div class="order-card__bottom">
-                                        <button class="green-bg">Повторить заказ</button>
-                                        <button class="green-border claim">Оформить претензию</button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="body-lk__body inconsistent-orders">
-                                <div class="body-lk__items order-card">
-                                    <div class="order-card__top">
-                                        <div class="order-card__order">
-                                            <span class="order-card__number">Заказ № 569</span>
-                                            <div class="order-card__date">от 14.01.2021</div>
+                            <div class="body-lk__items order-card order-card-reconciling">
+                                <div class="buyers">
+                                    <div class="sidebar-lk__top about-purchaser">
+                                        <div class="sidebar-lk__icon">
+                                            <div class="sidebar-lk__icon__letter">o</div>
                                         </div>
-                                        <p class="order-card__print"><span>Нужна доверенность или печать</span> <a
-                                                href="#" class="order-card__more">Подробнее о заказе</a></p>
+                                        <div class="about-purchaser__items">
+                                            <div class="sidebar-lk__name">Смирнов Александр</div>
+                                            <div class="about-purchaser__item">
+                                                <div class="sidebar-lk__who">Договор №152 от 20.05.2017</div>
+                                                <a href="#" class="sidebar-lk__about-p">Подробная информация о
+                                                    согласующем</a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="order-card__items">
                                         <div class="order-card__item">
-                                            <div class="order-card__name">Адрес доставки</div>
-                                            <div class="order-card__value">г. Волгоград, ул. Северная, д. 56, оф. 459
+                                            <div class="order-card__name">E-mail:</div>
+                                            <div class="order-card__value">konstant.1989@gmail.com</div>
+                                        </div>
+                                        <div class="order-card__item">
+                                            <div class="order-card__name">Дебеторская задолженность</div>
+                                            <div class="order-card__value">159 653 ₽</div>
+                                        </div>
+                                    </div>
+                                    <div class="buyers__wrap">
+                                        <div class="buyers__name">Адрес доставки</div>
+                                        <div class="buyers__items">
+                                            <div class="buyers__adres">
+                                                <div class="buyers__clue">Адрес</div>
+                                                <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д. 5/1,
+                                                    оф. 109</p>
                                             </div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Сумма</div>
-                                            <div class="order-card__value">129 999 Р</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Товаров</div>
-                                            <div class="order-card__value">5</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Статус</div>
-                                            <div class="order-card__value">Не согласован</div>
-                                        </div>
-                                    </div>
-                                    <div class="order-card__bottom">
-                                        <button class="green-bg_big">Отправить на согласование</button>
-                                    </div>
-                                </div>
-                                <div class="body-lk__items order-card">
-                                    <div class="order-card__top">
-                                        <div class="order-card__order">
-                                            <span class="order-card__number">Заказ № 569</span>
-                                            <div class="order-card__date">от 14.01.2021</div>
-                                        </div>
-                                        <p class="order-card__print"><span>Нужна доверенность или печать</span> <a
-                                                href="#" class="order-card__more">Подробнее о заказе</a></p>
-                                    </div>
-                                    <div class="order-card__items">
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Адрес доставки</div>
-                                            <div class="order-card__value">г. Волгоград, ул. Северная, д. 56, оф. 459
+                                            <div class="buyers__item">
+                                                <div class="buyers__clue">Бюджет</div>
+                                                <span>100 000 Р</span>
                                             </div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Сумма</div>
-                                            <div class="order-card__value">129 999 Р</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Товаров</div>
-                                            <div class="order-card__value">5</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Статус</div>
-                                            <div class="order-card__value">Не согласован</div>
-                                        </div>
-                                    </div>
-                                    <div class="order-card__bottom">
-                                        <button class="green-bg_big">Отправить на согласование</button>
-                                    </div>
-                                </div>
-                                <div class="body-lk__items order-card">
-                                    <div class="order-card__top">
-                                        <div class="order-card__order">
-                                            <span class="order-card__number">Заказ № 569</span>
-                                            <div class="order-card__date">от 14.01.2021</div>
-                                        </div>
-                                        <p class="order-card__print"><span>Нужна доверенность или печать</span> <a
-                                                href="#" class="order-card__more">Подробнее о заказе</a></p>
-                                    </div>
-                                    <div class="order-card__items">
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Адрес доставки</div>
-                                            <div class="order-card__value">г. Волгоград, ул. Северная, д. 56, оф. 459
+                                            <div class="buyers__item">
+                                                <div class="buyers__clue">Номер телефона</div>
+                                                <span>+7 952 000-12-64</span>
                                             </div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Сумма</div>
-                                            <div class="order-card__value">129 999 Р</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Товаров</div>
-                                            <div class="order-card__value">5</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Статус</div>
-                                            <div class="order-card__value">Не согласован</div>
-                                        </div>
-                                    </div>
-                                    <div class="order-card__bottom">
-                                        <button class="green-bg_big">Отправить на согласование</button>
-                                    </div>
-                                </div>
-                                <div class="body-lk__items order-card">
-                                    <div class="order-card__top">
-                                        <div class="order-card__order">
-                                            <span class="order-card__number">Заказ № 569</span>
-                                            <div class="order-card__date">от 14.01.2021</div>
-                                        </div>
-                                        <p class="order-card__print"><span>Нужна доверенность или печать</span> <a
-                                                href="#" class="order-card__more">Подробнее о заказе</a></p>
-                                    </div>
-                                    <div class="order-card__items">
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Адрес доставки</div>
-                                            <div class="order-card__value">г. Волгоград, ул. Северная, д. 56, оф. 459
-                                            </div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Сумма</div>
-                                            <div class="order-card__value">129 999 Р</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Товаров</div>
-                                            <div class="order-card__value">5</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Статус</div>
-                                            <div class="order-card__value">Не согласован</div>
-                                        </div>
-                                    </div>
-                                    <div class="order-card__bottom">
-                                        <button class="green-bg_big">Отправить на согласование</button>
-                                    </div>
-                                </div>
-                                <div class="body-lk__items order-card">
-                                    <div class="order-card__top">
-                                        <div class="order-card__order">
-                                            <span class="order-card__number">Заказ № 569</span>
-                                            <div class="order-card__date">от 14.01.2021</div>
-                                        </div>
-                                        <p class="order-card__print"><span>Нужна доверенность или печать</span> <a
-                                                href="#" class="order-card__more">Подробнее о заказе</a></p>
-                                    </div>
-                                    <div class="order-card__items">
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Адрес доставки</div>
-                                            <div class="order-card__value">г. Волгоград, ул. Северная, д. 56, оф. 459
-                                            </div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Сумма</div>
-                                            <div class="order-card__value">129 999 Р</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Товаров</div>
-                                            <div class="order-card__value">5</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Статус</div>
-                                            <div class="order-card__value">Не согласован</div>
-                                        </div>
-                                    </div>
-                                    <div class="order-card__bottom">
-                                        <button class="green-bg_big">Отправить на согласование</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="body-lk__body orders-pending">
-                                <div class="body-lk__items order-card">
-                                    <div class="order-card__top">
-                                        <div class="order-card__order">
-                                            <span class="order-card__number">Заказ № 569</span>
-                                            <div class="order-card__date">от 14.01.2021</div>
-                                        </div>
-                                        <p class="order-card__print"><span>Ожидает согласования</span> <a href="#"
-                                                class="order-card__more">Подробнее о заказе</a></p>
-                                    </div>
-                                    <div class="order-card__items">
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Адрес доставки</div>
-                                            <div class="order-card__value">г. Волгоград, ул. Северная, д. 56, оф. 459
-                                            </div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Сумма</div>
-                                            <div class="order-card__value">129 999 Р</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Товаров</div>
-                                            <div class="order-card__value">5</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Статус</div>
-                                            <div class="order-card__value">Ожидает согласования</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="body-lk__items order-card">
-                                    <div class="order-card__top">
-                                        <div class="order-card__order">
-                                            <span class="order-card__number">Заказ № 569</span>
-                                            <div class="order-card__date">от 14.01.2021</div>
+                                <div class="buyers">
+                                    <div class="sidebar-lk__top about-purchaser">
+                                        <div class="sidebar-lk__icon">
+                                            <div class="sidebar-lk__icon__letter">o</div>
                                         </div>
-                                        <p class="order-card__print"><span>Ожидает согласования</span> <a href="#"
-                                                class="order-card__more">Подробнее о заказе</a></p>
+                                        <div class="about-purchaser__items">
+                                            <div class="sidebar-lk__name">Смирнов Александр</div>
+                                            <div class="about-purchaser__item">
+                                                <div class="sidebar-lk__who">Договор №152 от 20.05.2017</div>
+                                                <a href="#" class="sidebar-lk__about-p">Подробная информация о
+                                                    согласующем</a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="order-card__items">
                                         <div class="order-card__item">
-                                            <div class="order-card__name">Адрес доставки</div>
-                                            <div class="order-card__value">г. Волгоград, ул. Северная, д. 56, оф. 459
+                                            <div class="order-card__name">E-mail:</div>
+                                            <div class="order-card__value">konstant.1989@gmail.com</div>
+                                        </div>
+                                        <div class="order-card__item">
+                                            <div class="order-card__name">Дебеторская задолженность</div>
+                                            <div class="order-card__value">159 653 ₽</div>
+                                        </div>
+                                    </div>
+                                    <div class="buyers__wrap">
+                                        <div class="buyers__name">Адрес доставки</div>
+                                        <div class="buyers__items">
+                                            <div class="buyers__adres">
+                                                <div class="buyers__clue">Адрес</div>
+                                                <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д. 5/1,
+                                                    оф. 109</p>
                                             </div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Сумма</div>
-                                            <div class="order-card__value">129 999 Р</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Товаров</div>
-                                            <div class="order-card__value">5</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Статус</div>
-                                            <div class="order-card__value">Ожидает согласования</div>
+                                            <div class="buyers__item">
+                                                <div class="buyers__clue">Бюджет</div>
+                                                <span>100 000 Р</span>
+                                            </div>
+                                            <div class="buyers__item">
+                                                <div class="buyers__clue">Номер телефона</div>
+                                                <span>+7 952 000-12-64</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="body-lk__items order-card">
-                                    <div class="order-card__top">
-                                        <div class="order-card__order">
-                                            <span class="order-card__number">Заказ № 569</span>
-                                            <div class="order-card__date">от 14.01.2021</div>
+                                <div class="buyers">
+                                    <div class="sidebar-lk__top about-purchaser">
+                                        <div class="sidebar-lk__icon">
+                                            <div class="sidebar-lk__icon__letter">o</div>
                                         </div>
-                                        <p class="order-card__print"><span>Ожидает согласования</span> <a href="#"
-                                                class="order-card__more">Подробнее о заказе</a></p>
+                                        <div class="about-purchaser__items">
+                                            <div class="sidebar-lk__name">Смирнов Александр</div>
+                                            <div class="about-purchaser__item">
+                                                <div class="sidebar-lk__who">Договор №152 от 20.05.2017</div>
+                                                <a href="#" class="sidebar-lk__about-p">Подробная информация о
+                                                    согласующем</a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="order-card__items">
                                         <div class="order-card__item">
-                                            <div class="order-card__name">Адрес доставки</div>
-                                            <div class="order-card__value">г. Волгоград, ул. Северная, д. 56, оф. 459
+                                            <div class="order-card__name">E-mail:</div>
+                                            <div class="order-card__value">konstant.1989@gmail.com</div>
+                                        </div>
+                                        <div class="order-card__item">
+                                            <div class="order-card__name">Дебеторская задолженность</div>
+                                            <div class="order-card__value">159 653 ₽</div>
+                                        </div>
+                                    </div>
+                                    <div class="buyers__wrap">
+                                        <div class="buyers__name">Адрес доставки</div>
+                                        <div class="buyers__items">
+                                            <div class="buyers__adres">
+                                                <div class="buyers__clue">Адрес</div>
+                                                <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д. 5/1,
+                                                    оф. 109</p>
                                             </div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Сумма</div>
-                                            <div class="order-card__value">129 999 Р</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Товаров</div>
-                                            <div class="order-card__value">5</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Статус</div>
-                                            <div class="order-card__value">Ожидает согласования</div>
+                                            <div class="buyers__item">
+                                                <div class="buyers__clue">Бюджет</div>
+                                                <span>100 000 Р</span>
+                                            </div>
+                                            <div class="buyers__item">
+                                                <div class="buyers__clue">Номер телефона</div>
+                                                <span>+7 952 000-12-64</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="body-lk__items order-card">
-                                    <div class="order-card__top">
-                                        <div class="order-card__order">
-                                            <span class="order-card__number">Заказ № 569</span>
-                                            <div class="order-card__date">от 14.01.2021</div>
+                                <div class="buyers">
+                                    <div class="sidebar-lk__top about-purchaser">
+                                        <div class="sidebar-lk__icon">
+                                            <div class="sidebar-lk__icon__letter">o</div>
                                         </div>
-                                        <p class="order-card__print"><span>Ожидает согласования</span> <a href="#"
-                                                class="order-card__more">Подробнее о заказе</a></p>
+                                        <div class="about-purchaser__items">
+                                            <div class="sidebar-lk__name">Смирнов Александр</div>
+                                            <div class="about-purchaser__item">
+                                                <div class="sidebar-lk__who">Договор №152 от 20.05.2017</div>
+                                                <a href="#" class="sidebar-lk__about-p">Подробная информация о
+                                                    согласующем</a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="order-card__items">
                                         <div class="order-card__item">
-                                            <div class="order-card__name">Адрес доставки</div>
-                                            <div class="order-card__value">г. Волгоград, ул. Северная, д. 56, оф. 459
-                                            </div>
+                                            <div class="order-card__name">E-mail:</div>
+                                            <div class="order-card__value">konstant.1989@gmail.com</div>
                                         </div>
                                         <div class="order-card__item">
-                                            <div class="order-card__name">Сумма</div>
-                                            <div class="order-card__value">129 999 Р</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Товаров</div>
-                                            <div class="order-card__value">5</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Статус</div>
-                                            <div class="order-card__value">Ожидает согласования</div>
+                                            <div class="order-card__name">Дебеторская задолженность</div>
+                                            <div class="order-card__value">159 653 ₽</div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="body-lk__items order-card">
-                                    <div class="order-card__top">
-                                        <div class="order-card__order">
-                                            <span class="order-card__number">Заказ № 569</span>
-                                            <div class="order-card__date">от 14.01.2021</div>
-                                        </div>
-                                        <p class="order-card__print"><span>Ожидает согласования</span> <a href="#"
-                                                class="order-card__more">Подробнее о заказе</a></p>
-                                    </div>
-                                    <div class="order-card__items">
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Адрес доставки</div>
-                                            <div class="order-card__value">г. Волгоград, ул. Северная, д. 56, оф. 459
+                                    <div class="buyers__wrap">
+                                        <div class="buyers__name">Адрес доставки</div>
+                                        <div class="buyers__items">
+                                            <div class="buyers__adres">
+                                                <div class="buyers__clue">Адрес</div>
+                                                <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д. 5/1,
+                                                    оф. 109</p>
                                             </div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Сумма</div>
-                                            <div class="order-card__value">129 999 Р</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Товаров</div>
-                                            <div class="order-card__value">5</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Статус</div>
-                                            <div class="order-card__value">Ожидает согласования</div>
+                                            <div class="buyers__item">
+                                                <div class="buyers__clue">Бюджет</div>
+                                                <span>100 000 Р</span>
+                                            </div>
+                                            <div class="buyers__item">
+                                                <div class="buyers__clue">Номер телефона</div>
+                                                <span>+7 952 000-12-64</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1155,28 +1015,149 @@
                                 </div>
 
                             </div>
+                            <div class="new-employee">
+                                <div class="personal-d__title">Личные данные</div>
+                                <form method="post" class="new-employee__form">
+                                    <div class="new-employee__body">
+                                        <div class="inputsection">
+                                            <input class="some-input" type="text" onfocus="this.value = ''"
+                                                value="Антон" required>
+                                            <label class="placeholder">Имя</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input" type="text" onfocus="this.value = ''"
+                                                value="Павлов" required>
+                                            <label class="placeholder">Фамилия</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input _phone" onfocus="this.value = ''"
+                                                value="+7 928 736 52 91" type="text" required>
+                                            <label class="placeholder">Номер телефона</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input password-input reg-inp" type="password" required>
+                                            <label class="placeholder">Пароль</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input" type="text" onfocus="this.value = ''"
+                                                value="konstant.1989@gmail" required>
+                                            <label class="placeholder">Уровень прав</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input select-input" type="text" value="Закупщик"
+                                                required>
+                                            <div class="item-select select-form">
+                                                <div class="select__header">
+                                                    <span class="select__current">Закупщик</span>
+                                                    <div class="select__icon _scale">
+                                                        <svg width="7" height="6" viewBox="0 0 7 6" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M3.5 6L0.468911 0.75L6.53109 0.75L3.5 6Z"
+                                                                fill="#C4C4C4" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="select__body">
+                                                    <div class="select__el">Закупщик</div>
+                                                    <div class="select__el">Согласующий</div>
+                                                    <div class="select__el">Администратор</div>
+                                                </div>
+                                            </div>
+                                            <label class="placeholder">E-mail</label>
+                                        </div>
+                                    </div>
+                                    <div class="personal-d__title">Реквизиты</div>
+                                    <div class="new-employee__body">
+                                        <div class="inputsection">
+                                            <input class="some-input" type="text" onfocus="this.value = ''"
+                                                value="Тандер" required>
+                                            <label class="placeholder">Наименование организации</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input" type="text" required>
+                                            <label class="placeholder">Договор</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input valid-input" type="number" required>
+                                            <label class="placeholder">ИНН</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input valid-input" type="number" required>
+                                            <label class="placeholder">КПП</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input valid-input" type="number" required>
+                                            <label class="placeholder">БИК</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input valid-input" type="number" required>
+                                            <label class="placeholder">Р/С</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input" type="text" required>
+                                            <label class="placeholder">Банк</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input valid-input" type="number" required>
+                                            <label class="placeholder">К/С</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input" type="text" required>
+                                            <label class="placeholder">Юридический адрес</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input" type="text" required>
+                                            <label class="placeholder">Почтовый адрес</label>
+                                        </div>
+                                    </div>
+                                    <div class="town__name">г. Москва</div>
+                                    <div class="new-employee__body">
+                                        <div class="co-worker__items">
+                                            <div class="inputsection _big">
+                                                <input class="some-input" value="Краснодарский край" type="text" onfocus="this.value = ''"
+                                                    required>
+                                                <label class="placeholder">Регион</label>
+                                            </div>
+                                            <div class="co-worker__details">
+                                                <div class="inputsection _small1">
+                                                    <input class="some-input" value="100 000 Р" type="text" onfocus="this.value = ''" required>
+                                                    <label class="placeholder">Бюджет</label>
+                                                </div>
+                                                <div class="inputsection _small2">
+                                                    <input class="some-input _phone2" onfocus="this.value = ''"
+                                                        value="+7 928 736 52 91" type="text" required>
+                                                    <label class="placeholder">Номер телефона</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="inputsection">
+                                        <input name="input" class="some-input input-city" onfocus="this.value = ''"
+                                            value="Краснодар" type="text" required>
+                                        <label class="placeholder">Город</label>
+                                    </div>
+                                    <div class="inputsection">
+                                        <input name="input" class="some-input input-street"
+                                            onfocus="this.value = ''" value="Монтажников" type="text" required>
+                                        <label class="placeholder">Улица</label>
+                                    </div>
+                                    <div class="inputsection">
+                                        <input name="input" class="some-input input-house" onfocus="this.value = ''"
+                                            value="5/1" type="text" required>
+                                        <label class="placeholder">Дом</label>
+                                    </div>
+                                    <div class="inputsection">
+                                        <input name="input" class="some-input input-room" onfocus="this.value = ''"
+                                            value="109" type="text" required>
+                                        <label class="placeholder">Офис или квартира</label>
+                                    </div>
+                                    <div class="new-employee__button-form">
+                                        <button type="submit" class="green-border">Сохранить изменения</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="popups help">
-                <div class="popups__conteiner">
-                    <div class="popups__top">
-                        <div class="popups__title">Нажна помощь?</div>
-                        <div class="popups__close"></div>
-                    </div>
-                    <div class="popups__text">Оставьте сообщение и наш менеджер свяжется с вами в ближайшее время. </div>
-                    <form method="post" class="popups__body">
-                        <div class="inputsection">
-                            <input class="some-input" type="text" required>
-                            <label class="placeholder">Артикул товара*</label>
-                        </div>
-                        <div class="inputsection">
-                            <input class="some-input" type="text" required>
-                            <label class="placeholder">Сообщение*</label>
-                        </div>
-                        <button type="submit" class="popups__button">Отправить</button>
-                    </form>
                 </div>
             </div>
             <div class="popups registration-claim">

@@ -1019,6 +1019,7 @@ let select = function () {
 select();
 
 
+
 $(document).ready(function () {
     $('#review-text').keyup(function () {
         $('#counter').text(this.value.length++);
@@ -1146,23 +1147,40 @@ $(document).ready(function () {
     $('._edit').click(function () {
         $('.lk_add-adres').show();
     })
-    $('.order-tab').click(function(){
+    $('.order-tab').click(function () {
         $('.order-tab').removeClass('active');
         $(this).toggleClass('active')
         $('.personal-data-wrapper').removeClass('active');
     });
 
-    $('#personal-data-tab').click(function (){
+    $('#personal-data-tab').click(function () {
         $('#personal-data').toggleClass('active');
     });
-    $('#order-tab').click(function (){
+    $('#order-tab').click(function () {
         $('#orders').toggleClass('active');
     });
-    $('#quick-order-tab').click(function (){
+    $('#quick-order-tab').click(function () {
         $('#quick-order').toggleClass('active');
     });
-    $('#delivery-address-tab').click(function (){
+    $('#delivery-address-tab').click(function () {
         $('#delivery-address').toggleClass('active');
+    });
+    $('.contact-with-manager').click(function () {
+        $('.help').toggleClass('active');
+        $('body').addClass('passive');
+    });
+    //----------co-worker---
+    $('.co-worker__item').click(function () {
+        $('.co-worker__item').removeClass('active');
+        $(this).toggleClass('active');
+    });
+    $('.co-worker_purchaser').click(function () {
+        $('.order-card-reconciling').removeClass('active');
+        $('.order-card-purchaser').toggleClass('active');
+    });
+    $('.co-worker_reconciling').click(function () {
+        $('.order-card-purchaser').removeClass('active');
+        $('.order-card-reconciling').toggleClass('active');
     });
 
 });
@@ -1170,24 +1188,30 @@ $(document).ready(function () {
 //=========personal-data-wrapper
 
 $(document).ready(function () {
-    $('.quick-order__icon').click(function(){
+    $('.quick-order__icon').click(function () {
         $('.quick-order__icon').removeClass('active');
         $(this).addClass('active');
-        if($('._grid').hasClass('active')){
+        if ($('._grid').hasClass('active')) {
             $('.body-catalogs__body').removeClass('active').hide();
             $('.body-catalogs__body._grid').addClass('active').show();
         }
-        if($('.quick-order__icon._list').hasClass('active')){
+        if ($('.quick-order__icon._list').hasClass('active')) {
             $('.body-catalogs__body').removeClass('active').hide();
             $('.body-catalogs__body._list').addClass('active').show();
         }
-        if($('.quick-order__icon._line').hasClass('active')){
+        if ($('.quick-order__icon._line').hasClass('active')) {
             $('.body-catalogs__body').removeClass('active').hide();
             $('.body-catalogs__body._line').addClass('active').show();
         }
     });
 
-    $('.product__button').click(function(){
+    $('.product__button').click(function () {
         $(this).css('background-color', '#00AA95').text('В корзине');
+    });
+    $('.some-input').focus(function () {
+        $('.select-form').removeClass('is-active');
+    });
+    $('.select-input').focus(function () {
+        $('.select-form').toggleClass('is-active');
     });
 });

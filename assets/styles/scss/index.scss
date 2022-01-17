@@ -10201,7 +10201,7 @@ input[type="number"]:focus {
         margin-top: 4px;
         min-width: 100%;
     }
-    &__more{
+    &__more {
         display: flex;
     }
     &__button {
@@ -10363,7 +10363,7 @@ input[type="number"]:focus {
             .inputsection {
                 margin-bottom: 20px;
             }
-            .details-order{
+            .details-order {
                 margin-top: 20px;
             }
         }
@@ -11235,7 +11235,8 @@ input[type="number"]:focus {
         .basket-order__item {
             flex-direction: column;
             align-items: flex-start;
-            .details-orders, .basket-order__adres{
+            .details-orders,
+            .basket-order__adres {
                 min-width: 100%;
                 input {
                     min-width: 100%;
@@ -11248,9 +11249,10 @@ input[type="number"]:focus {
                 margin-top: 30px;
             }
         }
-        .personal-d__result, .body-lk__delivery-adresses{
+        .personal-d__result,
+        .body-lk__delivery-adresses {
             .basket-order__items {
-                .basket-order__item{
+                .basket-order__item {
                     .basket-order__details:not(:first-child) {
                         margin-top: 20px;
                         margin-right: 0;
@@ -11322,7 +11324,7 @@ input[type="number"]:focus {
 .personal-data-wrapper.active {
     display: block;
 }
-.personal-data-wrapper.body-lk__quick-order{
+.personal-data-wrapper.body-lk__quick-order {
     display: block;
 }
 /* @media (max-width: 900px) {
@@ -11401,7 +11403,7 @@ input[type="number"]:focus {
         color: #dbdbdb;
         transition: 0.2s;
         cursor: pointer;
-        svg{
+        svg {
             transform: translate(0, 3px);
         }
     }
@@ -11466,14 +11468,415 @@ input[type="number"]:focus {
         margin-top: 64px;
     }
 }
-.footer-catalof__items{
-    background: #F8F8F8;
+.footer-catalof__items {
+    background: #f8f8f8;
     border-radius: 2px;
     padding: 3px 5px;
 }
 //========================================
-.body-lk__delivery-adresses{
-    .basket-order__items{
+.body-lk__delivery-adresses {
+    .basket-order__items {
         margin-top: 22px;
     }
+}
+
+///////////////////////////////////////////////////////
+//==============supplies-info=============
+.supplies-info {
+    max-width: 600px;
+    &__title {
+        margin-top: 32px;
+        font-weight: bold;
+        font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
+        line-height: 92%;
+        letter-spacing: 0.06em;
+        color: #3b3b3b;
+    }
+
+    &__items {
+        margin-top: 24px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 137%;
+        letter-spacing: 0.06em;
+        color: #3b3b3b;
+    }
+
+    &__item:not(:first-child) {
+        margin-top: 16px;
+    }
+
+    &__name {
+        font-weight: bold;
+    }
+
+    &__list {
+        font-weight: 300;
+    }
+
+    &__el {
+        padding-left: 25px;
+        position: relative;
+    }
+    &__el::before {
+        position: absolute;
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #3b3b3b;
+        left: 10px;
+        top: 7px;
+    }
+
+    &__text {
+        font-weight: 300;
+    }
+}
+////////////////////////////////////////////////////
+//==================notifications============
+.notifications {
+    &__title {
+    }
+
+    &__body {
+        margin-top: 8px;
+    }
+
+    &__items {
+        margin-top: 24px;
+        padding: 0 0 16px 0;
+        border-bottom: 1px solid rgba(183, 183, 183, 0.2);
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__item {
+    }
+
+    &__name {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 167%;
+        letter-spacing: 0.04em;
+        color: #3b3b3b;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 137%;
+        color: #252525;
+        margin-top: 12px;
+        max-width: 605px;
+    }
+
+    &__date {
+        margin-top: 4px;
+        font-size: 16px;
+        line-height: 137%;
+        color: #252525;
+        white-space: nowrap;
+    }
+}
+@media (max-width: 585px) {
+    .notifications {
+        &__items {
+            flex-direction: column;
+        }
+        &__date {
+            margin-top: 16px;
+        }
+        &__name {
+            line-height: 137%;
+        }
+    }
+}
+.help {
+    .popups__text {
+        max-width: 347px;
+        margin-top: 8px;
+        font-size: 16px;
+        line-height: 125%;
+        letter-spacing: 0.01em;
+        color: #1d1d1d;
+        text-shadow: 0px 9.375px 18.75px rgba(0, 0, 0, 0.05);
+    }
+    .popups__body {
+        margin-top: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+        .inputsection:not(:first-child) {
+            margin-top: calc(15px + (48 - 15) * ((100vw - 320px) / (1920 - 320)));
+        }
+    }
+}
+////////////////////////////////////////////////
+//================buyers=========
+.buyers {
+    &__wrap {
+        margin-top: 16px;
+        border-bottom: 1px solid #e8e8e8;
+        padding-bottom: 24px;
+    }
+
+    &__name {
+        font-weight: bold;
+        line-height: 167%;
+        letter-spacing: 0.04em;
+        color: #3b3b3b;
+    }
+
+    &__items {
+        display: flex;
+    }
+
+    &__adres {
+        font-size: 16px;
+        line-height: 137%;
+        color: #252525;
+        margin-right: 24px;
+    }
+
+    &__clue {
+        font-size: 12px;
+        line-height: 183%;
+        margin-top: 2px;
+        color: #252525;
+        opacity: 0.2;
+    }
+    &__item {
+        span {
+            font-size: 16px;
+            line-height: 137%;
+            color: #252525;
+            white-space: nowrap;
+        }
+    }
+    &__item:not(:last-child) {
+        margin-right: 24px;
+    }
+    .sidebar-lk {
+        &__who {
+            color: #252525;
+        }
+        &__about-p {
+            font-size: 16px;
+            line-height: 137%;
+            text-decoration-line: underline;
+            color: #252525;
+        }
+        &__about-p:hover {
+            text-decoration: none;
+        }
+    }
+    .order-card__items {
+        margin-top: 10px;
+    }
+    .about-purchaser__item {
+        flex-wrap: wrap;
+    }
+    .sidebar-lk__icon {
+        min-width: 55px;
+    }
+}
+.buyers {
+    margin-top: 14px;
+}
+.buyers:first-child {
+    margin-top: 5px;
+}
+@media (max-width: 545px) {
+    .buyers {
+        &__items {
+            flex-wrap: wrap;
+        }
+        &__adres {
+            margin-right: 0;
+        }
+    }
+}
+////////////////////////////////////////////////
+//============co-worker===========
+.co-worker {
+    display: flex;
+    flex-wrap: wrap;
+    &_purchaser {
+    }
+
+    &_reconciling {
+    }
+
+    &__item {
+        color: rgba(59, 59, 59, 0.4);
+        font-size: 14px;
+        line-height: 20px;
+        padding: 13px 18px 9px;
+        cursor: pointer;
+    }
+    &__item.active {
+        color: #454545;
+        background-color: #f2f2f2;
+    }
+    &__tab {
+        display: flex;
+        margin-right: 17px;
+        margin-top: 14px;
+    }
+
+    &__button {
+        margin-top: 14px;
+    }
+}
+.co-worker-body {
+    .order-card {
+        display: none;
+    }
+    .order-card.active {
+        display: block;
+    }
+}
+//------------------------------------
+.new-employee {
+    &__form {
+        .inputsection{
+            max-width: 607px;
+        }
+        .inputsection,
+        .select-inputsection {
+            margin-top: 16px;
+            flex: 1 1 calc(50% - 23px);
+            position: relative;
+        }
+        .select-input {
+            opacity: 0;
+        }
+        .select-input:focus ~ .item-select{
+            
+        }
+        .item-select {
+            position: absolute;
+            bottom: 5px;
+            z-index: 5;
+            width: 100%;
+            padding: 5px 0 0 0;
+            .select__current {
+                margin-right: 5px;
+            }
+            .select__header {
+                border: 0;
+                padding: 0;
+                font-size: 16px;
+                justify-content: flex-start;
+                cursor: pointer;
+            }
+            .select__el {
+                font-size: 16px;
+                margin-top: 7px;
+                cursor: pointer;
+            }
+            .select__body {
+                border: 0;
+                background-color: #fff;
+                box-shadow: 0px 16px 30px -25px rgba(34, 60, 80, 0.2);
+            }
+        }
+        .item-select.is-active {
+            .select__body {
+                visibility: visible;
+                opacity: 1;
+            }
+            .select__icon {
+                transform: scale(1, -1);
+            }
+        }
+        .town__name {
+            margin-top: 16px;
+            font-weight: bold;
+            line-height: 167%;
+            letter-spacing: 0.04em;
+            color: #3b3b3b;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 46px;
+        .co-worker__items{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .inputsection._big{
+                flex: 1 1 auto;
+                max-width: 607px;
+            }
+            .inputsection._small1{
+                max-width: 83px;
+                margin-right: 30px;
+            }
+            .inputsection._small2{
+                max-width: 130px;
+            }
+            .co-worker__details{
+                display: flex;
+            }
+        }
+    }
+
+    &__button-form {
+        margin-top: 24px;
+    }
+}
+.personal-d {
+    &__title {
+    }
+}
+
+.some-input {
+}
+.placeholder {
+}
+.password-input {
+}
+.reg-inp {
+}
+.item-select {
+}
+.select {
+    &__header {
+    }
+
+    &__current {
+    }
+
+    &__icon {
+    }
+
+    &__body {
+    }
+
+    &__el {
+    }
+}
+.valid-input {
+}
+.town {
+    &__name {
+    }
+}
+.co-worker {
+    &__items {
+    }
+
+    &__item {
+    }
+}
+.input-city {
+}
+.input-street {
+}
+.input-house {
+}
+.input-room {
+}
+.green-border {
 }
