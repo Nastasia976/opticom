@@ -1182,6 +1182,12 @@ $(document).ready(function () {
         $('.order-card-purchaser').removeClass('active');
         $('.order-card-reconciling').toggleClass('active');
     });
+    $('.some-input').focus(function () {
+        $('.select-form').removeClass('is-active');
+    });
+    $('.select-input').focus(function () {
+        $('.select-form').toggleClass('is-active');
+    });
 
 });
 
@@ -1207,11 +1213,5 @@ $(document).ready(function () {
 
     $('.product__button').click(function () {
         $(this).css('background-color', '#00AA95').text('В корзине');
-    });
-    $('.some-input').focus(function () {
-        $('.select-form').removeClass('is-active');
-    });
-    $('.select-input').focus(function () {
-        $('.select-form').toggleClass('is-active');
     });
 });

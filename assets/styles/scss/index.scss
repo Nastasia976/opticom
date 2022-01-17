@@ -11736,21 +11736,19 @@ input[type="number"]:focus {
 }
 //------------------------------------
 .new-employee {
+    margin-top: 24px;
     &__form {
         .inputsection{
             max-width: 607px;
         }
         .inputsection,
         .select-inputsection {
-            margin-top: 16px;
+            margin-top: 22px;
             flex: 1 1 calc(50% - 23px);
             position: relative;
         }
         .select-input {
             opacity: 0;
-        }
-        .select-input:focus ~ .item-select{
-            
         }
         .item-select {
             position: absolute;
@@ -11805,9 +11803,11 @@ input[type="number"]:focus {
             width: 100%;
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             .inputsection._big{
                 flex: 1 1 auto;
                 max-width: 607px;
+                margin-right: 24px;
             }
             .inputsection._small1{
                 max-width: 83px;
@@ -11824,6 +11824,28 @@ input[type="number"]:focus {
 
     &__button-form {
         margin-top: 24px;
+    }
+}
+@media(max-width:600px){
+    .new-employee {
+        &__body{
+            flex-direction: column;
+            column-gap: 0;
+            .co-worker__items{
+                .inputsection._big{
+                    margin-right: 0;
+                    order: 2;
+                }
+                .inputsection._small1, .inputsection._small2{
+                    max-width: 100% !important;
+                }
+                .co-worker__details{
+                    width: 100%;
+                    flex-direction: column;
+                    order: 1;
+                }
+            }
+        }
     }
 }
 .personal-d {

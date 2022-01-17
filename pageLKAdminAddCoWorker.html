@@ -553,8 +553,8 @@
                 <div class="bread-crambs__conteier _conteiner2">
                     <p class="bread-crambs__list">
                         <a href="#" class="bread-crambs__link">Личный кабинет</a>
-                        <a href="#" class="bread-crambs__link">Заказы</a>
-                        <span>Ожидающие согласования заказы</span>
+                        <a href="#" class="bread-crambs__link">Сотрудники</a>
+                        <span>Новый сотрудник</span>
                     </p>
                 </div>
             </div>
@@ -644,389 +644,157 @@
                             </div>
                         </div>
                         <div class="personal-area__body body-lk co-worker-body">
-                            <div class="body-lk__title">Заказы</div>
-                            <div class="co-worker">
-                                <div class="co-worker__tab">
-                                    <div class="co-worker__item co-worker_purchaser active">Закупщики</div>
-                                    <div class="co-worker__item co-worker_reconciling">Согласующие</div>
-                                </div>
-                                <a href="https://nastasia976.github.io/opticom/pageLKAdminAddCoWorker" class="co-worker__button">
-                                    <button class="green-border add-employee">Добавить нового сотрудника</button>
-                                </a>
-                            </div>
-                            <div class="body-lk__items order-card order-card-purchaser active">
-                                <div class="buyers">
-                                    <div class="sidebar-lk__top about-purchaser">
-                                        <div class="sidebar-lk__icon">
-                                            <div class="sidebar-lk__icon__letter">o</div>
+                            <a href="https://nastasia976.github.io/opticom/pageLKAdminCoWorker" class="body-lk__come-back">
+                                <svg width="41" height="8" viewBox="0 0 41 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.646446 3.64645C0.451183 3.84171 0.451183 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM41 3.5L1 3.5V4.5L41 4.5V3.5Z"
+                                        fill="black" fill-opacity="0.18" />
+                                </svg>
+                                Вернуться назад
+                            </a>
+                            <div class="body-lk__title">Новый сотрудник</div>
+                            <div class="new-employee">
+                                <div class="personal-d__title">Личные данные</div>
+                                <form method="post" class="new-employee__form">
+                                    <div class="new-employee__body">
+                                        <div class="inputsection">
+                                            <input class="some-input" type="text" onfocus="this.value = ''"
+                                                value="Антон" required>
+                                            <label class="placeholder">Имя</label>
                                         </div>
-                                        <div class="about-purchaser__items">
-                                            <div class="sidebar-lk__name">Иванов Константин</div>
-                                            <div class="about-purchaser__item">
-                                                <div class="sidebar-lk__who">Договор №152 от 20.05.2017</div>
-                                                <a href="#" class="sidebar-lk__about-p">Подробная информация о
-                                                    закупщике</a>
+                                        <div class="inputsection">
+                                            <input class="some-input" type="text" onfocus="this.value = ''"
+                                                value="Павлов" required>
+                                            <label class="placeholder">Фамилия</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input _phone" onfocus="this.value = ''"
+                                                value="+7 928 736 52 91" type="text" required>
+                                            <label class="placeholder">Номер телефона</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input password-input reg-inp" onfocus="this.value = ''" value="*******" type="password" required>
+                                            <label class="placeholder">Пароль</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input" type="text" onfocus="this.value = ''"
+                                                value="konstant.1989@gmail" required>
+                                            <label class="placeholder">E-mail</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input select-input" type="text" value="Закупщик"
+                                                required>
+                                            <div class="item-select select-form">
+                                                <div class="select__header">
+                                                    <span class="select__current">Закупщик</span>
+                                                    <div class="select__icon _scale">
+                                                        <svg width="7" height="6" viewBox="0 0 7 6" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M3.5 6L0.468911 0.75L6.53109 0.75L3.5 6Z"
+                                                                fill="#C4C4C4" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="select__body">
+                                                    <div class="select__el">Закупщик</div>
+                                                    <div class="select__el">Согласующий</div>
+                                                    <div class="select__el">Администратор</div>
+                                                </div>
+                                            </div>
+                                            <label class="placeholder">Уровень прав</label>
+                                        </div>
+                                    </div>
+                                    <div class="personal-d__title">Реквизиты</div>
+                                    <div class="new-employee__body">
+                                        <div class="inputsection">
+                                            <input class="some-input" type="text" onfocus="this.value = ''"
+                                                value="Тандер" required>
+                                            <label class="placeholder">Наименование организации</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input" type="text" required>
+                                            <label class="placeholder">Договор</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input valid-input" type="number" required>
+                                            <label class="placeholder">ИНН</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input valid-input" type="number" required>
+                                            <label class="placeholder">КПП</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input valid-input" type="number" required>
+                                            <label class="placeholder">БИК</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input valid-input" type="number" required>
+                                            <label class="placeholder">Р/С</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input" type="text" required>
+                                            <label class="placeholder">Банк</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input valid-input" type="number" required>
+                                            <label class="placeholder">К/С</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input" type="text" required>
+                                            <label class="placeholder">Юридический адрес</label>
+                                        </div>
+                                        <div class="inputsection">
+                                            <input class="some-input" type="text" required>
+                                            <label class="placeholder">Почтовый адрес</label>
+                                        </div>
+                                    </div>
+                                    <div class="personal-d__title">Адрес доставки</div>
+                                    <div class="town__name">г. Москва</div>
+                                    <div class="new-employee__body">
+                                        <div class="co-worker__items">
+                                            <div class="inputsection _big">
+                                                <input class="some-input" value="Краснодарский край" type="text" onfocus="this.value = ''"
+                                                    required>
+                                                <label class="placeholder">Регион</label>
+                                            </div>
+                                            <div class="co-worker__details">
+                                                <div class="inputsection _small1">
+                                                    <input class="some-input" value="100 000 Р" type="text" onfocus="this.value = ''" required>
+                                                    <label class="placeholder">Бюджет</label>
+                                                </div>
+                                                <div class="inputsection _small2">
+                                                    <input class="some-input _phone2" onfocus="this.value = ''"
+                                                        value="+7 928 736 52 91" type="text" required>
+                                                    <label class="placeholder">Номер телефона</label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="order-card__items">
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">E-mail:</div>
-                                            <div class="order-card__value">konstant.1989@gmail.com</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Дебеторская задолженность</div>
-                                            <div class="order-card__value">159 653 ₽</div>
-                                        </div>
+                                    <div class="inputsection">
+                                        <input name="input" class="some-input input-city" onfocus="this.value = ''"
+                                            value="Краснодар" type="text" required>
+                                        <label class="placeholder">Город</label>
                                     </div>
-                                    <div class="buyers__wrap">
-                                        <div class="buyers__name">Адрес доставки</div>
-                                        <div class="buyers__items">
-                                            <div class="buyers__adres">
-                                                <div class="buyers__clue">Адрес</div>
-                                                <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д. 5/1,
-                                                    оф. 109</p>
-                                            </div>
-                                            <div class="buyers__item">
-                                                <div class="buyers__clue">Бюджет</div>
-                                                <span>100 000 Р</span>
-                                            </div>
-                                            <div class="buyers__item">
-                                                <div class="buyers__clue">Номер телефона</div>
-                                                <span>+7 952 000-12-64</span>
-                                            </div>
-                                        </div>
+                                    <div class="inputsection">
+                                        <input name="input" class="some-input input-street"
+                                            onfocus="this.value = ''" value="Монтажников" type="text" required>
+                                        <label class="placeholder">Улица</label>
                                     </div>
-                                </div>
-                                <div class="buyers">
-                                    <div class="sidebar-lk__top about-purchaser">
-                                        <div class="sidebar-lk__icon">
-                                            <div class="sidebar-lk__icon__letter">o</div>
-                                        </div>
-                                        <div class="about-purchaser__items">
-                                            <div class="sidebar-lk__name">Иванов Константин</div>
-                                            <div class="about-purchaser__item">
-                                                <div class="sidebar-lk__who">Договор №152 от 20.05.2017</div>
-                                                <a href="#" class="sidebar-lk__about-p">Подробная информация о
-                                                    закупщике</a>
-                                            </div>
-                                        </div>
+                                    <div class="inputsection">
+                                        <input name="input" class="some-input input-house" onfocus="this.value = ''"
+                                            value="5/1" type="text" required>
+                                        <label class="placeholder">Дом</label>
                                     </div>
-                                    <div class="order-card__items">
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">E-mail:</div>
-                                            <div class="order-card__value">konstant.1989@gmail.com</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Дебеторская задолженность</div>
-                                            <div class="order-card__value">159 653 ₽</div>
-                                        </div>
+                                    <div class="inputsection">
+                                        <input name="input" class="some-input input-room" onfocus="this.value = ''"
+                                            value="109" type="text" required>
+                                        <label class="placeholder">Офис или квартира</label>
                                     </div>
-                                    <div class="buyers__wrap">
-                                        <div class="buyers__name">Адрес доставки</div>
-                                        <div class="buyers__items">
-                                            <div class="buyers__adres">
-                                                <div class="buyers__clue">Адрес</div>
-                                                <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д. 5/1,
-                                                    оф. 109</p>
-                                            </div>
-                                            <div class="buyers__item">
-                                                <div class="buyers__clue">Бюджет</div>
-                                                <span>100 000 Р</span>
-                                            </div>
-                                            <div class="buyers__item">
-                                                <div class="buyers__clue">Номер телефона</div>
-                                                <span>+7 952 000-12-64</span>
-                                            </div>
-                                        </div>
+                                    <div class="new-employee__button-form">
+                                        <button type="submit" class="green-border">Сохранить изменения</button>
                                     </div>
-                                </div>
-                                <div class="buyers">
-                                    <div class="sidebar-lk__top about-purchaser">
-                                        <div class="sidebar-lk__icon">
-                                            <div class="sidebar-lk__icon__letter">o</div>
-                                        </div>
-                                        <div class="about-purchaser__items">
-                                            <div class="sidebar-lk__name">Иванов Константин</div>
-                                            <div class="about-purchaser__item">
-                                                <div class="sidebar-lk__who">Договор №152 от 20.05.2017</div>
-                                                <a href="#" class="sidebar-lk__about-p">Подробная информация о
-                                                    закупщике</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="order-card__items">
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">E-mail:</div>
-                                            <div class="order-card__value">konstant.1989@gmail.com</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Дебеторская задолженность</div>
-                                            <div class="order-card__value">159 653 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="buyers__wrap">
-                                        <div class="buyers__name">Адрес доставки</div>
-                                        <div class="buyers__items">
-                                            <div class="buyers__adres">
-                                                <div class="buyers__clue">Адрес</div>
-                                                <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д. 5/1,
-                                                    оф. 109</p>
-                                            </div>
-                                            <div class="buyers__item">
-                                                <div class="buyers__clue">Бюджет</div>
-                                                <span>100 000 Р</span>
-                                            </div>
-                                            <div class="buyers__item">
-                                                <div class="buyers__clue">Номер телефона</div>
-                                                <span>+7 952 000-12-64</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="buyers">
-                                    <div class="sidebar-lk__top about-purchaser">
-                                        <div class="sidebar-lk__icon">
-                                            <div class="sidebar-lk__icon__letter">o</div>
-                                        </div>
-                                        <div class="about-purchaser__items">
-                                            <div class="sidebar-lk__name">Иванов Константин</div>
-                                            <div class="about-purchaser__item">
-                                                <div class="sidebar-lk__who">Договор №152 от 20.05.2017</div>
-                                                <a href="#" class="sidebar-lk__about-p">Подробная информация о
-                                                    закупщике</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="order-card__items">
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">E-mail:</div>
-                                            <div class="order-card__value">konstant.1989@gmail.com</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Дебеторская задолженность</div>
-                                            <div class="order-card__value">159 653 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="buyers__wrap">
-                                        <div class="buyers__name">Адрес доставки</div>
-                                        <div class="buyers__items">
-                                            <div class="buyers__adres">
-                                                <div class="buyers__clue">Адрес</div>
-                                                <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д. 5/1,
-                                                    оф. 109</p>
-                                            </div>
-                                            <div class="buyers__item">
-                                                <div class="buyers__clue">Бюджет</div>
-                                                <span>100 000 Р</span>
-                                            </div>
-                                            <div class="buyers__item">
-                                                <div class="buyers__clue">Номер телефона</div>
-                                                <span>+7 952 000-12-64</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="body-catalogs__footer footer-catalof">
-                                    <div class="footer-catalof__items">
-                                        <a href="#" class="footer-catalof__item">1</a>
-                                        <a href="#" class="footer-catalof__item">2</a>
-                                        <a href="#" class="footer-catalof__item active">3</a>
-                                        <a href="#" class="footer-catalof__item">4</a>
-                                        <a href="#" class="footer-catalof__item">5</a>
-                                        <a href="#" class="footer-catalof__item">...</a>
-                                        <a href="#" class="footer-catalof__item">10</a>
-                                        <a href="#" class="footer-catalof__item">12</a>
-                                    </div>
-    
-                                </div>
-                            </div>
-                            <div class="body-lk__items order-card order-card-reconciling">
-                                <div class="buyers">
-                                    <div class="sidebar-lk__top about-purchaser">
-                                        <div class="sidebar-lk__icon">
-                                            <div class="sidebar-lk__icon__letter">o</div>
-                                        </div>
-                                        <div class="about-purchaser__items">
-                                            <div class="sidebar-lk__name">Смирнов Александр</div>
-                                            <div class="about-purchaser__item">
-                                                <div class="sidebar-lk__who">Договор №152 от 20.05.2017</div>
-                                                <a href="#" class="sidebar-lk__about-p">Подробная информация о
-                                                    согласующем</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="order-card__items">
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">E-mail:</div>
-                                            <div class="order-card__value">konstant.1989@gmail.com</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Дебеторская задолженность</div>
-                                            <div class="order-card__value">159 653 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="buyers__wrap">
-                                        <div class="buyers__name">Адрес доставки</div>
-                                        <div class="buyers__items">
-                                            <div class="buyers__adres">
-                                                <div class="buyers__clue">Адрес</div>
-                                                <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д. 5/1,
-                                                    оф. 109</p>
-                                            </div>
-                                            <div class="buyers__item">
-                                                <div class="buyers__clue">Бюджет</div>
-                                                <span>100 000 Р</span>
-                                            </div>
-                                            <div class="buyers__item">
-                                                <div class="buyers__clue">Номер телефона</div>
-                                                <span>+7 952 000-12-64</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="buyers">
-                                    <div class="sidebar-lk__top about-purchaser">
-                                        <div class="sidebar-lk__icon">
-                                            <div class="sidebar-lk__icon__letter">o</div>
-                                        </div>
-                                        <div class="about-purchaser__items">
-                                            <div class="sidebar-lk__name">Смирнов Александр</div>
-                                            <div class="about-purchaser__item">
-                                                <div class="sidebar-lk__who">Договор №152 от 20.05.2017</div>
-                                                <a href="#" class="sidebar-lk__about-p">Подробная информация о
-                                                    согласующем</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="order-card__items">
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">E-mail:</div>
-                                            <div class="order-card__value">konstant.1989@gmail.com</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Дебеторская задолженность</div>
-                                            <div class="order-card__value">159 653 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="buyers__wrap">
-                                        <div class="buyers__name">Адрес доставки</div>
-                                        <div class="buyers__items">
-                                            <div class="buyers__adres">
-                                                <div class="buyers__clue">Адрес</div>
-                                                <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д. 5/1,
-                                                    оф. 109</p>
-                                            </div>
-                                            <div class="buyers__item">
-                                                <div class="buyers__clue">Бюджет</div>
-                                                <span>100 000 Р</span>
-                                            </div>
-                                            <div class="buyers__item">
-                                                <div class="buyers__clue">Номер телефона</div>
-                                                <span>+7 952 000-12-64</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="buyers">
-                                    <div class="sidebar-lk__top about-purchaser">
-                                        <div class="sidebar-lk__icon">
-                                            <div class="sidebar-lk__icon__letter">o</div>
-                                        </div>
-                                        <div class="about-purchaser__items">
-                                            <div class="sidebar-lk__name">Смирнов Александр</div>
-                                            <div class="about-purchaser__item">
-                                                <div class="sidebar-lk__who">Договор №152 от 20.05.2017</div>
-                                                <a href="#" class="sidebar-lk__about-p">Подробная информация о
-                                                    согласующем</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="order-card__items">
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">E-mail:</div>
-                                            <div class="order-card__value">konstant.1989@gmail.com</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Дебеторская задолженность</div>
-                                            <div class="order-card__value">159 653 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="buyers__wrap">
-                                        <div class="buyers__name">Адрес доставки</div>
-                                        <div class="buyers__items">
-                                            <div class="buyers__adres">
-                                                <div class="buyers__clue">Адрес</div>
-                                                <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д. 5/1,
-                                                    оф. 109</p>
-                                            </div>
-                                            <div class="buyers__item">
-                                                <div class="buyers__clue">Бюджет</div>
-                                                <span>100 000 Р</span>
-                                            </div>
-                                            <div class="buyers__item">
-                                                <div class="buyers__clue">Номер телефона</div>
-                                                <span>+7 952 000-12-64</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="buyers">
-                                    <div class="sidebar-lk__top about-purchaser">
-                                        <div class="sidebar-lk__icon">
-                                            <div class="sidebar-lk__icon__letter">o</div>
-                                        </div>
-                                        <div class="about-purchaser__items">
-                                            <div class="sidebar-lk__name">Смирнов Александр</div>
-                                            <div class="about-purchaser__item">
-                                                <div class="sidebar-lk__who">Договор №152 от 20.05.2017</div>
-                                                <a href="#" class="sidebar-lk__about-p">Подробная информация о
-                                                    согласующем</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="order-card__items">
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">E-mail:</div>
-                                            <div class="order-card__value">konstant.1989@gmail.com</div>
-                                        </div>
-                                        <div class="order-card__item">
-                                            <div class="order-card__name">Дебеторская задолженность</div>
-                                            <div class="order-card__value">159 653 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="buyers__wrap">
-                                        <div class="buyers__name">Адрес доставки</div>
-                                        <div class="buyers__items">
-                                            <div class="buyers__adres">
-                                                <div class="buyers__clue">Адрес</div>
-                                                <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д. 5/1,
-                                                    оф. 109</p>
-                                            </div>
-                                            <div class="buyers__item">
-                                                <div class="buyers__clue">Бюджет</div>
-                                                <span>100 000 Р</span>
-                                            </div>
-                                            <div class="buyers__item">
-                                                <div class="buyers__clue">Номер телефона</div>
-                                                <span>+7 952 000-12-64</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="body-catalogs__footer footer-catalof">
-                                    <div class="footer-catalof__items">
-                                        <a href="#" class="footer-catalof__item">1</a>
-                                        <a href="#" class="footer-catalof__item">2</a>
-                                        <a href="#" class="footer-catalof__item active">3</a>
-                                        <a href="#" class="footer-catalof__item">4</a>
-                                        <a href="#" class="footer-catalof__item">5</a>
-                                        <a href="#" class="footer-catalof__item">...</a>
-                                        <a href="#" class="footer-catalof__item">10</a>
-                                        <a href="#" class="footer-catalof__item">12</a>
-                                    </div>
-    
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
