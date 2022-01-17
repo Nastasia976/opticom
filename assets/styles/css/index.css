@@ -14962,3 +14962,17 @@ input[type="number"]:focus {
             order: 1;
   }
 }
+
+.personal-data-wrapper.lk-admin {
+  display: block;
+}
+
+.main-admin .sidebar-lk__who {
+  color: #252525;
+}
+
+.name-in-body {
+  letter-spacing: 0.04em;
+  font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
+  color: #3B3B3B;
+}

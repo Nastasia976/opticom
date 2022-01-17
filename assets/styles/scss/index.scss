@@ -11848,57 +11848,16 @@ input[type="number"]:focus {
         }
     }
 }
-.personal-d {
-    &__title {
+.personal-data-wrapper.lk-admin{
+    display: block;
+}
+.main-admin{
+    .sidebar-lk__who{
+        color: #252525;
     }
 }
-
-.some-input {
-}
-.placeholder {
-}
-.password-input {
-}
-.reg-inp {
-}
-.item-select {
-}
-.select {
-    &__header {
-    }
-
-    &__current {
-    }
-
-    &__icon {
-    }
-
-    &__body {
-    }
-
-    &__el {
-    }
-}
-.valid-input {
-}
-.town {
-    &__name {
-    }
-}
-.co-worker {
-    &__items {
-    }
-
-    &__item {
-    }
-}
-.input-city {
-}
-.input-street {
-}
-.input-house {
-}
-.input-room {
-}
-.green-border {
+.name-in-body{
+    letter-spacing: 0.04em;
+    font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
+    color: #3B3B3B;
 }

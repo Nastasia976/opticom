@@ -553,7 +553,8 @@
                 <div class="bread-crambs__conteier _conteiner2">
                     <p class="bread-crambs__list">
                         <a href="#" class="bread-crambs__link">Личный кабинет</a>
-                        <span>Адреса доставки</span>
+                        <a href="#" class="bread-crambs__link">Заказы</a>
+                        <span>Заказ № 569 от 14.01.2021</span>
                     </p>
                 </div>
             </div>
@@ -568,7 +569,7 @@
                                 <div class="sidebar-lk__icon">
                                     <div class="sidebar-lk__icon__letter">o</div>
                                 </div>
-                                <div class="sidebar-lk__who">Закупщик</div>
+                                <div class="sidebar-lk__who">Администратор</div>
                                 <div class="sidebar-lk__name">Иванова Ольга</div>
                                 <div class="sidebar-lk__e-mail">ivanovaolga@tander.ru</div>
                             </div>
@@ -596,6 +597,9 @@
                                     </li>
                                     <li class="sidebar-lk__el">
                                         <a href="#" class="sidebar-lk__link">Избранное</a>
+                                    </li>
+                                    <li class="sidebar-lk__el">
+                                        <a href="#" class="sidebar-lk__link">Сотрудники</a>
                                     </li>
                                     <li class="sidebar-lk__el">
                                         <a href="#" class="sidebar-lk__link">Управление</a>
@@ -635,163 +639,80 @@
                                 <div class="sidebar-lk__e-mail">ivanovaolga@tander.ru</div>
                                 <div class="sidebar-lk__tel">+7 (952) 217-56-12</div>
                                 <div class="sidebar-lk__button">
-                                    <button class="green-border contact-with-manager">Связаться</button>
+                                    <button class="green-border">Связаться</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="personal-area__body body-lk">
-                            <div class="body-lk__title">Адреса доставки</div>
-                            <div class="body-lk__delivery-adresses">
-                                <div class="basket-order__items">
-                                    <div class="basket-order__name _selected">
-                                        г. Краснодар <span></span>
-                                    </div>
-                                    <div class="basket-order__item">
-                                        <div class="basket-order__adres">
-                                            <span>Адрес</span>
-                                            <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д.
-                                                5/1, оф. 109</p>
-                                        </div>
-                                        <div class="basket-order__details details-order">
-                                            <div class="details-order__name">Бюджет</div>
-                                            <div class="details-order__sense">100 000 Р</div>
-                                        </div>
-                                        <div class="basket-order__details details-order">
-                                            <div class="details-order__name">Номер телефона</div>
-                                            <div class="details-order__sense">+7 952 000-12-64</div>
-                                        </div>
-                                    </div>
+                        <form method="post" class="personal-area__body body-lk">
+                            <div class="body-lk__title">Личные данные</div>
+                            <div class="body-lk__form">
+                                <div class="inputsection">
+                                    <input class="some-input" onfocus="this.value = ''" type="text" value="Иванов"
+                                        required>
+                                    <label class="placeholder">Фамилия</label>
                                 </div>
-                                <div class="basket-order__items">
-                                    <div class="basket-order__name _selected">
-                                        г. Ставрополь<span></span>
-                                    </div>
-                                    <div class="basket-order__item">
-                                        <div class="basket-order__adres">
-                                            <span>Адрес</span>
-                                            <p>Россия, Ставропольский край, г. Ставрополь, ул. Монтажников, д. 5/1, оф.
-                                                109</p>
-                                        </div>
-                                        <div class="basket-order__details details-order">
-                                            <div class="details-order__name">Бюджет</div>
-                                            <div class="details-order__sense">100 000 Р</div>
-                                        </div>
-                                        <div class="basket-order__details details-order">
-                                            <div class="details-order__name">Номер телефона</div>
-                                            <div class="details-order__sense">+7 952 000-12-64</div>
-                                        </div>
-                                    </div>
+                                <div class="inputsection">
+                                    <input class="some-input" type="text" required>
+                                    <label class="placeholder">Имя</label>
                                 </div>
-                                <div class="basket-order__items">
-                                    <div class="basket-order__name _selected">
-                                        г. Москва<span></span>
-                                    </div>
-                                    <div class="basket-order__item">
-                                        <div class="basket-order__adres">
-                                            <span>Адрес</span>
-                                            <p>Россия, г. Москва, ул. Монтажников, д. 5/1, оф. 109</p>
-                                        </div>
-                                        <div class="basket-order__details details-order">
-                                            <div class="details-order__name">Бюджет</div>
-                                            <div class="details-order__sense">100 000 Р</div>
-                                        </div>
-                                        <div class="basket-order__details details-order">
-                                            <div class="details-order__name">Номер телефона</div>
-                                            <div class="details-order__sense">+7 952 000-12-64</div>
-                                        </div>
-                                    </div>
+                                <div class="inputsection">
+                                    <input class="some-input _phone" type="text" required>
+                                    <label class="placeholder">Номер телефона</label>
                                 </div>
-                                <div class="basket-order__items">
-                                    <div class="basket-order__name _selected">
-                                        г. Санкт-Петербург<span></span>
-                                    </div>
-                                    <div class="basket-order__item">
-                                        <div class="basket-order__adres">
-                                            <span>Адрес</span>
-                                            <p>Россия, Санкт-Петербург, ул. Монтажников, д. 5/1, оф. 109</p>
-                                        </div>
-                                        <div class="basket-order__details details-order">
-                                            <div class="details-order__name">Бюджет</div>
-                                            <div class="details-order__sense">100 000 Р</div>
-                                        </div>
-                                        <div class="basket-order__details details-order">
-                                            <div class="details-order__name">Номер телефона</div>
-                                            <div class="details-order__sense">+7 952 000-12-64</div>
-                                        </div>
-                                    </div>
+                                <div class="inputsection">
+                                    <input class="some-input" type="text" required>
+                                    <label class="placeholder">E-mail</label>
                                 </div>
-                                <div class="basket-order__items">
-                                    <div class="basket-order__name _selected">
-                                        г. Красноярск<span></span>
-                                    </div>
-                                    <div class="basket-order__item">
-                                        <div class="basket-order__adres">
-                                            <span>Адрес</span>
-                                            <p>Россия, г. Красноярск, ул. Монтажников, д. 5/1, оф. 109</p>
-                                        </div>
-                                        <div class="basket-order__details details-order">
-                                            <div class="details-order__name">Бюджет</div>
-                                            <div class="details-order__sense">100 000 Р</div>
-                                        </div>
-                                        <div class="basket-order__details details-order">
-                                            <div class="details-order__name">Номер телефона</div>
-                                            <div class="details-order__sense">+7 952 000-12-64</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="basket-order__items">
-                                    <div class="basket-order__name _selected">
-                                        г. Ижевск<span></span>
-                                    </div>
-                                    <div class="basket-order__item">
-                                        <div class="basket-order__adres">
-                                            <span>Адрес</span>
-                                            <p>Россия, Ижевск, г. Ставрополь, ул. Монтажников, д. 5/1, оф. 109</p>
-                                        </div>
-                                        <div class="basket-order__details details-order">
-                                            <div class="details-order__name">Бюджет</div>
-                                            <div class="details-order__sense">100 000 Р</div>
-                                        </div>
-                                        <div class="basket-order__details details-order">
-                                            <div class="details-order__name">Номер телефона</div>
-                                            <div class="details-order__sense">+7 952 000-12-64</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="basket-order__items">
-                                    <div class="basket-order__name _selected">
-                                        г. Усть-Лабинск<span></span>
-                                    </div>
-                                    <div class="basket-order__item">
-                                        <div class="basket-order__adres">
-                                            <span>Адрес</span>
-                                            <p>Россия, Усть-Лабинск, г. Ставрополь, ул. Монтажников, д. 5/1, оф. 109</p>
-                                        </div>
-                                        <div class="basket-order__details details-order">
-                                            <div class="details-order__name">Бюджет</div>
-                                            <div class="details-order__sense">100 000 Р</div>
-                                        </div>
-                                        <div class="basket-order__details details-order">
-                                            <div class="details-order__name">Номер телефона</div>
-                                            <div class="details-order__sense">+7 952 000-12-64</div>
-                                        </div>
-                                    </div>
+                                <div class="inputsection">
+                                    <input class="some-input password-input reg-inp" type="password" required>
+                                    <label class="placeholder">Пароль</label>
                                 </div>
                             </div>
-                            <div class="body-catalogs__footer footer-catalof">
-                                <div class="footer-catalof__items">
-                                    <a href="#" class="footer-catalof__item">1</a>
-                                    <a href="#" class="footer-catalof__item">2</a>
-                                    <a href="#" class="footer-catalof__item active">3</a>
-                                    <a href="#" class="footer-catalof__item">4</a>
-                                    <a href="#" class="footer-catalof__item">5</a>
-                                    <a href="#" class="footer-catalof__item">...</a>
-                                    <a href="#" class="footer-catalof__item">10</a>
-                                    <a href="#" class="footer-catalof__item">12</a>
+                            <div class="body-lk__title">Информация об организации</div>
+                            <div class="body-lk__form">
+                                <div class="inputsection">
+                                    <input class="some-input" type="text" required>
+                                    <label class="placeholder">Наименование организации</label>
                                 </div>
-
+                                <div class="inputsection">
+                                    <input class="some-input" type="text" required>
+                                    <label class="placeholder">Договор</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input valid-input" type="number" required>
+                                    <label class="placeholder">ИНН</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input valid-input" type="number" required>
+                                    <label class="placeholder">КПП</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input valid-input" type="number" required>
+                                    <label class="placeholder">БИК</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input valid-input" type="number" required>
+                                    <label class="placeholder">Р/С</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input" type="text" required>
+                                    <label class="placeholder">Банк</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input valid-input" type="number" required>
+                                    <label class="placeholder">К/С</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input" type="text" required>
+                                    <label class="placeholder">Юридический адрес</label>
+                                </div>
+                                <div class="inputsection">
+                                    <input class="some-input" type="text" required>
+                                    <label class="placeholder">Почтовый адрес</label>
+                                </div>
                             </div>
-                        </div>
+                            <button type="submit" class="green-border save-changes">Сохранить изменения</button>
+                        </form>
                     </div>
                 </div>
             </div>
