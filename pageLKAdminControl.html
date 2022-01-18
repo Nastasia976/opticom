@@ -5,13 +5,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/styles/css/dycalendar.css">
     <link rel="stylesheet" href="assets/styles/css/index.css">
     <link rel="stylesheet" href="assets/styles/css/iconsfont.css">
     <title>Оптиком</title>
 </head>
 
 <body>
-    <div class="wrapper wrapper-lk wrapper-lk-reconciling">
+    <div class="wrapper wrapper-lk">
         <header class="header white">
             <div class="header__conteiner">
                 <div class="header__logo logo">
@@ -553,8 +554,7 @@
                 <div class="bread-crambs__conteier _conteiner2">
                     <p class="bread-crambs__list">
                         <a href="#" class="bread-crambs__link">Личный кабинет</a>
-                        <a href="#" class="bread-crambs__link">Заказы</a>
-                        <span>Заказ № 569 от 14.01.2021</span>
+                        <span class="order-status">управление</span>
                     </p>
                 </div>
             </div>
@@ -644,123 +644,201 @@
                             </div>
                         </div>
                         <div class="personal-area__body body-lk">
-                            <div class="body-lk__title">Адреса доставки</div>
-                            <div class="personal-d">
-                                <div class="personal-data-wrapper lk-admin">
-                                    <form method="post" class="basket-order__body">
-                                        <div class="personal-d__result">
-                                            <div class="basket-order__items _first">
-                                                <div class="basket-order__name _selected">
-                                                    г. Краснодар <span>(активен)</span>
+                            <div class="body-lk__title">Управление</div>
+                            <div class="control__about">
+                                <span>Договор №152 от 20.05.2017</span>
+                                <span>Дебиторская задолженность: 159 653 ₽ </span>
+                            </div>
+                            <div class="control__subtitle">Аналитика заказов</div>
+                            <div class="control__body">
+                                <div class="control__analytics analytics">
+                                    <div class="analytics__wrapper">
+                                        <div class="analytics__title">
+                                            Аналитика за период
+                                        </div>
+                                        <div class="analytics__date">
+                                            с 11.02.2021 по 14.02.2021
+                                        </div>
+                                        <div class="analytics__summ">
+                                            Сумма заказов
+                                            <span>159 653 ₽</span>
+                                        </div>
+                                        <div class="analytics__unit">
+                                            Количество заказов
+                                            <span>24</span>
+                                        </div>
+                                        <div class="analytics__title">Общие расходы за февраль</div>
+                                        <div class="analytics__image">
+                                            <svg width="170" height="170" viewBox="0 0 170 170" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M166 85.5C166 100.538 161.84 115.282 153.979 128.101C146.119 140.921 134.865 151.316 121.463 158.136C108.061 164.956 93.0335 167.935 78.0433 166.744C63.053 165.553 48.6846 160.237 36.5281 151.386C24.3715 142.535 14.9008 130.493 9.16401 116.592C3.42717 102.692 1.64789 87.4759 4.02305 72.6271C6.39822 57.7784 12.8352 43.8763 22.6217 32.4591C32.4083 21.042 45.1627 12.5551 59.4737 7.93754"
+                                                    stroke="#005D55" stroke-width="6" />
+                                                <path
+                                                    d="M59.4933 7.96559C71.7531 3.99231 84.779 2.97587 97.5067 4.99932C110.234 7.02276 122.303 12.0287 132.726 19.6081C143.149 27.1875 151.631 37.1253 157.479 48.6096C163.327 60.0939 166.376 72.7989 166.375 85.6865"
+                                                    stroke="#FF8E7D" stroke-width="6" />
+                                            </svg>
+                                            <span class="analytics__total">159 653 ₽</span>
+                                        </div>
+                                        <div class="analytics__title">Аналитика по корзинам <br> за февраль</div>
+                                        <div class="analytics__body">
+                                            <div class="analytics__items">
+                                                <div class="analytics__icon">
+                                                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.21142 34.7886C4.75376 32.3309 2.99764 29.2611 2.12484 25.8968C1.25205 22.5325 1.2943 18.9961 2.24724 15.6536C3.20017 12.3111 5.02915 9.28411 7.54483 6.88588C10.0605 4.48765 13.1715 2.80538 16.5556 2.01322C19.9398 1.22107 23.4742 1.34782 26.793 2.38035C30.1117 3.41288 33.0942 5.31366 35.4316 7.88593C37.769 10.4582 39.3765 13.6085 40.0876 17.0106C40.7986 20.4127 40.5875 23.9431 39.4759 27.2362"
+                                                            stroke="#005D55" stroke-width="3" />
+                                                        <path
+                                                            d="M39.481 27.2184C38.4221 30.3651 36.5772 33.1894 34.1213 35.4236C31.6653 37.6577 28.6795 39.2278 25.4469 39.9851C22.2142 40.7423 18.8418 40.6616 15.6491 39.7507C12.4563 38.8397 9.54909 37.1286 7.20277 34.7795"
+                                                            stroke="#FF8E7D" stroke-width="3" />
+                                                    </svg>
                                                 </div>
-                                                <div class="basket-order__item">
-                                                    <div class="basket-order__adres">
-                                                        <span>Адрес</span>
-                                                        <p>Россия, Краснодарский край, г. Краснодар, ул. Монтажников, д.
-                                                            5/1, оф. 109</p>
+                                                <div class="analytics__item">
+                                                    <div class="analytics__text">
+                                                        Корзина для <br> бытовой химии
                                                     </div>
-                                                    <div class="basket-order__details details-order">
-                                                        <div class="details-order__name">Бюджет</div>
-                                                        <div class="details-order__sense">100 000 Р</div>
-                                                    </div>
-                                                    <div class="basket-order__details details-order">
-                                                        <div class="details-order__name">Номер телефона</div>
-                                                        <div class="details-order__sense">+7 952 000-12-64</div>
-                                                    </div>
+                                                    <div class="analytics__total-summ">159 653 ₽</div>
                                                 </div>
                                             </div>
-                                            <div class="basket-order__items">
-                                                <div class="basket-order__name">
-                                                    г. Ставрополь
+                                            <div class="analytics__items">
+                                                <div class="analytics__icon">
+                                                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.21142 34.7886C4.75376 32.3309 2.99764 29.2611 2.12484 25.8968C1.25205 22.5325 1.2943 18.9961 2.24724 15.6536C3.20017 12.3111 5.02915 9.28411 7.54483 6.88588C10.0605 4.48765 13.1715 2.80538 16.5556 2.01322C19.9398 1.22107 23.4742 1.34782 26.793 2.38035C30.1117 3.41288 33.0942 5.31366 35.4316 7.88593C37.769 10.4582 39.3765 13.6085 40.0876 17.0106C40.7986 20.4127 40.5875 23.9431 39.4759 27.2362"
+                                                            stroke="#005D55" stroke-width="3" />
+                                                        <path
+                                                            d="M39.481 27.2184C38.4221 30.3651 36.5772 33.1894 34.1213 35.4236C31.6653 37.6577 28.6795 39.2278 25.4469 39.9851C22.2142 40.7423 18.8418 40.6616 15.6491 39.7507C12.4563 38.8397 9.54909 37.1286 7.20277 34.7795"
+                                                            stroke="#FF8E7D" stroke-width="3" />
+                                                    </svg>
                                                 </div>
-                                                <div class="basket-order__item">
-                                                    <div class="basket-order__adres">
-                                                        <span>Адрес</span>
-                                                        <p>Россия, Ставропольский край, г. Ставрополь, ул. Монтажников,
-                                                            д.
-                                                            5/1, оф. 109</p>
+                                                <div class="analytics__item">
+                                                    <div class="analytics__text">
+                                                        Корзины для офисных расходных материалов
                                                     </div>
-                                                    <div class="basket-order__details details-order">
-                                                        <div class="details-order__name">Бюджет</div>
-                                                        <div class="details-order__sense">100 000 Р</div>
+                                                    <div class="analytics__total-summ">159 653 ₽</div>
+                                                </div>
+                                            </div>
+                                            <div class="analytics__items">
+                                                <div class="analytics__icon">
+                                                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.21142 34.7886C4.75376 32.3309 2.99764 29.2611 2.12484 25.8968C1.25205 22.5325 1.2943 18.9961 2.24724 15.6536C3.20017 12.3111 5.02915 9.28411 7.54483 6.88588C10.0605 4.48765 13.1715 2.80538 16.5556 2.01322C19.9398 1.22107 23.4742 1.34782 26.793 2.38035C30.1117 3.41288 33.0942 5.31366 35.4316 7.88593C37.769 10.4582 39.3765 13.6085 40.0876 17.0106C40.7986 20.4127 40.5875 23.9431 39.4759 27.2362"
+                                                            stroke="#005D55" stroke-width="3" />
+                                                        <path
+                                                            d="M39.481 27.2184C38.4221 30.3651 36.5772 33.1894 34.1213 35.4236C31.6653 37.6577 28.6795 39.2278 25.4469 39.9851C22.2142 40.7423 18.8418 40.6616 15.6491 39.7507C12.4563 38.8397 9.54909 37.1286 7.20277 34.7795"
+                                                            stroke="#FF8E7D" stroke-width="3" />
+                                                    </svg>
+                                                </div>
+                                                <div class="analytics__item">
+                                                    <div class="analytics__text">
+                                                        Корзина для расходных материалов
                                                     </div>
-                                                    <div class="basket-order__details details-order">
-                                                        <div class="details-order__name">Номер телефона</div>
-                                                        <div class="details-order__sense">+7 952 000-12-64</div>
-                                                    </div>
+                                                    <div class="analytics__total-summ">159 653 ₽</div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="personal-d__bottom">
-                                            <button class="green-border _first">Выбрать</button>
-                                            <div class="green-border _edit ">Редактировать</div>
+                                    </div>
+                                    <div class="control__subtitle">Акт сверки</div>
+                                    <div class="control__act act">
+                                        <form method="post" class="act__form">
+                                            <div class="act__item">
+                                                <div class="inputsection">
+                                                    <input class="some-input" value="Выберите дату"
+                                                        onfocus="this.value = ''" type="text" required>
+                                                    <label class="placeholder">с</label>
+                                                </div>
+                                                <div class="inputsection">
+                                                    <input class="some-input" value="14.06.2021"
+                                                        onfocus="this.value = ''" type="text" required>
+                                                    <label class="placeholder">по</label>
+                                                </div>
+                                            </div>
+                                            <div class="inputsection">
+                                                <input class="some-input" type="text" required>
+                                                <label class="placeholder">Ваше сообщение</label>
+                                            </div>
+                                            <button class="act__button _btn-orange">Запросить акт сверки</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="control__calendar calendar">
+                                    <div class="calendar__header">
+                                        <div class="inputsection">
+                                            <input class="some-input input-start" type="text" onfocus="this.value = ''"
+                                                value="Выберите дату" required>
+                                            <label class="placeholder input-end">с</label>
                                         </div>
-                                        <div class="basket-order__items">
-                                            <form method="post">
-                                                <div class="basket-order__name">
-                                                    г. Москва
-                                                </div>
-                                                <div class="basket-order__item">
-                                                    <div class="basket-order__adres">
-                                                        <div class="basket-order__details details-orders">
-                                                            <input class="region-input" type="tel"
-                                                                onfocus="this.value = ''" required
-                                                                value="Краснодарский край">
-                                                            <div class="placeholder">Регион</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="basket-order__details details-orders">
-                                                        <input class="input-budget" type="tel" onfocus="this.value = ''"
-                                                            required value="100 000 Р">
-                                                        <div class="placeholder">Бюджет</div>
-                                                    </div>
-                                                    <div class="basket-order__details details-orders">
-                                                        <input class="some-input input-number-lk _phone2"
-                                                            onfocus="this.value = ''" value="+7 952 000-12-64"
-                                                            type="text" required>
-                                                        <div class="placeholder">Номер телефона</div>
-                                                    </div>
-                                                </div>
-                                                <div class="wrapper-inputsection">
-                                                    <div class="inputsection">
-                                                        <input name="input" class="some-input input-city"
-                                                            onfocus="this.value = ''" value="Краснодар" type="text"
-                                                            required>
-                                                        <label class="placeholder">Город</label>
-                                                    </div>
-                                                    <div class="inputsection">
-                                                        <input name="input" class="some-input input-street"
-                                                            onfocus="this.value = ''" value="Монтажников" type="text"
-                                                            required>
-                                                        <label class="placeholder">Улица</label>
-                                                    </div>
-                                                    <div class="inputsection">
-                                                        <input name="input" class="some-input input-house"
-                                                            onfocus="this.value = ''" value="5/1" type="text" required>
-                                                        <label class="placeholder">Дом</label>
-                                                    </div>
-                                                    <div class="inputsection">
-                                                        <input name="input" class="some-input input-room"
-                                                            onfocus="this.value = ''" value="109" type="text" required>
-                                                        <label class="placeholder">Офис или квартира</label>
-                                                    </div>
-                                                </div>
-                                                <div class="personal-d__bottom">
-                                                    <button type="submit"
-                                                        class="green-border _first save-changes">Сохранить
-                                                        изменения</button>
-                                                    <button type="reset" class="green-border">Отменить
-                                                        редактирование</button>
-                                                </div>
-                                            </form>
+                                        <div class="inputsection">
+                                            <input class="some-input" type="text" onfocus="this.value = ''"
+                                                value="14.06.2021" required>
+                                            <label class="placeholder">по</label>
                                         </div>
-                                    </form>
+                                    </div>
+                                    <div class="calendar__conteiner">
+                                        <div class="calendar__name-month">Февраль</div>
+                                        <div class="calendar__name-day">
+                                            <span>ПН</span>
+                                            <span>ВТ</span>
+                                            <span>СР</span>
+                                            <span>ЧТ</span>
+                                            <span>ПТ</span>
+                                            <span>СБ</span>
+                                            <span>ВС</span>
+                                        </div>
+                                        <div class="calendar__body">
+                                            <div class="calendar__day"></div>
+                                            <div class="calendar__day"></div>
+                                            <div class="calendar__day"></div>
+                                            <div class="calendar__day"></div>
+                                            <div class="calendar__day"></div>
+                                            <div class="calendar__day">1</div>
+                                            <div class="calendar__day">2</div>
+                                            <div class="calendar__day">3</div>
+                                            <div class="calendar__day">4</div>
+                                            <div class="calendar__day">5</div>
+                                            <div class="calendar__day">6</div>
+                                            <div class="calendar__day">7</div>
+                                            <div class="calendar__day">8</div>
+                                            <div class="calendar__day">9</div>
+                                            <div class="calendar__day">10</div>
+                                            <div class="calendar__day">11</div>
+                                            <div class="calendar__day active">12</div>
+                                            <div class="calendar__day active">13</div>
+                                            <div class="calendar__day active">14</div>
+                                            <div class="calendar__day">15</div>
+                                            <div class="calendar__day">16</div>
+                                            <div class="calendar__day">17</div>
+                                            <div class="calendar__day">18</div>
+                                            <div class="calendar__day">19</div>
+                                            <div class="calendar__day">20</div>
+                                            <div class="calendar__day">21</div>
+                                            <div class="calendar__day">22</div>
+                                            <div class="calendar__day">23</div>
+                                            <div class="calendar__day">24</div>
+                                            <div class="calendar__day">25</div>
+                                            <div class="calendar__day">26</div>
+                                            <div class="calendar__day">27</div>
+                                            <div class="calendar__day">28</div>
+                                            <div class="calendar__day">29</div>
+                                        </div>
+                                    </div>
+                                    <div class="calendar__button">
+                                        <button class="green-bg">Сформировать</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+
+
+
             <div class="popups registration-claim">
                 <div class="popups__conteiner">
                     <div class="popups__top">
@@ -780,6 +858,7 @@
                     </form>
                 </div>
             </div>
+
             <div class="popups _delit delit-basket">
                 <div class="popups__conteiner">
                     <div class="popups__top">
@@ -1782,7 +1861,7 @@
             </div>
         </footer>
     </div>
-
+    <script src="assets/scripts/dycalendar.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

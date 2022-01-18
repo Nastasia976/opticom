@@ -323,16 +323,16 @@ $(document).ready(function () {
     $('.header__burger').click(function () {
         $(this).toggleClass('active');
         $('.burger-menu, .burger__conteiner, .burger').toggleClass('active');
-        $('body').toggleClass('lock');
+        $('body').addClass('lock');
     });
 
     $('#1catalog-menu').click(function () {
         $('.catalog-menu').toggleClass('active');
-        $('body').addClass('passive');
+        $('body').addClass('lock');
     });
     $('.body-catalog__close').click(function () {
         $('.catalog-menu').removeClass('active');
-        $('body').removeClass('passive');
+        $('body').removeClass('lock');
     });
 
     $('._catalog').click(function (e) {
@@ -383,26 +383,26 @@ $(document).ready(function () {
 
     $('.button-request').click(function (event) {
         $('.popup-request').toggleClass('active');
-        $('body').addClass('passive');
+        $('body').addClass('lock');
     })
 
     $('.popup__close, .will-aut, .will-reg, .send-response').click(function (event) {
         $('.popup-request, .popup-reg, .popup-reg2, .popup-reg3, .popup-autoriz, .popup-forgot').removeClass('active');
-        $('body').removeClass('passive');
+        $('body').removeClass('lock');
     })
 
     $('.form-write__button').click(function (event) {
         $('.send-message').toggleClass('active');
-        $('body').addClass('passive');
+        $('body').addClass('lock');
     })
     $('.popups__close').click(function (event) {
         $('.popups').removeClass('active');
-        $('body').removeClass('passive');
+        $('body').removeClass('lock');
     })
 
     $('.will-reg, .user-reg').click(function () {
         $('.popup-reg').toggleClass('active');
-        $('body').addClass('passive');
+        $('body').addClass('lock');
     })
 
     $('.button-next').click(function () {
@@ -420,7 +420,7 @@ $(document).ready(function () {
 
     $('.header-exit, .will-aut, .user-exit').click(function () {
         $('.popup-autoriz').toggleClass('active');
-        $('body').addClass('passive');
+        $('body').addClass('lock');
     })
     $('.popup__forget').click(function () {
         $('.popup-autoriz').removeClass('active');
@@ -448,7 +448,7 @@ $(document).ready(function () {
     $('.add-basket__add').click(function () {
         $('.add-basket').removeClass('active');
         $('.create-basket').toggleClass('active');
-        $('body').addClass('passive');
+        $('body').addClass('lock');
     })
     $('.add-basket__close').click(function () {
         $('.add-basket').removeClass('active');
@@ -472,7 +472,7 @@ $(document).ready(function () {
 
     $('._ok').click(function () {
         $('.popups').removeClass('active');
-        $('body').removeClass('passive');
+        $('body').removeClass('lock');
     })
     //-------results-search---
 
@@ -590,18 +590,18 @@ $(document).ready(function () {
 
     $('.footer-mobile__map').click(function () {
         $('.our-adres').toggleClass('active');
-        $('body').addClass('passive');
+        $('body').addClass('lock');
     });
     $('.popups__close_x').click(function () {
         $('.our-adres').removeClass('active');
-        $('body').removeClass('passive');
+        $('body').removeClass('lock');
     });
     $(document).mouseup(function (e) {
         var div = $('.our-adres');
         if (!div.is(e.target)
             && div.has(e.target).length === 0) {
             $('.our-adres').removeClass('active');
-            $('body').removeClass('passive');
+            $('body').removeClass('lock');
         }
     });
 
@@ -676,7 +676,7 @@ setTimeout(() => { $('.multy-basket').addClass('active') }, 1500);
     if (!div.is(e.target)
         && div.has(e.target).length === 0) {
         $('.popups').removeClass('active');
-        $('body').removeClass('passive');
+        $('body').removeClass('lock');
     }
 }); */
 let myMainBtn = document.querySelector('.main-button')
@@ -1079,7 +1079,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.activities__item').click(function () {
         $('.kind').toggleClass('active');
-        $('body').addClass('passive');
+        $('body').addClass('lock');
     });
 });
 
@@ -1087,23 +1087,23 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.in-tov-matrix').click(function () {
         $('.editing-matrix').toggleClass('active');
-        $('body').addClass('passive');
+        $('body').addClass('lock');
     });
     $('.filter-matrix__button').click(function () {
         $('.extend-matrix').toggleClass('active');
-        $('body').addClass('passive');
+        $('body').addClass('lock');
     });
 });
 //-------baskets--------
 $(document).ready(function () {
     $('.baskets__to-clear').click(function () {
         $('.delit-all-product').toggleClass('active');
-        $('body').addClass('passive');
+        $('body').addClass('lock');
     });
 
     $('.comment-basket__button').click(function () {
         $('.order-sent').toggleClass('active');
-        $('body').addClass('passive');
+        $('body').addClass('lock');
     });
 });
 
@@ -1136,7 +1136,7 @@ $(document).ready(function () {
 
     $('.claim, .submitaclaim, .sidebar-lk__link_claim').click(function () {
         $('.registration-claim').toggleClass('active');
-        $('body').addClass('passive');
+        $('body').addClass('lock');
     });
 
     $('.sidebar-lk__el').click(function () {
@@ -1167,7 +1167,7 @@ $(document).ready(function () {
     });
     $('.contact-with-manager').click(function () {
         $('.help').toggleClass('active');
-        $('body').addClass('passive');
+        $('body').addClass('lock');
     });
     //----------co-worker---
     $('.co-worker__item').click(function () {
@@ -1215,3 +1215,20 @@ $(document).ready(function () {
         $(this).css('background-color', '#00AA95').text('В корзине');
     });
 });
+
+
+/* dycalendar.draw({
+    target: '#calendar',
+    type: 'month',
+    dayformat: 'full',
+    monthformat: 'full',
+    highlighttargetdate: true,
+    
+}) */
+
+/* let calendarDay = document.querySelectorAll('.calendar__day');
+let calendarBody = document.querySelector('.calendar__body');
+for (let i = 1; i < 2; i++) {
+    for (let k = 1; k < 32; k++) {
+    }
+} */
