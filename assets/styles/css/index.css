@@ -510,8 +510,22 @@ input[type="number"]:focus {
 .add-basket__body {
   max-height: 157px;
   overflow: auto;
-  margin: 20px -25px 0;
-  padding: 0 25px;
+  padding: 0 25px 20px 0;
+}
+
+.add-basket__body::-webkit-scrollbar {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 200px;
+  width: 3px;
+}
+
+.add-basket__body::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.add-basket__body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .add-basket__top {
@@ -1475,6 +1489,7 @@ mark {
   padding: 17px 20px 19px;
   position: relative;
   background-color: #f8f8f8;
+  border-bottom: 1px solid #DCDCDC;
 }
 
 .menu-mobile form label {
@@ -1552,7 +1567,7 @@ mark {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
 }
 
 .menu-mobile__back .mobile-back {
@@ -3376,7 +3391,7 @@ mark {
 }
 
 .write-us {
-  margin-top: calc(80px + (116 - 80) * ((100vw - 320px) / (1920 - 320)));
+  margin-top: calc(70px + (116 - 70) * ((100vw - 320px) / (1920 - 320)));
   position: relative;
 }
 
@@ -3419,45 +3434,14 @@ mark {
 }
 
 .form-write__item {
-  margin-top: 60px;
-  padding: 0px 20px 2px;
+  margin-top: calc(20px + (60 - 20) * ((100vw - 320px) / (1920 - 320)));
+  padding: 0px 20px 0px;
   border-bottom: 1px solid rgba(183, 183, 183, 0.2);
   text-align: center;
   position: relative;
 }
 
-.form-write__item input,
-.form-write__item input::-webkit-input-placeholder {
-  line-height: 122%;
-  color: #252525;
-  opacity: 0.9;
-  font-size: 18px;
-  text-align: center;
-  font-weight: 300;
-}
-
-.form-write__item input,
-.form-write__item input:-ms-input-placeholder {
-  line-height: 122%;
-  color: #252525;
-  opacity: 0.9;
-  font-size: 18px;
-  text-align: center;
-  font-weight: 300;
-}
-
-.form-write__item input,
-.form-write__item input::-ms-input-placeholder {
-  line-height: 122%;
-  color: #252525;
-  opacity: 0.9;
-  font-size: 18px;
-  text-align: center;
-  font-weight: 300;
-}
-
-.form-write__item input,
-.form-write__item input::placeholder {
+.form-write__item input {
   line-height: 122%;
   color: #252525;
   opacity: 0.9;
@@ -3472,7 +3456,7 @@ mark {
 }
 
 .form-write__item input:focus ~ .placeholder {
-  top: -20px !important;
+  bottom: 20px;
   font-size: 12px;
   opacity: 0.6;
   -webkit-transition: 0.4s;
@@ -3481,7 +3465,7 @@ mark {
 }
 
 .form-write__item input:not(:focus) ~ .placeholder {
-  top: 0;
+  bottom: 0;
   opacity: 1;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -3489,7 +3473,7 @@ mark {
 }
 
 .form-write__item input:valid ~ .placeholder {
-  top: -10px;
+  bottom: 20px;
   font-size: 12px;
   opacity: 0.6;
   -webkit-transition: 0.4s;
@@ -3498,19 +3482,18 @@ mark {
 }
 
 .form-write__item .placeholder {
-  left: 0;
-  right: 0;
-  margin: auto;
-  bottom: 10px !important;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .form-write__agree {
   letter-spacing: 0.06em;
   color: #000000;
   opacity: 0.15;
-  font-size: 16px;
+  font-size: calc(15px + (16 - 15) * ((100vw - 320px) / (1920 - 320)));
   line-height: 137%;
-  margin-top: 83px;
+  margin-top: calc(40px + (83 - 40) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .form-write__button {
@@ -3532,6 +3515,12 @@ mark {
   border: 1px solid #d4ad67;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+@media (max-width: 1200px) {
+  .write-us__fon2 {
+    top: -105px !important;
+  }
 }
 
 .wrapper-main-page .footer {
@@ -11341,6 +11330,12 @@ mark {
   margin-top: 20px;
 }
 
+@media (max-width: 1200px) {
+  .wrapper-disinfection .write-us__fon2 {
+    top: 140px !important;
+  }
+}
+
 .delyvery-page {
   padding: 125px 0 0 0;
 }
@@ -11541,7 +11536,7 @@ mark {
 }
 
 .wrapper-how-to-pay .write-us {
-  margin-top: 150px;
+  margin-top: calc(70px + (150 - 70) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .wrapper-how-to-pay .footer {
@@ -11749,6 +11744,10 @@ mark {
   color: #2b2b2b;
 }
 
+.wrapper-about-company .footer {
+  margin-top: calc(50px + (120 - 50) * ((100vw - 320px) / (1920 - 320)));
+}
+
 .about-company {
   padding: 154px 50px 0 55px;
   height: 100vh;
@@ -11893,7 +11892,7 @@ mark {
 
 @media (max-height: 800px) {
   .about-company {
-    padding: 90px 50px 0 55px;
+    padding: 95px 50px 0 55px;
   }
   /* .bottom-company {
         &__image {

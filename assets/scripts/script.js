@@ -350,6 +350,7 @@ $(document).ready(function () {
     $('.menu-mobile__header').click(function () {
         $('.menu-mobile__header').hide();
         $(this).show().addClass('active').next().slideDown(300);
+        $('._first').css('margin-top', '0');
         $('._all-categories').show();
     });
     $('.menu-mobile__item').click(function () {
@@ -365,6 +366,7 @@ $(document).ready(function () {
         $('.menu-mobile__header').removeClass('active');
         $('.menu-mobile__item').removeClass('active').next().slideUp(300);
         $('.menu-mobile__header').show();
+        $('._first').css('margin-top', '12.5px');
     });
     $('._main').click(function () {
         $('.menu-mobile').hide();
