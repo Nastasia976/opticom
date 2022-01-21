@@ -4439,38 +4439,6 @@ mark {
   padding: 0;
 }
 
-.card-product .bread-crambs__list {
-  max-width: 542px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.02em;
-  color: rgba(73, 73, 73, 0.4);
-}
-
-.card-product .bread-crambs__link {
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.02em;
-  color: rgba(73, 73, 73, 0.4);
-  margin-right: 10px;
-  position: relative;
-  display: inline-block;
-}
-
-.card-product .bread-crambs__link::after {
-  position: absolute;
-  content: "";
-  height: 13px;
-  top: 1px;
-  right: -7px;
-  width: 1px;
-  -webkit-transform: skew(-25deg);
-          transform: skew(-25deg);
-  background-color: rgba(73, 73, 73, 0.4);
-}
-
 .card-product__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4568,6 +4536,38 @@ mark {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 52.36%;
           flex: 0 1 52.36%;
+}
+
+.bread-crambs__list {
+  max-width: 542px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  color: rgba(73, 73, 73, 0.4);
+}
+
+.bread-crambs__link {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  color: rgba(73, 73, 73, 0.4);
+  margin-right: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.bread-crambs__link::after {
+  position: absolute;
+  content: "";
+  height: 13px;
+  top: 1px;
+  right: -7px;
+  width: 1px;
+  -webkit-transform: skew(-25deg);
+          transform: skew(-25deg);
+  background-color: rgba(73, 73, 73, 0.4);
 }
 
 .heart-in {
