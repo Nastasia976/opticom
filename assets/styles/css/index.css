@@ -1464,11 +1464,66 @@ mark {
 .menu-mobile {
   display: none;
   width: 100%;
-  min-height: calc(100vh - 110px);
+  min-height: 100vh;
   position: absolute;
   background-color: #fff;
   z-index: 20;
-  top: 110px;
+  top: 60px;
+}
+
+.menu-mobile form {
+  padding: 17px 20px 19px;
+  position: relative;
+  background-color: #f8f8f8;
+}
+
+.menu-mobile form label {
+  position: absolute;
+  right: 20px;
+}
+
+.menu-mobile form input,
+.menu-mobile form input::-webkit-input-placeholder {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 171%;
+  letter-spacing: 0.06em;
+  color: #005d55;
+  border-bottom: 1px solid rgba(0, 93, 85, 0.3);
+  min-width: 100%;
+}
+
+.menu-mobile form input,
+.menu-mobile form input:-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 171%;
+  letter-spacing: 0.06em;
+  color: #005d55;
+  border-bottom: 1px solid rgba(0, 93, 85, 0.3);
+  min-width: 100%;
+}
+
+.menu-mobile form input,
+.menu-mobile form input::-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 171%;
+  letter-spacing: 0.06em;
+  color: #005d55;
+  border-bottom: 1px solid rgba(0, 93, 85, 0.3);
+  min-width: 100%;
+}
+
+.menu-mobile form input,
+.menu-mobile form input::placeholder {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 171%;
+  letter-spacing: 0.06em;
+  color: #005d55;
+  border-bottom: 1px solid rgba(0, 93, 85, 0.3);
+  min-width: 100%;
 }
 
 .menu-mobile__conteiner {
@@ -4371,7 +4426,7 @@ mark {
 }
 
 ._icon-compare:hover::before {
-  color: #01645C;
+  color: #01645c;
 }
 
 .card-product {
@@ -5236,7 +5291,8 @@ mark {
   display: none;
 }
 
-.description__button, .characters__button {
+.description__button,
+.characters__button {
   margin-top: 12px;
   text-align: right;
   font-weight: 500;
@@ -5280,10 +5336,13 @@ mark {
     height: -moz-fit-content;
     height: fit-content;
   }
-  .description__button, .characters__button {
+  .description__button,
+  .characters__button {
     display: block;
   }
-  .description, .characters, .sertificates {
+  .description,
+  .characters,
+  .sertificates {
     padding: 16px 20px 0 !important;
   }
   .characters .about-product__list .about-product__el:last-child {
@@ -5382,7 +5441,7 @@ mark {
   .sertificates__list {
     margin-top: 12px;
     padding: 13px 14px;
-    background-color: #F4F4F4;
+    background-color: #f4f4f4;
   }
   .sertificates__list .sertificates__el._empty {
     display: none;

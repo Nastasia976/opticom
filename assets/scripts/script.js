@@ -319,9 +319,7 @@ $(document).ready(function () {
     $('._icon-search').on('click', function () {
         $('.search-form__input').focus();
     });
-
     $('.header__burger').click(function () {
-        $(this).toggleClass('active');
         $('.burger-menu, .burger__conteiner, .burger').toggleClass('active');
         $('body').addClass('lock');
         if ($('.menu-mobile').css('display', 'block')) {
@@ -333,6 +331,14 @@ $(document).ready(function () {
             $('._all-categories').hide();
         }
     });
+    $('.header__burger').click(function () {
+        if ($(this).hasClass('active')){
+            $(this).removeClass('active');
+            $('body').removeClass('lock');
+        } else {
+            $(this).addClass('active');
+        }
+    })
     //--------catalog-menu-mobile-----
     $('.items-catalog-mobile').click(function () {
         $('.menu-mobile').show();
