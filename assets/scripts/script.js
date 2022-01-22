@@ -533,19 +533,19 @@ $(document).ready(function () {
     })
     //-------results-search---
 
-    $('._icon-grid').click(function(){
+    $('._icon-grid').click(function () {
         $('.icon-result').removeClass('active');
         $(this).addClass('active');
         $('.body-result').hide();
         $('.body-grid').css('display', 'flex');
     });
-    $('._icon-list').click(function(){
+    $('._icon-list').click(function () {
         $('.icon-result').removeClass('active');
         $(this).addClass('active');
         $('.body-result').hide();
         $('.body-list').css('display', 'flex');
     });
-    $('._icon-line').click(function(){
+    $('._icon-line').click(function () {
         $('.icon-result').removeClass('active');
         $(this).addClass('active');
         $('.body-result').hide();
@@ -569,6 +569,9 @@ $(document).ready(function () {
         $('.sidebar-p-catalog__items').children('.balance').text(c);
     });
 
+    $('.top-product__icon:last-child').click(function () {
+        $(this).toggleClass('active');
+    })
 
     $('.el').hover(
         function () {
@@ -694,6 +697,11 @@ $(document).ready(function () {
         $('.sl3').slick('reinit');
         $('.sl7').slick('reinit');
     });
+
+    $('.top-block__arrow').click(function(){
+        $(this).toggleClass('static');
+        $('.top-block__block').toggleClass('open');
+    })
 });
 
 
@@ -859,17 +867,6 @@ let myFirst = new Swiper('.slider', {
     },
 });
 
-new Swiper('.blog-swiper', {
-    slidesPerView: "auto",
-    freeMode: true,
-    scrollbar: {
-        el: ".swiper-scrollbar",
-    },
-    mousewheel: true,
-    navigation: {
-        nextEl: '.top-block__arrow',
-    },
-});
 
 var sliderIndex = 8;
 let myShaddow = document.querySelector('.scrollbar__shaddow');
@@ -880,7 +877,9 @@ let myScroll = new Swiper('.scrollbar', {
     slidesPerView: "auto",
     freeMode: true,
     spaceBetween: 40,
-    mousewheel: true,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
     scrollbar: {
         el: ".swiper-scrollbar",
     },
@@ -892,10 +891,10 @@ let myScroll = new Swiper('.scrollbar', {
         1270: {
             touchRatio: 0,
             simulateTouch: false,
-            mousewheel: false,
         },
         300: {
             touchRatio: 1,
+            simulateTouch: true,
         }
     }
 });
@@ -1347,7 +1346,7 @@ $(document).ready(function () {
         }
     });
 
-    $('.product__button').click(function () {
+    $('.product__button, .product__button-compare').click(function () {
         $(this).css('background-color', '#00AA95').text('В корзине');
     });
 });
