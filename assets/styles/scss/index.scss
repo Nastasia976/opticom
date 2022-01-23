@@ -497,7 +497,6 @@ input[type="number"]:focus {
     height: 100vh;
     position: absolute;
     width: 90%;
-    overflow: auto;
     top: 0;
     transform: translate(-100%, 0);
     transition: 1s;
@@ -512,10 +511,12 @@ input[type="number"]:focus {
 }
 .burger {
     background-color: #f8f8f8;
+    overflow: auto;
     width: 461px;
-    min-height: 100%;
+    max-height: 100%;
+    height: 100%;
     top: 0;
-    padding: calc(30px + (46 - 30) * ((100vw - 768px) / (1920 - 768))) 0 0 0;
+    padding: calc(30px + (46 - 30) * ((100vw - 768px) / (1920 - 768))) 0 0px 0;
     display: flex;
     flex-direction: column;
     .search-form,
@@ -587,7 +588,7 @@ input[type="number"]:focus {
         margin-top: 30px;
         background-color: rgba(196, 196, 196, 0.08);
         height: 105px;
-        padding: 0 0 0 calc(40px + (102 - 40) * ((100vw - 768px) / (1920 - 768)));
+        padding: 35px 0 35px calc(40px + (102 - 40) * ((100vw - 768px) / (1920 - 768)));
     }
 
     &__social {
@@ -5874,6 +5875,7 @@ mark {
             position: relative;
             .product__name {
                 margin-top: 20px;
+                display: block;
             }
             .top-product {
                 position: absolute;
@@ -6904,7 +6906,7 @@ mark {
 //============pageContacts======================
 .wrapper-contacts {
     .footer {
-        margin-top: 100px;
+        margin-top: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 -320)));
     }
 }
 .main._padding {
@@ -9202,19 +9204,17 @@ mark {
 //////////////////////////////////////////////////
 //===============delyvery-page==============
 .delyvery-page {
-    padding: 125px 0 0 0;
     &__conteiner {
     }
 
     &__title {
         padding: 0 20px;
         h3 {
-            margin-top: 0;
         }
     }
 
     &__wrapper {
-        margin-top: 67px;
+        margin-top: calc(40px + (67 - 40) * ((100vw - 320px) / (1920 - 320)));
     }
 
     &__header {
@@ -9345,16 +9345,6 @@ mark {
         margin-bottom: 15px;
     }
 }
-@media (max-width: 1375px) {
-    .delyvery-page {
-        padding: 110px 0 0 0;
-    }
-}
-@media (max-width: 610px) {
-    .delyvery-page {
-        padding: 80px 0 0 0;
-    }
-}
 @media (max-width: 445px) {
     .delyvery-page__name {
         span {
@@ -9374,10 +9364,13 @@ mark {
 .wrapper-how-to-pay {
     color: #2b2b2b;
     .write-us {
-        margin-top: calc(70px + (150 - 70) * ((100vw - 320px) / (1920 - 320)));
+        margin-top: calc(60px + (150 - 60) * ((100vw - 320px) / (1920 - 320)));
     }
     .footer {
         margin-top: 100px;
+    }
+    .footer-mobile{
+        margin-top: 40px;
     }
 }
 .how-to-pay {
@@ -9431,7 +9424,8 @@ mark {
 
     &__name._uppercase {
         font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (1920 - 320)));
-        line-height: 160%;
+        line-height: 110%;
+        padding: 4px 0;
         text-transform: uppercase;
         font-weight: 500;
         margin-left: 5px;
@@ -9465,14 +9459,15 @@ mark {
 }
 //----------features
 .features {
-    margin-top: calc(80px + (113 - 80) * ((100vw - 320px) / (1920 - 320)));
+    margin-top: calc(60px + (113 - 60) * ((100vw - 320px) / (1920 - 320)));
     &__title {
         padding: 0 20px;
     }
     &__description {
-        margin-top: calc(40px + (69 - 40) * ((100vw - 320px) / (1920 - 320)));
+        margin-top: calc(15px + (69 - 15) * ((100vw - 320px) / (1920 - 320)));
         line-height: 122%;
         max-width: 365px;
+        font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 -320)));
     }
 
     &__body {
@@ -9509,7 +9504,7 @@ mark {
     }
 
     &__name {
-        font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (1920 - 320)));
+        font-size: calc(17px + (26 - 17) * ((100vw - 320px) / (1920 - 320)));
         line-height: 120%;
         text-transform: uppercase;
         font-weight: 500;
@@ -9548,6 +9543,7 @@ mark {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    min-height: 585px;
     .opticom-svg {
         position: absolute;
         left: 50px;
@@ -9569,7 +9565,7 @@ mark {
         flex: 0 1 44.5%;
     }
     &__title {
-        font-size: calc(30px + (46 - 30) * ((100vw - 320px) / (1920 - 320)));
+        font-size: calc(38px + (50 - 38) * ((100vw - 320px) / (1920 - 320)));
         font-weight: 500;
         line-height: 120%;
         color: #fff;
@@ -9583,7 +9579,7 @@ mark {
         color: #ffffff;
         text-shadow: 0px 9.375px 18.75px rgba(0, 0, 0, 0.05);
         max-width: 455px;
-        font-size: 18px;
+        font-size: calc(18px + (28 - 18) * ((100vw - 1440px) / (2200 - 1440)));
     }
 }
 .bottom-company {
@@ -9599,9 +9595,8 @@ mark {
         max-height: 780px;
         img {
             position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+            right: 0;
+            margin: auto;
             left: 0;
             bottom: 0;
         }
@@ -9643,6 +9638,14 @@ mark {
         bottom: 27px;
     }
 }
+@media(min-width:1920px){
+    .top-company {
+        &__description{
+            line-height: 157%;
+            max-width: 700px !important;
+        }
+    }
+}
 @media (max-height: 1080px) {
     .about-company {
         padding: calc(100px + (154 - 100) * ((100vh - 800px) / (1080 - 800)))
@@ -9682,6 +9685,18 @@ mark {
         }
     }
 }
+
+@media (max-width: 1200px) {
+    .bottom-company {
+        &__image{
+            
+            img{
+                object-fit: contain;
+                width: 100%;
+            }
+        }
+    }
+}
 @media (max-width: 1130px) {
     .top-company {
         justify-content: flex-start;
@@ -9697,26 +9712,45 @@ mark {
         padding-left: 20px;
     }
     .bottom-company {
-        /*  &__image{
-            height: fit-content;
-            padding: 0 0 40% 0;
-        } */
         justify-content: flex-start;
         &__image {
-            height: 100%;
-            padding: 0 0 70% 0;
-            flex: 0 1 100%;
             .image_block {
                 display: none;
             }
             .image_hide {
                 display: block;
+                position: absolute;
+                width: 65%;
             }
         }
     }
     .right-menu {
         &__link {
             bottom: 10px;
+        }
+        &__social{
+            margin-top: 20px;
+        }
+    }
+}
+@media (max-width: 610px) {
+    .bottom-company {
+        &__image {
+            .image_hide {
+                width: 80%;
+            }
+        }
+    }
+}
+@media (max-width: 445px) {
+    .top-company__description{
+        font-size: 16px;
+    }
+    .bottom-company {
+        &__image {
+            .image_hide {
+                width: 100%;
+            }
         }
     }
 }
@@ -9868,6 +9902,19 @@ mark {
         padding: calc(30px + (51 - 30) * ((100vw - 320px) / (1920 - 320))) 0 21px;
         border-bottom: 1px solid #484848;
         cursor: pointer;
+        transition: 0.2s;
+    }
+    &__item:hover{
+        color: #D4AE67;
+        transition: 0.2s;
+        .activities__icon{
+            background-color: #D4AE67;
+            transition: 0.2s;
+        }
+        .activities__icon::before, .activities__icon::after{
+            background-color: #fff;
+            transition: 0.2s;
+        }
     }
 
     &__name {
@@ -9883,6 +9930,7 @@ mark {
         border-radius: 50%;
         border: 1px solid #d4ae67;
         margin-left: 15px;
+        transition: 0.2s;
     }
     &__icon::before,
     &__icon::after {
@@ -9896,6 +9944,7 @@ mark {
         left: 0;
         right: 0;
         margin: auto;
+        transition: 0.2s;
     }
     &__icon::before {
         transform: rotate(90deg);
@@ -9954,6 +10003,13 @@ mark {
         position: absolute;
         top: 0;
         right: 0;
+        border: 1px solid #3C3C3C;
+    }
+    .popups__close::before, .popups__close::after{
+        width: 1px;
+    }
+    .popups__close:hover{
+        border: 1px solid #01645C;
     }
 }
 
@@ -9972,7 +10028,10 @@ mark {
     .kind {
         .popups__conteiner {
             flex-direction: column;
-            padding: 32px 0 0 0;
+            padding: 35px 20px 0;
+        }
+        .popups__items{
+            padding: 20px 0;
         }
         .popups__image {
             padding: 0 0 50% 0;
@@ -10177,7 +10236,14 @@ mark {
 //=================favorite==============
 .wrapper-favorite,
 .wrapper-matrix {
+    .item-icon2{
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
     .body-catalogs__body {
+        display: none;
+    }
+    .body-catalogs__body.body-grid{
         border: 0;
         border-top: 1px solid #e8e8e8;
         border-left: 1px solid #e8e8e8;
@@ -10186,6 +10252,33 @@ mark {
         border: 1px solid #e8e8e8;
         border-top: 0;
         border-left: 0;
+    }
+    .body-catalogs__body.active{
+        display: flex;
+    }
+    .body-list, .body-line{
+        display: none;
+        width: 100%;
+        margin-left: 0;
+    }
+    .body-list{
+        row-gap: 24px;
+        border: 0;
+        .product__item{
+            border: 1px solid #E6E6E6;
+        }
+    }
+    .body-line{
+        row-gap: 16px;
+    }
+    .body-catalogs{
+        flex: 1 1 auto;
+        &__item{
+            white-space: nowrap;
+        }
+    }
+    .footer{
+        margin-top: calc(40px + (160 - 40) * ((100vw - 320px) / (1920 - 320)));
     }
 }
 .wrapper-favorite {
@@ -10198,6 +10291,7 @@ mark {
 }
 .sidebar-favorite {
     min-width: 260px;
+    max-width: 260px;
     &__name {
         font-weight: 500;
         line-height: 122%;
@@ -10248,6 +10342,7 @@ mark {
             display: flex;
             overflow: auto;
             margin-bottom: 30px;
+            max-width: 100%;
             &__name {
                 white-space: nowrap;
                 margin-bottom: calc(8px + (15 - 8) * ((100vw - 320px) / (900 - 320)));
@@ -10280,10 +10375,23 @@ mark {
         }
     }
 }
+@media (max-width: 445px) {
+    .wrapper-favorite,
+    .wrapper-matrix {
+        .body-catalogs__body.body-grid{
+            row-gap: 16px;
+            border: 0;
+            .product__item {
+                border: 1px solid #E8E8E8;
+            }
+        }
+    }
+}
 ////////////////////////////////////////////////////
 //=============matrix=================
 .filter-matrix {
     min-width: 260px;
+    max-width: 260px;
     &__items {
         margin-bottom: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
     }
@@ -10291,24 +10399,33 @@ mark {
     &__name {
         font-weight: 500;
         line-height: 122%;
+        display: block;
+        cursor: pointer;
     }
 
     &__item {
         margin-top: 10px;
+        transition: 0.2s;
     }
-
+    &__name:hover, &__el:hover{
+        transition: 0.2s;
+        color: #D4AE67;
+    }
     &__el {
         margin-top: 10px;
         font-size: 16px;
         line-height: 137%;
+        display: block;
+        transition: 0.2s;
+        cursor: pointer;
     }
 
     &__bottom {
         width: 100%;
         background-color: #f9f9f9;
         padding: 30px;
+        transition: 0.2s;
     }
-
     &__text {
         font-size: 16px;
         line-height: 137%;
@@ -10321,15 +10438,43 @@ mark {
     }
 
     &__button {
-        background: linear-gradient(180deg, #006d64 0%, #006d64 100%);
+        background: #006d64;
         margin-top: 20px;
         font-size: 16px;
         line-height: 120%;
         color: rgba(255, 255, 255, 0.95);
         padding: 11px;
         width: 100%;
+        transition: 0.2s;
+    }
+    &__button:hover{
+        background-color: #00AA95;
+        transition: 0.2s;
     }
 }
+.extend-matrix, .editing-matrix {
+    .popups__title{
+        font-weight: 700;
+    }
+    .popups__close{
+        border: 1px solid #3C3C3C;
+    }
+    .popups__close:hover{
+        border: 1px solid #01645C;
+    }
+    .popups__close::before, .popups__close::after{
+        width: 1px;
+    }
+}
+.editing-matrix{
+    .popups__description{
+        max-width: 340px;
+    }
+    .popups__body{
+        margin-top: 20px;
+    }
+}
+
 @media (max-width: 900px) {
     .wrapper-matrix {
         .catalog__wrapper {
@@ -10337,6 +10482,7 @@ mark {
             margin-top: 30px;
         }
         .filter-matrix {
+            max-width: 100%;
             margin-bottom: 30px;
             &__button {
                 max-width: 300px;
@@ -10347,14 +10493,26 @@ mark {
 @media (max-width: 445px) {
     .wrapper-matrix {
         .item-icon1 {
-            display: block;
-            margin-top: 50px;
+            display: flex;
+            margin-top: 40px;
         }
         .body-catalogs__item {
             flex: 1 1 100%;
         }
     }
 }
+///////////////////////////////////////////////
+@media(max-width:1900px){
+    .wrapper-favorite, .wrapper-result, .wrapper-matrix, .wrapper-how-to-pay, .wrapper-contacts, .wrapper-basket{
+        .header{
+            .search-form{
+                margin-left: calc(35px + (45 - 35) * ((100vw - 1440px) / (1900 - 1440))) !important;
+            }
+        }
+    }
+}
+
+
 ///////////////////////////////////////////
 //=============polity
 .wrapper-policy {
@@ -10810,8 +10968,12 @@ mark {
     .body-catalogs__body {
         border: 0;
     }
+    .footer-catalof{
+        max-width: 923px;
+    }
     .product__item {
         border: 1px solid #e6e6e6;
+        margin: 0 !important;
         .name-underline {
             font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
             font-weight: bold;
@@ -10971,14 +11133,11 @@ mark {
             flex-direction: column;
         }
         .sidebar-baskets {
-            order: 1;
             width: 100%;
             margin-left: 0;
             margin-bottom: 20px;
             padding: 30px 20px;
-        }
-        &__wrap-catalog {
-            order: 2;
+            margin-top: 30px;
         }
     }
 }
@@ -11320,10 +11479,17 @@ mark {
             height: 42px;
             border-bottom: 1px solid rgba(183, 183, 183, 0.2);
             position: relative;
+            p{
+                white-space: nowrap;
+                padding-bottom: 2px;
+                margin-right: 3.5px;
+                font-size: 18px;
+                color: #252525;
+                opacity: 0.9;
+            }
             input,
             input::placeholder {
                 width: 100%;
-                padding: 0 0 2px 0;
                 font-weight: 300;
                 font-size: 18px;
                 line-height: 122%;
