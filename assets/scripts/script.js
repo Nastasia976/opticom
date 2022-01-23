@@ -433,19 +433,37 @@ $(document).ready(function () {
     $('.data-mask').mask('99.99.9999', {
         autoclear: false
     });
-
+    /* $('.button-request').click(function (event) {
+        $('.popup-request').toggleClass('active');
+        $('body').addClass('lock');
+    }) */
 
     $('.button-request').click(function (event) {
         $('.popup-request').toggleClass('active');
-        $('body').addClass('lock');
-    })
-    $('.popup-request input').click(function () {
-        $('body').addClass('lock');
+        $('body').addClass('locked');
     })
 
-    $('.popup__close, .will-aut, .will-reg, .send-response').click(function (event) {
+    $(document).mouseup(function (e) {
+        var div = $('.popup__conteiner');
+        if (!div.is(e.target)
+            && div.has(e.target).length === 0) {
+            $('.pop-up').removeClass('active');
+            $('body').removeClass('locked');
+        }
+    });
+
+    $('.popup__button').click(function () {
+        if ($('pop-up input').val > 0){
+            $('body').removeClass('lock');
+        } else {
+            $('body').addClass('lock');
+        }
+    })
+
+    $('.popup__close, .will-aut, .will-reg').click(function (event) {
         $('.popup-request, .popup-reg, .popup-reg2, .popup-reg3, .popup-autoriz, .popup-forgot').removeClass('active');
         $('body').removeClass('lock');
+        $('body').removeClass('locked');
     })
 
     $('.form-write__button').click(function (event) {
@@ -701,7 +719,22 @@ $(document).ready(function () {
     $('.top-block__arrow').click(function(){
         $(this).toggleClass('static');
         $('.top-block__block').toggleClass('open');
+    });
+
+    $('.top-block__item span').click(function(event){
+        $(this).parent().addClass('active');
+    });
+    $('.teg-close').click(function(event){
+        $(this).parent().removeClass('active');
     })
+
+    $(window).on('resize', function () {
+        if ($(window).width() < 1376) {
+            $('.header').removeClass('vacanci')
+        } else{
+            $('.header').addClass('vacanci')
+        }
+    });
 });
 
 
@@ -1174,6 +1207,8 @@ $(document).ready(function () {
         if ($('#review-text').val().length > 0) {
             $('.placeholder-textarea').addClass('scale');
             $('.textarea').removeClass('active');
+        } else{
+            $('.placeholder-textarea').removeClass('scale');
         }
     });
 
