@@ -685,6 +685,20 @@
                 </div>
             </div>
 
+            <div class="popups send-message">
+                <div class="popups__conteiner">
+                    <div class="popups__top">
+                        <div class="popups__title">Ваше сообщение отправлено</div>
+                        <div class="popups__close"></div>
+                    </div>
+                    <div class="popups__body">
+                        <div class="popups__text">Менеджер свяжется с вами в ближайшее время по указанным контактным
+                            данным</div>
+                        <button class="popups__button _ok">Хорошо</button>
+                    </div>
+                </div>
+            </div>
+
             <div class="popup-reg pop-up popup-request">
                 <div class="popup__conteiner">
                     <div class="popup__top">
@@ -784,8 +798,7 @@
                     </div>
                     <div class="popup__body">
                         <div class="popup__title">Откликнуться <br> на вакансию</div>
-                        <div class="popup__description">Введите ваши данные и наш менеджер свяжется с вами для уточнения
-                            цены данного товара.</div>
+                        <div class="popup__description">Напишите почему вы хотите у нас работать и оставьте ваши контакты. Мы изучим ваше резюме и обязательно свяжемся с вами.</div>
                         <div class="popup__form">
                             <form method="post" class="form-popup">
                                 <div class="inputsection">
@@ -809,7 +822,8 @@
                                         <div class="current-text"><span id="counter">0</span>/1000</div>
                                     </div>
                                 </div>
-                                <input type="file" name="file" id="file" class="inputfile"
+                                <div class="row-input-file">
+                                    <input type="file" name="file" id="file" class="inputfile"
                                     data-multiple-caption="{count} файлов выбрано" multiple tabindex="5">
                                 <label for="file" class="label-file">
                                     <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
@@ -819,16 +833,18 @@
                                             fill="#006D66" />
                                     </svg>
                                     <span class="text-add-file">Прикрепить файл</span>
-                                    <button class="close-hide">
-                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M10.1425 0L11 0.85751L0.857841 11L0.000359834 10.1425L10.1425 0Z"
-                                                fill="#CBCBCB" />
-                                            <path d="M0.857482 0L0 0.85751L10.1422 11L10.9996 10.1425L0.857482 0Z"
-                                                fill="#CBCBCB" />
-                                        </svg>
-                                    </button>
                                 </label>
+                                <div class="close-hide">
+                                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.1425 0L11 0.85751L0.857841 11L0.000359834 10.1425L10.1425 0Z"
+                                            fill="#CBCBCB" />
+                                        <path d="M0.857482 0L0 0.85751L10.1422 11L10.9996 10.1425L0.857482 0Z"
+                                            fill="#CBCBCB" />
+                                    </svg>
+                                </div>
+                                </div>
+                                
                                 <div class="popup__agree">Нажимая на кнопку “Отправить”, Вы соглашаетесь с условиями
                                     обработки персональных данных</div>
                                 <button type="submit" class="popup__button send-response"

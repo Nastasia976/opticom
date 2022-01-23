@@ -625,7 +625,7 @@ $(document).ready(function () {
 
     $('.add-adres').click(function (event) {
         $('.popapp-add-adres').show();
-        $('body').addClass('lock');
+        $('body').addClass('locked');
     });
 
     $('.profil-phone').mask('+7 (999) 999-99-99', {
@@ -710,28 +710,28 @@ $(document).ready(function () {
     $('.account__item_register').click(function () {
         $('.popup-register').show();
         $('.popup-autoriz').hide();
-        $('body').addClass('lock');
+        $('body').addClass('locked');
         $('.reg-inp').css('background', '#f9fafc');
         $('.popup-register__error').hide();
     });
     $('.account__item_enter').click(function () {
         $('.popup-register').hide();
         $('.popup-autoriz').show();
-        $('body').addClass('lock');
+        $('body').addClass('locked');
         $('.reg-inp').css('background', '#f9fafc');
         $('.popup-register__error').hide();
     });
 
     $('.add-question').click(function () {
         $('.popup-question').show();
-        $('body').addClass('lock');
+        $('body').addClass('locked');
     });
 
     $('.add-reviews').click(function () {
         $('.popup-reviews').show();
-        $('body').addClass('lock');
+        $('body').addClass('locked');
     });
-    
+
     $('.close-register__item, .popup-thx__button').click(function () {
         $('.popup-register, .popup-autoriz, .popapp-add-adres, .popup-question, .popup-reviews, .popup-quick, .popup-thx, .popup-del, .popup-pre-order, .popup-subscription, .popup-thx-order, popup-thx-profil').hide();
         $('body').removeClass('lock');
@@ -844,52 +844,52 @@ $(document).ready(function () {
         $('.leave-reiting__value').text(5);
     });
 
-    $('.popular__button2, .slider-rec__button2').click(function(){
+    $('.popular__button2, .slider-rec__button2').click(function () {
         $('.popup-quick').show();
-        $('body').addClass('lock');
+        $('body').addClass('locked');
     });
-    $('.button-popup-quick').click(function(){
+    $('.button-popup-quick').click(function () {
         $('.popup-thx').show();
         $('.popup-quick').hide();
     });
 
-    $('.card-basket__close').click(function(){
+    $('.card-basket__close').click(function () {
         $('.popup-del').show();
-        $('body').addClass('lock');
+        $('body').addClass('locked');
     });
-    $('.popup-del__cancel').click(function(){
+    $('.popup-del__cancel').click(function () {
         $('.popup-del').hide();
         $('body').removeClass('lock');
     });
 
-    $('.side-basket__button').click(function(){
+    $('.side-basket__button').click(function () {
         $('.popup-pre-order').show();
-        $('body').addClass('lock');
+        $('body').addClass('locked');
     });
 
-    $('.popup-pre-order__notice').click(function(){
+    $('.popup-pre-order__notice').click(function () {
         $('.popup-pre-order').hide();
         $('.popup-subscription').show();
     });
 
-    $('.popup-pre-order__prepayment').click(function(){
+    $('.popup-pre-order__prepayment').click(function () {
         $('.popup-thx-order').show();
         $('.popup-pre-order').hide();
     });
 
-    $('.save-data').click(function(){
+    $('.save-data').click(function () {
         $('.popup-thx-profil').show();
-        $('body').addClass('lock');
+        $('body').addClass('locked');
     });
 
-    $('.side-basket__button-thx').click(function(){
+    $('.side-basket__button-thx').click(function () {
         $('.popup-thx-order').show();
-        $('body').addClass('lock');
+        $('body').addClass('locked');
     });
-    
+
 });
 
- //----------------reiting------
+//----------------reiting------
 
 
 
@@ -954,7 +954,7 @@ var filterOut = function () {
 $(window).on('resize', function () {
     if ($(window).width() < 1081) {
         inputHide();
-    } else{
+    } else {
         inputShow();
     }
 });
@@ -962,18 +962,18 @@ $(window).on('resize', function () {
 var inputHide = function () {
     $(document).ready(function () {
         $('.choice-adres__item').each(function () {
-            if ($(this).text().length == ''){
+            if ($(this).text().length == '') {
                 $(this).hide().prev().hide();
-            } 
+            }
         });
     });
 }
 var inputShow = function () {
     $(document).ready(function () {
         $('.choice-adres__item').each(function () {
-            if ($(this).text().length == ''){
+            if ($(this).text().length == '') {
                 $(this).show().show();
-            } 
+            }
         });
     });
 }
