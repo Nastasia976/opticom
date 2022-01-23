@@ -776,7 +776,7 @@ input[type="number"]:focus {
 }
 @media (min-height: 736px) {
     .contact-burger {
-        padding: calc(20px + (80 + 20) * ((100vh - 736px) / (900 - 736))) 20px 0;
+        padding: 45px 20px;
     }
 }
 @media (max-height: 600px) {
@@ -1032,9 +1032,6 @@ input[type="number"]:focus {
         display: none;
     }
 }
-mark {
-    background-color: black;
-}
 .result-search-catalog.show-result {
     .body-catalog__item:nth-child(3) ~ .body-catalog__item {
         display: flex;
@@ -1076,7 +1073,8 @@ mark {
     &__conteiner {
         max-height: 100vh;
         overflow: auto;
-        padding-bottom: 110px;
+        padding-bottom: 60px;
+        padding-top: 15px;
     }
     .exit-burger {
         display: flex;
@@ -1087,6 +1085,7 @@ mark {
         padding: 24px 20px 42px;
     }
 }
+
 .menu-mobile {
     &__back {
         padding: 14px 20px 13px;
@@ -1182,9 +1181,14 @@ mark {
             min-width: 8px;
         }
     }
-    &__item.active,
     &__item:hover,
     .menu-mobile__item_link:hover {
+        background-color: #f8f8f8;
+        span {
+            color: #006d66;
+        }
+    }
+    &__item.active{
         background-color: #f8f8f8;
         span {
             color: #006d66;
@@ -1223,54 +1227,15 @@ mark {
 }
 .mobile-item-arrow {
 }
-
-//--------media for menu catalog-------------
-@media (max-width: 1440px) {
-    .body-catalog {
-        &__form {
-            margin: 0 !important;
-        }
-    }
-}
-@media (max-width: 1050px) {
-    .catalog-menu {
-        width: 100%;
-    }
-    .body-catalog {
-        &__wrapper {
-            padding-top: 32px;
-        }
-    }
-    .sidebar-catalog {
-        &__list {
-            padding-top: 20px;
-        }
-        &__logo {
-            padding-left: 30px;
-            svg {
-                max-width: 200px;
+.header-green{
+    .menu-mobile {
+        &__el {
+            a{
+                color: #000;
             }
         }
     }
 }
-@media (max-width: 775px) {
-    .body-catalog {
-        &__wrapper {
-            flex-direction: column;
-        }
-        .result-search-catalog {
-            display: none;
-        }
-    }
-}
-@media (max-width: 580px) {
-    .catalog-menu {
-        display: none;
-    }
-    .menu-mobile {
-    }
-}
-//--------------------------------------------
 @media (min-width: 1920px) {
     .burger__logo,
     .burger__footer,
@@ -1516,6 +1481,7 @@ mark {
             width: 100%;
             margin: 0;
             padding: 27px 20px 17px;
+            max-height: 60px;
             input {
                 height: 100%;
                 font-size: 14px;
@@ -1552,7 +1518,53 @@ mark {
         top: 70px;
     }
 }
-
+//--------media for menu catalog-------------
+@media (max-width: 1440px) {
+    .body-catalog {
+        &__form {
+            margin: 0 !important;
+        }
+    }
+}
+@media (max-width: 1050px) {
+    .catalog-menu {
+        width: 100%;
+    }
+    .body-catalog {
+        &__wrapper {
+            padding-top: 32px;
+        }
+    }
+    .sidebar-catalog {
+        &__list {
+            padding-top: 20px;
+        }
+        &__logo {
+            padding-left: 30px;
+            svg {
+                max-width: 200px;
+            }
+        }
+    }
+}
+@media (max-width: 775px) {
+    .body-catalog {
+        &__wrapper {
+            flex-direction: column;
+        }
+        .result-search-catalog {
+            display: none;
+        }
+    }
+}
+@media (max-width: 580px) {
+    .catalog-menu {
+        display: none;
+    }
+    .menu-mobile {
+    }
+}
+//--------------------------------------------
 //============TITLE-BLOCK=============
 .main-block {
     min-height: 100vh;

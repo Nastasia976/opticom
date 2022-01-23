@@ -365,8 +365,12 @@ $(document).ready(function () {
         $('._all-categories').show();
     });
     $('.menu-mobile__item').click(function () {
-        $('.menu-mobile__item, .menu-mobile__item_link').removeClass('active').next().hide(300);
-        $(this).toggleClass('active').next().slideToggle(300);
+        if($(this).hasClass('active')){
+            $(this).removeClass('active').next().slideToggle(300);
+        } else {
+            $('.menu-mobile__item, .menu-mobile__item_link').removeClass('active').next().hide(300);
+            $(this).addClass('active').next().slideToggle(300);
+        }
     });
     $('.menu-mobile__item_link').click(function () {
         $('.menu-mobile__item').removeClass('active').next().hide(300);
