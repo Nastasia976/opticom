@@ -760,10 +760,9 @@ input[type="number"]:focus {
 
 .burger {
   background-color: #f8f8f8;
-  overflow: auto;
   width: 461px;
-  max-height: 100%;
   height: 100%;
+  overflow: auto;
   top: 0;
   padding: calc(30px + (46 - 30) * ((100vw - 768px) / (1920 - 768))) 0 0px 0;
   display: -webkit-box;
@@ -1117,6 +1116,12 @@ input[type="number"]:focus {
 @media (min-height: 736px) {
   .contact-burger {
     padding: calc(20px + (80 + 20) * ((100vh - 736px) / (900 - 736))) 20px 0;
+  }
+}
+
+@media (max-height: 600px) {
+  .contact-burger {
+    padding: 20px;
   }
 }
 
@@ -1962,10 +1967,10 @@ mark {
     z-index: 20000;
     background-color: #fff;
     min-width: 100%;
-    height: 60px;
+    min-height: 60px;
   }
   .burger__conteiner {
-    min-width: 100%;
+    width: 100%;
     z-index: 1 !important;
     padding: 59px 0 0 0;
   }
@@ -1974,7 +1979,7 @@ mark {
     z-index: 1 !important;
     -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
             box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
-    padding: 0;
+    padding: 10px 0 0 0;
   }
   .burger__logo {
     display: none;
@@ -1985,7 +1990,6 @@ mark {
     background-color: #fff;
   }
   .burger__items {
-    margin-top: 20px;
     display: block;
     padding: 13px 20px;
     background-color: #005d55;
@@ -2018,8 +2022,7 @@ mark {
     margin-top: 0;
     border-top: 1px solid #dcdcdc;
     background-color: #fff;
-    height: 61px;
-    padding: 0 20px;
+    padding: 15px 20px;
   }
   .burger__social {
     -webkit-box-pack: center;
@@ -2043,15 +2046,15 @@ mark {
             align-items: center;
     visibility: visible;
     width: 100%;
-    max-height: 25px !important;
     margin: 0;
-    padding: 27px 20px 7px;
+    padding: 27px 20px 17px;
   }
   .burger .search-form input {
     height: 100%;
     font-size: 14px;
     color: #17625d !important;
     padding-bottom: 3px;
+    border-bottom: 1px solid rgba(0, 93, 85, 0.3);
   }
   .burger .search-form input::-webkit-input-placeholder {
     color: #17625d !important;
@@ -2067,7 +2070,7 @@ mark {
   }
   .burger .search-form .search-form__button {
     right: 20px;
-    top: 18px;
+    top: 10px;
     color: #17625d !important;
   }
   .burger .burger__list a {
@@ -2476,7 +2479,7 @@ mark {
   transition: 0.4s;
 }
 
-.contacts-block _icon-catalog-big"::before {
+.contacts-block ._icon-catalog-big::before {
   margin-right: 15px;
   font-size: 30px;
 }
@@ -3406,6 +3409,7 @@ mark {
 
 .write-us__fon1, .write-us__fon2 {
   position: absolute;
+  pointer-events: none;
 }
 
 .write-us__fon1 {
@@ -16759,9 +16763,4 @@ mark {
     padding: 12px;
     width: 100%;
   }
-}
-
-.search-form__input {
-  min-height: 20px;
-  border-bottom: 1px solid #000;
 }
