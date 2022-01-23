@@ -2476,7 +2476,7 @@ mark {
   transition: 0.4s;
 }
 
-.contacts-block ._icon-catalog-big::before {
+.contacts-block _icon-catalog-big"::before {
   margin-right: 15px;
   font-size: 30px;
 }
@@ -16759,4 +16759,9 @@ mark {
     padding: 12px;
     width: 100%;
   }
+}
+
+.search-form__input {
+  min-height: 20px;
+  border-bottom: 1px solid #000;
 }

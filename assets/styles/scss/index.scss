@@ -1496,7 +1496,7 @@ mark {
             border-top: 1px solid #dcdcdc;
             background-color: #fff;
             height: 61px;
-            padding: 0 20px;
+            padding: 0 20px ;
         }
         &__social {
             justify-content: center;
@@ -1843,7 +1843,7 @@ mark {
         opacity: 0.7;
         transition: 0.4s;
     }
-    ._icon-catalog-big::before {
+    _icon-catalog-big"::before {
         margin-right: 15px;
         font-size: 30px;
     }
@@ -13298,4 +13298,9 @@ mark {
             width: 100%;
         }
     }
+}
+
+.search-form__input{
+    min-height: 20px;
+    border-bottom: 1px solid #000;
 }

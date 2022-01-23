@@ -320,14 +320,14 @@ $(document).ready(function () {
         $('.search-form__input').focus();
     });
 
-    $(document).mouseup(function (e) {
+    /* $(document).mouseup(function (e) {
         var div = $('.burger');
         if (!div.is(e.target)
             && div.has(e.target).length === 0) {
-            $('.burger__conteiner, .burger-menu, .burger').removeClass('active');
+            $('.burger__conteiner, .burger-menu, .burger, .popup-cooki, .button-accept').removeClass('active');
             $('body').removeClass('locks');
         }
-    });
+    }); */
 
     $('.header__burger').click(function () {
         if($(this).hasClass('active')){
