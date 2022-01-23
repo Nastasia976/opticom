@@ -4724,6 +4724,7 @@ mark {
                 left: 30px;
                 bottom: 26px;
                 display: none;
+                cursor: pointer;
             }
             .placeholder-textarea {
                 position: absolute;
@@ -7683,7 +7684,7 @@ mark {
     }
 }
 .similar-publications {
-    margin-top: calc(70px + (113 - 70) * ((100vw - 320px) / (1920 - 320)));
+    margin-top: calc(60px + (113 - 60) * ((100vw - 320px) / (1920 - 320)));
     padding: 0 20px;
     &__conteiner {
     }
@@ -7694,6 +7695,9 @@ mark {
     }
 
     &__title {
+        h3{
+            margin-top: 0;
+        }
     }
 
     &__body {
@@ -8008,7 +8012,11 @@ mark {
         }
     }
     &__link:hover {
-        border: 1px solid rgba(0, 0, 0, 0.2);
+        border: 1px solid #00AA95;
+        color: #00AA95;
+        span{
+            color: #00AA95;
+        }
         transition: 0.3s;
     }
 }
@@ -8331,7 +8339,7 @@ mark {
         line-height: 117%;
         letter-spacing: 0.01em;
         color: #000000;
-        max-width: 440px;
+        max-width: 435px;
         text-shadow: 0px 9.375px 18.75px rgba(0, 0, 0, 0.05);
     }
 
@@ -8340,6 +8348,9 @@ mark {
         cursor: pointer;
         .button-main {
             white-space: nowrap;
+            font-family: 'Pragmatica Extended';
+            letter-spacing: 0.02em;
+            padding: 13px calc(20px + (36 - 20) * ((100vw - 320px) / (1920 - 320)));
         }
     }
 
@@ -8375,7 +8386,51 @@ mark {
         padding: 0 10px;
     }
 }
-@media (min-height: 1080px) {
+@media (min-height: 800px) and (min-width: 1200px){
+    .disinfection-title{
+        &__column-left{
+            flex: 0 1 55%;
+        }
+        &__image{
+            height: 100%;
+            img{
+                object-fit: contain;
+            }
+        }
+        &__body{
+            margin-left: 40px !important;
+        }
+        &__column-right{
+            flex: 0 1 45%;
+        }
+    }
+}
+@media (min-width: 1921px){
+    .disinfection-title{
+        &__body, &__description {
+            max-width: 700px;
+        }
+        &__body{
+            padding-right: 0px;
+        }
+        &__column-right{
+            flex: 1 1 auto;
+        }
+        &__title{
+            br{
+                display: none;
+            }
+        }
+        &__title {
+            font-size: 50px;
+        }
+        &__description,
+        .button-main {
+            font-size: calc(18px + (32 - 18) * ((100vw - 1921px) / (2500 - 1921)));
+        }
+    }
+}
+@media (min-height: 1080px){
     .disinfection-title {
         &__title {
             font-size: calc(46px + (66 - 46) * ((100vh - 1080px) / (1500 - 1080)));
@@ -8470,6 +8525,18 @@ mark {
         }
     }
 }
+@media (max-height: 700px) and (min-width: 615px){
+    .disinfection-title{
+        min-height: 650px !important;
+    }
+}
+@media (max-height: 900px) and (max-width: 610px){
+    .disinfection-title{
+        &__body{
+            padding-top: 60px;
+        }
+    }
+}
 @media (max-height: 600px) {
     .disinfection-title {
         padding: 90px 0 0 0;
@@ -8508,7 +8575,7 @@ mark {
     }
 
     &__title {
-        margin-top: 70px;
+        margin-top: calc(0px + (70 - 0) * ((100vw - 320px) / (1920 -320)));
         h2 {
             margin: 0;
         }
@@ -8593,7 +8660,7 @@ mark {
 }
 //-----our-client
 .our-client {
-    margin-top: calc(80px + (113 - 80) * ((100vw - 320px) / (1920 - 320)));
+    margin-top: calc(60px + (113 - 60) * ((100vw - 320px) / (1920 - 320)));
     &__title {
         padding: 0 20px;
         h2 {
@@ -8634,11 +8701,19 @@ mark {
     &__item {
         position: relative;
         padding: 0 0 20.9% 0;
+        overflow: hidden;
         img {
             position: absolute;
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: all 0.5s ease-in-out 0s;
+        }
+    }
+    &__item:hover{
+        img{
+            transform: scale(1.1);
+            transition: all 0.5s ease-in-out 0s;
         }
     }
     &__item._small {
@@ -8752,7 +8827,12 @@ mark {
     }
 }
 .fon1 {
-    background-color: rgba(194, 199, 188, 0.8);
+    background-color: rgba(194, 199, 188, 1);
+    transition: 0.5s;
+}
+.fon1:hover{
+    background-color: rgba(179, 184, 173, 1);
+    transition: 0.5s;
 }
 .fon2 {
     background-color: rgba(216, 149, 96, 0.8);
@@ -8767,7 +8847,12 @@ mark {
     background-color: rgba(247, 248, 243, 0.8);
 }
 .fon6 {
-    background-color: rgba(241, 128, 112, 0.8);
+    background-color: rgba(241, 128, 112, 1);
+    transition: 0.5s;
+}
+.fon6:hover{
+    background-color: rgba(207, 110, 97,1);
+    transition: 0.5s;
 }
 @media (max-width: 3000px) {
     .our-client {
@@ -8880,7 +8965,7 @@ mark {
 }
 //----------cold-mist
 .cold-mist {
-    padding: calc(80px + (113 - 80) * ((100vw - 320px) / (1920 - 320))) 20px
+    padding: calc(60px + (113 - 60) * ((100vw - 320px) / (1920 - 320))) 20px
         calc(50px + (113 - 50) * ((100vw - 320px) / (1920 - 320)));
     background-color: rgba(243, 248, 255, 0.6);
     position: relative;
@@ -8889,7 +8974,7 @@ mark {
     }
 
     &__title {
-        h2 {
+        h3 {
             margin-top: 0;
         }
     }
@@ -8924,7 +9009,7 @@ mark {
 
     &__item {
         flex: 0 1 50%;
-        padding: 0 30px 0 21px;
+        padding: 0 20px 0 21px;
         position: relative;
         line-height: 122%;
     }
@@ -8934,7 +9019,7 @@ mark {
         width: 6px;
         height: 6px;
         background-color: #00aa95;
-        top: 3px;
+        top: 9px;
         left: 0;
     }
     &__item {
@@ -8978,7 +9063,7 @@ mark {
 }
 //---------equipment
 .equipment {
-    margin-top: calc(80px + (113 - 80) * ((100vw - 320px) / (1920 - 320)));
+    margin-top: calc(60px + (113 - 60) * ((100vw - 320px) / (1920 - 320)));
     padding: 0 20px;
     &__conteiner {
     }
@@ -9041,11 +9126,20 @@ mark {
 //-----write-us
 .wrapper-disinfection {
     .footer {
-        margin-top: 107px;
+        margin-top: calc(20px + (107 - 20) * ((100vw - 500px) / (1920 -500)));
+    }
+    .footer-mobile{
+        margin-top: 10px;
     }
     .write-us {
-        margin-top: calc(110px + (163 - 110) * ((100vw - 320px) / (1920 - 320)));
+        margin-top: calc(50px + (133 - 50) * ((100vw - 320px) / (1920 - 320)));
+        padding-top: 30px;
         position: relative;
+        &__title{
+            h3{
+                margin-top: 0;
+            }
+        }
         &__fon1 {
             position: absolute;
             top: calc(-10px + (-100 - (-10)) * ((100vw - 320px) / (1920 - 320)));
@@ -9062,7 +9156,7 @@ mark {
             z-index: 1;
         }
         &__description {
-            margin-top: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
+            margin: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320))) auto 0;
             font-size: 14px;
             line-height: 17px;
             text-align: center;
@@ -9073,11 +9167,14 @@ mark {
         }
         &__form {
             z-index: 4;
-            margin-top: 20px;
-            padding: 47px 20px 150px;
+            padding: calc(15px + (47 - 15) * ((100vw - 320px) / (1920 -320))) 20px 185px;
             .form-write__item:first-child {
                 margin-top: 20px;
             }
+        }
+        .form-write__agree{
+            max-width: 430px;
+            margin: calc(50px + (83 - 50) * ((100vw - 320px) / (1920 - 320))) auto 0;
         }
     }
 }
@@ -9085,9 +9182,21 @@ mark {
     .wrapper-disinfection {
         .write-us {
             &__fon2 {
-                top: 140px !important;
+                top: 160px !important;
             }
         }
+    }
+}
+@media(max-width:500px){
+    .wrapper-disinfection {
+        .write-us {
+            &__fon2, &__fon1, &__fon3 {
+                transform: scale(1,0.9);
+            }
+            &__form {
+                padding-bottom: 150px;
+            }
+        }    
     }
 }
 //////////////////////////////////////////////////
@@ -10334,6 +10443,7 @@ mark {
     }
 }
 .main-button {
+    display: block;
 }
 .button-main {
 }

@@ -808,7 +808,6 @@ setTimeout(() => { $('.multy-basket').addClass('active') }, 1500);
         $('body').removeClass('lock');
     }
 }); */
-let myMainBtn = document.querySelector('.main-button')
 let mySliderTitle = new Swiper('.slider-title', {
     slidesPerView: 1,
     pagination: {
@@ -826,19 +825,6 @@ let mySliderTitle = new Swiper('.slider-title', {
     },
 });
 
-/* myMainBtn.addEventListener('mouseenter', function () {
-    console.log('ok');
-    mySliderTitle.autoplay.stop();
-});
-myMainBtn.addEventListener('mouseleave', function () {
-    mySliderTitle.params.autoplay.delay = 5000;
-    mySliderTitle.autoplay.start();
-}); */
-
-/* window.onresize = function(event)
-{
-document.location.reload(true);
-} */
 
 new Swiper('.swiper-progress', {
     slidesPerView: 2,
@@ -976,6 +962,11 @@ myScroll.on('fromEdge', function () { //когда слайдер уйдет о�
 $("body").on('click', '[href="#progress-block"]', function (e) {
     var fixed_offset = 0;
     $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
+    e.preventDefault();
+});
+$("body").on('click', '[href="#write-us"]', function (e) {
+    var fixed_offset = 100;
+    $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
     e.preventDefault();
 });
 
