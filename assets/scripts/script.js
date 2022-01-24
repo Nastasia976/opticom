@@ -1484,22 +1484,35 @@ function linkMark(string, pos, len) {
     return string.slice(0, pos) + '<mark>' + string.slice(pos, pos + len) + '</mark>' + string.slice(pos + len);
 }
 ////////// control////////////////////
- /* $(document).ready(function () {
-    $(".flatpickr").flatpickr({
-        inline: true,
-        mode: "range",
-        altInput: true,
-        dateFormat: "d-m-y",
-    });
-    
+/* $(document).ready(function () {
+   $(".flatpickr").flatpickr({
+       inline: true,
+       mode: "range",
+       altInput: true,
+       dateFormat: "d-m-y",
+   });
+   
 }); */
+
 
 flatpickr(document.getElementById('date'), {
     "locale": "ru",
-    defaultDate: new Date(),
     inline: true,
     altFormat: "d.m.Y",
     altInput: true,
     dateFormat: "d.m.Y",
     mode: "range",
+    allowInput: true,
+    defaultDate: ["01.01.2010", "12.01.2010"]
 });
+
+
+let inpStart = document.querySelector('.input-start').value;
+let inpEnd = document.querySelector('.input-end').value;
+let control = document.querySelector('.form-control').value = inpStart + inpEnd;
+
+console.log(control);
+console.log(inpStart);
+
+
+
