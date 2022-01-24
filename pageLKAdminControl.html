@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/styles/css/dycalendar.css">
     <link rel="stylesheet" href="assets/styles/css/index.css">
     <link rel="stylesheet" href="assets/styles/css/iconsfont.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <title>Оптиком</title>
 </head>
 
@@ -1865,9 +1866,16 @@
                                             Количество заказов
                                             <span>24</span>
                                         </div>
-                                        <div class="analytics__title">Общие расходы за февраль</div>
+                                        <div class="analytics__title"><figcaprion>Общие расходы за февраль</figcaprion></div>
                                         <div class="analytics__image">
-                                            <svg width="170" height="170" viewBox="0 0 170 170" fill="none"
+                                            <figure><svg width="220px" height="220px" viewBox="0 0 42 42" class="donut">
+                                                <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
+                                                <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#FF8E7D" stroke-width="1"></circle>
+                                                <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#005D55" stroke-width="1" stroke-dasharray="70 30" stroke-dashoffset="0"></circle>
+                                              </svg>
+                                            </figure>
+                                            
+                                            <!-- <svg width="170" height="170" viewBox="0 0 170 170" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M166 85.5C166 100.538 161.84 115.282 153.979 128.101C146.119 140.921 134.865 151.316 121.463 158.136C108.061 164.956 93.0335 167.935 78.0433 166.744C63.053 165.553 48.6846 160.237 36.5281 151.386C24.3715 142.535 14.9008 130.493 9.16401 116.592C3.42717 102.692 1.64789 87.4759 4.02305 72.6271C6.39822 57.7784 12.8352 43.8763 22.6217 32.4591C32.4083 21.042 45.1627 12.5551 59.4737 7.93754"
@@ -1875,7 +1883,7 @@
                                                 <path
                                                     d="M59.4933 7.96559C71.7531 3.99231 84.779 2.97587 97.5067 4.99932C110.234 7.02276 122.303 12.0287 132.726 19.6081C143.149 27.1875 151.631 37.1253 157.479 48.6096C163.327 60.0939 166.376 72.7989 166.375 85.6865"
                                                     stroke="#FF8E7D" stroke-width="6" />
-                                            </svg>
+                                            </svg> -->
                                             <span class="analytics__total">159 653 ₽</span>
                                         </div>
                                         <div class="analytics__title">Аналитика по корзинам <br> за февраль</div>
@@ -1944,7 +1952,7 @@
                                         <form method="post" class="act__form">
                                             <div class="act__item">
                                                 <div class="inputsection">
-                                                    <input class="some-input" value="Выберите дату"
+                                                    <input name="birthday" class="some-input" value="Выберите дату"
                                                         onfocus="this.value = ''" type="text" required>
                                                     <label class="placeholder">с</label>
                                                 </div>
@@ -2032,11 +2040,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
             <div class="popups registration-claim">
                 <div class="popups__conteiner">
                     <div class="popups__top">
@@ -2056,7 +2059,6 @@
                     </form>
                 </div>
             </div>
-
             <div class="popups _delit delit-basket">
                 <div class="popups__conteiner">
                     <div class="popups__top">
@@ -3066,8 +3068,23 @@
     <script src="assets/scripts/script.js"></script>
     <script src="assets/scripts/slick.min.js"></script>
     <script src="assets/scripts/jquery.maskedinput.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 
-
+    <script>
+        $(function() {
+          $('input[name="birthday"]').daterangepicker({
+            singleDatePicker: true,
+            showDropdowns: true,
+            minYear: 1901,
+            maxYear: parseInt(moment().format('YYYY'),10)
+          }, function(start, end, label) {
+            var years = moment().diff(start, 'years');
+            alert("You are " + years + " years old!");
+          });
+        });
+        </script>
 
 </body>
 

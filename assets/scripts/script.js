@@ -320,17 +320,17 @@ $(document).ready(function () {
         $('.search-form__input').focus();
     });
 
-     $(document).mouseup(function (e) {
+    $(document).mouseup(function (e) {
         var div = $('.burger, .popup-cooki,');
         if (!div.is(e.target)
             && div.has(e.target).length === 0) {
             $('.burger__conteiner, .burger-menu, .burger').removeClass('active');
             $('body').removeClass('locks');
         }
-    }); 
+    });
 
     $('.header__burger').click(function () {
-        if($(this).hasClass('active')){
+        if ($(this).hasClass('active')) {
             $(this).removeClass('active');
             $('body').removeClass('locked');
             $('.burger__conteiner, .burger-menu, .burger').removeClass('active');
@@ -348,8 +348,8 @@ $(document).ready(function () {
             $('._all-categories').hide();
         }
     });
-    
-    
+
+
     //--------catalog-menu-mobile-----
     $('.items-catalog-mobile').click(function () {
         $('.menu-mobile').show();
@@ -365,7 +365,7 @@ $(document).ready(function () {
         $('._all-categories').show();
     });
     $('.menu-mobile__item').click(function () {
-        if($(this).hasClass('active')){
+        if ($(this).hasClass('active')) {
             $(this).removeClass('active').next().slideToggle(300);
         } else {
             $('.menu-mobile__item, .menu-mobile__item_link').removeClass('active').next().hide(300);
@@ -445,9 +445,9 @@ $(document).ready(function () {
         autoclear: false
     });
 
-    $('.data-mask').mask('99.99.9999', {
+    /* $('.data-mask').mask('99.99.9999', {
         autoclear: false
-    });
+    }); */
     /* $('.button-request').click(function (event) {
         $('.popup-request').toggleClass('active');
         $('body').addClass('locked');
@@ -494,7 +494,7 @@ $(document).ready(function () {
     $('.will-reg, .user-reg').click(function () {
         $('.popup-reg').toggleClass('active');
         $('body').addClass('locked');
-        if ($('.burger').hasClass('active')){
+        if ($('.burger').hasClass('active')) {
             $('.burger, .burger__conteiner, .header__burger, .burger-menu').removeClass('active');
         }
     })
@@ -515,7 +515,7 @@ $(document).ready(function () {
     $('.header-exit, .will-aut, .user-exit').click(function () {
         $('.popup-autoriz').toggleClass('active');
         $('body').addClass('locked');
-        if ($('.burger').hasClass('active')){
+        if ($('.burger').hasClass('active')) {
             $('.burger, .burger__conteiner, .header__burger, .burger-menu').removeClass('active');
         }
     })
@@ -572,7 +572,7 @@ $(document).ready(function () {
         $('body').removeClass('locked');
     });
 
-    $('.sidebar-catalog__item').click(function(){
+    $('.sidebar-catalog__item').click(function () {
         $(this).toggleClass('active');
     })
     //-------results-search---
@@ -756,9 +756,9 @@ $(document).ready(function () {
 
     $(window).on('resize', function () {
         if ($(window).width() < 1376) {
-            $('.header').removeClass('vacanci')
+            $('.header-vacanci').removeClass('vacanci')
         } else {
-            $('.header').addClass('vacanci')
+            $('.header-vacanci').addClass('vacanci')
         }
     });
 });
@@ -1147,7 +1147,7 @@ $(document).ready(function () {
         $(this).parent().find('.select__item, .select__el').not(this).removeClass('active');
     });
 
-    $('.close-hide').click(function(){
+    $('.close-hide').click(function () {
         $('.text-add-file').text('Прикрепить файл');
         $(this).hide();
     });
