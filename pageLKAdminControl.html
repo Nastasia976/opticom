@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="assets/styles/css/dycalendar.css">
     <link rel="stylesheet" href="assets/styles/css/index.css">
     <link rel="stylesheet" href="assets/styles/css/iconsfont.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
     <title>Оптиком</title>
 </head>
 
@@ -1953,12 +1954,12 @@
                                             <div class="act__item">
                                                 <div class="inputsection">
                                                     <input name="birthday" class="some-input" value="Выберите дату"
-                                                        onfocus="this.value = ''" type="text" required>
+                                                        onfocus="this.value = ''" type="date" required>
                                                     <label class="placeholder">с</label>
                                                 </div>
                                                 <div class="inputsection">
                                                     <input class="some-input" value="14.06.2021"
-                                                        onfocus="this.value = ''" type="text" required>
+                                                        onfocus="this.value = ''" type="date" required>
                                                     <label class="placeholder">по</label>
                                                 </div>
                                             </div>
@@ -1970,19 +1971,20 @@
                                         </form>
                                     </div>
                                 </div>
-                                <form method="post" class="control__calendar calendar">
-                                    <div class="calendar__header">
+                                <div method="post" class="control__calendar calendar">
+                                    <div class="calendar__header ">
                                         <div class="inputsection">
-                                            <input class="some-input input-start data-mask" placeholder="Выберите дату"
-                                                type="text" required>
+                                            <input name="birthday" id="date" class="flatpickr" placeholder="Выберите дату"
+                                                type="date" value="14.06.2021">
                                             <label class="placeholder placeholder-start">с</label>
                                         </div>
-                                        <div class="inputsection">
-                                            <input class="some-input data-mask" type="text" onfocus="this.value = ''"
-                                                value="14.06.2021" required>
+                                        <!-- <div class="inputsection">
+                                            <input id="" class="some-input secondRangeInput" type="text" onfocus="this.value = ''"
+                                                value="14.06.2021">
                                             <label class="placeholder">по</label>
-                                        </div>
+                                        </div> -->
                                     </div>
+                                    <div class=""></div>
                                     <div class="calendar__conteiner">
                                         <div class="calendar__name-month">Февраль</div>
                                         <div class="calendar__name-day">
@@ -2034,7 +2036,7 @@
                                     <div class="calendar__button">
                                         <button type="submit" class="green-bg">Сформировать</button>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -3064,27 +3066,14 @@
     <script src="assets/scripts/dycalendar.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/ru.js"></script>
+
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="assets/scripts/script.js"></script>
     <script src="assets/scripts/slick.min.js"></script>
     <script src="assets/scripts/jquery.maskedinput.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-
-    <script>
-        $(function() {
-          $('input[name="birthday"]').daterangepicker({
-            singleDatePicker: true,
-            showDropdowns: true,
-            minYear: 1901,
-            maxYear: parseInt(moment().format('YYYY'),10)
-          }, function(start, end, label) {
-            var years = moment().diff(start, 'years');
-            alert("You are " + years + " years old!");
-          });
-        });
-        </script>
 
 </body>
 

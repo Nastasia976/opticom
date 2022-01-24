@@ -16785,3 +16785,24 @@ input[type="number"]:focus {
     width: 100%;
   }
 }
+
+/* .flatpickr-calendar{
+    background-color:  #FBFBFB !important;
+    min-width: 450px !important;
+    width: 100% !important;
+    .flatpickr-next-month, .flatpickr-prev-month{
+        display: none;
+    }
+    .flatpickr-months{
+        text-align: left !important;
+        .flatpickr-current-month{
+            width: fit-content;
+            .cur-year{
+                display: none;
+            }
+        }
+        select{
+            padding: 0 !important;
+        }
+    }
+} */

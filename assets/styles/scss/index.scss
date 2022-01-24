@@ -37,6 +37,8 @@
     font-weight: 400;
 }
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+
 body {
     font-family: "Pragmatica";
     font-weight: 300;
@@ -13325,3 +13327,24 @@ input[type="number"]:focus {
         }
     }
 }
+
+/* .flatpickr-calendar{
+    background-color:  #FBFBFB !important;
+    min-width: 450px !important;
+    width: 100% !important;
+    .flatpickr-next-month, .flatpickr-prev-month{
+        display: none;
+    }
+    .flatpickr-months{
+        text-align: left !important;
+        .flatpickr-current-month{
+            width: fit-content;
+            .cur-year{
+                display: none;
+            }
+        }
+        select{
+            padding: 0 !important;
+        }
+    }
+} */

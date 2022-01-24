@@ -1483,3 +1483,23 @@ document.querySelector('#search-menu').oninput = function () {
 function linkMark(string, pos, len) {
     return string.slice(0, pos) + '<mark>' + string.slice(pos, pos + len) + '</mark>' + string.slice(pos + len);
 }
+////////// control////////////////////
+ /* $(document).ready(function () {
+    $(".flatpickr").flatpickr({
+        inline: true,
+        mode: "range",
+        altInput: true,
+        dateFormat: "d-m-y",
+    });
+    
+}); */
+
+flatpickr(document.getElementById('date'), {
+    "locale": "ru",
+    defaultDate: new Date(),
+    inline: true,
+    altFormat: "d.m.Y",
+    altInput: true,
+    dateFormat: "d.m.Y",
+    mode: "range",
+});
