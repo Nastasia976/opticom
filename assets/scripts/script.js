@@ -323,10 +323,10 @@ $(document).ready(function () {
     });
 
     $(document).mouseup(function (e) {
-        var div = $('.burger, .popup-cooki,');
-        if (!div.is(e.target)
-            && div.has(e.target).length === 0) {
-            $('.burger__conteiner, .burger-menu, .burger').removeClass('active');
+        var burg = $('.burger, .popup-cooki');
+        if (!burg.is(e.target)
+            && burg.has(e.target).length === 0) {
+            $('.burger__conteiner, .burger-menu, .burger, .header__burger ').removeClass('active');
             $('.menu-mobile').css('display', 'none');
             $('.menu-mobile__body').slideUp(300);
             $('.menu-mobile__header').removeClass('active');
@@ -356,6 +356,11 @@ $(document).ready(function () {
         }
     });
 
+    $('.burger').click(function(){
+        if ($(this).hasClass('active')){
+            $('body').addClass('locked');
+        }
+    })
 
     //--------catalog-menu-mobile-----
     $('.items-catalog-mobile').click(function () {
@@ -463,14 +468,14 @@ $(document).ready(function () {
         $('body').addClass('locked');
     })
 
-    $(document).mouseup(function (e) {
-        var div = $('.popup__conteiner, .popups__conteiner');
-        if (!div.is(e.target)
-            && div.has(e.target).length === 0) {
-            $('.pop-up, .popups').removeClass('active');
-            $('body').removeClass('locked');
+    $('#add-in-basket').click(function(){
+        if ($(this).hasClass('active')){
+            $(this).removeClass('active').find('.button-main').text('В корзину');
+        } else {
+            $(this).addClass('active').find('.button-main').text('В корзине');
         }
-    });
+       
+    })
 
     $('.popup__button').click(function () {
         if ($('pop-up input').val > 0) {
@@ -774,7 +779,14 @@ $(document).ready(function () {
     });
 });
 
-
+$(document).mouseup(function (e) {
+    var div = $('.popup__conteiner, .popups__conteiner');
+    if (!div.is(e.target)
+        && div.has(e.target).length === 0) {
+        $('.pop-up, .popups').removeClass('active');
+        $('body').removeClass('locked');
+    }
+});
 
 
 $(document).on('click', '.popup__check', function (event) {

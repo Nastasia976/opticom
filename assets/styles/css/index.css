@@ -123,16 +123,7 @@ a {
   color: #1d1d1d;
 }
 
-body.lock,
-body.passive {
-  overflow: hidden;
-}
-
-body.locked {
-  overflow: hidden;
-}
-
-body.locks {
+body.lock, body.locked {
   overflow: hidden;
 }
 
@@ -4774,17 +4765,41 @@ input[type="number"]:focus {
   margin-top: 32px;
 }
 
-.items-product__items .main-button {
-  -webkit-transform: translate(5px, 16px);
-          transform: translate(5px, 16px);
+.items-product__items .items-product__main-button {
+  -webkit-transform: translate(5px, 6px);
+          transform: translate(5px, 6px);
   margin-left: 10px;
   cursor: pointer;
+  border: 1px solid #D4AE67;
 }
 
-.items-product__items .main-button .button-main {
-  padding: 13px 40px;
+.items-product__items .items-product__main-button .button-main {
+  padding: 13px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translate(-5px, -6px);
+          transform: translate(-5px, -6px);
+  width: 183px;
+  font-family: 'Pragmatica Extended';
   letter-spacing: 0.07em;
   font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.items-product__items .items-product__main-button.active {
+  border: 1px solid #00A793;
+}
+
+.items-product__items .items-product__main-button.active .button-main {
+  background-color: #00A793 !important;
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
 }
 
 .items-product__items._request .main-button {

@@ -47,14 +47,7 @@ body {
 a {
     color: #1d1d1d;
 }
-body.lock,
-body.passive {
-    overflow: hidden;
-}
-body.locked {
-    overflow: hidden;
-}
-body.locks {
+body.lock, body.locked{
     overflow: hidden;
 }
 h2 {
@@ -3653,14 +3646,28 @@ input[type="number"]:focus {
         display: flex;
         align-items: flex-end;
         margin-top: 32px;
-        .main-button {
-            transform: translate(5px, 16px);
+        .items-product__main-button{
+            transform: translate(5px, 6px);
             margin-left: 10px;
             cursor: pointer;
+            border: 1px solid #D4AE67;
             .button-main {
-                padding: 13px 40px;
+                padding: 13px 0px;
+                display: flex;
+                align-items: center;    
+                justify-content: center;
+                transform: translate(-5px, -6px);
+                width: 183px;
+                font-family: 'Pragmatica Extended';
                 letter-spacing: 0.07em;
                 font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+            }
+        }
+        .items-product__main-button.active{
+            border: 1px solid #00A793;
+            .button-main {
+                background-color: #00A793 !important;
+                transform: translate(0px, 0px);
             }
         }
     }
