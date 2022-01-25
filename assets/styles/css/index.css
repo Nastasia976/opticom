@@ -1496,10 +1496,11 @@ input[type="number"]:focus {
 }
 
 .menu-mobile form {
-  padding: 14.5px 20px 17px;
+  padding: 17.5px 20px 15px;
   position: relative;
   background-color: #f8f8f8;
   max-height: 60px;
+  height: 60px;
   border-bottom: 1px solid #dcdcdc;
 }
 
@@ -1507,7 +1508,11 @@ input[type="number"]:focus {
   position: absolute;
   right: 20px;
   height: 13px;
-  bottom: 25px;
+  bottom: 28px;
+}
+
+.menu-mobile form input {
+  height: 18px;
 }
 
 .menu-mobile form input,
@@ -1515,7 +1520,7 @@ input[type="number"]:focus {
   height: 16px;
   font-size: 14px;
   font-weight: 300;
-  padding-bottom: 2.5px;
+  padding-bottom: 2px;
   color: #005d55;
   border-bottom: 1px solid rgba(0, 93, 85, 0.3);
   min-width: 100%;
@@ -1526,7 +1531,7 @@ input[type="number"]:focus {
   height: 16px;
   font-size: 14px;
   font-weight: 300;
-  padding-bottom: 2.5px;
+  padding-bottom: 2px;
   color: #005d55;
   border-bottom: 1px solid rgba(0, 93, 85, 0.3);
   min-width: 100%;
@@ -1537,7 +1542,7 @@ input[type="number"]:focus {
   height: 16px;
   font-size: 14px;
   font-weight: 300;
-  padding-bottom: 2.5px;
+  padding-bottom: 2px;
   color: #005d55;
   border-bottom: 1px solid rgba(0, 93, 85, 0.3);
   min-width: 100%;
@@ -1548,17 +1553,36 @@ input[type="number"]:focus {
   height: 16px;
   font-size: 14px;
   font-weight: 300;
-  padding-bottom: 2.5px;
+  padding-bottom: 2px;
   color: #005d55;
   border-bottom: 1px solid rgba(0, 93, 85, 0.3);
   min-width: 100%;
+}
+
+.menu-mobile form ._icon-search {
+  font-size: 13px;
+  font-weight: 300;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  bottom: -0.5px;
+  margin: auto;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #005D55;
+}
+
+.menu-mobile form ._icon-search:hover,
+.menu-mobile form ._icon-search:focus {
+  opacity: 0.5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .menu-mobile__conteiner {
   max-height: 100vh;
   overflow: auto;
   padding-bottom: 60px;
-  padding-top: 15px;
 }
 
 .menu-mobile .exit-burger {
@@ -1886,8 +1910,8 @@ input[type="number"]:focus {
   ._icon-uniE907::before {
     font-size: 35px !important;
   }
-  .header {
-    max-height: 60px;
+  .header, .header__conteiner, .header__burger {
+    max-height: 60px !important;
   }
   .header__item {
     display: none;
@@ -1948,7 +1972,7 @@ input[type="number"]:focus {
     z-index: 1 !important;
     -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
             box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
-    padding: 10px 0 0 0;
+    padding: 0;
   }
   .burger__logo {
     display: none;
@@ -2016,14 +2040,15 @@ input[type="number"]:focus {
     visibility: visible;
     width: 100%;
     margin: 0;
-    padding: 27px 20px 17px;
+    padding: 25px 20px 19px;
+    height: 60px;
     max-height: 60px;
   }
   .burger .search-form input {
     height: 100%;
     font-size: 14px;
     color: #17625d !important;
-    padding-bottom: 3px;
+    padding-bottom: 2px;
     border-bottom: 1px solid rgba(0, 93, 85, 0.3);
   }
   .burger .search-form input::-webkit-input-placeholder {
@@ -2040,7 +2065,7 @@ input[type="number"]:focus {
   }
   .burger .search-form .search-form__button {
     right: 20px;
-    top: 10px;
+    top: 2px;
     color: #17625d !important;
   }
   .burger .burger__list a {
@@ -13511,6 +13536,14 @@ input[type="number"]:focus {
   .wrapper-basket .header .search-form, .wrapper-lk .header .search-form {
     margin-left: calc(35px + (45 - 35) * ((100vw - 1440px) / (1900 - 1440))) !important;
   }
+  .wrapper-favorite .burger .search-form,
+  .wrapper-result .burger .search-form,
+  .wrapper-matrix .burger .search-form,
+  .wrapper-how-to-pay .burger .search-form,
+  .wrapper-contacts .burger .search-form,
+  .wrapper-basket .burger .search-form, .wrapper-lk .burger .search-form {
+    margin-left: 0 !important;
+  }
 }
 
 .header-wrap {
@@ -16577,6 +16610,13 @@ input[type="number"]:focus {
   margin-top: 16px;
 }
 
+.act__form .inputsection .placeholder.fixed {
+  top: -8px;
+  font-size: 12px !important;
+  opacity: 0.6;
+  color: rgba(37, 37, 37, 0.2) !important;
+}
+
 .act__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16600,7 +16640,7 @@ input[type="number"]:focus {
 .calendar {
   margin-left: 24px;
   max-width: 450px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .calendar__header {
@@ -16617,7 +16657,7 @@ input[type="number"]:focus {
           flex: 0 1 calc(50% - 15px);
 }
 
-.calendar__header .inputsection .placeholder-start {
+.calendar__header .inputsection .placeholder-start, .calendar__header .inputsection .placeholder-end {
   top: -8px !important;
   font-size: 12px !important;
   opacity: 0.6 !important;
@@ -16626,7 +16666,11 @@ input[type="number"]:focus {
   color: rgba(37, 37, 37, 0.2) !important;
 }
 
-.calendar__header .inputsection .input-start::-webkit-input-placeholder {
+.calendar__header .inputsection .placeholder-end {
+  left: 100px;
+}
+
+.calendar__header .inputsection .flatpickr::-webkit-input-placeholder {
   font-weight: 300;
   font-size: 18px;
   line-height: 122%;
@@ -16634,7 +16678,7 @@ input[type="number"]:focus {
   opacity: 0.9;
 }
 
-.calendar__header .inputsection .input-start:-ms-input-placeholder {
+.calendar__header .inputsection .flatpickr:-ms-input-placeholder {
   font-weight: 300;
   font-size: 18px;
   line-height: 122%;
@@ -16642,7 +16686,7 @@ input[type="number"]:focus {
   opacity: 0.9;
 }
 
-.calendar__header .inputsection .input-start::-ms-input-placeholder {
+.calendar__header .inputsection .flatpickr::-ms-input-placeholder {
   font-weight: 300;
   font-size: 18px;
   line-height: 122%;
@@ -16650,7 +16694,7 @@ input[type="number"]:focus {
   opacity: 0.9;
 }
 
-.calendar__header .inputsection .input-start::placeholder {
+.calendar__header .inputsection .flatpickr::placeholder {
   font-weight: 300;
   font-size: 18px;
   line-height: 122%;
@@ -16915,6 +16959,10 @@ input[type="number"]:focus {
   display: none;
 }
 
+.control__body .flatpickr-calendar .flatpickr-day.today {
+  border-radius: 0;
+}
+
 .control__body .flatpickr-calendar .flatpickr-day.selected,
 .control__body .flatpickr-calendar .flatpickr-day.inRange {
   background-color: #F0F0F0;
@@ -16957,6 +17005,14 @@ input[type="number"]:focus {
   font-weight: 700;
   font-family: "Pragmatica";
   font-size: 18px;
+}
+
+.control__body .flatpickr-calendar .flatpickr-months select:hover {
+  background-color: transparent;
+}
+
+.control__body .flatpickr-calendar .flatpickr-months .cur-year:hover, .control__body .flatpickr-calendar .flatpickr-months .numInputWrapper:hover {
+  background-color: transparent;
 }
 
 .control__body .flatpickr-calendar .flatpickr-months .flatpickr-current-month {

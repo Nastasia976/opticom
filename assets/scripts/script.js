@@ -1,3 +1,5 @@
+
+
 $(document).ready(function () {
     $('.swiper-product').slick({
         slidesToShow: 2,
@@ -1502,17 +1504,23 @@ flatpickr(document.getElementById('date'), {
     altInput: true,
     dateFormat: "d.m.Y",
     mode: "range",
-    allowInput: true,
-    defaultDate: ["01.01.2010", "12.01.2010"]
+    /* allowInput: true, */
+});
+
+flatpickr(document.getElementById('act-inp-start'), {
+    "locale": "ru",
+    altFormat: "d.m.Y",
+    altInput: true,
+    dateFormat: "d.m.Y",
+});
+flatpickr(document.getElementById('act-inp-end'), {
+    "locale": "ru",
+    altFormat: "d.m.Y",
+    altInput: true,
+    dateFormat: "d.m.Y",
 });
 
 
-let inpStart = document.querySelector('.input-start').value;
-let inpEnd = document.querySelector('.input-end').value;
-let control = document.querySelector('.form-control').value = inpStart + inpEnd;
-
-console.log(control);
-console.log(inpStart);
 
 
 

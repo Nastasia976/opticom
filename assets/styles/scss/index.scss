@@ -1051,33 +1051,52 @@ input[type="number"]:focus {
     z-index: 20;
     top: 60px;
     form {
-        padding: 14.5px 20px 17px;
+        padding: 17.5px 20px 15px;
         position: relative;
         background-color: #f8f8f8;
         max-height: 60px;
+        height: 60px;
         border-bottom: 1px solid #dcdcdc;
         label {
             position: absolute;
             right: 20px;
             height: 13px;
-            bottom: 25px;
+            bottom: 28px;
+        }
+        input{
+            height: 18px;
         }
         input,
         input::placeholder {
             height: 16px;
             font-size: 14px;
             font-weight: 300;
-            padding-bottom: 2.5px;
+            padding-bottom: 2px;
             color: #005d55;
             border-bottom: 1px solid rgba(0, 93, 85, 0.3);
             min-width: 100%;
+        }
+        ._icon-search {
+            font-size: 13px;
+            font-weight: 300;
+            position: absolute;
+            right: 20px;
+            top: 0;
+            bottom: -0.5px;
+            margin: auto;
+            transition: 0.3s;
+            color:  #005D55;
+        }
+        ._icon-search:hover,
+        ._icon-search:focus {
+            opacity: 0.5;
+            transition: 0.3s;
         }
     }
     &__conteiner {
         max-height: 100vh;
         overflow: auto;
         padding-bottom: 60px;
-        padding-top: 15px;
     }
     .exit-burger {
         display: flex;
@@ -1365,8 +1384,8 @@ input[type="number"]:focus {
     ._icon-uniE907::before {
         font-size: 35px !important;
     }
-    .header {
-        max-height: 60px;
+    .header, .header__conteiner, .header__burger {
+        max-height: 60px !important;
     }
     .header__item {
         display: none;
@@ -1430,7 +1449,7 @@ input[type="number"]:focus {
         width: 100%;
         z-index: 1 !important;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
-        padding: 10px 0 0 0;
+        padding: 0;
         &__logo {
             display: none;
         }
@@ -1483,13 +1502,14 @@ input[type="number"]:focus {
             visibility: visible;
             width: 100%;
             margin: 0;
-            padding: 27px 20px 17px;
+            padding: 25px 20px 19px;
+            height: 60px;
             max-height: 60px;
             input {
                 height: 100%;
                 font-size: 14px;
                 color: #17625d !important;
-                padding-bottom: 3px;
+                padding-bottom: 2px;
                 border-bottom: 1px solid rgba(0, 93, 85, 0.3);
             }
             input::placeholder {
@@ -1497,7 +1517,7 @@ input[type="number"]:focus {
             }
             .search-form__button {
                 right: 20px;
-                top: 10px;
+                top: 2px;
                 color: #17625d !important;
             }
         }
@@ -10629,6 +10649,11 @@ input[type="number"]:focus {
                 margin-left: calc(35px + (45 - 35) * ((100vw - 1440px) / (1900 - 1440))) !important;
             }
         }
+        .burger{
+            .search-form {
+                margin-left: 0 !important;
+            }
+        }
     }
 }
 .header-wrap {
@@ -13186,6 +13211,12 @@ input[type="number"]:focus {
     &__form {
         .inputsection {
             margin-top: 16px;
+            .placeholder.fixed{
+                top: -8px;
+                font-size: 12px !important;
+                opacity: 0.6;
+                color: rgba(37, 37, 37, 0.2) !important;
+            }
         }
     }
 
@@ -13205,20 +13236,23 @@ input[type="number"]:focus {
 .calendar {
     margin-left: 24px;
     max-width: 450px;
-    margin-top: 20px;
+    margin-top: 10px;
     &__header {
         display: flex;
         column-gap: 30px;
         .inputsection {
             flex: 0 1 calc(50% - 15px);
-            .placeholder-start {
+            .placeholder-start, .placeholder-end{
                 top: -8px !important;
                 font-size: 12px !important;
                 opacity: 0.6 !important;
                 transition: 0.4s;
                 color: rgba(37, 37, 37, 0.2) !important;
             }
-            .input-start::placeholder {
+            .placeholder-end{
+                left: 100px;
+            }
+            .flatpickr::placeholder {
                 font-weight: 300;
                 font-size: 18px;
                 line-height: 122%;
@@ -13430,6 +13464,9 @@ input[type="number"]:focus {
         .flatpickr-day.nextMonthDay{
             display: none;
         }
+        .flatpickr-day.today{
+            border-radius: 0;
+        }
         .flatpickr-day.selected,
         .flatpickr-day.inRange {
             background-color: #F0F0F0;
@@ -13455,6 +13492,12 @@ input[type="number"]:focus {
                 font-weight: 700;
                 font-family: "Pragmatica";
                 font-size: 18px;
+            }
+            select:hover{
+                background-color: transparent;
+            }
+            .cur-year:hover, .numInputWrapper:hover{
+                background-color: transparent;
             }
             .flatpickr-current-month {
                 display: flex;
