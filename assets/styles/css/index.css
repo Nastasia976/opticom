@@ -17110,3 +17110,7 @@ input[type="number"]:focus {
     min-width: 100% !important;
   }
 }
+
+.wrapper.purcaser-adres-deliv .sidebar-lk__top.about-purchaser .sidebar-lk__name {
+  font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
+}
