@@ -1484,17 +1484,6 @@ function linkMark(string, pos, len) {
     return string.slice(0, pos) + '<mark>' + string.slice(pos, pos + len) + '</mark>' + string.slice(pos + len);
 }
 ////////// control////////////////////
-/* $(document).ready(function () {
-   $(".flatpickr").flatpickr({
-       inline: true,
-       mode: "range",
-       altInput: true,
-       dateFormat: "d-m-y",
-   });
-   
-}); */
-
-
 flatpickr(document.getElementById('date'), {
     "locale": "ru",
     inline: true,
@@ -1502,7 +1491,7 @@ flatpickr(document.getElementById('date'), {
     altInput: true,
     dateFormat: "d.m.Y",
     mode: "range",
-    /* allowInput: true, */
+    defaultDate: ["01.01.2021", "11.01.2021"],
 });
 
 flatpickr(document.getElementById('act-inp-start'), {

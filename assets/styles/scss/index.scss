@@ -13239,6 +13239,9 @@ input[type="number"]:focus {
                 opacity: 0.6;
                 color: rgba(37, 37, 37, 0.2) !important;
             }
+            input::placeholder{
+                color: rgba(37, 37, 37, 0.9);
+            }
         }
     }
 
@@ -13272,7 +13275,7 @@ input[type="number"]:focus {
                 color: rgba(37, 37, 37, 0.2) !important;
             }
             .placeholder-end{
-                left: 100px;
+                left: 105px;
             }
             .flatpickr::placeholder {
                 font-weight: 300;
@@ -13281,6 +13284,13 @@ input[type="number"]:focus {
                 color: #252525;
                 opacity: 0.9;
             }
+            .flatpickr{
+                border-bottom: 1px solid rgba(183, 183, 183, 0.2);
+                max-width: 40%;
+            }
+        }
+        .inputsection._under{
+            margin-top: 15px;
         }
     }
 

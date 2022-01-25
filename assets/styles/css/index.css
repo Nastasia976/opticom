@@ -16646,6 +16646,22 @@ input[type="number"]:focus {
   color: rgba(37, 37, 37, 0.2) !important;
 }
 
+.act__form .inputsection input::-webkit-input-placeholder {
+  color: rgba(37, 37, 37, 0.9);
+}
+
+.act__form .inputsection input:-ms-input-placeholder {
+  color: rgba(37, 37, 37, 0.9);
+}
+
+.act__form .inputsection input::-ms-input-placeholder {
+  color: rgba(37, 37, 37, 0.9);
+}
+
+.act__form .inputsection input::placeholder {
+  color: rgba(37, 37, 37, 0.9);
+}
+
 .act__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16696,7 +16712,7 @@ input[type="number"]:focus {
 }
 
 .calendar__header .inputsection .placeholder-end {
-  left: 100px;
+  left: 105px;
 }
 
 .calendar__header .inputsection .flatpickr::-webkit-input-placeholder {
@@ -16729,6 +16745,15 @@ input[type="number"]:focus {
   line-height: 122%;
   color: #252525;
   opacity: 0.9;
+}
+
+.calendar__header .inputsection .flatpickr {
+  border-bottom: 1px solid rgba(183, 183, 183, 0.2);
+  max-width: 40%;
+}
+
+.calendar__header .inputsection._under {
+  margin-top: 15px;
 }
 
 .calendar__conteiner {
