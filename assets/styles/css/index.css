@@ -766,6 +766,22 @@ input[type="number"]:focus {
           flex-direction: column;
 }
 
+.burger .search-form-burger .search-input-burger, .burger .search-form-burger .search-input-burger::-webkit-input-placeholder {
+  color: #005D55 !important;
+}
+
+.burger .search-form-burger .search-input-burger, .burger .search-form-burger .search-input-burger:-ms-input-placeholder {
+  color: #005D55 !important;
+}
+
+.burger .search-form-burger .search-input-burger, .burger .search-form-burger .search-input-burger::-ms-input-placeholder {
+  color: #005D55 !important;
+}
+
+.burger .search-form-burger .search-input-burger, .burger .search-form-burger .search-input-burger::placeholder {
+  color: #005D55 !important;
+}
+
 .burger .search-form, .burger__items {
   display: none;
 }
@@ -1522,22 +1538,12 @@ input[type="number"]:focus {
   border-bottom: 1px solid #dcdcdc;
 }
 
-.menu-mobile form label {
-  position: absolute;
-  right: 20px;
-  height: 13px;
-}
-
-.menu-mobile form input {
-  height: 18px;
-}
-
 .menu-mobile form input,
 .menu-mobile form input::-webkit-input-placeholder {
   height: 16px;
   font-size: 14px;
   font-weight: 300;
-  padding-bottom: 2px;
+  padding-bottom: 0px;
   color: #005d55;
   border-bottom: 1px solid rgba(0, 93, 85, 0.3);
   min-width: 100%;
@@ -1548,7 +1554,7 @@ input[type="number"]:focus {
   height: 16px;
   font-size: 14px;
   font-weight: 300;
-  padding-bottom: 2px;
+  padding-bottom: 0px;
   color: #005d55;
   border-bottom: 1px solid rgba(0, 93, 85, 0.3);
   min-width: 100%;
@@ -1559,7 +1565,7 @@ input[type="number"]:focus {
   height: 16px;
   font-size: 14px;
   font-weight: 300;
-  padding-bottom: 2px;
+  padding-bottom: 0px;
   color: #005d55;
   border-bottom: 1px solid rgba(0, 93, 85, 0.3);
   min-width: 100%;
@@ -1570,19 +1576,18 @@ input[type="number"]:focus {
   height: 16px;
   font-size: 14px;
   font-weight: 300;
-  padding-bottom: 2px;
+  padding-bottom: 0px;
   color: #005d55;
   border-bottom: 1px solid rgba(0, 93, 85, 0.3);
   min-width: 100%;
 }
 
-.menu-mobile form ._icon-search {
+.menu-mobile form .search-form__button {
   font-size: 13px;
   font-weight: 300;
   position: absolute;
   right: 20px;
-  top: 0;
-  bottom: -2px;
+  top: 20px;
   margin: auto;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -2047,7 +2052,7 @@ input[type="number"]:focus {
     background-color: #f8f8f8;
     padding: 12px 0;
   }
-  .burger .search-form {
+  .burger .search-form-burger {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2061,29 +2066,36 @@ input[type="number"]:focus {
     height: 60px;
     max-height: 60px;
     min-height: 60px;
+    position: relative;
   }
-  .burger .search-form input {
+  .burger .search-form-burger input {
     height: 16px;
     font-size: 14px;
-    color: rgba(0, 93, 85, 0.9) !important;
+    color: #005d55;
+    width: 100%;
     border-bottom: 1px solid rgba(0, 93, 85, 0.3);
   }
-  .burger .search-form input::-webkit-input-placeholder {
-    color: rgba(0, 93, 85, 0.9) !important;
+  .burger .search-form-burger input::-webkit-input-placeholder {
+    color: #005d55;
   }
-  .burger .search-form input:-ms-input-placeholder {
-    color: rgba(0, 93, 85, 0.9) !important;
+  .burger .search-form-burger input:-ms-input-placeholder {
+    color: #005d55;
   }
-  .burger .search-form input::-ms-input-placeholder {
-    color: rgba(0, 93, 85, 0.9) !important;
+  .burger .search-form-burger input::-ms-input-placeholder {
+    color: #005d55;
   }
-  .burger .search-form input::placeholder {
-    color: rgba(0, 93, 85, 0.9) !important;
+  .burger .search-form-burger input::placeholder {
+    color: #005d55;
   }
-  .burger .search-form .search-form__button {
+  .burger .search-form-burger .search-form__button {
     right: 20px;
     top: 2px;
-    color: #17625d !important;
+    color: #005D55;
+    font-size: 13px;
+    font-weight: 300;
+    position: absolute;
+    right: 20px;
+    top: 21px;
   }
   .burger .burger__list a {
     font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (530 - 320)));
@@ -2096,6 +2108,18 @@ input[type="number"]:focus {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .burger .search-form input, .burger .search-form input::-webkit-input-placeholder {
+    color: #005D55;
+  }
+  .burger .search-form input, .burger .search-form input:-ms-input-placeholder {
+    color: #005D55;
+  }
+  .burger .search-form input, .burger .search-form input::-ms-input-placeholder {
+    color: #005D55;
+  }
+  .burger .search-form input, .burger .search-form input::placeholder {
+    color: #005D55;
   }
   .add-basket {
     padding: 12px 20px 29px;
