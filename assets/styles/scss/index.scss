@@ -4501,7 +4501,7 @@ input[type="number"]:focus {
                 background: linear-gradient(180deg, rgba(230, 230, 230, 0.5) 0%, rgba(230, 230, 230, 0.5) 0.01%, rgba(209, 209, 209, 0.5) 100%);
             }
             &__item {
-                padding: 5px 11px 4px;
+                padding: 5px calc(10px + (11 - 10) * ((100vw - 320px) / (1920 - 320))) 4px;
                 font-size: 14px;
                 line-height: 17px;
                 white-space: nowrap;
@@ -5209,13 +5209,13 @@ input[type="number"]:focus {
     &__items {
     }
     &__items:not(:last-child) {
-        margin-bottom: 30px;
+        margin-bottom: calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
     }
     &__name {
         font-size: 16px;
         font-weight: 500;
         line-height: 137%;
-        margin-bottom: 23px;
+        margin-bottom: calc(15px + (23 - 15) * ((100vw - 320px) / (1920 - 320)));
     }
 
     &__item {
@@ -5274,10 +5274,10 @@ input[type="number"]:focus {
         }
     }
     &__item:not(:last-child) {
-        margin-bottom: 17px;
+        margin-bottom: calc(13px + (17 - 13) * ((100vw - 320px) / (1920 - 320)));
     }
     &__buttons {
-        margin-top: 54px;
+        margin-top: calc(20px + (54 - 20) * ((100vw - 320px) / (1920 - 320)));
         display: flex;
         flex-direction: column;
     }
@@ -5299,7 +5299,7 @@ input[type="number"]:focus {
         transition: 0.3s;
     }
     .button-cancel {
-        margin-top: 17px;
+        margin-top: calc(10px + (17 - 10) * ((100vw - 320px) / (1920 - 320)));
         border: 1px solid #006d64;
         color: #006d64;
         transition: 0.3s;
@@ -5854,7 +5854,7 @@ input[type="number"]:focus {
             text-decoration: underline;
             max-width: 100%;
             font-weight: 700;
-            font-size: 20px;
+            font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
             line-height: 130%;
             letter-spacing: 0.04em;
             cursor: pointer;
@@ -5868,7 +5868,7 @@ input[type="number"]:focus {
         }
         .product__description {
             margin-top: 5px;
-            font-size: 16px;
+            font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
             line-height: 137%;
         }
         .product__obolochka {
@@ -5878,6 +5878,10 @@ input[type="number"]:focus {
         }
         .packing-product__body {
             margin-right: 20px;
+            .packing-product__item{
+                font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1920 - 320)));
+                padding: calc(3px + (5 - 3) * ((100vw - 320px) / (1920 - 320)));
+            }
         }
         .amount {
             height: 26px;
@@ -5895,7 +5899,7 @@ input[type="number"]:focus {
             justify-content: center;
         }
         .product__price {
-            font-size: 18px;
+            font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
             line-height: 122%;
             margin-top: 0;
             margin-right: 12px;
@@ -5925,7 +5929,7 @@ input[type="number"]:focus {
             padding: 20px 24px 24px;
             position: relative;
             .product__name {
-                margin-top: 20px;
+                margin-top: 22px;
                 display: block;
             }
             .top-product {
@@ -5943,7 +5947,7 @@ input[type="number"]:focus {
 @media (max-width: 1150px) {
     .body-catalogs__body._line {
         .item-line {
-            padding: 20px;
+            padding: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320))) 20px;
             .packing-product {
                 margin-right: 0;
                 &__item {
@@ -5958,6 +5962,22 @@ input[type="number"]:focus {
         .item-line {
             .packing-product__body {
                 margin-right: 0px;
+            }
+            .product__name {
+                line-height: 105%;
+            }
+            .product__description {
+                line-height: 110%;
+            }
+            .product__packing{
+                margin-top: 0;
+            }
+            .product__price {
+                line-height: 100%;
+                margin-top: 5px;
+            }
+            .product__bottom{
+                margin-top: 5px;
             }
         }
     }
@@ -10664,33 +10684,15 @@ input[type="number"]:focus {
     }
 }
 ///////////////////////////////////////////////
-@media (max-width: 1900px) {
-    .wrapper-favorite,
-    .wrapper-result,
-    .wrapper-matrix,
-    .wrapper-how-to-pay,
-    .wrapper-contacts,
-    .wrapper-basket, .wrapper-lk{
-        .header {
-            .search-form {
-                margin-left: calc(35px + (45 - 35) * ((100vw - 1440px) / (1900 - 1440))) !important;
-            }
-        }
-        .burger{
-            .search-form {
-                margin-left: 0 !important;
-            }
-        }
-        .body-catalog{
-            .search-form {
-                margin-left: 0 !important;
-            }
-        }
+@media (max-width: 1920px) {
+    .margin-search-form{
+        margin-left: calc(35px + (45 - 35) * ((100vw - 1440px) / (1900 - 1440)));
     }
 }
+
 .body-catalog{
     .search-form {
-        margin-left: 0 !important;
+        margin-left: 0 ;
     }
 }
 .header-wrap {
@@ -11171,6 +11173,15 @@ input[type="number"]:focus {
     }
     .product__item:not(:last-child) {
         margin-bottom: 24px;
+    }
+}
+@media(max-width:340px){
+    .page-5{
+        width: 100%;
+        .footer-catalof__item{
+            padding: 0 calc(6.5px + (8.5 - 6.5) * ((100vw - 320px) / (340 - 320)));
+
+        }
     }
 }
 .baskets {
@@ -12622,7 +12633,7 @@ input[type="number"]:focus {
         align-items: flex-end;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin-bottom: calc(30px + (64 - 30) * ((100vw - 320px) / (1920 - 320)));
+        margin-bottom: calc(20px + (64 - 20) * ((100vw - 320px) / (1920 - 320)));
     }
 
     &__button._btn-orange {
@@ -13576,5 +13587,18 @@ input[type="number"]:focus {
         .sidebar-lk__name{
             font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
         }
+    }
+}
+.heart-out{
+    transition: 0.2s;
+    color: #00A793;
+}
+.heart-out:hover{
+    color: #01645C;
+    transition: 0.2s;
+}
+@media(max-width:345px){
+    .item-select._big{
+        margin-right: 0 !important;
     }
 }

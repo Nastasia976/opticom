@@ -5791,7 +5791,7 @@ input[type="number"]:focus {
 }
 
 .product__item .packing-product__item {
-  padding: 5px 11px 4px;
+  padding: 5px calc(10px + (11 - 10) * ((100vw - 320px) / (1920 - 320))) 4px;
   font-size: 14px;
   line-height: 17px;
   white-space: nowrap;
@@ -6870,14 +6870,14 @@ input[type="number"]:focus {
 }
 
 .filter-catalog__items:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .filter-catalog__name {
   font-size: 16px;
   font-weight: 500;
   line-height: 137%;
-  margin-bottom: 23px;
+  margin-bottom: calc(15px + (23 - 15) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .filter-catalog__item {
@@ -6957,11 +6957,11 @@ input[type="number"]:focus {
 }
 
 .filter-catalog__item:not(:last-child) {
-  margin-bottom: 17px;
+  margin-bottom: calc(13px + (17 - 13) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .filter-catalog__buttons {
-  margin-top: 54px;
+  margin-top: calc(20px + (54 - 20) * ((100vw - 320px) / (1920 - 320)));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6993,7 +6993,7 @@ input[type="number"]:focus {
 }
 
 .filter-catalog .button-cancel {
-  margin-top: 17px;
+  margin-top: calc(10px + (17 - 10) * ((100vw - 320px) / (1920 - 320)));
   border: 1px solid #006d64;
   color: #006d64;
   -webkit-transition: 0.3s;
@@ -7709,7 +7709,7 @@ input[type="number"]:focus {
   text-decoration: underline;
   max-width: 100%;
   font-weight: 700;
-  font-size: 20px;
+  font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
   line-height: 130%;
   letter-spacing: 0.04em;
   cursor: pointer;
@@ -7726,7 +7726,7 @@ input[type="number"]:focus {
 
 .body-catalogs__body._line .item-line .product__description {
   margin-top: 5px;
-  font-size: 16px;
+  font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
   line-height: 137%;
 }
 
@@ -7742,6 +7742,11 @@ input[type="number"]:focus {
 
 .body-catalogs__body._line .item-line .packing-product__body {
   margin-right: 20px;
+}
+
+.body-catalogs__body._line .item-line .packing-product__body .packing-product__item {
+  font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1920 - 320)));
+  padding: calc(3px + (5 - 3) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .body-catalogs__body._line .item-line .amount {
@@ -7768,7 +7773,7 @@ input[type="number"]:focus {
 }
 
 .body-catalogs__body._line .item-line .product__price {
-  font-size: 18px;
+  font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
   line-height: 122%;
   margin-top: 0;
   margin-right: 12px;
@@ -7803,7 +7808,7 @@ input[type="number"]:focus {
     position: relative;
   }
   .body-catalogs__body._line .item-line .product__name {
-    margin-top: 20px;
+    margin-top: 22px;
     display: block;
   }
   .body-catalogs__body._line .item-line .top-product {
@@ -7820,7 +7825,7 @@ input[type="number"]:focus {
 
 @media (max-width: 1150px) {
   .body-catalogs__body._line .item-line {
-    padding: 20px;
+    padding: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320))) 20px;
   }
   .body-catalogs__body._line .item-line .packing-product {
     margin-right: 0;
@@ -7833,6 +7838,22 @@ input[type="number"]:focus {
 @media (max-width: 445px) {
   .body-catalogs__body._line .item-line .packing-product__body {
     margin-right: 0px;
+  }
+  .body-catalogs__body._line .item-line .product__name {
+    line-height: 105%;
+  }
+  .body-catalogs__body._line .item-line .product__description {
+    line-height: 110%;
+  }
+  .body-catalogs__body._line .item-line .product__packing {
+    margin-top: 0;
+  }
+  .body-catalogs__body._line .item-line .product__price {
+    line-height: 100%;
+    margin-top: 5px;
+  }
+  .body-catalogs__body._line .item-line .product__bottom {
+    margin-top: 5px;
   }
 }
 
@@ -13559,35 +13580,14 @@ input[type="number"]:focus {
   }
 }
 
-@media (max-width: 1900px) {
-  .wrapper-favorite .header .search-form,
-  .wrapper-result .header .search-form,
-  .wrapper-matrix .header .search-form,
-  .wrapper-how-to-pay .header .search-form,
-  .wrapper-contacts .header .search-form,
-  .wrapper-basket .header .search-form, .wrapper-lk .header .search-form {
-    margin-left: calc(35px + (45 - 35) * ((100vw - 1440px) / (1900 - 1440))) !important;
-  }
-  .wrapper-favorite .burger .search-form,
-  .wrapper-result .burger .search-form,
-  .wrapper-matrix .burger .search-form,
-  .wrapper-how-to-pay .burger .search-form,
-  .wrapper-contacts .burger .search-form,
-  .wrapper-basket .burger .search-form, .wrapper-lk .burger .search-form {
-    margin-left: 0 !important;
-  }
-  .wrapper-favorite .body-catalog .search-form,
-  .wrapper-result .body-catalog .search-form,
-  .wrapper-matrix .body-catalog .search-form,
-  .wrapper-how-to-pay .body-catalog .search-form,
-  .wrapper-contacts .body-catalog .search-form,
-  .wrapper-basket .body-catalog .search-form, .wrapper-lk .body-catalog .search-form {
-    margin-left: 0 !important;
+@media (max-width: 1920px) {
+  .margin-search-form {
+    margin-left: calc(35px + (45 - 35) * ((100vw - 1440px) / (1900 - 1440)));
   }
 }
 
 .body-catalog .search-form {
-  margin-left: 0 !important;
+  margin-left: 0;
 }
 
 .header-wrap {
@@ -14126,6 +14126,15 @@ input[type="number"]:focus {
 
 .wrapper-basket .product__item:not(:last-child) {
   margin-bottom: 24px;
+}
+
+@media (max-width: 340px) {
+  .page-5 {
+    width: 100%;
+  }
+  .page-5 .footer-catalof__item {
+    padding: 0 calc(6.5px + (8.5 - 6.5) * ((100vw - 320px) / (340 - 320)));
+  }
 }
 
 .baskets__wrapper {
@@ -15943,7 +15952,7 @@ input[type="number"]:focus {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: calc(30px + (64 - 30) * ((100vw - 320px) / (1920 - 320)));
+  margin-bottom: calc(20px + (64 - 20) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .quick-order__button._btn-orange {
@@ -17116,4 +17125,22 @@ input[type="number"]:focus {
 
 .wrapper.purcaser-adres-deliv .sidebar-lk__top.about-purchaser .sidebar-lk__name {
   font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.heart-out {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #00A793;
+}
+
+.heart-out:hover {
+  color: #01645C;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+@media (max-width: 345px) {
+  .item-select._big {
+    margin-right: 0 !important;
+  }
 }
