@@ -4898,18 +4898,19 @@ input[type="number"]:focus {
   font-size: 14px;
   line-height: 17px;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .packing__item:not(:last-child) {
   border-right: 0.5px solid #9f9f9f;
 }
 
-.packing__item:first-child {
+.packing__item.active, .packing__item.active:hover {
   background: #e1e1de;
   color: #454545;
 }
 
-.packing__item.active, .packing__item:hover {
+.packing__item:hover {
   background: #f1f0eb;
   color: #212121;
 }
@@ -5764,6 +5765,13 @@ input[type="number"]:focus {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  /* &__item.active{
+                background: linear-gradient(180deg, rgba(228, 228, 228, 0.5) 0%, rgba(210, 210, 210, 0.5) 100%);
+                color: #696969;
+            }
+            &__item:first-child {
+                background-color: #e1e1de;
+            } */
 }
 
 .product__item .packing-product__title {
@@ -5778,6 +5786,8 @@ input[type="number"]:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(230, 230, 230, 0.5)), color-stop(0.01%, rgba(230, 230, 230, 0.5)), to(rgba(209, 209, 209, 0.5)));
+  background: linear-gradient(180deg, rgba(230, 230, 230, 0.5) 0%, rgba(230, 230, 230, 0.5) 0.01%, rgba(209, 209, 209, 0.5) 100%);
 }
 
 .product__item .packing-product__item {
@@ -5785,23 +5795,20 @@ input[type="number"]:focus {
   font-size: 14px;
   line-height: 17px;
   white-space: nowrap;
-}
-
-.product__item .packing-product__item:not(:first-child) {
   color: rgba(0, 0, 0, 0.75);
   cursor: pointer;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(230, 230, 230, 0.5)), color-stop(0.01%, rgba(230, 230, 230, 0.5)), to(rgba(209, 209, 209, 0.5)));
-  background: linear-gradient(180deg, rgba(230, 230, 230, 0.5) 0%, rgba(230, 230, 230, 0.5) 0.01%, rgba(209, 209, 209, 0.5) 100%);
+  background-color: transparent;
 }
 
-.product__item .packing-product__item:not(:first-child):hover, .product__item .packing-product__item.active:not(:first-child) {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(228, 228, 228, 0.5)), to(rgba(210, 210, 210, 0.5)));
-  background: linear-gradient(180deg, rgba(228, 228, 228, 0.5) 0%, rgba(210, 210, 210, 0.5) 100%);
+.product__item .packing-product__item:hover {
   color: #696969;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(228, 228, 228, 0.5)), to(rgba(210, 210, 210, 0.5)));
+  background: linear-gradient(180deg, rgba(228, 228, 228, 0.5) 0%, rgba(210, 210, 210, 0.5));
 }
 
-.product__item .packing-product__item:first-child {
-  background-color: #e1e1de;
+.product__item .packing-product__item.active, .product__item .packing-product__item.active:hover {
+  background: #E1E1DE !important;
+  color: #3B3B3B;
 }
 
 .product__item:last-child {
@@ -6899,7 +6906,7 @@ input[type="number"]:focus {
 
 .filter-catalog__item label {
   width: 15px;
-  height: 14px;
+  height: 15px;
   border: 1px solid #d1d1d1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8032,7 +8039,7 @@ input[type="number"]:focus {
 }
 
 .compare__top {
-  margin-top: calc(60px + (72 - 60) * ((100vw - 320px) / (1920 - 320)));
+  margin-top: calc(30px + (72 - 30) * ((100vw - 320px) / (1920 - 320)));
   padding: 0 20px;
   border-bottom: 1px solid #e3e2dc;
 }
@@ -8177,7 +8184,7 @@ input[type="number"]:focus {
 }
 
 .scrollbar__body {
-  padding: 0 0 20px 0;
+  padding: 0 0 calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320))) 0;
 }
 
 .scrollbar__item {
@@ -8412,7 +8419,7 @@ input[type="number"]:focus {
 
 .product-compare__slider .product__item .select-product .select__choice-all span,
 .swiper-mobile .product__item .select-product .select__choice-all span {
-  font-size: 14px;
+  font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1920 - 320)));
 }
 
 .product-compare__slider .product__item .select-product.is-active .select__body,
@@ -9070,10 +9077,6 @@ input[type="number"]:focus {
 }
 
 @media (max-width: 520px) {
-  .swiper-mobile .product__item .select-product,
-  .swiper-mobile2 .product__item .select-product {
-    margin: 0 !important;
-  }
   .swiper-mobile .product__item,
   .swiper-mobile2 .product__item {
     padding: 0;

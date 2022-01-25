@@ -3767,15 +3767,15 @@ input[type="number"]:focus {
         font-size: 14px;
         line-height: 17px;
         cursor: pointer;
+        background-color: transparent;
     }
     &__item:not(:last-child) {
         border-right: 0.5px solid #9f9f9f;
     }
-    &__item:first-child {
+    &__item.active, &__item.active:hover {
         background: #e1e1de;
         color: #454545;
     }
-    &__item.active,
     &__item:hover {
         background: #f1f0eb;
         color: #212121;
@@ -4498,31 +4498,32 @@ input[type="number"]:focus {
             &__body {
                 margin-top: 11px;
                 display: flex;
+                background: linear-gradient(180deg, rgba(230, 230, 230, 0.5) 0%, rgba(230, 230, 230, 0.5) 0.01%, rgba(209, 209, 209, 0.5) 100%);
             }
             &__item {
                 padding: 5px 11px 4px;
                 font-size: 14px;
                 line-height: 17px;
                 white-space: nowrap;
-            }
-            &__item:not(:first-child) {
                 color: rgba(0, 0, 0, 0.75);
                 cursor: pointer;
-                background: linear-gradient(
-                    180deg,
-                    rgba(230, 230, 230, 0.5) 0%,
-                    rgba(230, 230, 230, 0.5) 0.01%,
-                    rgba(209, 209, 209, 0.5) 100%
-                );
+                background-color: transparent; 
             }
-            &__item:not(:first-child):hover,
-            &__item.active:not(:first-child) {
+            &__item:hover{
+                color: #696969;
+                background: linear-gradient(180deg, rgba(228, 228, 228, 0.5) 0%, rgba(210, 210, 210, 0.5))
+            }
+            &__item.active, &__item.active:hover{
+                background: #E1E1DE !important;
+                color: #3B3B3B;
+            }
+            /* &__item.active{
                 background: linear-gradient(180deg, rgba(228, 228, 228, 0.5) 0%, rgba(210, 210, 210, 0.5) 100%);
                 color: #696969;
             }
             &__item:first-child {
                 background-color: #e1e1de;
-            }
+            } */
         }
     }
     &__item:last-child {
@@ -5235,7 +5236,7 @@ input[type="number"]:focus {
         }
         label {
             width: 15px;
-            height: 14px;
+            height: 15px;
             border: 1px solid #d1d1d1;
             display: flex;
             align-items: center;
@@ -6136,7 +6137,7 @@ input[type="number"]:focus {
         }
     }
     &__top {
-        margin-top: calc(60px + (72 - 60) * ((100vw - 320px) / (1920 - 320)));
+        margin-top: calc(30px + (72 - 30) * ((100vw - 320px) / (1920 - 320)));
         padding: 0 20px;
         border-bottom: 1px solid #e3e2dc;
         .scrollbar__item:hover {
@@ -6241,7 +6242,7 @@ input[type="number"]:focus {
         }
     }
     &__body {
-        padding: 0 0 20px 0;
+        padding: 0 0 calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320))) 0;
     }
     &__item {
         display: flex;
@@ -6407,7 +6408,7 @@ input[type="number"]:focus {
             .select__choice-all {
                 padding: 13px 11px 10px;
                 span {
-                    font-size: 14px;
+                    font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1920 - 320)));
                 }
             }
         }
@@ -6928,7 +6929,7 @@ input[type="number"]:focus {
     .swiper-mobile2 {
         .product__item {
             .select-product {
-                margin: 0 !important;
+                
             }
         }
         .product__item {

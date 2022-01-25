@@ -434,7 +434,7 @@ $(document).ready(function () {
         $(this).toggleClass('active');
     })
     $('.packing-product__item').click(function () {
-        $('.packing-product__item').removeClass('active');
+        $(this).parent().find('.packing-product__item').removeClass('active');
         $(this).toggleClass('active');
     })//фасовка
 
