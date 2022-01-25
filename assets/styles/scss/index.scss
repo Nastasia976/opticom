@@ -514,6 +514,7 @@ input[type="number"]:focus {
     display: flex;
     flex-direction: column;
     .search-form-burger{
+        display: none;
         .search-input-burger, .search-input-burger::placeholder{
             color: #005D55 !important;
         }
@@ -905,17 +906,21 @@ input[type="number"]:focus {
         margin-left: 0;
         width: 100%;
         padding-right: 72px;
-        input,
-        input::placeholder {
+        position: relative;
+        .catalog-form__input,
+        .catalog-form__input::placeholder {
             color: #3c3c3c;
-            font-size: 18px;
+            font-size: 14px;
             line-height: 133%;
             letter-spacing: 0.06em;
+            width: 100%;
         }
         input {
             border-bottom: 1px solid rgba(60, 60, 60, 0.3);
+            padding-right: 30px;
         }
-        ._icon-search {
+        .catalog-form__button {
+            position: absolute;
             font-size: 14px;
             padding: 2px;
             color: #3c3c3c;
@@ -1050,11 +1055,12 @@ input[type="number"]:focus {
 }
 @media(max-width:1000px){
     .body-catalog{
+        padding: 62px 0px 0px calc(20px + (56 - 20) * ((100vw - 1050px) / (1920 -1050)));
         &__form{
             padding-right: 20px;
-        }
-        .search-form__button {
-            right: 20px;
+            .catalog-form__button {
+                right: 20px;
+            }
         }
     }
 }
@@ -1094,11 +1100,6 @@ input[type="number"]:focus {
             margin: auto;
             transition: 0.3s;
             color: #005D55;
-        }
-        ._icon-search:hover,
-        ._icon-search:focus {
-            opacity: 0.5;
-            transition: 0.3s;
         }
     }
     &__conteiner {
@@ -1507,7 +1508,6 @@ input[type="number"]:focus {
         .search-form-burger{
             display: flex;
             align-items: flex-end;
-            visibility: visible;
             width: 100%;
             margin: 0;
             padding: 17px 20px 19px;
@@ -1515,6 +1515,7 @@ input[type="number"]:focus {
             max-height: 60px;
             min-height: 60px;
             position: relative;
+            display: flex;
             input {
                 height: 16px;
                 font-size: 14px;
@@ -1526,8 +1527,6 @@ input[type="number"]:focus {
                 color: #005d55;
             }
             .search-form__button {
-                right: 20px;
-                top: 2px;
                 color: #005D55;
                 font-size: 13px;
                 font-weight: 300;
@@ -1605,8 +1604,6 @@ input[type="number"]:focus {
 @media (max-width: 580px) {
     .catalog-menu {
         display: none;
-    }
-    .menu-mobile {
     }
 }
 //--------------------------------------------

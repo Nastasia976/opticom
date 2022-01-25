@@ -327,7 +327,12 @@ $(document).ready(function () {
         if (!div.is(e.target)
             && div.has(e.target).length === 0) {
             $('.burger__conteiner, .burger-menu, .burger').removeClass('active');
-            $('body').removeClass('locks');
+            $('.menu-mobile').css('display', 'none');
+            $('.menu-mobile__body').slideUp(300);
+            $('.menu-mobile__header').removeClass('active');
+            $('.menu-mobile__item').removeClass('active').next().slideUp(300);
+            $('.menu-mobile__header').show();
+            $('._all-categories').hide();
         }
     });
 
@@ -496,6 +501,12 @@ $(document).ready(function () {
         $('body').addClass('locked');
         if ($('.burger').hasClass('active')) {
             $('.burger, .burger__conteiner, .header__burger, .burger-menu').removeClass('active');
+            $('.menu-mobile').css('display', 'none');
+            $('.menu-mobile__body').slideUp(300);
+            $('.menu-mobile__header').removeClass('active');
+            $('.menu-mobile__item').removeClass('active').next().slideUp(300);
+            $('.menu-mobile__header').show();
+            $('._all-categories').hide();
         }
     })
 
