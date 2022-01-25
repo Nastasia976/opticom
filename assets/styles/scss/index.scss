@@ -5605,6 +5605,13 @@ input[type="number"]:focus {
     .body-catalogs__item {
         margin-right: 0 !important;
     }
+    .grid-catalog{
+        row-gap: 16px;
+        border: 0;
+        .product__item{
+            border: 1px solid #E8E8E8;
+        }
+    }
 }
 //-------------catalog-list----------
 .body-catalogs {
@@ -5949,10 +5956,13 @@ input[type="number"]:focus {
         .item-line {
             padding: calc(9px + (20 - 9) * ((100vw - 320px) / (1920 - 320))) 20px calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
             .packing-product {
-                margin-right: 0;
+                margin-right: 10px;
                 &__item {
                     padding: 5px 8px;
                 }
+            }
+            .product__price{
+                margin-right: 0;
             }
         }
     }
@@ -5976,7 +5986,7 @@ input[type="number"]:focus {
                 margin-top: 5px;
             }
             .product__bottom{
-                margin-top: 5px;
+                margin-top: 10px;
             }
         }
     }
