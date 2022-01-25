@@ -9588,8 +9588,8 @@ input[type="number"]:focus {
   overflow: hidden;
   position: relative;
   padding-right: 58px;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9628,7 +9628,7 @@ input[type="number"]:focus {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   white-space: nowrap;
-  font-size: 16px;
+  font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
   line-height: 137%;
   margin-right: 18px;
   display: -webkit-box;
@@ -9693,6 +9693,7 @@ input[type="number"]:focus {
           transform: scale(-1, 1);
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  margin-top: 16px;
 }
 
 .blog__body {
@@ -9824,14 +9825,25 @@ input[type="number"]:focus {
   }
 }
 
-@media (max-width: 480px) {
-  .top-block {
+@media (max-width: 650px) {
+  .blog .top-block {
     position: relative;
   }
-  .top-block .rubrica {
+  .blog .top-block__block {
+    padding-top: 15px;
+    max-height: 70px;
+  }
+  .blog .top-block__block.open {
+    max-height: 800px;
+  }
+  .blog .top-block .rubrica {
     position: absolute;
     left: 0;
-    top: -25px;
+    top: 0px;
+    margin-top: 0;
+  }
+  .blog .top-block__arrow {
+    top: 15px;
   }
 }
 

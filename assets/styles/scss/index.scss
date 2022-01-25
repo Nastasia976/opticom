@@ -7351,7 +7351,7 @@ input[type="number"]:focus {
             overflow: hidden;
             position: relative;
             padding-right: 58px;
-            transition: all 0.2s ease-out;
+            transition: all 0.5s ease-out;
             display: flex;
             align-items: flex-start;
         }
@@ -7374,7 +7374,7 @@ input[type="number"]:focus {
             border-radius: 53px;
             transition: 0.3s;
             white-space: nowrap;
-            font-size: 16px;
+            font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
             line-height: 137%;
             margin-right: 18px;
             display: flex;
@@ -7417,6 +7417,7 @@ input[type="number"]:focus {
             position: static;
             transform: scale(-1, 1);
             transition: 0.4s;
+            margin-top: 16px;
         }
     }
     //-----------------------body-with-card-------
@@ -7512,13 +7513,26 @@ input[type="number"]:focus {
         height: auto;
     }
 }
-@media (max-width: 480px) {
-    .top-block {
-        position: relative;
-        .rubrica {
-            position: absolute;
-            left: 0;
-            top: -25px;
+@media (max-width: 650px) {
+    .blog {
+        .top-block{
+            position: relative;
+            &__block{
+                padding-top: 15px;
+                max-height: 70px;
+            }
+            &__block.open {
+                max-height: 800px;
+            }
+            .rubrica {
+                position: absolute;
+                left: 0;
+                top: 0px;
+                margin-top: 0;
+            }
+            &__arrow {
+                top: 15px;
+            }
         }
     }
 }
