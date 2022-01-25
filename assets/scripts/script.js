@@ -395,12 +395,10 @@ $(document).ready(function () {
     $('#1catalog-menu').click(function () {
         $('.catalog-menu').toggleClass('active');
         $('body').addClass('locked');
-        $('.wrapper').addClass('lock');
     });
     $('.body-catalog__close').click(function () {
         $('.catalog-menu').removeClass('active');
-        $('body').removeClass('lock');
-        $('.wrapper').removeClass('lock');
+        $('body').removeClass('locked');
     });
 
     $('.catalog__elemet span').click(function (e) {
