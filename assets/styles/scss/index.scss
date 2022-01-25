@@ -5929,7 +5929,7 @@ input[type="number"]:focus {
             padding: 20px 24px 24px;
             position: relative;
             .product__name {
-                margin-top: 22px;
+                margin-top: 25px;
                 display: block;
             }
             .top-product {
@@ -5947,7 +5947,7 @@ input[type="number"]:focus {
 @media (max-width: 1150px) {
     .body-catalogs__body._line {
         .item-line {
-            padding: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320))) 20px;
+            padding: calc(9px + (20 - 9) * ((100vw - 320px) / (1920 - 320))) 20px calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
             .packing-product {
                 margin-right: 0;
                 &__item {
@@ -5961,7 +5961,6 @@ input[type="number"]:focus {
     .body-catalogs__body._line {
         .item-line {
             .packing-product__body {
-                margin-right: 0px;
             }
             .product__name {
                 line-height: 105%;
