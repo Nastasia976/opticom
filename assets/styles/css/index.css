@@ -7190,13 +7190,21 @@ input[type="number"]:focus {
 .item-icon .body-catalogs__icon {
   cursor: pointer;
   color: #dbdbdb;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .item-icon .body-catalogs__icon:not(:last-child) {
   margin-right: 12px;
 }
 
-.item-icon .body-catalogs__icon.active {
+.item-icon .body-catalogs__icon:hover {
+  color: #01645C;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.item-icon .body-catalogs__icon.active, .item-icon .body-catalogs__icon.active:hover {
   color: #7ecbc2 !important;
 }
 
@@ -7934,6 +7942,14 @@ input[type="number"]:focus {
   font-size: 16px;
   line-height: 137%;
   padding: 5px 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.sidebar-p-catalog__link:hover {
+  color: #D4AE67;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .sidebar-p-catalog__more, .sidebar-p-catalog__roll-up {

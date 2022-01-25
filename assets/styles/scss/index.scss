@@ -5436,11 +5436,16 @@ input[type="number"]:focus {
     .body-catalogs__icon {
         cursor: pointer;
         color: #dbdbdb;
+        transition: 0.2s;
     }
     .body-catalogs__icon:not(:last-child) {
         margin-right: 12px;
     }
-    .body-catalogs__icon.active {
+    .body-catalogs__icon:hover{
+        color: #01645C;
+        transition: 0.2s;
+    }
+    .body-catalogs__icon.active, .body-catalogs__icon.active:hover {
         color: #7ecbc2 !important;
     }
 }
@@ -6049,8 +6054,12 @@ input[type="number"]:focus {
         font-size: 16px;
         line-height: 137%;
         padding: 5px 0;
+        transition: 0.2s;
     }
-
+    &__link:hover{
+        color: #D4AE67;
+        transition: 0.2s;
+    }
     &__more,
     &__roll-up {
         color: #006d64;
