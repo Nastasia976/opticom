@@ -614,12 +614,12 @@ $(document).ready(function () {
 
     $('.sidebar-p-catalog__more').click(function () {
         $(this).hide().next().show();
-        $(this).parent().find('.sidebar-p-catalog__link._last ~ .sidebar-p-catalog__link').slideToggle(500);
+        $(this).parent().find('.sidebar-p-catalog__link:nth-child(4) ~ .sidebar-p-catalog__link').css('display', 'block');
     })
 
     $('.roll-up').click(function () {
         $(this).hide().prev().show();
-        $(this).parent().find('.sidebar-p-catalog__link._last ~ .sidebar-p-catalog__link').slideToggle(500);
+        $(this).parent().find('.sidebar-p-catalog__link:nth-child(4) ~ .sidebar-p-catalog__link').css('display', 'none');
     })
 
     $('.sidebar-p-catalog__items').each(function () {
@@ -1429,7 +1429,11 @@ $(document).ready(function () {
     });
 
     $('.product__button, .product__button-compare').click(function () {
-        $(this).css('background-color', '#00AA95').text('В корзине');
+        if ($(this).hasClass('active')){
+            $(this).removeClass('active').css('background-color', '#D4AE67').text('В корзину');
+        } else {
+            $(this).addClass('active').css('background-color', '#00AA95').text('В корзине');
+        }
     });
 });
 
