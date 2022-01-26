@@ -336,8 +336,8 @@ $(document).ready(function () {
         }
     });
 
-    $('.popup-cooki').click(function(){
-        if ($('.burger, .pop-up').hasClass('active')){
+    $('.popup-cooki').click(function () {
+        if ($('.burger, .pop-up').hasClass('active')) {
             $('body').addClass('locked');
         }
     })
@@ -362,14 +362,14 @@ $(document).ready(function () {
         }
     });
 
-    $('.burger').click(function(){
-        if ($(this).hasClass('active')){
+    $('.burger').click(function () {
+        if ($(this).hasClass('active')) {
             $('body').addClass('locked');
         }
     });
 
-    $('.pop-up').click(function(){
-        if ($(this).hasClass('active')){
+    $('.pop-up').click(function () {
+        if ($(this).hasClass('active')) {
             $('body').addClass('locked');
         }
     })
@@ -480,13 +480,13 @@ $(document).ready(function () {
         $('body').addClass('locked');
     })
 
-    $('#add-in-basket').click(function(){
-        if ($(this).hasClass('active')){
+    $('#add-in-basket').click(function () {
+        if ($(this).hasClass('active')) {
             $(this).removeClass('active').find('.button-main').text('В корзину');
         } else {
             $(this).addClass('active').find('.button-main').text('В корзине');
         }
-       
+
     })
 
     $('.popup__button').click(function () {
@@ -650,21 +650,21 @@ $(document).ready(function () {
 
     //---------catalog-autoriz------
 
-    $('.icon-grid-avtoriz-catalog').click(function(){
+    $('.icon-grid-avtoriz-catalog').click(function () {
         $('.body-catalogs__icon').removeClass('active');
         $(this).addClass('active');
         $('.body-autoriz').removeClass('active');
         $('.body-grid-avtoriz-catalog').addClass('active');
     });
 
-    $('.icon-list-avtoriz-catalog').click(function(){
+    $('.icon-list-avtoriz-catalog').click(function () {
         $('.body-catalogs__icon').removeClass('active');
         $(this).addClass('active');
         $('.body-autoriz').removeClass('active');
         $('.body-list-avtoriz-catalog').addClass('active');
     });
 
-    $('.icon-line-avtoriz-catalog').click(function(){
+    $('.icon-line-avtoriz-catalog').click(function () {
         $('.body-catalogs__icon').removeClass('active');
         $(this).addClass('active');
         $('.body-autoriz').removeClass('active');
@@ -807,7 +807,8 @@ $(document).ready(function () {
     });
     $('.teg-close').click(function (event) {
         $(this).parent().removeClass('active');
-    })
+    });
+
 
     $(window).on('resize', function () {
         if ($(window).width() < 1376) {
@@ -1369,6 +1370,7 @@ $(document).ready(function () {
         $('.order-sent').toggleClass('active');
         $('body').addClass('locked');
     });
+
 });
 
 //--------lk-----------
@@ -1476,7 +1478,7 @@ $(document).ready(function () {
     });
 
     $('.product__button, .product__button-compare').click(function () {
-        if ($(this).hasClass('active')){
+        if ($(this).hasClass('active')) {
             $(this).removeClass('active').css('background-color', '#D4AE67').text('В корзину');
         } else {
             $(this).addClass('active').css('background-color', '#00AA95').text('В корзине');
@@ -1515,6 +1517,49 @@ for (let i = 1; i < 2; i++) {
         $('.result-search-catalog').removeClass('show');
     }
 }); */
+
+
+function init() {
+    let map = new ymaps.Map('map', {
+        center: [60.087131, 30.470643],
+        zoom: 13,
+    });
+    
+    let placemark1 = new ymaps.Placemark([60.085896, 30.487878], {
+        balloonContent: `
+        <div class="balloon">
+            <div class="balloon__top">
+                <div class="balloon__title">Офис и склад в Санкт-Петербурге</div>
+                <div class="balloon__close"></div>
+            </div>
+            <div class="balloon__body">
+            188663, Ленинградская обл, Всеволожский р-н, Кузьмоловский гп, Заводская ул, дом № 3, корпус 360 Г</div>
+        </div>
+        `
+    }, {
+        iconLayout: 'default#image',
+        iconImageHref: '../../../img/iconMap.svg', //расположение
+        iconImageSize: [45, 54], //размер иконки
+        iconImageOffset: [0, 0], //сдвиг
+        hideIconOnBalloonOpen: false,
+    });
+
+
+    map.controls.remove('geolocationControl'); // удаляем геолокацию
+    map.controls.remove('searchControl'); // удаляем поиск
+    map.controls.remove('trafficControl'); // удаляем контроль трафика
+    map.controls.remove('typeSelector'); // удаляем тип
+    map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+    map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+    map.controls.remove('rulerControl'); // удаляем контрол правил
+   // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+
+    map.geoObjects.add(placemark1); //добавляем балун
+}
+
+ymaps.ready(init);
+
+
 
 
 document.querySelector('#search-menu').oninput = function () {
@@ -1580,8 +1625,4 @@ flatpickr(document.getElementById('act-inp-end'), {
     altInput: true,
     dateFormat: "d.m.Y",
 });
-
-
-
-
 
