@@ -992,10 +992,11 @@ let myArN = document.querySelector('.scrollbar__next');
 let myScroll = new Swiper('.scrollbar', {
     slidesPerView: "auto",
     freeMode: true,
-    spaceBetween: 40,
     observer: true,
     observeParents: true,
     observeSlideChildren: true,
+    touchRatio: 0,
+    simulateTouch: false,
     scrollbar: {
         el: ".swiper-scrollbar",
     },
@@ -1005,12 +1006,10 @@ let myScroll = new Swiper('.scrollbar', {
     },
     breakpoints: {
         1270: {
-            touchRatio: 0,
-            simulateTouch: false,
+            spaceBetween: 40,
         },
         300: {
-            touchRatio: 1,
-            simulateTouch: true,
+            spaceBetween: 20,
         }
     }
 });
@@ -1486,39 +1485,7 @@ $(document).ready(function () {
     });
 });
 
-
-/* dycalendar.draw({
-    target: '#calendar',
-    type: 'month',
-    dayformat: 'full',
-    monthformat: 'full',
-    highlighttargetdate: true,
-    
-}) */
-
-/* let calendarDay = document.querySelectorAll('.calendar__day');
-let calendarBody = document.querySelector('.calendar__body');
-for (let i = 1; i < 2; i++) {
-    for (let k = 1; k < 32; k++) {
-    }
-} */
-
-/* $('.search-form__input').on('keyup',function(){
-    var $this = $(this),
-        val = $this.val();
-    
-    if(val.length >= 1){
-        $('.body-catalog__column-left, .body-catalog__column-right').hide();
-        $('.search-catalog, .result-search-catalog').show();
-    }else {
-        $('.body-catalog__column-left, .body-catalog__column-right').show();
-        $('.search-catalog, .result-search-catalog').hide();
-        $('.body-catalog__button').show();
-        $('.result-search-catalog').removeClass('show');
-    }
-}); */
-
-
+//---------------карта----------
 function init() {
     let map = new ymaps.Map('map', {
         center: [60.087131, 30.470643],
@@ -1560,7 +1527,7 @@ function init() {
 ymaps.ready(init);
 
 
-
+//-------------меню каталога-------------------
 
 document.querySelector('#search-menu').oninput = function () {
     let val = this.value.trim();
@@ -1602,7 +1569,7 @@ document.querySelector('#search-menu').oninput = function () {
 function linkMark(string, pos, len) {
     return string.slice(0, pos) + '<mark>' + string.slice(pos, pos + len) + '</mark>' + string.slice(pos + len);
 }
-////////// control////////////////////
+//-------------------календарь-----------------
 flatpickr(document.getElementById('date'), {
     "locale": "ru",
     inline: true,
