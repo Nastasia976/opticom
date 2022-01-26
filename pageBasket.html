@@ -1811,7 +1811,8 @@
                         <div class="append-basket__body">
                             <label>
                                 <span>Название корзины</span>
-                                <input type="text" placeholder="Корзина для">
+                                <p>Корзина для</p>
+                                <input type="text">
                             </label>
                             <div class="append-basket__button">Создать корзину</div>
                         </div>
@@ -1820,7 +1821,7 @@
                     <div class="baskets__total-amount total-amount">
                         <div class="total-amount__title">Общая сумма корзин: <br> <span>101 000 ₽</span></div>
                         <div class="total-amount__description">Условия доставки согласовываются с менеджером</div>
-                        <div class="total-amount__contact">Связаться</div>
+                        <div class="total-amount__contact contact-with-manager">Связаться</div>
                         <button class="total-amount__button">Оформить заказ</button>
                     </div>
                 </div>
@@ -1840,7 +1841,27 @@
                     </div>
                 </div>
             </div>
-
+            <div class="popups help">
+                <div class="popups__conteiner">
+                    <div class="popups__top">
+                        <div class="popups__title">Нажна помощь?</div>
+                        <div class="popups__close"></div>
+                    </div>
+                    <div class="popups__text">Оставьте сообщение и наш менеджер свяжется с вами в ближайшее время.
+                    </div>
+                    <form method="post" class="popups__body">
+                        <div class="inputsection">
+                            <input class="some-input" type="text" required>
+                            <label class="placeholder">Артикул товара*</label>
+                        </div>
+                        <div class="inputsection">
+                            <input class="some-input" type="text" required>
+                            <label class="placeholder">Сообщение*</label>
+                        </div>
+                        <button type="submit" class="popups__button">Отправить</button>
+                    </form>
+                </div>
+            </div>
             <div class="popups multy-basket">
                 <div class="popups__conteiner">
                     <div class="popups__top">
