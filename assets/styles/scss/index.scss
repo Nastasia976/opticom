@@ -3651,6 +3651,7 @@ input[type="number"]:focus {
             margin-left: 10px;
             cursor: pointer;
             border: 1px solid #D4AE67;
+            box-sizing: border-box;
             .button-main {
                 padding: 13px 0px;
                 display: flex;
@@ -3667,7 +3668,7 @@ input[type="number"]:focus {
             border: 1px solid #00A793;
             .button-main {
                 background-color: #00A793 !important;
-                transform: translate(0px, 0px);
+                transform: translate(0px, 0.4px);
             }
         }
     }
@@ -4629,12 +4630,7 @@ input[type="number"]:focus {
     }
 }
 //------------POPUP REQUEST---------
-.popup-request,
-.popup-reg,
-.popup-reg2,
-.popup-reg3,
-.popup-autoriz,
-.popup-forgot {
+.pop-up{
     width: 100%;
     min-height: 100%;
     background-color: rgba(0, 0, 0, 0.1);
@@ -4652,7 +4648,7 @@ input[type="number"]:focus {
         width: 100%;
         background-color: #fff;
         min-height: 100%;
-        padding: 0 0 30px 0;
+        padding: 0 0 22px 0;
         transform: translate(-100%, 0);
         transition: all ease 0.5s;
     }
@@ -5477,8 +5473,22 @@ input[type="number"]:focus {
         line-height: 137%;
         padding: 0 8.5px;
     }
-    &__item.active {
-        font-weight: 500;
+    &__item.active{
+        span{
+            font-weight: 500; 
+        }
+    }
+    &__item:hover {
+        padding: 0 8.3px; 
+        span{
+            font-weight: 500;
+        }
+    }
+    &__item.active:hover {
+        padding: 0 8.5px; 
+        span{
+            font-weight: 500;
+        }
     }
 }
 .best {
@@ -6379,7 +6389,7 @@ input[type="number"]:focus {
             margin-top: 0;
             font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
         }
-        .product__button {
+        .product__button{
             height: 41px;
             display: flex;
             align-items: center;
@@ -6390,6 +6400,7 @@ input[type="number"]:focus {
             background-color: #d4ae67;
             font-size: 14px;
             color: #fff;
+            font-family: "Pragmatica";
         }
         .product__button-request {
             width: 100%;
