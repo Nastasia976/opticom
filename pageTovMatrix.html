@@ -1958,7 +1958,7 @@
                                             <input value="1" class="amount__numbers">
                                             <button onclick="inc(1)" class="amount__item _plus">+</button>
                                         </div>
-                                        <button type="submit" class="product__button">В корзину</button>
+                                        <button type="submit" class="del-from-matrix del-card-matrix">Удалить из матрицы</button>
                                     </div>
                                 </div>
                                 <div class="product__item">
@@ -3425,12 +3425,24 @@
                             <span>Текст вашего сообщения</span>
                             <input type="text" class="creat-name" placeholder="Сообщение*" required>
                         </label>
-                        <button type="submit" class="popups__button">Отправить</button>
+                        <button type="submit" class="popups__button send-response">Отправить</button>
                     </form>
                 </div>
             </div>
 
-
+            <div class="popups send-message">
+                <div class="popups__conteiner">
+                    <div class="popups__top">
+                        <div class="popups__title">Ваше сообщение отправлено</div>
+                        <div class="popups__close"></div>
+                    </div>
+                    <div class="popups__body">
+                        <div class="popups__text">Менеджер свяжется с вами в ближайшее время по указанным контактным
+                            данным</div>
+                        <button class="popups__button _ok">Хорошо</button>
+                    </div>
+                </div>
+            </div>
             <div class="our-adres">
                 <div class="popups__close_x"></div>
                 <div class="popups__title">Наши адреса</div>
@@ -3469,7 +3481,7 @@
                             <span>Текст вашего сообщения</span>
                             <input type="text" class="creat-name" placeholder="Сообщение*" required>
                         </label>
-                        <button type="submit" class="popups__button">Отправить</button>
+                        <button type="submit" class="popups__button send-response"">Отправить</button>
                     </form>
                 </div>
             </div>

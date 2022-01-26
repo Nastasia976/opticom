@@ -507,7 +507,7 @@ $(document).ready(function () {
     $('.form-write__button, .send-response').click(function (event) {
         $('.send-message').toggleClass('active');
         $('body').addClass('locked');
-        $('.pop-up').removeClass('active');
+        $('.pop-up, .editing-matrix, .extend-matrix').removeClass('active');
     })
     $('.popups__close').click(function (event) {
         $('.popups').removeClass('active');
@@ -648,6 +648,30 @@ $(document).ready(function () {
         $(this).toggleClass('active');
     })
 
+    //---------catalog-autoriz------
+
+    $('.icon-grid-avtoriz-catalog').click(function(){
+        $('.body-catalogs__icon').removeClass('active');
+        $(this).addClass('active');
+        $('.body-autoriz').removeClass('active');
+        $('.body-grid-avtoriz-catalog').addClass('active');
+    });
+
+    $('.icon-list-avtoriz-catalog').click(function(){
+        $('.body-catalogs__icon').removeClass('active');
+        $(this).addClass('active');
+        $('.body-autoriz').removeClass('active');
+        $('.body-list-avtoriz-catalog').addClass('active');
+    });
+
+    $('.icon-line-avtoriz-catalog').click(function(){
+        $('.body-catalogs__icon').removeClass('active');
+        $(this).addClass('active');
+        $('.body-autoriz').removeClass('active');
+        $('.body-line-avtoriz-catalog').addClass('active');
+    });
+
+    //-------------------------
     $('.el').hover(
         function () {
             $(this).toggleClass('active');
@@ -1325,7 +1349,7 @@ $(document).ready(function () {
 
 //--------tov-matrix---------
 $(document).ready(function () {
-    $('.in-tov-matrix').click(function () {
+    $('.del-card-matrix').click(function () {
         $('.editing-matrix').toggleClass('active');
         $('body').addClass('locked');
     });
