@@ -5449,7 +5449,7 @@ input[type="number"]:focus {
         margin-right: 12px;
     }
     .body-catalogs__icon:hover{
-        color: #01645C;
+        color: #b4b4b4;
         transition: 0.2s;
     }
     .body-catalogs__icon.active, .body-catalogs__icon.active:hover {
@@ -7049,6 +7049,11 @@ input[type="number"]:focus {
     &__items {
         width: fit-content;
         margin-top: 30px;
+        a:hover{
+            .page-contacts__text{
+                color: #D89560;
+            }
+        }
     }
     &__items:not(:last-child) {
         margin-right: 26px;
@@ -12699,6 +12704,7 @@ input[type="number"]:focus {
         color: #50cfc0;
     }
 }
+
 ._btn-orange {
     padding: 12px 37px 14px;
     font-family: "Pragmatica Extended";

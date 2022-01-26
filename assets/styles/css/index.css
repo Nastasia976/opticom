@@ -7016,7 +7016,7 @@ input[type="number"]:focus {
 }
 
 .item-icon .body-catalogs__icon:hover {
-  color: #01645C;
+  color: #b4b4b4;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -9023,6 +9023,10 @@ input[type="number"]:focus {
   width: -moz-fit-content;
   width: fit-content;
   margin-top: 30px;
+}
+
+.page-contacts__items a:hover .page-contacts__text {
+  color: #D89560;
 }
 
 .page-contacts__items:not(:last-child) {
