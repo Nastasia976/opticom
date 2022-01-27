@@ -876,23 +876,7 @@ $(document).on('click', '.radiobuttons__item', function (event) {
 setTimeout(() => { $('.popup-cooki').addClass('active') }, 5000);
 setTimeout(() => { $('.multy-basket').addClass('active') }, 1500);
 
-/* $(document).click(function (e) {
-    var div = $('.burger, .burger-menu, .header__burger');
-    if (!div.is(e.target)
-        && div.has(e.target).length === 0) {
-        $('.burger, .header__burger, .burger-menu, .burger__conteiner').removeClass('active');
-        $('body').removeClass('lock');
-    }
-}); */
 
-/* $(document).mouseup(function (e) {
-    var div = $('.popups__conteiner');
-    if (!div.is(e.target)
-        && div.has(e.target).length === 0) {
-        $('.popups').removeClass('active');
-        $('body').removeClass('lock');
-    }
-}); */
 let mySliderTitle = new Swiper('.slider-title', {
     slidesPerView: 1,
     pagination: {
@@ -1023,26 +1007,6 @@ myScroll.on('fromEdge', function () { //когда слайдер уйдет о�
 });
 
 
-
-/* $(document).ready(function () {
-    $('.scrollbar').scroll(function(){
-        if($('.scrollbar__next').hasClass('swiper-button-disabled')){
-            $('.scrollbar__shaddow').hide();
-        }else{
-            $('.scrollbar__shaddow').show();
-        }
-    })
-}); */
-
-
-
-
-/* $("body").on('click', '[href="#"]', function (e) {
-    var fixed_offset = 100;
-    $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
-    e.preventDefault();
-}); *///скролл до нужного блока
-
 $("body").on('click', '[href="#progress-block"], [href="#from-top"]', function (e) {
     var fixed_offset = 0;
     $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
@@ -1126,20 +1090,6 @@ $(window).on("scroll", function () {
         $('.fixed__conteiners2, .fixed__conteiners, .compare__dots, .compare__dots2').removeClass('active');
     }
 });
-
-
-/* let sliderBlock = document.querySelector('.slider-title__slide');
-let mySlider = document.querySelector('.slider-title');
- 
-sliderBlock.addEventListener("mouseenter", function (e) {
-    mySlider.params.autoplay.disableOnInteraction = false;
-    mySlider.params.autoplay.delay = 500;
-    mySlider.autoplay.start();
-});
- 
-sliderBlock.addEventListener("mouseleave", function (e) {
-    mySlider.autoplay.stop();
-}) */   //попробовать сделать остановку слайдера при наведении мыши
 
 
 function isInView(elem) {
@@ -1306,24 +1256,6 @@ $(document).ready(function () {
         }
     });
 
-    /* if ($('.search-form__input').val().length > 0){
-        console.log('hello')
-        $('.body-catalog__column-left, .body-catalog__column-right').addClass('hide');
-    } */
-    /* $('.search-form__input').on('keyup',function(){
-        var $this = $(this),
-            val = $this.val();
-        
-        if(val.length >= 1){
-            $('.body-catalog__column-left, .body-catalog__column-right').hide();
-            $('.search-catalog, .result-search-catalog').show();
-        }else {
-            $('.body-catalog__column-left, .body-catalog__column-right').show();
-            $('.search-catalog, .result-search-catalog').hide();
-            $('.body-catalog__button').show();
-            $('.result-search-catalog').removeClass('show');
-        }
-    }); */
     $('.body-catalog__button').click(function () {
         $(this).hide();
         $('.result-search-catalog').addClass('show-result');
@@ -1485,60 +1417,6 @@ $(document).ready(function () {
     });
 });
 
-
-//----------------------magnific-popup-------
-
-$(document).ready(function() {
-    $('.popup-link').magnificPopup({
-    });
-});
-
-
-
-
-
-//---------------карта----------
-function init() {
-    let map = new ymaps.Map('map', {
-        center: [60.087131, 30.470643],
-        zoom: 13,
-    });
-    
-    let placemark1 = new ymaps.Placemark([60.085896, 30.487878], {
-        balloonContent: `
-        <div class="balloon">
-            <div class="balloon__top">
-                <div class="balloon__title">Офис и склад в Санкт-Петербурге</div>
-                <div class="balloon__close"></div>
-            </div>
-            <div class="balloon__body">
-            188663, Ленинградская обл, Всеволожский р-н, Кузьмоловский гп, Заводская ул, дом № 3, корпус 360 Г</div>
-        </div>
-        `
-    }, {
-        iconLayout: 'default#image',
-        iconImageHref: '../../img/iconMap.svg', //расположение
-        iconImageSize: [45, 54], //размер иконки
-        iconImageOffset: [0, 0], //сдвиг
-        hideIconOnBalloonOpen: false,
-    });
-
-
-    map.controls.remove('geolocationControl'); // удаляем геолокацию
-    map.controls.remove('searchControl'); // удаляем поиск
-    map.controls.remove('trafficControl'); // удаляем контроль трафика
-    map.controls.remove('typeSelector'); // удаляем тип
-    map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-    map.controls.remove('zoomControl'); // удаляем контрол зуммирования
-    map.controls.remove('rulerControl'); // удаляем контрол правил
-   // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
-
-    map.geoObjects.add(placemark1); //добавляем балун
-}
-
-ymaps.ready(init);
-
-
 //-------------меню каталога-------------------
 
 document.querySelector('#search-menu').oninput = function () {
@@ -1581,27 +1459,6 @@ document.querySelector('#search-menu').oninput = function () {
 function linkMark(string, pos, len) {
     return string.slice(0, pos) + '<mark>' + string.slice(pos, pos + len) + '</mark>' + string.slice(pos + len);
 }
-//-------------------календарь-----------------
-flatpickr(document.getElementById('date'), {
-    "locale": "ru",
-    inline: true,
-    altFormat: "d.m.Y",
-    altInput: true,
-    dateFormat: "d.m.Y",
-    mode: "range",
-    defaultDate: ["01.01.2021", "11.01.2021"],
-});
 
-flatpickr(document.getElementById('act-inp-start'), {
-    "locale": "ru",
-    altFormat: "d.m.Y",
-    altInput: true,
-    dateFormat: "d.m.Y",
-});
-flatpickr(document.getElementById('act-inp-end'), {
-    "locale": "ru",
-    altFormat: "d.m.Y",
-    altInput: true,
-    dateFormat: "d.m.Y",
-});
+
 
