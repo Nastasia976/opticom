@@ -985,6 +985,7 @@ input[type="number"]:focus {
             padding: 2px;
             color: #3c3c3c;
             right: 72px;
+            cursor: pointer;
         }
     }
 
@@ -8001,6 +8002,9 @@ input[type="number"]:focus {
         a {
             color: #00aa95;
         }
+        a:hover{
+            color: #01645C;
+        }
     }
 
     &__item {
@@ -8523,13 +8527,13 @@ input[type="number"]:focus {
     &__item:nth-child(odd) {
         background-color: #f9fbf5;
     }
-    &__item:nth-child(odd):hover {
+    &__item:nth-child(3) {
         background-color: #f7f8f3;
     }
     &__item:nth-child(even) {
         background-color: #f2f8f5;
     }
-    &__item:nth-child(even):hover {
+    &__item:nth-child(4) {
         background-color: #f7fcfb;
     }
     &__date {
@@ -9702,6 +9706,9 @@ input[type="number"]:focus {
                 display: none;
             }
         }
+        span:hover{
+            text-decoration: none;
+        }
     }
     &__close {
         min-width: 38px;
@@ -10068,9 +10075,9 @@ input[type="number"]:focus {
     }
     .bottom-company {
         &__image{
-            min-height: 700px;
+            min-height: 600px;
            img{
-            width: 100%;
+            width: 90%;
            }
         }
     }
@@ -12668,7 +12675,7 @@ input[type="number"]:focus {
     padding: 12px calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320))) 10px;
 }
 .green-bg:hover,
-.green-bg:focus .green-bg_big:hover,
+.green-bg:focus, .green-bg_big:hover,
 .green-bg_big:focus {
     background-color: #00aa95;
     transition: 0.3s;
@@ -14087,4 +14094,7 @@ input[type="number"]:focus {
     height: 100%;
     position: fixed;
     background-color: rgba(0,0,0,0.5);
+}
+.choise-date-input{
+    pointer-events: none;
 }

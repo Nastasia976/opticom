@@ -1414,6 +1414,7 @@ input[type="number"]:focus {
   padding: 2px;
   color: #3c3c3c;
   right: 72px;
+  cursor: pointer;
 }
 
 .body-catalog__wrapper {
@@ -10183,6 +10184,10 @@ input[type="number"]:focus {
   color: #00aa95;
 }
 
+.publication__paragraph a:hover {
+  color: #01645C;
+}
+
 .publication__item {
   margin-top: 40px;
   padding: 0 0 0 40px;
@@ -10829,7 +10834,7 @@ input[type="number"]:focus {
   background-color: #f9fbf5;
 }
 
-.our-vacancies__item:nth-child(odd):hover {
+.our-vacancies__item:nth-child(3) {
   background-color: #f7f8f3;
 }
 
@@ -10837,7 +10842,7 @@ input[type="number"]:focus {
   background-color: #f2f8f5;
 }
 
-.our-vacancies__item:nth-child(even):hover {
+.our-vacancies__item:nth-child(4) {
   background-color: #f7fcfb;
 }
 
@@ -12214,6 +12219,10 @@ input[type="number"]:focus {
   display: none;
 }
 
+.delyvery-page__name span:hover {
+  text-decoration: none;
+}
+
 .delyvery-page__close {
   min-width: 38px;
   height: 38px;
@@ -12656,10 +12665,10 @@ input[type="number"]:focus {
     line-height: 157%;
   }
   .bottom-company__image {
-    min-height: 700px;
+    min-height: 600px;
   }
   .bottom-company__image img {
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -15774,7 +15783,7 @@ input[type="number"]:focus {
 }
 
 .green-bg:hover,
-.green-bg:focus .green-bg_big:hover,
+.green-bg:focus, .green-bg_big:hover,
 .green-bg_big:focus {
   background-color: #00aa95;
   -webkit-transition: 0.3s;
@@ -17508,4 +17517,8 @@ input[type="number"]:focus {
   height: 100%;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.choise-date-input {
+  pointer-events: none;
 }
