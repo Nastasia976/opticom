@@ -244,6 +244,9 @@ input[type="number"]:focus {
                 margin-left: calc(40px + (58 - 40) * ((100vw - 1375px) / (1920 - 1375)));
                 .search-form__button{
                     right: 0 !important;
+                    display: block;
+                    position: absolute;
+                    height: fit-content;
                 }
             }
         }
@@ -714,10 +717,6 @@ input[type="number"]:focus {
         font-size: 14px;
         font-weight: 300;
     }
-
-    &__button {
-        background-color: transparent;
-    }
     ._icon-search {
         font-size: 13px;
         font-weight: 300;
@@ -727,11 +726,7 @@ input[type="number"]:focus {
         bottom: 0;
         margin: auto;
         transition: 0.3s;
-    }
-    ._icon-search:hover,
-    ._icon-search:focus {
-        opacity: 0.5;
-        transition: 0.3s;
+        cursor: pointer;
     }
 }
 .burger-menu {
@@ -7354,7 +7349,7 @@ input[type="number"]:focus {
     }
 }
 
-@media(max-width:1270px){
+@media(max-width:1280px){
     .header, .header-card-pr{
         .header__menu{
             margin-left: calc(20px + (45 - 20) * ((100vw - 1150px) / (1270 - 1150))) !important;

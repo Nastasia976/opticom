@@ -383,6 +383,11 @@ input[type="number"]:focus {
 
 .header__conteiner .header-wrap .search-form-header .search-form__button, .header .conteiner-card .header-wrap .search-form-header .search-form__button {
   right: 0 !important;
+  display: block;
+  position: absolute;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .header__conteiner .header__menu, .header .conteiner-card .header__menu {
@@ -1045,10 +1050,6 @@ input[type="number"]:focus {
   font-weight: 300;
 }
 
-.search-form__button, .search-form-header__button {
-  background-color: transparent;
-}
-
 .search-form ._icon-search, .search-form-header ._icon-search {
   font-size: 13px;
   font-weight: 300;
@@ -1059,14 +1060,7 @@ input[type="number"]:focus {
   margin: auto;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-
-.search-form ._icon-search:hover,
-.search-form ._icon-search:focus, .search-form-header ._icon-search:hover,
-.search-form-header ._icon-search:focus {
-  opacity: 0.5;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  cursor: pointer;
 }
 
 .burger-menu {
@@ -9368,7 +9362,7 @@ input[type="number"]:focus {
   margin-top: calc(15px + (45 - 15) * ((100vw - 320px) / (1920 - 320)));
 }
 
-@media (max-width: 1270px) {
+@media (max-width: 1280px) {
   .header .header__menu, .header-card-pr .header__menu {
     margin-left: calc(20px + (45 - 20) * ((100vw - 1150px) / (1270 - 1150))) !important;
   }
