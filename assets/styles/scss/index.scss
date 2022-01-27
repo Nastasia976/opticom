@@ -12479,6 +12479,9 @@ input[type="number"]:focus {
             margin-right: 10px;
         }
     }
+    &__come-back:hover{
+        color: rgba(43, 43, 43, 0.4);
+    }
 
     &__form {
         display: flex;

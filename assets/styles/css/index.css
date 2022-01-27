@@ -15536,6 +15536,10 @@ input[type="number"]:focus {
   margin-right: 10px;
 }
 
+.body-lk__come-back:hover {
+  color: rgba(43, 43, 43, 0.4);
+}
+
 .body-lk__form {
   display: -webkit-box;
   display: -ms-flexbox;
