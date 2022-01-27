@@ -1505,7 +1505,7 @@ function init() {
         `
     }, {
         iconLayout: 'default#image',
-        iconImageHref: '../../../img/iconMap.svg', //расположение
+        iconImageHref: '../../img/iconMap.svg', //расположение
         iconImageSize: [45, 54], //размер иконки
         iconImageOffset: [0, 0], //сдвиг
         hideIconOnBalloonOpen: false,
