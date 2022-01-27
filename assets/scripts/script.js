@@ -1485,6 +1485,18 @@ $(document).ready(function () {
     });
 });
 
+
+//----------------------magnific-popup-------
+
+$(document).ready(function() {
+    $('.popup-link').magnificPopup({
+    });
+});
+
+
+
+
+
 //---------------карта----------
 function init() {
     let map = new ymaps.Map('map', {

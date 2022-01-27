@@ -4805,6 +4805,11 @@ input[type="number"]:focus {
   font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
 }
 
+.items-product__items .items-product__main-button:hover .button-main {
+  -webkit-transform: translate(0px, 0.4px) !important;
+          transform: translate(0px, 0.4px) !important;
+}
+
 .items-product__items .items-product__main-button.active {
   border: 1px solid #00a793;
 }
@@ -17194,4 +17199,11 @@ input[type="number"]:focus {
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
   }
+}
+
+.popupos {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
 }
