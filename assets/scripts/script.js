@@ -322,7 +322,7 @@ $(document).ready(function () {
         $('.search-form__input').focus();
     });
 
-    $(document).mouseup(function (e) {
+   /*  $(document).mouseup(function (e) {
         var burg = $('.burger, .popup-cooki');
         if (!burg.is(e.target)
             && burg.has(e.target).length === 0) {
@@ -334,7 +334,7 @@ $(document).ready(function () {
             $('.menu-mobile__header').show();
             $('._all-categories').hide();
         }
-    });
+    }); */
 
     $('.popup-cooki').click(function () {
         if ($('.burger, .pop-up').hasClass('active')) {
