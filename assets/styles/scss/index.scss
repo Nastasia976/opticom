@@ -164,12 +164,12 @@ input[type="number"]:focus {
     a {
         color: black;
     }
-    .search-form {
-        &__input {
+    .search-form-header{
+        input {
             color: black;
             border-bottom: 1px solid rgba(60, 60, 60, 0.3);
         }
-        &__input::placeholder,
+        input::placeholder,
         ._icon-search {
             color: black;
         }
@@ -182,7 +182,24 @@ input[type="number"]:focus {
     .basket-unit {
         color: white;
     }
+    .header__element._compare{
+        svg{
+            color: #3C3C3C;
+            margin-right: 8px;
+            
+        }
+    }
 }
+.header{
+    .header__element._compare{
+        svg{
+            color: #3C3C3C;
+            margin-right: 8px;
+
+        }
+    }
+}
+
 .header-green {
     background-color: #17625d;
     a {
@@ -200,6 +217,12 @@ input[type="number"]:focus {
         }
         input {
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    }
+    .header__element._compare{
+        svg{
+            color: #fff;;
+            margin-right: 8px;
         }
     }
 }
@@ -1949,6 +1972,11 @@ input[type="number"]:focus {
         border-radius: 0px 40px 0px 0px;
         display: flex;
         align-items: center;
+    }
+    &__items._catalog{
+       svg{
+        margin-right: 15px;
+       }
     }
     &__item {
         color: white;

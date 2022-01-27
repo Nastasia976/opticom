@@ -269,28 +269,28 @@ input[type="number"]:focus {
   color: black;
 }
 
-.header.scrolled .search-form__input {
+.header.scrolled .search-form-header input {
   color: black;
   border-bottom: 1px solid rgba(60, 60, 60, 0.3);
 }
 
-.header.scrolled .search-form__input::-webkit-input-placeholder,
-.header.scrolled .search-form ._icon-search {
+.header.scrolled .search-form-header input::-webkit-input-placeholder,
+.header.scrolled .search-form-header ._icon-search {
   color: black;
 }
 
-.header.scrolled .search-form__input:-ms-input-placeholder,
-.header.scrolled .search-form ._icon-search {
+.header.scrolled .search-form-header input:-ms-input-placeholder,
+.header.scrolled .search-form-header ._icon-search {
   color: black;
 }
 
-.header.scrolled .search-form__input::-ms-input-placeholder,
-.header.scrolled .search-form ._icon-search {
+.header.scrolled .search-form-header input::-ms-input-placeholder,
+.header.scrolled .search-form-header ._icon-search {
   color: black;
 }
 
-.header.scrolled .search-form__input::placeholder,
-.header.scrolled .search-form ._icon-search {
+.header.scrolled .search-form-header input::placeholder,
+.header.scrolled .search-form-header ._icon-search {
   color: black;
 }
 
@@ -303,6 +303,16 @@ input[type="number"]:focus {
 
 .header.scrolled .basket-unit {
   color: white;
+}
+
+.header.scrolled .header__element._compare svg {
+  color: #3C3C3C;
+  margin-right: 8px;
+}
+
+.header .header__element._compare svg {
+  color: #3C3C3C;
+  margin-right: 8px;
 }
 
 .header-green {
@@ -339,6 +349,11 @@ input[type="number"]:focus {
 
 .header-green .search-form-header input {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header-green .header__element._compare svg {
+  color: #fff;
+  margin-right: 8px;
 }
 
 .header.white .basket-unit {
@@ -2621,6 +2636,10 @@ input[type="number"]:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.contacts-block__items._catalog svg {
+  margin-right: 15px;
 }
 
 .contacts-block__item {
