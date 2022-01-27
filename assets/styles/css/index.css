@@ -12746,7 +12746,20 @@ input[type="number"]:focus {
   .bottom-company__image .image_hide {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 90%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
+@media (max-width: 620px) and (max-height: 680px) {
+  .bottom-company__image {
+    position: relative;
+  }
+  .bottom-company__image .image_hide {
+    position: absolute;
+    width: 100%;
+    height: 80%;
     -o-object-fit: contain;
        object-fit: contain;
   }
@@ -12786,21 +12799,27 @@ input[type="number"]:focus {
 }
 
 @media (max-width: 445px) and (max-height: 680px) {
-  .bottom-company {
-    margin: 0px -20px;
-  }
   .bottom-company__image {
     position: relative;
   }
   .bottom-company__image .image_hide {
-    -o-object-fit: cover;
-       object-fit: cover;
+    position: absolute !important;
+    max-height: 70%;
   }
   .about-company {
     padding-top: calc(65px + (95 - 65) * ((100vh - 560px) / (680 - 560)));
   }
   .top-company__body .top-company__description {
-    margin-top: calc(15px + (38 - 15) * ((100vh - 560px) / (680 - 560)));
+    margin-top: calc(10px + (38 - 10) * ((100vh - 560px) / (680 - 560)));
+  }
+}
+
+@media (max-width: 445px) and (max-height: 560px) {
+  .about-company {
+    padding-top: 65px;
+  }
+  .top-company__body .top-company__description {
+    margin-top: 10px;
   }
 }
 

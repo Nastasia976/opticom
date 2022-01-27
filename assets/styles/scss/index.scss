@@ -10158,7 +10158,20 @@ input[type="number"]:focus {
             .image_hide{
                 position: absolute;
                 width: 100%;
-                height: 100%;
+                height: 90%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+@media (max-width: 620px) and (max-height:680px){
+    .bottom-company {
+        &__image{
+            position: relative;
+            .image_hide{
+                position: absolute;
+                width: 100%;
+                height: 80%;
                 object-fit: contain;
             }
         }
@@ -10203,11 +10216,11 @@ input[type="number"]:focus {
 }
 @media (max-width: 445px) and (max-height:680px){
     .bottom-company {
-        margin: 0px -20px;
         &__image{
             position: relative;
             .image_hide{
-                object-fit: cover;
+                position: absolute !important;
+                max-height: 70%;
             }
         }
     }
@@ -10216,7 +10229,17 @@ input[type="number"]:focus {
     }
     .top-company__body{
         .top-company__description{
-            margin-top: calc(15px + (38 - 15) * ((100vh - 560px) / (680 - 560)));
+            margin-top: calc(10px + (38 - 10) * ((100vh - 560px) / (680 - 560)));
+        }
+    }
+}
+@media (max-width: 445px) and (max-height:560px){
+    .about-company{
+        padding-top: 65px;
+    }
+    .top-company__body{
+        .top-company__description{
+            margin-top: 10px;
         }
     }
 }
