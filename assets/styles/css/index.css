@@ -12801,10 +12801,22 @@ input[type="number"]:focus {
 @media (max-width: 445px) and (max-height: 680px) {
   .bottom-company__image {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   .bottom-company__image .image_hide {
-    position: absolute !important;
-    max-height: 70%;
+    /* position: absolute !important;
+                max-height: 70%;
+                max-width: 70%;
+                bottom: 45px;
+                transform: scale(1.4, 1.4); */
+    position: static !important;
+    margin: 0;
+    width: 95%;
   }
   .about-company {
     padding-top: calc(65px + (95 - 65) * ((100vh - 560px) / (680 - 560)));

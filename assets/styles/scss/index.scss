@@ -10218,9 +10218,17 @@ input[type="number"]:focus {
     .bottom-company {
         &__image{
             position: relative;
+            display: flex;
+            align-items: flex-end;
             .image_hide{
-                position: absolute !important;
+                /* position: absolute !important;
                 max-height: 70%;
+                max-width: 70%;
+                bottom: 45px;
+                transform: scale(1.4, 1.4); */
+                position: static !important;
+                margin: 0;
+                width: 95%;
             }
         }
     }
@@ -10243,6 +10251,7 @@ input[type="number"]:focus {
         }
     }
 }
+
 @media (max-width: 445px) {
     .top-company__description {
         font-size: 16px;
