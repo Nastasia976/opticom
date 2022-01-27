@@ -322,19 +322,19 @@ $(document).ready(function () {
         $('.search-form__input').focus();
     });
 
-   /*  $(document).mouseup(function (e) {
-        var burg = $('.burger, .popup-cooki');
-        if (!burg.is(e.target)
-            && burg.has(e.target).length === 0) {
-            $('.burger__conteiner, .burger-menu, .burger, .header__burger ').removeClass('active');
-            $('.menu-mobile').css('display', 'none');
-            $('.menu-mobile__body').slideUp(300);
-            $('.menu-mobile__header').removeClass('active');
-            $('.menu-mobile__item').removeClass('active').next().slideUp(300);
-            $('.menu-mobile__header').show();
-            $('._all-categories').hide();
-        }
-    }); */
+    /*  $(document).mouseup(function (e) {
+         var burg = $('.burger, .popup-cooki');
+         if (!burg.is(e.target)
+             && burg.has(e.target).length === 0) {
+             $('.burger__conteiner, .burger-menu, .burger, .header__burger ').removeClass('active');
+             $('.menu-mobile').css('display', 'none');
+             $('.menu-mobile__body').slideUp(300);
+             $('.menu-mobile__header').removeClass('active');
+             $('.menu-mobile__item').removeClass('active').next().slideUp(300);
+             $('.menu-mobile__header').show();
+             $('._all-categories').hide();
+         }
+     }); */
 
     $('.popup-cooki').click(function () {
         if ($('.burger, .pop-up').hasClass('active')) {
@@ -859,7 +859,7 @@ $(document).on('click', '.filter-catalog__item, .control__item, .sidebar-lk__ite
 
 $(document).on('click', '._radio-catalog-item', function (event) {
     $('._radio-catalog-item').removeClass('active').find('input').attr('checked', false);
-        $(this).toggleClass('active').find('input').attr('checked', true);
+    $(this).toggleClass('active').find('input').attr('checked', true);
 });
 
 
@@ -983,11 +983,12 @@ let myScroll = new Swiper('.scrollbar', {
     observer: true,
     observeParents: true,
     observeSlideChildren: true,
-    touchRatio: 0,
-    simulateTouch: false,
-    scrollbar: {
+    /* touchRatio: 0,
+    simulateTouch: false, */
+    /* scrollbar: {
         el: ".swiper-scrollbar",
-    },
+    }, */
+    slideToClickedSlide: true,
     navigation: {
         nextEl: '.scrollbar__next',
         prevEl: '.scrollbar__prev'
@@ -1009,6 +1010,14 @@ myScroll.on('fromEdge', function () { //когда слайдер уйдет о�
     myShaddow.style.display = 'block';
 
 });
+
+$(document).ready(function () {
+    $('.scrollbar__item').click(function () {
+        $('.scrollbar__item').removeClass('active');
+        $(this).addClass('active');
+    })
+})
+
 
 
 $("body").on('click', '[href="#progress-block"], [href="#from-top"]', function (e) {
