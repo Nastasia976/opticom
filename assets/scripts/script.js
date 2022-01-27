@@ -857,6 +857,10 @@ $(document).on('click', '.filter-catalog__item, .control__item, .sidebar-lk__ite
     return false;
 });//чекбоксы в каталоге
 
+$(document).on('click', '._radio-catalog-item', function (event) {
+    $('._radio-catalog-item').removeClass('active').find('input').attr('checked', false);
+        $(this).toggleClass('active').find('input').attr('checked', true);
+});
 
 
 $.each($('.radiobuttons__item'), function (index, val) {

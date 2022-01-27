@@ -364,7 +364,7 @@ input[type="number"]:focus {
     right: calc(17px + 48 * ((100vw - 1440px) / 480));
     bottom: -300px;
     background-color: #fff;
-    padding: 12px 25px 29px;
+    padding: 12px 20px 29px;
     visibility: hidden;
     opacity: 0;
     transform: translate(0, -100%);
@@ -372,7 +372,8 @@ input[type="number"]:focus {
     &__body {
         max-height: 155px;
         overflow: auto;
-        padding: 0 25px 20px 0;
+        padding: 0 25px 0px 0;
+        margin-top: 20px;
     }
     &__body::-webkit-scrollbar {
         height: 100%;
@@ -409,7 +410,7 @@ input[type="number"]:focus {
     &__add {
         display: flex;
         align-items: center;
-        margin-top: 25px;
+        margin-top: 20px;
         cursor: pointer;
         .add-icon {
             width: 20px;
@@ -447,18 +448,20 @@ input[type="number"]:focus {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        font-size: 16px;
-        line-height: 19px;
-        font-family: "Roboto";
         margin-top: 24px;
+        button{
+            font-size: 16px;
+            line-height: 19px;
+            font-family: "Roboto";
+        }
     }
     &__button1 {
         background-color: #006d64;
-        padding: 10px 14px;
+        padding: 10px 13px;
         color: white !important;
         transition: 0.3s;
         margin-top: 10px;
-        margin-right: 10px;
+        margin-right: 9px;
     }
     &__button1:hover {
         background-color: #00aa95;
@@ -467,10 +470,11 @@ input[type="number"]:focus {
 
     &__button2 {
         border: 1px solid #006d64;
-        padding: 10px 14px;
+        padding: 10px 12px;
         color: #006d64 !important;
         transition: 0.3s;
         margin-top: 10px;
+        font-family: 'Robobto';
     }
     &__button2:hover {
         color: #00aa95;
@@ -7587,6 +7591,11 @@ input[type="number"]:focus {
     }
     &__link {
         color: #e9e9e9;
+        transition: 0.2s;
+    }
+    &__link:hover{
+        color: #b4b4b4;
+        transition: 0.2s;
     }
     &__link:not(:first-child) {
         margin-left: 12px;
@@ -7668,12 +7677,16 @@ input[type="number"]:focus {
             right: 10px;
             top: 5px;
             transition: 0.4s;
+            color: #2B2B2B;
         }
         &__arrow.static {
             position: static;
             transform: scale(-1, 1);
             transition: 0.4s;
             margin-top: 16px;
+        }
+        &__arrow:hover{
+            color: #20A196;
         }
     }
     //-----------------------body-with-card-------
@@ -8026,8 +8039,7 @@ input[type="number"]:focus {
     }
 
     &__slider {
-        border-top: 1px solid #e8e8e8;
-        border-left: 1px solid #e8e8e8;
+        
         .blog__item {
             height: inherit;
             .blog__name {
@@ -9945,6 +9957,7 @@ input[type="number"]:focus {
     justify-content: flex-end;
     &__body {
         flex: 0 1 44.5%;
+        z-index: 2;
     }
     &__title {
         font-size: calc(38px + (50 - 38) * ((100vw - 320px) / (1920 - 320)));
@@ -10021,11 +10034,54 @@ input[type="number"]:focus {
     }
 }
 @media (min-width: 1920px) {
+    .about-company{
+        min-height: 950px !important;
+    }
     .top-company {
         &__description {
             line-height: 157%;
-            max-width: 700px !important;
         }
+    }
+    .bottom-company {
+        &__image{
+            min-height: 700px;
+           img{
+            width: 100%;
+           }
+        }
+    }
+}
+@media (min-width: 2050px) and (max-height:1340px) {
+    .bottom-company {
+        margin-top: 50px;
+    }
+}
+@media (min-width: 2230px) and (max-height:1340px) {
+    .bottom-company {
+        margin-top: 100px;
+    }
+}
+@media (min-width: 2400px) and (max-height:1340px) {
+    .bottom-company {
+        margin-top: 150px;
+    }
+}
+@media (min-width: 2600px) and (max-height:1340px) {
+    .bottom-company {
+        margin-top: 250px;
+    }
+}
+@media (min-width: 1130px) and (max-height: 670px) {
+    .about-company {
+        min-height: 640px;
+    }
+    .bottom-company {
+        margin-top: 380px;
+    }
+    .right-menu__social{
+        top: -300px;
+        right: 0px;
+        position: absolute;
     }
 }
 @media (max-height: 1080px) {
@@ -10039,11 +10095,6 @@ input[type="number"]:focus {
     .about-company {
         padding: 95px 50px 0 55px;
     }
-    /* .bottom-company {
-        &__image {
-            padding: 0 0 calc(300px + (550 - 300) * ((100vh - 560px) / (1080 - 560))) 0;
-        }
-    } */
 }
 @media (max-width: 3000px) {
     .top-company {
@@ -10078,11 +10129,38 @@ input[type="number"]:focus {
         }
     }
 }
+@media (max-width: 1130px) and (max-height: 720px) {
+    .bottom-company {
+        &__image{
+            position: relative;
+            .image_block{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
 @media (max-width: 1130px) {
     .top-company {
         justify-content: flex-start;
         &__body {
             flex: 1 1 auto;
+        }
+    }
+    
+}
+@media (max-width: 768px) and (max-height:680px){
+    .bottom-company {
+        &__image{
+            position: relative;
+            .image_hide{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
         }
     }
 }
@@ -10101,7 +10179,7 @@ input[type="number"]:focus {
             .image_hide {
                 display: block;
                 position: absolute;
-                width: 65%;
+                width: 68%;
             }
         }
     }
@@ -10118,8 +10196,27 @@ input[type="number"]:focus {
     .bottom-company {
         &__image {
             .image_hide {
-                width: 80%;
+                width: 85%;
             }
+        }
+    }
+}
+@media (max-width: 445px) and (max-height:680px){
+    .bottom-company {
+        margin: 0px -20px;
+        &__image{
+            position: relative;
+            .image_hide{
+                object-fit: cover;
+            }
+        }
+    }
+    .about-company{
+        padding-top: calc(65px + (95 - 65) * ((100vh - 560px) / (680 - 560)));
+    }
+    .top-company__body{
+        .top-company__description{
+            margin-top: calc(15px + (38 - 15) * ((100vh - 560px) / (680 - 560)));
         }
     }
 }
