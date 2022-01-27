@@ -1934,11 +1934,6 @@
                                     </div>
                                     <div class="product__price">120 руб. / шт.</div>
                                     <div class="product__bottom">
-                                        <div class="product__amount amount">
-                                            <button onclick="inc(-1)" class="amount__item _minus">-</button>
-                                            <input value="1" class="amount__numbers">
-                                            <button onclick="inc(1)" class="amount__item _plus">+</button>
-                                        </div>
                                         <button type="submit" class="del-from-matrix del-card-matrix">Удалить из
                                             матрицы</button>
                                     </div>
@@ -3479,21 +3474,22 @@
                     </form>
                 </div>
             </div>
-            <div class=" popups create-basket">
-                            <div class="popups__conteiner">
-                                <div class="popups__top">
-                                    <div class="popups__title">Создать новую корзину</div>
-                                    <div class="popups__close"></div>
-                                </div>
-                                <form method="post" class="popups__body _basket">
-                                    <label>
-                                        <span>Название корзины</span>
-                                        <input type="text" class="creat-name" placeholder="Корзина для" required>
-                                    </label>
-                                    <button type="submit" class="popups__button button-create">Создать корзину</button>
-                                </form>
-                            </div>
+            <div class="popups create-basket">
+                <div class="popups__conteiner">
+                    <div class="popups__top">
+                        <div class="popups__title">Создать новую корзину</div>
+                        <div class="popups__close"></div>
+                    </div>
+                    <form method="post" class="popups__body _basket">
+                        <label>
+                            <span>Название корзины</span>
+                            <p>Корзина для</p>
+                            <input type="text" class="creat-name" required>
+                        </label>
+                        <button type="submit" class="popups__button button-create">Создать корзину</button>
+                    </form>
                 </div>
+            </div>
                 <div class="popup-reg pop-up">
                     <div class="popup__conteiner">
                         <div class="popup__top">

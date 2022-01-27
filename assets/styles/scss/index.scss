@@ -449,18 +449,19 @@ input[type="number"]:focus {
         flex-wrap: wrap;
         align-items: center;
         margin-top: 24px;
-        button{
+        a{
             font-size: 16px;
             line-height: 19px;
+            padding: 10px 14px;
             font-family: "Roboto";
+            letter-spacing: normal;
+            margin-top: 10px;
+            transition: 0.3s;
         }
     }
     &__button1 {
         background-color: #006d64;
-        padding: 10px 13px;
         color: white !important;
-        transition: 0.3s;
-        margin-top: 10px;
         margin-right: 9px;
     }
     &__button1:hover {
@@ -470,11 +471,7 @@ input[type="number"]:focus {
 
     &__button2 {
         border: 1px solid #006d64;
-        padding: 10px 12px;
         color: #006d64 !important;
-        transition: 0.3s;
-        margin-top: 10px;
-        font-family: 'Robobto';
     }
     &__button2:hover {
         color: #00aa95;
@@ -3411,6 +3408,7 @@ input[type="number"]:focus {
         label {
             display: flex;
             flex-direction: column;
+            position: relative;
             span {
                 color: rgba(37, 37, 37, 0.2);
                 font-size: 12px;
@@ -3423,6 +3421,11 @@ input[type="number"]:focus {
                 line-height: 122%;
                 padding-bottom: 2px;
                 border-bottom: 1px solid rgba(183, 183, 183, 0.2);
+            }
+            p{
+                position: absolute;
+                bottom: 5px;
+                color: rgba(37, 37, 37, 0.9);
             }
         }
     }
@@ -3499,6 +3502,13 @@ input[type="number"]:focus {
     .popups__close::before,
     .popups__close::after {
         width: 1px;
+    }
+}
+.create-basket{
+    label{
+        input{
+            padding-left: 109px;
+        }
     }
 }
 @media (min-width: 1920px) {
@@ -10051,37 +10061,34 @@ input[type="number"]:focus {
         }
     }
 }
-@media (min-width: 2050px) and (max-height:1340px) {
-    .bottom-company {
-        margin-top: 50px;
+@media (min-width: 2050px) and (max-height:1100px){
+    .about-company{
+        padding-top: 150px !important;
     }
 }
-@media (min-width: 2230px) and (max-height:1340px) {
+@media (min-width: 2050px) and (max-height:1340px) {
     .bottom-company {
         margin-top: 100px;
     }
 }
-@media (min-width: 2400px) and (max-height:1340px) {
+@media (min-width: 2230px) and (max-height:1340px) {
     .bottom-company {
         margin-top: 150px;
     }
 }
-@media (min-width: 2600px) and (max-height:1340px) {
+@media (min-width: 2400px) and (max-height:1340px) {
+    .bottom-company {
+        margin-top: 200px;
+    }
+}
+@media (min-width: 2600px) and (max-height:1440px) {
     .bottom-company {
         margin-top: 250px;
     }
 }
-@media (min-width: 1130px) and (max-height: 670px) {
+ @media (max-width: 1920px) and (max-height: 720px) {
     .about-company {
-        min-height: 640px;
-    }
-    .bottom-company {
-        margin-top: 380px;
-    }
-    .right-menu__social{
-        top: -300px;
-        right: 0px;
-        position: absolute;
+        min-height: 720px;
     }
 }
 @media (max-height: 1080px) {
@@ -11063,13 +11070,14 @@ input[type="number"]:focus {
 .del-from-matrix {
     flex: 1 1 auto;
     line-height: 100%;
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 190%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 5px;
-    font-family: "Pragmatica";
-    background-color: #d47467;
+    font-family: "Pragmatica Extended";
+    background-color: #D4AE67;
     color: white;
     transition: 0.2s;
 }
