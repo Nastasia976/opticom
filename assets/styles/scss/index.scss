@@ -6356,22 +6356,28 @@ input[type="number"]:focus {
         .scrollbar__prev {
             position: absolute;
             transform: rotate(-180deg);
-            left: -20px;
+            left: -15px;
             top: 7px;
-            width: 25px;
+            width: 20px;
             height: 20px;
             cursor: pointer;
+        }
+        .scrollbar__next, .scrollbar__prev{
+            color: #D4AE67;
+        }
+        .scrollbar__next:hover, .scrollbar__prev:hover{
+            color: #F18070;
         }
         .swiper-button-disabled {
             display: none;
         }
         .scrollbar__shaddow {
-            min-height: 100%;
+            min-height: 90%;
             min-width: 250px;
             background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
             position: absolute;
             right: 20px;
-            bottom: 2px;
+            bottom: 10px;
             pointer-events: none;
             transition: 0.6s;
             z-index: 20;
@@ -6389,6 +6395,7 @@ input[type="number"]:focus {
         content: "";
         position: absolute;
         width: 100%;
+        left: 0;
         height: 1px;
         background-color: #e3e2dc;
         bottom: 2px;
