@@ -291,6 +291,7 @@ input[type="number"]:focus {
     &__item {
         margin-left: calc(63px + (105 - 63) * ((100vw - 1440px) / (1920 - 1440)));
         padding: 10px 0;
+        cursor: pointer;
         ._icon-catalog::before {
             margin-right: 6px;
         }
