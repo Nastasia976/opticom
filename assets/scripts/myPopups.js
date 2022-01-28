@@ -12,7 +12,7 @@ $(document).ready(function () {
             },
         }
     });
-    $('.send-sms').magnificPopup({
+    $('.send-sms, .send-response').magnificPopup({
         items: {
             src: '#message-sent',
         },
@@ -123,7 +123,22 @@ $(document).ready(function () {
         },
         removalDelay: 250,
         mainClass: 'mfp-with-fade',
-        closeOnContentClick: true,
+    });
+
+    $('.button-request').magnificPopup({
+        items: {
+            src: '#request-prise',
+        },
+        removalDelay: 250,
+        mainClass: 'mfp-with-fade',
+    });
+
+    $('.button-respond').magnificPopup({
+        items: {
+            src: '#respond',
+        },
+        removalDelay: 250,
+        mainClass: 'mfp-with-fade',
     });
 
 });

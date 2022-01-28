@@ -475,10 +475,10 @@ $(document).ready(function () {
         $('body').addClass('locked');
     }) */
 
-    $('.button-request').click(function (event) {
+    /* $('.button-request').click(function (event) {
         $('.popup-request').toggleClass('active');
         $('body').addClass('locked');
-    })
+    }) */
 
     $('#add-in-basket').click(function () {
         if ($(this).hasClass('active')) {
@@ -582,9 +582,9 @@ $(document).ready(function () {
         $(this).toggleClass('active');
     });
 
-    $('.request').click(function () {
+    /* $('.request').click(function () {
         $('.popup-request').toggleClass('active');
-    });
+    }); */
 
     $('.sidebar-catalog__item').click(function () {
         $(this).toggleClass('active');
