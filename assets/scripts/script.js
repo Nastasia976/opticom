@@ -1278,12 +1278,12 @@ $(document).ready(function () {
 
 //-----activities-------
 
-$(document).ready(function () {
+/* $(document).ready(function () {
     $('.activities__item').click(function () {
         $('.kind').toggleClass('active');
         $('body').addClass('locked');
     });
-});
+}); */
 
 //--------tov-matrix---------
 $(document).ready(function () {

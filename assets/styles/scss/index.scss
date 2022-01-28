@@ -164,6 +164,12 @@ input[type="number"]:focus {
     a {
         color: black;
     }
+    .header__link, .header__catalog{
+        color: #000;
+        span{
+            color: #000;
+        }
+    }
     .search-form-header {
         input {
             color: black;
@@ -221,6 +227,12 @@ input[type="number"]:focus {
         svg {
             color: #fff;
             margin-right: 8px;
+        }
+    }
+    .header__link, .header__catalog{
+        color: #fff;
+        span{
+            color: #fff;
         }
     }
 }
@@ -10076,6 +10088,10 @@ input[type="number"]:focus {
         position: absolute;
         right: 15px;
         bottom: 27px;
+        color: #fff;
+    }
+    &__link:hover{
+        color: #D4AE67;
     }
 }
 @media (min-width: 1920px) {
@@ -13970,6 +13986,7 @@ input[type="number"]:focus {
             display: flex;
             flex-direction: column;
             position: relative;
+            max-width: 430px;
             span {
                 color: rgba(37, 37, 37, 0.2);
                 font-size: 12px;

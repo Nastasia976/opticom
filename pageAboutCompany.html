@@ -1815,7 +1815,7 @@
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M0 42.4842L8.5 51L17 42.4842L15.778 41.2629L9.36358 47.6922V0H7.63642V47.6922L1.22204 41.2629L0 42.4842Z"
-                                    fill="#F9F0E1" />
+                                    fill="currentColor" />
                             </svg>
                         </a>
                     </div>
@@ -2012,7 +2012,7 @@
                                 Нажимая на кнопку “Отправить”, Вы соглашаетесь с <a href="#">условиями обработки
                                     персональных данных</a>
                             </div>
-                            <button type="submit" class="form-write__button" tabindex="18">Отправить</button>
+                            <button type="submit" class="form-write__button send-sms" tabindex="18">Отправить</button>
                         </form>
                     </div>
                 </div>
@@ -2623,21 +2623,17 @@
                 </div>
             </div>
         </div>
-
         <!--------popups CENTER-------------->
-        <div class="popups kind">
-            <div class="popups__conteiner">
-                <div class="popups__image">
-                    <img src="img/aboutCompany/kindofactivities.png" alt="aboutCompany">
+        <div id="line-of-business" class="popups__conteiner mfp-hide kind">
+            <div class="popups__image">
+                <img src="img/aboutCompany/kindofactivities.png" alt="aboutCompany">
+            </div>
+            <div class="popups__items">
+                <div class="popups__top">
                 </div>
-                <div class="popups__items">
-                    <div class="popups__top">
-                        <div class="popups__close"></div>
-                    </div>
-                    <p><span class="_bold">Упаковка </span> — двигатель любого товара, особенно в пищевой индустрии,
-                        она сохраняет, продает и украшает сам продукт, правильно презентуя его покупателю.</p>
-                    <p class="_bold">Текущий объем упаковочных материалов на складе: более 1000 наименований</p>
-                </div>
+                <p><span class="_bold">Упаковка </span> — двигатель любого товара, особенно в пищевой индустрии,
+                    она сохраняет, продает и украшает сам продукт, правильно презентуя его покупателю.</p>
+                <p class="_bold">Текущий объем упаковочных материалов на складе: более 1000 наименований</p>
             </div>
         </div>
         <div class="our-adres">
@@ -2667,17 +2663,14 @@
                 <div class="popups__text">Санкт-Петербург, Большой Сампсониевский пр-т, д.50</div>
             </div>
         </div>
-        <div class="popups send-message">
-            <div class="popups__conteiner">
-                <div class="popups__top">
-                    <div class="popups__title">Ваше сообщение отправлено</div>
-                    <div class="popups__close"></div>
-                </div>
-                <div class="popups__body">
-                    <div class="popups__text">Менеджер свяжется с вами в ближайшее время по указанным контактным
-                        данным</div>
-                    <button class="popups__button _ok">Хорошо</button>
-                </div>
+        <div id="message-sent" class="popups__conteiner mfp-hide">
+            <div class="popups__top">
+                <div class="popups__title">Ваше сообщение отправлено</div>
+            </div>
+            <div class="popups__body">
+                <div class="popups__text">Менеджер свяжется с вами в ближайшее время по указанным контактным
+                    данным</div>
+                <button class="popups__button _ok">Хорошо</button>
             </div>
         </div>
         <div id="creat-basket" class="popups__conteiner mfp-hide">
@@ -2693,20 +2686,17 @@
                 <button type="submit" class="popups__button button-create">Создать корзину</button>
             </form>
         </div>
-
-        <div class="popups check-your-email">
-            <div class="popups__conteiner">
-                <div class="popups__top">
-                    <div class="popups__title">Пожалуйста, проверьте почту</div>
-                    <div class="popups__close"></div>
-                </div>
-                <div class="popups__body">
-                    <div class="popups__text">Ссылка на сброс пароля отправлена на <br> Вашу почту, указанную при
-                        регистрации.</div>
-                    <div class="popups__button">Хорошо</div>
-                </div>
+        <div id="check-yuor-email" class="popups__conteiner  mfp-hide">
+            <div class="popups__top">
+                <div class="popups__title">Пожалуйста, проверьте почту</div>
+            </div>
+            <div class="popups__body">
+                <div class="popups__text">Ссылка на сброс пароля отправлена <br> на Вашу почту, указанную при
+                    регистрации.</div>
+                <div class="popups__button _ok">Хорошо</div>
             </div>
         </div>
+        <!---------------------->
         <div class="footer-mobile mobile">
             <div class="footer-mobile__title">
                 <h2>Оптиком СПБ — <br> искусство готовых решений</h2>

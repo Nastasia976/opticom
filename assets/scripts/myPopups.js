@@ -37,4 +37,10 @@ $(document).ready(function () {
             type: 'inline',
         },
     });
+    $('.activities__item').magnificPopup({
+        items: {
+            src: '#line-of-business',
+            type: 'inline',
+        },
+    });
 });
