@@ -1287,14 +1287,14 @@ $(document).ready(function () {
 
 //--------tov-matrix---------
 $(document).ready(function () {
-    $('.del-card-matrix').click(function () {
+    /* $('.del-card-matrix').click(function () {
         $('.editing-matrix').toggleClass('active');
         $('body').addClass('locked');
-    });
-    $('.filter-matrix__button').click(function () {
+    }); */
+    /* $('.filter-matrix__button').click(function () {
         $('.extend-matrix').toggleClass('active');
         $('body').addClass('locked');
-    });
+    }); */
 });
 //-------baskets--------
 $(document).ready(function () {

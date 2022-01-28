@@ -65,4 +65,22 @@ $(document).ready(function () {
         },
     });
 
+    $('.sidebar-lk__link_claim, .claim').magnificPopup({
+        items: {
+            src: '#making-claim',
+        },
+    });
+    
+    $('.del-card-matrix').magnificPopup({
+        items: {
+            src: '#editing-matrix',
+        },
+    });
+    
+    $('.filter-matrix__button').magnificPopup({
+        items: {
+            src: '#extend-matrix',
+        },
+    });
+
 });
