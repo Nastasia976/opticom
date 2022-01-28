@@ -368,12 +368,12 @@ $(document).ready(function () {
         }
     });
 
-    $('.pop-up').click(function () {
+    /* $('.pop-up').click(function () {
         if ($(this).hasClass('active')) {
             $('body').addClass('locked');
         }
     })
-
+ */
     //--------catalog-menu-mobile-----
     $('.items-catalog-mobile').click(function () {
         $('.menu-mobile').show();
@@ -812,14 +812,14 @@ $(document).ready(function () {
     });
 });
 
-$(document).mouseup(function (e) {
+/* $(document).mouseup(function (e) {
     var popup = $('.popup__conteiner, .popup-cooki');
     if (!popup.is(e.target)
         && popup.has(e.target).length === 0) {
         $('.pop-up').removeClass('active');
         $('body').removeClass('locked');
     }
-});
+}); */
 $(document).mouseup(function (e) {
     var popups = $('.popups__conteiner, .popup-cooki');
     if (!popups.is(e.target)
@@ -1422,6 +1422,7 @@ $(document).ready(function () {
         }
     });
 });
+
 
 //-------------меню каталога-------------------
 
