@@ -1337,10 +1337,10 @@ $(document).ready(function () {
         $('.order-status').text(textContent);
     });
 
-    $('.claim, .submitaclaim, .sidebar-lk__link_claim').click(function () {
+    /* $('.claim, .submitaclaim, .sidebar-lk__link_claim').click(function () {
         $('.registration-claim').toggleClass('active');
         $('body').addClass('locked');
-    });
+    }); */
 
     $('.sidebar-lk__el').click(function () {
         $('.sub-menu-lk').slideToggle();

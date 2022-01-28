@@ -11136,6 +11136,11 @@ input[type="number"]:focus {
 
 .disinfection-title__link {
   padding: 0 10px;
+  color: #fff;
+}
+
+.disinfection-title__link:hover {
+  color: #D4AE67;
 }
 
 @media (min-height: 800px) and (min-width: 1200px) {
