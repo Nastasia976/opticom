@@ -26,42 +26,49 @@ $(document).ready(function () {
         },
         removalDelay: 250,
         closeOnContentClick: true,
+        mainClass: 'mfp-with-fade',
     });
     $('.activities__item').magnificPopup({
         items: {
             src: '#line-of-business',
         },
         removalDelay: 250,
+        mainClass: 'mfp-with-fade',
     });
     $('.contact-with-manager').magnificPopup({
         items: {
             src: '#need-help',
         },
         removalDelay: 250,
+        mainClass: 'mfp-with-fade',
     });
     $('.baskets__to-clear').magnificPopup({
         items: {
             src: '#delite-allproduct',
         },
         removalDelay: 250,
+        mainClass: 'mfp-with-fade',
     });
     $('.custom').magnificPopup({
         items: {
             src: '#custom-approval',
         },
         removalDelay: 250,
+        mainClass: 'mfp-with-fade',
     });
     $('.limited').magnificPopup({
         items: {
             src: '#limit-exceeded',
         },
         removalDelay: 250,
+        mainClass: 'mfp-with-fade',
     });
     $('.control__button').magnificPopup({
         items: {
             src: '#delete-selected-list',
         },
         removalDelay: 250,
+        mainClass: 'mfp-with-fade',
     });
 
     $('.sidebar-lk__link_claim, .claim').magnificPopup({
@@ -69,6 +76,7 @@ $(document).ready(function () {
             src: '#making-claim',
         },
         removalDelay: 250,
+        mainClass: 'mfp-with-fade',
     });
 
     $('.del-card-matrix').magnificPopup({
@@ -76,6 +84,7 @@ $(document).ready(function () {
             src: '#editing-matrix',
         },
         removalDelay: 250,
+        mainClass: 'mfp-with-fade',
     });
 
     $('.filter-matrix__button').magnificPopup({
@@ -83,24 +92,28 @@ $(document).ready(function () {
             src: '#extend-matrix',
         },
         removalDelay: 250,
+        mainClass: 'mfp-with-fade',
     });
     $('.button-reg').magnificPopup({
         items: {
             src: '#reg-step2',
         },
         removalDelay: 250,
+        mainClass: 'mfp-with-fade',
     });
     $('.button-reg2').magnificPopup({
         items: {
             src: '#reg-step3',
         },
         removalDelay: 250,
+        mainClass: 'mfp-with-fade',
     });
     $('.button-reg-end').magnificPopup({
         items: {
             src: '#expect-call',
         },
         removalDelay: 250,
+        mainClass: 'mfp-with-fade',
         closeOnContentClick: true,
     });
 

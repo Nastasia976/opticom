@@ -14006,7 +14006,7 @@ input[type="number"]:focus {
 
 .popups__conteiner {
     opacity: 1;
-    transform: scale(0);
+   /*  transform: scale(0); */
     position: relative;
     margin: 0 auto !important;
     .popups__top {
@@ -14324,10 +14324,10 @@ input[type="number"]:focus {
         transform: translate(0, 0);
         transition: all 0.4s ease-out;
     }
-    .popups__conteiner{
+    /* .popups__conteiner{
         transform: scale(1);
         transition: all 0.4s ease-out;
-    }
+    } */
 }
 .mfp-hide{
     transition: all 0.4s ease-out;
@@ -14338,10 +14338,10 @@ input[type="number"]:focus {
         transform: translate(-100%, 0);
         transition: all 0.4s ease-out;
     }
-    .popups__conteiner{
+    /* .popups__conteiner{
         transform: scale(0);
         transition: all 0.4s ease-out;
-    }
+    } */
 }
 .mfp-container{
     padding: 0 !important;
