@@ -504,11 +504,6 @@ $(document).ready(function () {
         $('body').removeClass('locked');
     })
 
-    $('.form-write__button, .send-response').click(function (event) {
-        $('.send-message').toggleClass('active');
-        $('body').addClass('locked');
-        $('.pop-up, .editing-matrix, .extend-matrix').removeClass('active');
-    })
     $('.popups__close').click(function (event) {
         $('.popups').removeClass('active');
         $('body').removeClass('locked');
@@ -538,8 +533,7 @@ $(document).ready(function () {
     })
     $('.button-reg').click(function () {
         $('.popup-reg3').removeClass('active');
-        $('.popups-reg').toggleClass('active');
-    })
+    });
 
     $('.header-exit, .will-aut, .user-exit').click(function () {
         $('.popup-autoriz').toggleClass('active');
@@ -561,7 +555,6 @@ $(document).ready(function () {
     });
 
     $('.button-restore').click(function () {
-        $('.check-your-email').toggleClass('active');
         $('.popup-forgot').removeClass('active');
     })
 
@@ -573,11 +566,11 @@ $(document).ready(function () {
         $('.add-basket').toggleClass('active');
     });
 
-    $('.add-basket__add').click(function () {
+    /* $('.add-basket__add').click(function () {
         $('.add-basket').removeClass('active');
         $('.create-basket').toggleClass('active');
         $('body').addClass('locked');
-    })
+    }) */
     $('.add-basket__close').click(function () {
         $('.add-basket').removeClass('active');
     });
@@ -598,10 +591,10 @@ $(document).ready(function () {
         $('.popup-request').toggleClass('active');
     });
 
-    $('._ok').click(function () {
+    /* $('._ok').click(function () {
         $('.popups').removeClass('active');
         $('body').removeClass('locked');
-    });
+    }); */
 
     $('.sidebar-catalog__item').click(function () {
         $(this).toggleClass('active');

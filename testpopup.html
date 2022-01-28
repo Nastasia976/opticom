@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"> -->
     <link rel="stylesheet" href="assets/styles/css/magnific-popup.css">
     <link rel="stylesheet" href="assets/styles/css/index.css">
     <link rel="stylesheet" href="assets/styles/css/iconsfont.css">
@@ -14,10 +13,221 @@
 
 <body>
 
-    <a href="#popup" class="popup-link">popup-link</a>
 
-    <div id="popup" class="">
-        popup content Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, dolores?
+    <a href="#message-sent" class="popup-link">message</a>
+    <a href="#creat-basket" class="popup-link">creat-basket</a>
+    <a href="#check-yuor-email" class="popup-link">проверьте почту</a>
+    <a href="#expect-call" class="popup-link">Ожидайте звонок</a>
+    <a href="#delete-selected-list" class="popup-link">Удалить выбранный список?</a>
+    <a href="#line-of-business" class="popup-link">Упаковка</a>
+    <a href="#editing-matrix" class="popup-link">Редактирование товарной матрицы</a>
+    <a href="#extend-matrix" class="popup-link">Продлить товарную матрицу</a>
+    <a href="#delite-basket" class="popup-link">Удалить корзину?</a>
+    <a href="#delite-allproduct" class="popup-link">Удалить все товары?</a>
+    <a href="#making-claim" class="popup-link">Оформление претензи</a>
+    <a href="#need-help" class="popup-link">Нужна помощь?</a>
+    <a href="#custom-approval" class="popup-link">Ваш заказ отправлен</a>
+    <a href="#limit-exceeded" class="popup-link">Лимит бюджета</a>
+    <a href="#multy-basket" class="popup-link">Мультикорзины</a>
+
+
+
+    <div id="creat-basket" class="popups__conteiner mfp-hide">
+        <div class="popups__top">
+            <div class="popups__title">Создать новую корзину</div>
+        </div>
+        <form method="post" class="popups__body _basket">
+            <label>
+                <span>Название корзины</span>
+                <p class="name-basket-popup">Корзина для</p>
+                <input type="text" class="creat-name" required>
+            </label>
+            <button type="submit" class="popups__button button-create">Создать корзину</button>
+        </form>
+    </div>
+
+    <div id="message-sent" class="popups__conteiner mfp-hide">
+        <div class="popups__top">
+            <div class="popups__title">Ваше сообщение отправлено</div>
+        </div>
+        <div class="popups__body">
+            <div class="popups__text">Менеджер свяжется с вами в ближайшее время по указанным контактным
+                данным</div>
+            <button class="popups__button _ok">Хорошо</button>
+        </div>
+    </div>
+
+    <div id="check-yuor-email" class="popups__conteiner  mfp-hide">
+        <div class="popups__top">
+            <div class="popups__title">Пожалуйста, проверьте почту</div>
+        </div>
+        <div class="popups__body">
+            <div class="popups__text">Ссылка на сброс пароля отправлена <br> на Вашу почту, указанную при
+                регистрации.</div>
+            <div class="popups__button _ok">Хорошо</div>
+        </div>
+    </div>
+
+    <div id="expect-call" class="popups__conteiner mfp-hide">
+        <div class="popups__top">
+            <div class="popups__title">Ожидайте звонок</div>
+        </div>
+        <div class="popups__body">
+            <div class="popups__text">Для завершения регистрации с вами свяжется менеджер.</div>
+            <div class="popups__button _ok">Хорошо</div>
+        </div>
+    </div>
+
+    <div id="delete-selected-list" class="popups__conteiner delete-selected-list mfp-hide">
+        <div class="popups__top">
+            <div class="popups__title">Удалить выбранный список?</div>
+        </div>
+        <div class="popups__body">
+            <div class="popups__text">Отменить действие будет невозможно</div>
+        </div>
+        <div class="popups__bottom">
+            <button class="popups__button popups__button_yes"><span>Да</span></button>
+            <button class="popups__button popups__button_no"><span>Нет</span></button>
+        </div>
+    </div>
+
+    <div id="line-of-business" class="popups__conteiner mfp-hide kind">
+        <div class="popups__image">
+            <img src="img/aboutCompany/kindofactivities.png" alt="aboutCompany">
+        </div>
+        <div class="popups__items">
+            <div class="popups__top">
+            </div>
+            <p><span class="_bold">Упаковка </span> — двигатель любого товара, особенно в пищевой индустрии,
+                она сохраняет, продает и украшает сам продукт, правильно презентуя его покупателю.</p>
+            <p class="_bold">Текущий объем упаковочных материалов на складе: более 1000 наименований</p>
+        </div>
+    </div>
+
+    <div id="extend-matrix" class="popups__conteiner mfp-hide">
+        <div class="popups__top">
+            <div class="popups__title">Продлить товарную матрицу</div>
+        </div>
+        <form method="post" class="popups__body _basket">
+            <label>
+                <span>Текст вашего сообщения</span>
+                <input type="text" class="your-message" placeholder="Сообщение*" required>
+            </label>
+            <button type="submit" class="popups__button send-response">Отправить</button>
+        </form>
+    </div>
+
+    <div id="editing-matrix" class="popups__conteiner mfp-hide">
+        <div class="popups__top">
+            <div class="popups__title">Редактирование товарной матрицы</div>
+        </div>
+        <div class="popups__description">Сообщить менеджеру о необходимости редактирования матрицы товаров,
+            в связи <br> с отсутствием товара</div>
+        <form method="post" class="popups__body _basket">
+            <label>
+                <span>Текст вашего сообщения</span>
+                <input type="text" class="edit-matrix" placeholder="Сообщение*" required>
+            </label>
+            <button type="submit" class="popups__button send-response">Отправить</button>
+        </form>
+    </div>
+
+    <div id="delite-basket" class="popups__conteiner delite-basket mfp-hide">
+        <div class="popups__top">
+            <div class="popups__title">Удалить корзину?</div>
+        </div>
+        <div class="popups__body">
+            <div class="popups__text">Отменить действие будет невозможно</div>
+        </div>
+        <div class="popups__bottom">
+            <button class="popups__button popups__button_yes"><span>Да</span></button>
+            <button class="popups__button popups__button_no"><span>Нет</span></button>
+        </div>
+    </div>
+    <div id="delite-allproduct" class="popups__conteiner delite-basket mfp-hide">
+        <div class="popups__top">
+            <div class="popups__title">Удалить все товары из корзины?</div>
+        </div>
+        <div class="popups__body">
+            <div class="popups__text">Отменить действие будет невозможно</div>
+        </div>
+        <div class="popups__bottom">
+            <button class="popups__button popups__button_yes"><span>Да</span></button>
+            <button class="popups__button popups__button_no"><span>Нет</span></button>
+        </div>
+    </div>
+
+    <div id="making-claim" class="popups__conteiner making-claim mfp-hide">
+        <div class="popups__top">
+            <div class="popups__title">Оформление претензии</div>
+        </div>
+        <form method="post" class="popups__body">
+            <div class="inputsection">
+                <input class="some-input" type="text" required>
+                <label class="placeholder">Номер заказа</label>
+            </div>
+            <div class="inputsection">
+                <input class="some-input" type="text" required>
+                <label class="placeholder">Текст претензии</label>
+            </div>
+            <button type="submit" class="popups__button">Отправить</button>
+        </form>
+    </div>
+
+    <div id="need-help" class="popups__conteiner need-help mfp-hide">
+        <div class="popups__top">
+            <div class="popups__title">Нужна помощь?</div>
+        </div>
+        <div class="popups__text">Оставьте сообщение и наш менеджер свяжется с вами в ближайшее время.
+        </div>
+        <form method="post" class="popups__body">
+            <div class="inputsection">
+                <input class="some-input" type="text" required>
+                <label class="placeholder">Артикул товара*</label>
+            </div>
+            <div class="inputsection">
+                <input class="some-input" type="text" required>
+                <label class="placeholder">Сообщение*</label>
+            </div>
+            <button type="submit" class="popups__button">Отправить</button>
+        </form>
+    </div>
+
+    <div id="custom-approval" class="popups__conteiner small-popup mfp-hide">
+        <div class="popups__top">
+            <img src="img/the-order-has-been-sent.png" alt="the-order-has-been-sent">
+            <div class="popups__title">Ваш заказ отправлен на согласование</div>
+        </div>
+        <div class="popups__body">
+            <div class="popups__text">Для получения заказа <br> нужна печать и/или доверенность</div>
+        </div>
+    </div>
+
+    <div id="limit-exceeded" class="popups__conteiner small-popup mfp-hide">
+        <div class="popups__top">
+            <img src="img/the-order-has-been-sent.png" alt="the-order-has-been-sent">
+            <div class="popups__title">Лимит бюджета <br> превышен</div>
+        </div>
+        <div class="popups__body">
+            <div class="popups__text">Лимит бюджета корзины <br> для бытовой химии превышен</div>
+        </div>
+    </div>
+
+    <div id="multy-basket" class="popups__conteiner multy-basket mfp-hide">
+        <div class="popups__top">
+            <div class="popups__title">Мультикорзины</div>
+        </div>
+        <div class="popups__body">
+            <div class="popups__text">Удобный сервис формирования нескольких заказов:</div>
+            <div class="popups__list">
+                <div class="popups__el">Создайте необходимое количество корзин;</div>
+                <div class="popups__el">Заполните их нужными товарами;</div>
+                <div class="popups__el">Редактируйте корзины и оформляйте заказы в любое время - шаблоны
+                    сохраняются бессрочно;</div>
+                <div class="popups__el">При необходимости удалить корзину нажмите на крестик рядом с ее
+                    названием.</div>
+            </div>
+        </div>
     </div>
 
 
@@ -27,6 +237,7 @@
 
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/scripts/myPopups.js"></script>
     <script src="assets/scripts/script.js"></script>
     <script src="assets/scripts/slick.min.js"></script>
     <script src="assets/scripts/jquery.maskedinput.js"></script>
