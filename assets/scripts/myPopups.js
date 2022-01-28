@@ -117,6 +117,14 @@ $(document).ready(function () {
         closeOnContentClick: true,
     });
 
+    $('.header-autoriz-link').magnificPopup({
+        items: {
+            src: '#autoriz',
+        },
+        removalDelay: 250,
+        mainClass: 'mfp-with-fade',
+        closeOnContentClick: true,
+    });
 
 });
 
