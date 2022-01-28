@@ -11193,9 +11193,8 @@ input[type="number"]:focus {
 .main-button {
     display: block;
 }
-.button-main {
-}
 .button-request {
+    cursor: pointer;
 }
 @media (max-width: 1375px) {
     .error {
@@ -11522,6 +11521,8 @@ input[type="number"]:focus {
         line-height: 169%;
         font-size: 18px;
         transition: 0.3s;
+        display: block;
+        width: fit-content;
     }
     &__button:hover {
         transition: 0.3s;
@@ -14006,6 +14007,12 @@ input[type="number"]:focus {
                 color: rgba(37, 37, 37, 0.9);
             }
         }
+        .inputsection{
+            margin-top: 15px;
+            label{
+                position: absolute;
+            }
+        }
     }
     .popups__body._basket {
         margin-top: 13px;
@@ -14211,6 +14218,15 @@ input[type="number"]:focus {
     }
     .popups__text{
         margin-top: 8px;
+    }
+}
+.need-help{
+    .popups__body{
+        margin-top: -10px;
+        .inputsection{
+            margin-top: 26px;
+            max-width: 528px;
+        }
     }
 }
 /* .registration-claim {

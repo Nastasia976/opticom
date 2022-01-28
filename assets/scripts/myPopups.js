@@ -22,25 +22,47 @@ $(document).ready(function () {
     $('.send-sms').magnificPopup({
         items: {
             src: '#message-sent',
-            type: 'inline',
         },
     });
     $('.button-reg').magnificPopup({
         items: {
             src: '#expect-call',
-            type: 'inline',
         },
     });
     $('.button-restore').magnificPopup({
         items: {
             src: '#check-yuor-email',
-            type: 'inline',
         },
     });
     $('.activities__item').magnificPopup({
         items: {
             src: '#line-of-business',
-            type: 'inline',
         },
     });
+    $('.contact-with-manager').magnificPopup({
+        items: {
+            src: '#need-help',
+        },
+    });
+    $('.baskets__to-clear').magnificPopup({
+        items: {
+            src: '#delite-allproduct',
+        },
+    });
+    $('.custom').magnificPopup({
+        items: {
+            src: '#custom-approval',
+        },
+    });
+    $('.limited').magnificPopup({
+        items: {
+            src: '#limit-exceeded',
+        },
+    });
+    $('.control__button').magnificPopup({
+        items: {
+            src: '#delete-selected-list',
+        },
+    });
+
 });

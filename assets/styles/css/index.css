@@ -13875,6 +13875,10 @@ input[type="number"]:focus {
   display: block;
 }
 
+.button-request {
+  cursor: pointer;
+}
+
 @media (max-width: 1375px) {
   .error {
     padding: 110px 20px calc(40px + (113 - 40) * ((100vw - 320px) / (1920 - 320)));
@@ -14249,6 +14253,10 @@ input[type="number"]:focus {
   font-size: 18px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .total-amount__button:hover {
@@ -17377,6 +17385,14 @@ input[type="number"]:focus {
   color: rgba(37, 37, 37, 0.9);
 }
 
+.popups__conteiner .popups__body .inputsection {
+  margin-top: 15px;
+}
+
+.popups__conteiner .popups__body .inputsection label {
+  position: absolute;
+}
+
 .popups__conteiner .popups__body._basket {
   margin-top: 13px;
 }
@@ -17639,6 +17655,15 @@ input[type="number"]:focus {
 
 .making-claimб .popups__text, .need-help .popups__text {
   margin-top: 8px;
+}
+
+.need-help .popups__body {
+  margin-top: -10px;
+}
+
+.need-help .popups__body .inputsection {
+  margin-top: 26px;
+  max-width: 528px;
 }
 
 /* .registration-claim {
