@@ -802,6 +802,14 @@ $(document).ready(function () {
     });
 });
 
+$(document).mouseup(function (e) {
+    var popup = $('.add-basket, .popup-cooki, .mfp-bg, .mfp-wrap');
+    if (!popup.is(e.target)
+        && popup.has(e.target).length === 0) {
+        $('.add-basket').removeClass('active');
+    }
+});
+
 /* $(document).mouseup(function (e) {
     var popup = $('.popup__conteiner, .popup-cooki');
     if (!popup.is(e.target)

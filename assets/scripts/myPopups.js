@@ -4,15 +4,15 @@ $(document).ready(function () {
         removalDelay: 400,
         mainClass: 'mfp-with-fade',
         callbacks: {
-            open: function() {
+            open: function () {
                 $('body').css('overflow', 'hidden');
             },
-            close: function() {
+            close: function () {
                 $('body').css('overflow', '');
             },
         }
     });
-    $('.send-sms, .send-response').magnificPopup({
+    $('.send-sms, .send-response, .request-an-act').magnificPopup({
         items: {
             src: '#message-sent',
         },
@@ -144,6 +144,26 @@ $(document).ready(function () {
 });
 
 
-$('._ok').click(function(){
+$('._ok').click(function () {
     $.magnificPopup.close();
- });
+});
+
+$(window).on('load', function () {
+    var now, lastDatePopupShowed;
+    now = new Date();
+
+    if (localStorage.getItem('lastDatePopupShowed') !== null) {
+        lastDatePopupShowed = new Date(parseInt(localStorage.getItem('lastDatePopupShowed')));
+    }
+
+    if (((now - lastDatePopupShowed) >= (1 * 1)) || !lastDatePopupShowed) {
+        setTimeout(function () {
+            $.magnificPopup.open({
+                items: { src: '#multy-basket' },
+                type: 'inline',
+                removalDelay: 250,
+                mainClass: 'mfp-with-fade',
+            });
+        }, 1000);
+    }
+});

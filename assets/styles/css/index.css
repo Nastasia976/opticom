@@ -604,6 +604,9 @@ input[type="number"]:focus {
           transform: translate(0, -100%);
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  -webkit-box-shadow: 0px 35px 30px -15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 35px 30px -15px rgba(0, 0, 0, 0.1);
 }
 
 .add-basket__body {
@@ -6406,8 +6409,6 @@ input[type="number"]:focus {
   font-size: 12px;
   line-height: 12px;
   font-weight: 300;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 .pop-up .popup__items .popup__forget::after {
@@ -6416,15 +6417,17 @@ input[type="number"]:focus {
   width: 100%;
   height: 1px;
   bottom: -5px;
+  height: 5px;
   left: 0;
   border-bottom: 1px dashed rgba(212, 173, 103, 0.4);
 }
 
-.pop-up .popup__items .popup__forget:focus {
+.pop-up .popup__items .popup__forget:focus, .pop-up .popup__items .popup__forget:hover {
   color: #d7945f;
-  font-size: 13px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+}
+
+.pop-up .popup__items .popup__forget:focus::after, .pop-up .popup__items .popup__forget:hover::after {
+  border-bottom: 1px dashed #d7945f;
 }
 
 .pop-up .popup__items .popup__check {
@@ -6444,15 +6447,15 @@ input[type="number"]:focus {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .pop-up .popup__items .popup__check .member-input:focus ~ .remember-me {
   border: 1px solid #3c3c3c;
   opacity: 0.7;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .pop-up .popup__items .popup__check .remember-me {
@@ -6463,8 +6466,8 @@ input[type="number"]:focus {
   left: 0;
   top: 3px;
   cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   display: inline-block;
 }
 
@@ -6476,6 +6479,10 @@ input[type="number"]:focus {
   background-color: #006d64;
   left: 1px;
   top: 1px;
+}
+
+.pop-up .popup__items .popup__check:hover span {
+  opacity: 0.8;
 }
 
 .pop-up .popup__agree {
@@ -6522,8 +6529,6 @@ input[type="number"]:focus {
   color: #006d66;
   margin-top: 34px;
   cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
   border-bottom: 1px dashed rgba(0, 109, 102, 0.4);
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -6533,8 +6538,6 @@ input[type="number"]:focus {
 
 .pop-up .popup__footer:hover {
   color: #00a793;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
   border-bottom: 1px dashed rgba(0, 167, 147, 0.4);
 }
 

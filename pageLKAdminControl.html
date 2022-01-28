@@ -1975,12 +1975,12 @@
                                         <form method="post" class="act__form">
                                             <div class="act__item">
                                                 <div class="inputsection">
-                                                    <input id="act-inp-start" class="some-input" value=""
+                                                    <input class="some-input act-inp-start" value=""
                                                         placeholder="Выберите дату" required type="text">
                                                     <label class="placeholder fixed">с</label>
                                                 </div>
                                                 <div class="inputsection">
-                                                    <input id="act-inp-end" class="some-input"
+                                                    <input class="some-input act-inp-start"
                                                         placeholder="Выберите дату" type="text" required>
                                                     <label class="placeholder fixed">по</label>
                                                 </div>
@@ -1989,7 +1989,7 @@
                                                 <input class="some-input" type="text" required>
                                                 <label class="placeholder">Ваше сообщение</label>
                                             </div>
-                                            <button class="act__button _btn-orange">Запросить акт сверки</button>
+                                            <button class="act__button _btn-orange request-an-act">Запросить акт сверки</button>
                                         </form>
                                     </div>
                                 </div>
@@ -1999,7 +1999,7 @@
                                     <div class="calendar__header ">
 
                                         <div class="inputsection _under">
-                                            <input id="date" class="flatpickr" type="text">
+                                            <input class="flatpickr date" type="text">
                                             <label class="placeholder placeholder-start">с</label>
                                             <label class="placeholder placeholder-end">по</label>
                                         </div>
@@ -2580,6 +2580,16 @@
             </div>
         </div>
         <!--------popups CENTER-------------->
+        <div id="message-sent" class="popups__conteiner message-sent mfp-hide">
+            <div class="popups__top">
+                <div class="popups__title">Ваше сообщение отправлено</div>
+            </div>
+            <div class="popups__body">
+                <div class="popups__text">Менеджер свяжется с вами в ближайшее время по указанным контактным
+                    данным</div>
+                <button class="popups__button  _ok">Хорошо</button>
+            </div>
+        </div>
         <div id="making-claim" class="popups__conteiner making-claim mfp-hide">
             <div class="popups__top">
                 <div class="popups__title">Оформление претензии</div>

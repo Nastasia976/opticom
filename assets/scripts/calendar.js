@@ -1,4 +1,4 @@
-flatpickr(document.getElementById('date'), {
+flatpickr(document.getElementsByClassName('date'), {
     "locale": "ru",
     inline: true,
     altFormat: "d.m.Y",
@@ -8,13 +8,13 @@ flatpickr(document.getElementById('date'), {
     defaultDate: ["01.01.2021", "11.01.2021"],
 });
 
-flatpickr(document.getElementById('act-inp-start'), {
+flatpickr(document.getElementsByClassName('act-inp-start'), {
     "locale": "ru",
     altFormat: "d.m.Y",
     altInput: true,
     dateFormat: "d.m.Y",
 });
-flatpickr(document.getElementById('act-inp-end'), {
+flatpickr(document.getElementsByClassName('act-inp-end'), {
     "locale": "ru",
     altFormat: "d.m.Y",
     altInput: true,

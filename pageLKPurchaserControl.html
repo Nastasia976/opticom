@@ -1884,16 +1884,6 @@
                                                         stroke-dasharray="70 30" stroke-dashoffset="0"></circle>
                                                 </svg>
                                             </figure>
-
-                                            <!-- <svg width="170" height="170" viewBox="0 0 170 170" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M166 85.5C166 100.538 161.84 115.282 153.979 128.101C146.119 140.921 134.865 151.316 121.463 158.136C108.061 164.956 93.0335 167.935 78.0433 166.744C63.053 165.553 48.6846 160.237 36.5281 151.386C24.3715 142.535 14.9008 130.493 9.16401 116.592C3.42717 102.692 1.64789 87.4759 4.02305 72.6271C6.39822 57.7784 12.8352 43.8763 22.6217 32.4591C32.4083 21.042 45.1627 12.5551 59.4737 7.93754"
-                                                    stroke="#005D55" stroke-width="6" />
-                                                <path
-                                                    d="M59.4933 7.96559C71.7531 3.99231 84.779 2.97587 97.5067 4.99932C110.234 7.02276 122.303 12.0287 132.726 19.6081C143.149 27.1875 151.631 37.1253 157.479 48.6096C163.327 60.0939 166.376 72.7989 166.375 85.6865"
-                                                    stroke="#FF8E7D" stroke-width="6" />
-                                            </svg> -->
                                             <span class="analytics__total">159 653 ₽</span>
                                         </div>
                                         <div class="analytics__title">Аналитика по корзинам <br> за февраль</div>
@@ -1982,12 +1972,12 @@
                                         <form method="post" class="act__form">
                                             <div class="act__item">
                                                 <div class="inputsection">
-                                                    <input id="act-inp-start" class="some-input" value=""
+                                                    <input class="some-input act-inp-start" value=""
                                                         placeholder="Выберите дату" required type="text">
                                                     <label class="placeholder fixed">с</label>
                                                 </div>
                                                 <div class="inputsection">
-                                                    <input id="act-inp-end" class="some-input"
+                                                    <input class="some-input act-inp-start"
                                                         placeholder="Выберите дату" type="text" required>
                                                     <label class="placeholder fixed">по</label>
                                                 </div>
@@ -1996,7 +1986,7 @@
                                                 <input class="some-input" type="text" required>
                                                 <label class="placeholder">Ваше сообщение</label>
                                             </div>
-                                            <button class="act__button _btn-orange">Запросить акт сверки</button>
+                                            <button class="act__button _btn-orange request-an-act">Запросить акт сверки</button>
                                         </form>
                                     </div>
                                 </div>
@@ -2006,7 +1996,7 @@
                                     <div class="calendar__header ">
 
                                         <div class="inputsection _under">
-                                            <input id="date" class="flatpickr" type="text">
+                                            <input class="flatpickr date" type="text">
                                             <label class="placeholder placeholder-start">с</label>
                                             <label class="placeholder placeholder-end">по</label>
                                         </div>
@@ -2587,6 +2577,16 @@
             </div>
         </div>
         <!--------popups CENTER-------------->
+        <div id="message-sent" class="popups__conteiner message-sent mfp-hide">
+            <div class="popups__top">
+                <div class="popups__title">Ваше сообщение отправлено</div>
+            </div>
+            <div class="popups__body">
+                <div class="popups__text">Менеджер свяжется с вами в ближайшее время по указанным контактным
+                    данным</div>
+                <button class="popups__button  _ok">Хорошо</button>
+            </div>
+        </div>
         <div id="making-claim" class="popups__conteiner making-claim mfp-hide">
             <div class="popups__top">
                 <div class="popups__title">Оформление претензии</div>
