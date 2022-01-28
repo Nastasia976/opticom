@@ -5449,7 +5449,10 @@ input[type="number"]:focus {
         margin-bottom: calc(13px + (17 - 13) * ((100vw - 320px) / (1920 - 320)));
     }
     &__item:hover {
-        color: #d89560;
+        /* color: #d89560; */
+        span{
+            opacity: 0.8;
+        }
     }
     &__buttons {
         margin-top: calc(20px + (54 - 20) * ((100vw - 320px) / (1920 - 320)));

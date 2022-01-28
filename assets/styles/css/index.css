@@ -6884,7 +6884,11 @@ input[type="number"]:focus {
 }
 
 .filter-catalog__item:hover {
-  color: #d89560;
+  /* color: #d89560; */
+}
+
+.filter-catalog__item:hover span {
+  opacity: 0.8;
 }
 
 .filter-catalog__buttons {
