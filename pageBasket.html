@@ -2801,6 +2801,28 @@
     <script src="assets/scripts/slick.min.js"></script>
     <script src="assets/scripts/jquery.maskedinput.js"></script>
 
+    <script>
+        $(window).on('load', function () {
+            var now, lastDatePopupShowed;
+            now = new Date();
+
+            if (localStorage.getItem('lastDatePopupShowed') !== null) {
+                lastDatePopupShowed = new Date(parseInt(localStorage.getItem('lastDatePopupShowed')));
+            }
+
+            if (((now - lastDatePopupShowed) >= (1 * 1)) || !lastDatePopupShowed) {
+                setTimeout(function () {
+                    $.magnificPopup.open({
+                        items: { src: '#multy-basket' },
+                        type: 'inline',
+                        removalDelay: 250,
+                        mainClass: 'mfp-with-fade',
+                    });
+                }, 1000);
+            }
+        });
+    </script>
+
 </body>
 
 </html>

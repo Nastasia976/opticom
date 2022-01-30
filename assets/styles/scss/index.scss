@@ -14012,9 +14012,9 @@ input[type="number"]:focus {
 
 .popups__conteiner {
     opacity: 1;
-   /*  transform: scale(0); */
     position: relative;
     margin: 0 auto !important;
+    transition: all 0.4s ease-out;
     .popups__top {
         display: flex;
         align-items: flex-start;
@@ -14325,39 +14325,27 @@ input[type="number"]:focus {
     }
 }
 
-.mfp-ready.mfp-with-fade{
+//--------pop-up left---------------
+.mfp-ready{
     .pop-up{
         transform: translate(0, 0);
         transition: all 0.4s ease-out;
     }
-    /* .popups__conteiner{
-        transform: scale(1);
-        transition: all 0.4s ease-out;
-    } */
 }
-.mfp-hide{
+.mfp-bg{
     transition: all 0.4s ease-out;
 }
-.mfp-bg.mfp-removing.mfp-with-fade{
-    transition: all 0.4s ease-out;
+.mfp-removing{
     .pop-up{
         transform: translate(-100%, 0);
         transition: all 0.4s ease-out;
     }
-    /* .popups__conteiner{
-        transform: scale(0);
-        transition: all 0.4s ease-out;
-    } */
 }
+//------------------------------
 .mfp-container{
     padding: 0 !important;
 }
-.choise-date-input {
-    pointer-events: none;
-}
-.mfp-content{
-    transition: all 0.4s ease-out;
-}
+
 .mfp-with-fade {
     // before-open state
     .mfp-content,
@@ -14386,4 +14374,8 @@ input[type="number"]:focus {
     }    
   }
 
+
+.choise-date-input {
+    pointer-events: none;
+}
   

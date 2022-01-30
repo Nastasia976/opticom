@@ -121,7 +121,7 @@ $(document).ready(function () {
         items: {
             src: '#autoriz',
         },
-        removalDelay: 250,
+        removalDelay: 400,
         mainClass: 'mfp-with-fade',
     });
 
@@ -148,22 +148,3 @@ $('._ok').click(function () {
     $.magnificPopup.close();
 });
 
-$(window).on('load', function () {
-    var now, lastDatePopupShowed;
-    now = new Date();
-
-    if (localStorage.getItem('lastDatePopupShowed') !== null) {
-        lastDatePopupShowed = new Date(parseInt(localStorage.getItem('lastDatePopupShowed')));
-    }
-
-    if (((now - lastDatePopupShowed) >= (1 * 1)) || !lastDatePopupShowed) {
-        setTimeout(function () {
-            $.magnificPopup.open({
-                items: { src: '#multy-basket' },
-                type: 'inline',
-                removalDelay: 250,
-                mainClass: 'mfp-with-fade',
-            });
-        }, 1000);
-    }
-});

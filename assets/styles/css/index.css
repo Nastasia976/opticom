@@ -17340,9 +17340,10 @@ input[type="number"]:focus {
 
 .popups__conteiner {
   opacity: 1;
-  /*  transform: scale(0); */
   position: relative;
   margin: 0 auto !important;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 .popups__conteiner .popups__top {
@@ -17774,35 +17775,19 @@ input[type="number"]:focus {
   max-width: 528px;
 }
 
-.mfp-ready.mfp-with-fade {
-  /* .popups__conteiner{
-        transform: scale(1);
-        transition: all 0.4s ease-out;
-    } */
-}
-
-.mfp-ready.mfp-with-fade .pop-up {
+.mfp-ready .pop-up {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
   -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
 
-.mfp-hide {
+.mfp-bg {
   -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
 
-.mfp-bg.mfp-removing.mfp-with-fade {
-  -webkit-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
-  /* .popups__conteiner{
-        transform: scale(0);
-        transition: all 0.4s ease-out;
-    } */
-}
-
-.mfp-bg.mfp-removing.mfp-with-fade .pop-up {
+.mfp-removing .pop-up {
   -webkit-transform: translate(-100%, 0);
           transform: translate(-100%, 0);
   -webkit-transition: all 0.4s ease-out;
@@ -17811,15 +17796,6 @@ input[type="number"]:focus {
 
 .mfp-container {
   padding: 0 !important;
-}
-
-.choise-date-input {
-  pointer-events: none;
-}
-
-.mfp-content {
-  -webkit-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
 }
 
 .mfp-with-fade .mfp-content, .mfp-with-fade.mfp-bg {
@@ -17839,4 +17815,8 @@ input[type="number"]:focus {
 
 .mfp-with-fade.mfp-removing .mfp-content, .mfp-with-fade.mfp-removing.mfp-bg {
   opacity: 0;
+}
+
+.choise-date-input {
+  pointer-events: none;
 }
