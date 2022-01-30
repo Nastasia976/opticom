@@ -14379,3 +14379,13 @@ input[type="number"]:focus {
     pointer-events: none;
 }
   
+.el-select{
+    position: relative;
+}
+.el-select::after{
+    position: absolute;
+    content: '\1F861';
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+}
