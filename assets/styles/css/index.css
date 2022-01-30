@@ -269,11 +269,13 @@ input[type="number"]:focus {
   color: black;
 }
 
-.header.scrolled .header__link, .header.scrolled .header__catalog {
+.header.scrolled .header__link,
+.header.scrolled .header__catalog {
   color: #000;
 }
 
-.header.scrolled .header__link span, .header.scrolled .header__catalog span {
+.header.scrolled .header__link span,
+.header.scrolled .header__catalog span {
   color: #000;
 }
 
@@ -364,11 +366,13 @@ input[type="number"]:focus {
   margin-right: 8px;
 }
 
-.header-green .header__link, .header-green .header__catalog {
+.header-green .header__link,
+.header-green .header__catalog {
   color: #fff;
 }
 
-.header-green .header__link span, .header-green .header__catalog span {
+.header-green .header__link span,
+.header-green .header__catalog span {
   color: #fff;
 }
 
@@ -714,16 +718,16 @@ input[type="number"]:focus {
 }
 
 .add-basket__add:hover a {
-  color: #00A793;
+  color: #00a793;
 }
 
 .add-basket__add:hover .add-icon {
-  border: 1px solid #00A793;
+  border: 1px solid #00a793;
 }
 
 .add-basket__add:hover .add-icon::before,
 .add-basket__add:hover .add-icon::after {
-  background-color: #00A793;
+  background-color: #00a793;
 }
 
 .add-basket__buttons {
@@ -2635,7 +2639,8 @@ input[type="number"]:focus {
   }
 }
 
-.title-block, .title-block__conteiner {
+.title-block,
+.title-block__conteiner {
   min-height: 400px;
   position: relative;
 }
@@ -2784,11 +2789,11 @@ input[type="number"]:focus {
 
 .contacts-block__scroll .scroll__link {
   padding: 0 9px;
-  color: #17625D;
+  color: #17625d;
 }
 
 .contacts-block__scroll .scroll__link:hover {
-  color: #D4AE67;
+  color: #d4ae67;
 }
 
 .social {
@@ -6143,9 +6148,10 @@ input[type="number"]:focus {
   top: 26px !important;
 }
 
-.pop-up .mfp-close::before, .pop-up .mfp-close::after {
+.pop-up .mfp-close::before,
+.pop-up .mfp-close::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 25px;
   height: 2px;
   background-color: #777777;
@@ -6163,8 +6169,9 @@ input[type="number"]:focus {
           transform: rotate(-45deg);
 }
 
-.pop-up .mfp-close:hover::before, .pop-up .mfp-close:hover::after {
-  background-color: #01645C;
+.pop-up .mfp-close:hover::before,
+.pop-up .mfp-close:hover::after {
+  background-color: #01645c;
 }
 
 .pop-up .popup__top {
@@ -6422,11 +6429,13 @@ input[type="number"]:focus {
   border-bottom: 1px dashed rgba(212, 173, 103, 0.4);
 }
 
-.pop-up .popup__items .popup__forget:focus, .pop-up .popup__items .popup__forget:hover {
+.pop-up .popup__items .popup__forget:focus,
+.pop-up .popup__items .popup__forget:hover {
   color: #d7945f;
 }
 
-.pop-up .popup__items .popup__forget:focus::after, .pop-up .popup__items .popup__forget:hover::after {
+.pop-up .popup__items .popup__forget:focus::after,
+.pop-up .popup__items .popup__forget:hover::after {
   border-bottom: 1px dashed #d7945f;
 }
 
@@ -8106,12 +8115,14 @@ input[type="number"]:focus {
   cursor: pointer;
 }
 
-.compare__conteiner .scrollbar__next, .compare__conteiner .scrollbar__prev {
-  color: #D4AE67;
+.compare__conteiner .scrollbar__next,
+.compare__conteiner .scrollbar__prev {
+  color: #d4ae67;
 }
 
-.compare__conteiner .scrollbar__next:hover, .compare__conteiner .scrollbar__prev:hover {
-  color: #F18070;
+.compare__conteiner .scrollbar__next:hover,
+.compare__conteiner .scrollbar__prev:hover {
+  color: #f18070;
 }
 
 .compare__conteiner .swiper-button-disabled {
@@ -11225,7 +11236,7 @@ input[type="number"]:focus {
 }
 
 .disinfection-title__link:hover {
-  color: #D4AE67;
+  color: #d4ae67;
 }
 
 @media (min-height: 800px) and (min-width: 1200px) {
@@ -12707,7 +12718,7 @@ input[type="number"]:focus {
 }
 
 .right-menu__link:hover {
-  color: #D4AE67;
+  color: #d4ae67;
 }
 
 @media (min-width: 1920px) {
@@ -16799,7 +16810,8 @@ input[type="number"]:focus {
   margin-top: 16px;
 }
 
-.act__form .inputsection .placeholder.fixed {
+.act__form .inputsection .placeholder.fixed,
+.act__form .inputsection .fixed-end {
   top: -8px;
   font-size: 12px !important;
   opacity: 0.6;
@@ -16820,6 +16832,10 @@ input[type="number"]:focus {
 
 .act__form .inputsection input::placeholder {
   color: rgba(37, 37, 37, 0.9);
+}
+
+.act__form .inputsection .fixed-end {
+  left: 100px;
 }
 
 .act__item {
@@ -17024,7 +17040,7 @@ input[type="number"]:focus {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 490px) {
   .calendar__body {
     -ms-grid-rows: 30px 30px 30px 30px 30px;
     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -17041,6 +17057,12 @@ input[type="number"]:focus {
   }
   .calendar__header .inputsection:not(:first-child) {
     margin-top: 20px;
+  }
+  .calendar .form-control {
+    min-width: 100%;
+  }
+  .act__item .inputsection {
+    min-width: 100%;
   }
 }
 
@@ -17389,12 +17411,13 @@ input[type="number"]:focus {
   font-size: 0;
 }
 
-.popups__conteiner .mfp-close::before, .popups__conteiner .mfp-close::after {
+.popups__conteiner .mfp-close::before,
+.popups__conteiner .mfp-close::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 13.3px;
   height: 1px;
-  background-color: #3C3C3C;
+  background-color: #3c3c3c;
 }
 
 .popups__conteiner .mfp-close::before {
@@ -17412,7 +17435,8 @@ input[type="number"]:focus {
   border: 1px solid #01645c;
 }
 
-.popups__conteiner .mfp-close:hover::before, .popups__conteiner .mfp-close:hover::after {
+.popups__conteiner .mfp-close:hover::before,
+.popups__conteiner .mfp-close:hover::after {
   background-color: #01645c;
 }
 
@@ -17577,7 +17601,7 @@ input[type="number"]:focus {
 }
 
 .popups__conteiner .popups__bottom .popups__button_yes:hover {
-  background-color: #00AA95;
+  background-color: #00aa95;
 }
 
 .popups__conteiner .popups__bottom .popups__button_no {
@@ -17590,11 +17614,11 @@ input[type="number"]:focus {
 }
 
 .popups__conteiner .popups__bottom .popups__button_no:hover {
-  border: 1px solid #00AA95;
+  border: 1px solid #00aa95;
 }
 
 .popups__conteiner .popups__bottom .popups__button_no:hover span {
-  color: #00AA95;
+  color: #00aa95;
 }
 
 .kind {
@@ -17754,15 +17778,18 @@ input[type="number"]:focus {
   top: 8px;
 }
 
-.delete-selected-list .popups__body, .delite-basket .popups__body {
+.delete-selected-list .popups__body,
+.delite-basket .popups__body {
   margin-top: 8px;
 }
 
-.making-claim .popups__body, .need-help .popups__body {
+.making-claim .popups__body,
+.need-help .popups__body {
   margin-top: 0;
 }
 
-.making-claim .popups__text, .need-help .popups__text {
+.making-claim .popups__text,
+.need-help .popups__text {
   margin-top: 8px;
 }
 
@@ -17827,7 +17854,7 @@ input[type="number"]:focus {
 
 .el-select::after {
   position: absolute;
-  content: '\1F861';
+  content: "\1F861";
   width: 12px;
   height: 12px;
   margin-left: 5px;

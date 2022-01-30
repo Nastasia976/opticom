@@ -164,9 +164,10 @@ input[type="number"]:focus {
     a {
         color: black;
     }
-    .header__link, .header__catalog{
+    .header__link,
+    .header__catalog {
         color: #000;
-        span{
+        span {
             color: #000;
         }
     }
@@ -229,9 +230,10 @@ input[type="number"]:focus {
             margin-right: 8px;
         }
     }
-    .header__link, .header__catalog{
+    .header__link,
+    .header__catalog {
         color: #fff;
-        span{
+        span {
             color: #fff;
         }
     }
@@ -478,16 +480,16 @@ input[type="number"]:focus {
             margin-left: 10px;
         }
     }
-    &__add:hover{
-        a{
-            color: #00A793;
+    &__add:hover {
+        a {
+            color: #00a793;
         }
         .add-icon {
-            border: 1px solid #00A793;
+            border: 1px solid #00a793;
         }
         .add-icon::before,
         .add-icon::after {
-            background-color: #00A793;
+            background-color: #00a793;
         }
     }
 
@@ -1762,7 +1764,7 @@ input[type="number"]:focus {
         position: absolute;
         height: fit-content;
 
-       /*  padding-right: calc(20px + (60 - 20) * ((100vw - 1100px) / (1920 - 1100))); */
+        /*  padding-right: calc(20px + (60 - 20) * ((100vw - 1100px) / (1920 - 1100))); */
         top: 0;
         bottom: 0;
         margin: auto;
@@ -1958,7 +1960,8 @@ input[type="number"]:focus {
         }
     }
 }
-.title-block, .title-block__conteiner{
+.title-block,
+.title-block__conteiner {
     min-height: 400px;
     position: relative;
 }
@@ -2073,10 +2076,10 @@ input[type="number"]:focus {
         position: absolute;
         .scroll__link {
             padding: 0 9px;
-            color:  #17625D;
+            color: #17625d;
         }
-        .scroll__link:hover{
-           color: #D4AE67;
+        .scroll__link:hover {
+            color: #d4ae67;
         }
     }
 }
@@ -3401,7 +3404,7 @@ input[type="number"]:focus {
     transition: all ease-out 0.5s; */
     &__conteiner {
         max-width: 608px;
-       /*  transform: scale(0); */
+        /*  transform: scale(0); */
         /* transition: all 0.4s ease 0s; */
         width: 100%;
         background-color: #fff;
@@ -4839,7 +4842,7 @@ input[type="number"]:focus {
     z-index: 200;
     transition: all ease 0.5s;
     overflow: auto; */
-   /*  position: absolute; */
+    /*  position: absolute; */
     max-width: 462px;
     width: 100%;
     background-color: #fff;
@@ -4848,7 +4851,7 @@ input[type="number"]:focus {
     transform: translate(-100%, 0);
     transition: all ease 0.5s;
     .popup__conteiner {
-       /*  position: absolute;
+        /*  position: absolute;
         max-width: 462px;
         width: 100%;
         background-color: #fff;
@@ -4857,29 +4860,31 @@ input[type="number"]:focus {
         transform: translate(-100%, 0);
         transition: all ease 0.5s; */
     }
-    .mfp-close{
+    .mfp-close {
         font-size: 0;
         position: absolute;
         right: 26px !important;
         top: 26px !important;
     }
-    .mfp-close::before, .mfp-close::after{
+    .mfp-close::before,
+    .mfp-close::after {
         position: absolute;
-        content: '';
+        content: "";
         width: 25px;
         height: 2px;
         background-color: #777777;
         right: 13px;
         top: 20px;
     }
-    .mfp-close::before{
+    .mfp-close::before {
         transform: rotate(45deg);
     }
-    .mfp-close::after{
+    .mfp-close::after {
         transform: rotate(-45deg);
     }
-    .mfp-close:hover::before, .mfp-close:hover::after{
-        background-color:  #01645C;
+    .mfp-close:hover::before,
+    .mfp-close:hover::after {
+        background-color: #01645c;
     }
     .popup__top {
         padding: calc(30px + (46 - 30) * ((100vw - 445px) / (1920 - 445))) 20px 0
@@ -5074,10 +5079,12 @@ input[type="number"]:focus {
             left: 0;
             border-bottom: 1px dashed rgba(212, 173, 103, 0.4);
         }
-        .popup__forget:focus, .popup__forget:hover {
+        .popup__forget:focus,
+        .popup__forget:hover {
             color: #d7945f;
         }
-        .popup__forget:focus::after, .popup__forget:hover::after{
+        .popup__forget:focus::after,
+        .popup__forget:hover::after {
             border-bottom: 1px dashed #d7945f;
         }
 
@@ -5122,8 +5129,8 @@ input[type="number"]:focus {
                 top: 1px;
             }
         }
-        .popup__check:hover{
-            span{
+        .popup__check:hover {
+            span {
                 opacity: 0.8;
             }
         }
@@ -5516,7 +5523,7 @@ input[type="number"]:focus {
     }
     &__item:hover {
         /* color: #d89560; */
-        span{
+        span {
             opacity: 0.8;
         }
     }
@@ -6431,11 +6438,13 @@ input[type="number"]:focus {
             height: 20px;
             cursor: pointer;
         }
-        .scrollbar__next, .scrollbar__prev{
-            color: #D4AE67;
+        .scrollbar__next,
+        .scrollbar__prev {
+            color: #d4ae67;
         }
-        .scrollbar__next:hover, .scrollbar__prev:hover{
-            color: #F18070;
+        .scrollbar__next:hover,
+        .scrollbar__prev:hover {
+            color: #f18070;
         }
         .swiper-button-disabled {
             display: none;
@@ -8909,8 +8918,8 @@ input[type="number"]:focus {
         padding: 0 10px;
         color: #fff;
     }
-    &__link:hover{
-        color: #D4AE67;
+    &__link:hover {
+        color: #d4ae67;
     }
 }
 @media (min-height: 800px) and (min-width: 1200px) {
@@ -10170,8 +10179,8 @@ input[type="number"]:focus {
         bottom: 27px;
         color: #fff;
     }
-    &__link:hover{
-        color: #D4AE67;
+    &__link:hover {
+        color: #d4ae67;
     }
 }
 @media (min-width: 1920px) {
@@ -10598,7 +10607,6 @@ input[type="number"]:focus {
         transform: rotate(90deg);
     }
 }
-
 
 @media (max-width: 880px) {
     .activities {
@@ -13616,7 +13624,8 @@ input[type="number"]:focus {
     &__form {
         .inputsection {
             margin-top: 16px;
-            .placeholder.fixed {
+            .placeholder.fixed,
+            .fixed-end {
                 top: -8px;
                 font-size: 12px !important;
                 opacity: 0.6;
@@ -13624,6 +13633,9 @@ input[type="number"]:focus {
             }
             input::placeholder {
                 color: rgba(37, 37, 37, 0.9);
+            }
+            .fixed-end {
+                left: 100px;
             }
         }
     }
@@ -13757,7 +13769,7 @@ input[type="number"]:focus {
         }
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 490px) {
     .calendar {
         &__body {
             grid-template: 30px 30px 30px 30px 30px / 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -13774,6 +13786,14 @@ input[type="number"]:focus {
             .inputsection:not(:first-child) {
                 margin-top: 20px;
             }
+        }
+        .form-control {
+            min-width: 100%;
+        }
+    }
+    .act__item {
+        .inputsection {
+            min-width: 100%;
         }
     }
 }
@@ -14043,30 +14063,32 @@ input[type="number"]:focus {
         top: 17px !important;
         font-size: 0;
     }
-    .mfp-close::before, .mfp-close::after{
+    .mfp-close::before,
+    .mfp-close::after {
         position: absolute;
-        content: '';
+        content: "";
         width: 13.3px;
         height: 1px;
-        background-color: #3C3C3C;
+        background-color: #3c3c3c;
     }
-    .mfp-close::before{
+    .mfp-close::before {
         transform: rotate(45deg);
     }
-    .mfp-close::after{
+    .mfp-close::after {
         transform: rotate(-45deg);
     }
     .mfp-close:hover {
         color: #01645c;
         border: 1px solid #01645c;
     }
-    .mfp-close:hover::before,  .mfp-close:hover::after{
+    .mfp-close:hover::before,
+    .mfp-close:hover::after {
         background-color: #01645c;
     }
-    .creat-name{
+    .creat-name {
         padding-left: 110px;
     }
-    .popups__text{
+    .popups__text {
         max-width: 345px;
     }
     .popups__description {
@@ -14104,9 +14126,9 @@ input[type="number"]:focus {
                 color: rgba(37, 37, 37, 0.9);
             }
         }
-        .inputsection{
+        .inputsection {
             margin-top: 15px;
-            label{
+            label {
                 position: absolute;
             }
         }
@@ -14157,8 +14179,8 @@ input[type="number"]:focus {
             margin-top: 32px;
             color: white !important;
         }
-        .popups__button_yes:hover{
-            background-color: #00AA95;
+        .popups__button_yes:hover {
+            background-color: #00aa95;
         }
         .popups__button_no {
             border: 1px solid #006d64;
@@ -14168,10 +14190,10 @@ input[type="number"]:focus {
             margin-top: 32px;
             background-color: transparent;
         }
-        .popups__button_no:hover{
-            border: 1px solid #00AA95;
-            span{
-                color: #00AA95;
+        .popups__button_no:hover {
+            border: 1px solid #00aa95;
+            span {
+                color: #00aa95;
             }
         }
     }
@@ -14235,7 +14257,7 @@ input[type="number"]:focus {
             top: 5px;
             right: 10px;
         }
-        .mfp-close{
+        .mfp-close {
             top: 10px;
             right: 10px;
         }
@@ -14302,23 +14324,25 @@ input[type="number"]:focus {
     }
 }
 
-.delete-selected-list, .delite-basket{
-    .popups__body{
+.delete-selected-list,
+.delite-basket {
+    .popups__body {
         margin-top: 8px;
     }
 }
-.making-claim, .need-help{
-    .popups__body{
+.making-claim,
+.need-help {
+    .popups__body {
         margin-top: 0;
     }
-    .popups__text{
+    .popups__text {
         margin-top: 8px;
     }
 }
-.need-help{
-    .popups__body{
+.need-help {
+    .popups__body {
         margin-top: -10px;
-        .inputsection{
+        .inputsection {
             margin-top: 26px;
             max-width: 528px;
         }
@@ -14326,23 +14350,23 @@ input[type="number"]:focus {
 }
 
 //--------pop-up left---------------
-.mfp-ready{
-    .pop-up{
+.mfp-ready {
+    .pop-up {
         transform: translate(0, 0);
         transition: all 0.4s ease-out;
     }
 }
-.mfp-bg{
+.mfp-bg {
     transition: all 0.4s ease-out;
 }
-.mfp-removing{
-    .pop-up{
+.mfp-removing {
+    .pop-up {
         transform: translate(-100%, 0);
         transition: all 0.4s ease-out;
     }
 }
 //------------------------------
-.mfp-container{
+.mfp-container {
     padding: 0 !important;
 }
 
@@ -14350,41 +14374,40 @@ input[type="number"]:focus {
     // before-open state
     .mfp-content,
     &.mfp-bg {
-      opacity: 0;
-      -webkit-backface-visibility: hidden;
-      -webkit-transition: opacity 0.4s ease-out; 
-      -moz-transition: opacity 0.4s ease-out; 
-      -o-transition: opacity 0.4s ease-out; 
-      transition: opacity 0.4s ease-out;
+        opacity: 0;
+        -webkit-backface-visibility: hidden;
+        -webkit-transition: opacity 0.4s ease-out;
+        -moz-transition: opacity 0.4s ease-out;
+        -o-transition: opacity 0.4s ease-out;
+        transition: opacity 0.4s ease-out;
     }
     // open state
     &.mfp-ready {
-      .mfp-content{
-        opacity: 1;
-      }
-      &.mfp-bg {
-        opacity: 0.1; // background opacity
-      }
+        .mfp-content {
+            opacity: 1;
+        }
+        &.mfp-bg {
+            opacity: 0.1; // background opacity
+        }
     }
     &.mfp-removing {
-      .mfp-content,
-      &.mfp-bg {
-        opacity: 0;
-      }
-    }    
-  }
-
+        .mfp-content,
+        &.mfp-bg {
+            opacity: 0;
+        }
+    }
+}
 
 .choise-date-input {
     pointer-events: none;
 }
-  
-.el-select{
+
+.el-select {
     position: relative;
 }
-.el-select::after{
+.el-select::after {
     position: absolute;
-    content: '\1F861';
+    content: "\1F861";
     width: 12px;
     height: 12px;
     margin-left: 5px;

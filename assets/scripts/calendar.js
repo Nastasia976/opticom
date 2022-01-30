@@ -13,10 +13,11 @@ flatpickr(document.getElementsByClassName('act-inp-start'), {
     altFormat: "d.m.Y",
     altInput: true,
     dateFormat: "d.m.Y",
+    mode: "range",
 });
-flatpickr(document.getElementsByClassName('act-inp-end'), {
+/* flatpickr(document.getElementsByClassName('act-inp-end'), {
     "locale": "ru",
     altFormat: "d.m.Y",
     altInput: true,
     dateFormat: "d.m.Y",
-});
+}); */
