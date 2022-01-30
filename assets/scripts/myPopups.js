@@ -43,7 +43,7 @@ $(document).ready(function () {
         },
     });
 
-    $('.sidebar-lk__link_claim, .claim').magnificPopup({
+    $('.sidebar-lk__link_claim, .claim, .submitaclaim').magnificPopup({
         items: {
             src: '#making-claim',
         },
@@ -93,9 +93,11 @@ $(document).ready(function () {
             src: '#respond',
         },
     });
+
     $.extend(true, $.magnificPopup.defaults, {
         removalDelay: 250,
         mainClass: 'mfp-with-fade',
+        fixedContentPos: false,
         callbacks: {
             open: function () {
                 $('body').css('overflow', 'hidden');
