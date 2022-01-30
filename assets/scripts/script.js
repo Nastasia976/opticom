@@ -1430,6 +1430,20 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    $(function() {
+        $('.sidebar-catalog__link').hover(function() {
+            $('.body-catalog__body').hide();
+            var divId = $(this).data('id');
+            $('#' + divId).css('display', 'flex');
+            $('.sidebar-catalog__item').removeClass('active');
+        });
+    
+        $('a.floorplan.initial').trigger('mouseenter');    
+    });
+})
+
+
 
 //-------------меню каталога-------------------
 
@@ -1441,6 +1455,7 @@ document.querySelector('#search-menu').oninput = function () {
         document.querySelector('.body-catalog__column-right').classList.add('hide');
         document.querySelector('.search-catalog').classList.add('show');
         document.querySelector('.result-search-catalog').classList.add('show');
+        document.querySelector('.body-catalog__search-wrap').classList.add('show');
         result.forEach(function (elem) {
             if (elem.innerText.search(RegExp(val, "gi")) == -1) {
                 elem.classList.add('hide');
