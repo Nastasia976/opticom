@@ -755,14 +755,14 @@ $(document).ready(function () {
     });
     $('.popups__close_x').click(function () {
         $('.our-adres').removeClass('active');
-        $('body').removeClass('lock');
+        $('body').removeClass('locked');
     });
     $(document).mouseup(function (e) {
         var div = $('.our-adres');
         if (!div.is(e.target)
             && div.has(e.target).length === 0) {
             $('.our-adres').removeClass('active');
-            $('body').removeClass('lock');
+            $('body').removeClass('locked');
         }
     });
 

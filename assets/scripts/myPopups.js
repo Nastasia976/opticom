@@ -1,26 +1,16 @@
 $(document).ready(function () {
     $('.popup-link').magnificPopup({
         type: 'inline',
-        callbacks: {
-            open: function () {
-                $('body').css('overflow', 'hidden');
-            },
-            close: function () {
-                $('body').css('overflow', '');
-            },
-        }
     });
     $('.send-sms, .send-response, .request-an-act').magnificPopup({
         items: {
             src: '#message-sent',
         },
-        closeOnContentClick: true,
     });
     $('.button-restore').magnificPopup({
         items: {
             src: '#check-yuor-email',
         },
-        closeOnContentClick: true,
     });
     $('.activities__item').magnificPopup({
         items: {
@@ -106,14 +96,14 @@ $(document).ready(function () {
     $.extend(true, $.magnificPopup.defaults, {
         removalDelay: 250,
         mainClass: 'mfp-with-fade',
-        callbacks: {
+        /* callbacks: {
             open: function () {
                 $('body').css('overflow', 'hidden');
             },
             close: function () {
                 $('body').css('overflow', '');
             },
-        }
+        } */
     })
 
 });

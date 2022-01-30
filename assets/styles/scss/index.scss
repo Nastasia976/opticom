@@ -3291,6 +3291,10 @@ input[type="number"]:focus {
     .popups__close_x::after {
         transform: rotate(-45deg);
     }
+    .popups__close_x:hover::before,
+    .popups__close_x:hover::after {
+        background-color: #01645c;
+    }
     .popups__title {
         font-size: 16px;
         line-height: 137%;
@@ -4165,6 +4169,9 @@ input[type="number"]:focus {
         .button-main {
             padding: 8px 40px !important;
         }
+        .items-product__main-button {
+            margin-left: -5px;
+        }
     }
     .card-product {
         &__image {
@@ -4254,10 +4261,8 @@ input[type="number"]:focus {
     .choice-about {
         display: none;
     }
-    /* .select {
-        display: block;
-    } */
 }
+//---------------select-----------------
 .select {
     margin: 30px auto 0;
     width: 280px;
@@ -4495,6 +4500,9 @@ input[type="number"]:focus {
         a {
             transition: 0.3s;
             color: #838383;
+            .name-sertificat {
+                display: none;
+            }
         }
     }
     &__el:last-child {
@@ -4534,10 +4542,14 @@ input[type="number"]:focus {
             span {
                 display: none;
             }
+            .name-sertificat {
+                display: block;
+                line-height: 90%;
+                color: #3b3b3b;
+            }
         }
         .sertificates__el:first-child {
-            order: 2;
-            line-height: 90%;
+            display: none;
         }
     }
     .sertificates {
@@ -14195,6 +14207,13 @@ input[type="number"]:focus {
             span {
                 color: #00aa95;
             }
+        }
+    }
+}
+@media (max-width: 445px) {
+    .pop-up {
+        .mfp-close {
+            right: 5px !important;
         }
     }
 }
