@@ -1174,10 +1174,11 @@ counts.forEach(counterFunction);
 $(document).ready(function () {
     $('.select, .item-select').mouseup(function (e) {
         $('.select, .item-select').not(this).removeClass('is-active');
-    });
-    $('.select__item, .select__el').mouseup(function (e) {
         $(this).parent().find('.select__item, .select__el').not(this).removeClass('active');
     });
+    $('.select, .item-select').mouseout(function (e) {
+        $('.item-select').removeClass('is-active');
+    })
 
     $('.close-hide').click(function () {
         $('.text-add-file').text('Прикрепить файл');

@@ -6336,6 +6336,10 @@ input[type="number"]:focus {
   margin-top: 3px;
 }
 
+.pop-up .popup__form .label-file span:hover {
+  color: #00A793;
+}
+
 .pop-up .popup__form .label-file svg {
   margin-right: 16px;
 }
@@ -9799,7 +9803,7 @@ input[type="number"]:focus {
 }
 
 .blog .top-block__block.open {
-  max-height: 300px;
+  max-height: 1500px;
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
@@ -10041,9 +10045,6 @@ input[type="number"]:focus {
     padding-top: 15px;
     max-height: 70px;
   }
-  .block .top-block__block.open {
-    max-height: 800px;
-  }
   .block .top-block .rubrica {
     position: absolute;
     left: 0;
@@ -10072,10 +10073,41 @@ input[type="number"]:focus {
 }
 
 @media (max-width: 545px) {
+  .blog__top {
+    margin-top: 15px !important;
+  }
+  .blog .top-block__body {
+    padding-top: 20px;
+  }
+  .blog .top-block__block {
+    max-height: 80px;
+  }
+  .blog .top-block__arrow {
+    top: 15px;
+  }
+  .rubrica {
+    position: absolute;
+    top: -20px;
+  }
   .block-body-grid .blog__item {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 390px) {
+  .blog .top-block__block {
+    padding-right: 42px;
+  }
+  .blog .top-block__item {
+    white-space: normal;
+    max-width: 100%;
+    font-size: 12px;
+    padding: 0 5px;
+  }
+  .blog .top-block__arrow {
+    max-width: 30px;
   }
 }
 
@@ -16872,9 +16904,7 @@ input[type="number"]:focus {
 }
 
 .act__item .inputsection {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 calc(50% - 15px);
-          flex: 0 1 calc(50% - 15px);
+  /*  flex: 0 1 calc(50% - 15px); */
 }
 
 .act__button {
@@ -16949,7 +16979,7 @@ input[type="number"]:focus {
 
 .calendar__header .inputsection .flatpickr {
   border-bottom: 1px solid rgba(183, 183, 183, 0.2);
-  max-width: 40%;
+  /* max-width: 40%; */
 }
 
 .calendar__header .inputsection._under {
@@ -17599,7 +17629,7 @@ input[type="number"]:focus {
 
 .popups__conteiner .popups__bottom button {
   font-size: 16px;
-  line-height: 19;
+  line-height: 19px;
   font-family: "Roboto";
   display: -webkit-box;
   display: -ms-flexbox;

@@ -5015,6 +5015,9 @@ input[type="number"]:focus {
             span {
                 margin-top: 3px;
             }
+            span:hover{
+                color: #00A793;
+            }
             svg {
                 margin-right: 16px;
             }
@@ -7777,7 +7780,7 @@ input[type="number"]:focus {
             align-items: flex-start;
         }
         &__block.open {
-            max-height: 300px;
+            max-height: 1500px;
             transition: all 1s ease-out;
         }
 
@@ -7948,9 +7951,6 @@ input[type="number"]:focus {
                 padding-top: 15px;
                 max-height: 70px;
             }
-            &__block.open {
-                max-height: 800px;
-            }
             .rubrica {
                 position: absolute;
                 left: 0;
@@ -7978,9 +7978,47 @@ input[type="number"]:focus {
     }
 }
 @media (max-width: 545px) {
+    .blog{
+        &__top{
+            margin-top: 15px !important;
+        }
+        .top-block__body{
+            padding-top: 20px;
+        }
+        .top-block{
+            &__block{
+                max-height: 80px;
+            }
+            &__arrow{
+                top: 15px;
+            }
+        }
+    }
+    .rubrica{
+        position: absolute;
+        top: -20px;
+    }
     .block-body-grid {
         .blog__item {
             flex: 1 1 auto;
+        }
+    }
+}
+@media(max-width:390px){
+    .blog{
+        .top-block{
+            &__block{
+                padding-right: 42px;
+            }
+            &__item {
+                white-space: normal;
+                max-width: 100%;
+                font-size: 12px;
+                padding: 0 5px;
+            }
+            &__arrow{
+                max-width: 30px;
+            }
         }
     }
 }
@@ -13678,7 +13716,7 @@ input[type="number"]:focus {
         flex-wrap: wrap;
         column-gap: 30px;
         .inputsection {
-            flex: 0 1 calc(50% - 15px);
+           /*  flex: 0 1 calc(50% - 15px); */
         }
     }
 
@@ -13715,7 +13753,7 @@ input[type="number"]:focus {
             }
             .flatpickr {
                 border-bottom: 1px solid rgba(183, 183, 183, 0.2);
-                max-width: 40%;
+                /* max-width: 40%; */
             }
         }
         .inputsection._under {
@@ -14197,7 +14235,7 @@ input[type="number"]:focus {
         align-items: center;
         button {
             font-size: 16px;
-            line-height: 19;
+            line-height: 19px;
             font-family: "Roboto";
             display: flex;
             align-items: center;
