@@ -96,14 +96,14 @@ $(document).ready(function () {
     $.extend(true, $.magnificPopup.defaults, {
         removalDelay: 250,
         mainClass: 'mfp-with-fade',
-        /* callbacks: {
+        callbacks: {
             open: function () {
                 $('body').css('overflow', 'hidden');
             },
             close: function () {
                 $('body').css('overflow', '');
             },
-        } */
+        }
     })
 
 });
