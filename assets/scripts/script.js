@@ -425,6 +425,10 @@ $(document).ready(function () {
         $('.catalog-menu').toggleClass('active');
         $('body').addClass('locked');
     });
+
+    $('.sidebar-catalog,.catalog-form, .body-catalog__wrapper').click(function () {
+        $('body').addClass('locked');
+    })
     $('.body-catalog__close').click(function () {
         $('.catalog-menu').removeClass('active');
         $('body').removeClass('locked');
@@ -1176,9 +1180,6 @@ $(document).ready(function () {
         $('.select, .item-select').not(this).removeClass('is-active');
         $(this).parent().find('.select__item, .select__el').not(this).removeClass('active');
     });
-    $('.select, .item-select').mouseout(function (e) {
-        $('.item-select').removeClass('is-active');
-    })
 
     $('.close-hide').click(function () {
         $('.text-add-file').text('Прикрепить файл');
@@ -1450,9 +1451,11 @@ $(document).ready(function () {
 document.querySelector('#search-menu').oninput = function () {
     let val = this.value.trim();
     let result = document.querySelectorAll('.search-catalog li,  .result-search-catalog li');
+    let menuConteiner = document.querySelector('.body-catalog__conteiner')
     if (val != '') {
-        document.querySelector('.body-catalog__column-left').classList.add('hide');
-        document.querySelector('.body-catalog__column-right').classList.add('hide');
+        menuConteiner.style.display = 'none';
+        /* document.querySelector('.body-catalog__column-left').classList.add('hide');
+        document.querySelector('.body-catalog__column-right').classList.add('hide'); */
         document.querySelector('.search-catalog').classList.add('show');
         document.querySelector('.result-search-catalog').classList.add('show');
         document.querySelector('.body-catalog__search-wrap').classList.add('show');
@@ -1473,8 +1476,9 @@ document.querySelector('#search-menu').oninput = function () {
     else {
         result.forEach(function (elem) {
             elem.classList.remove('hide');
-            document.querySelector('.body-catalog__column-left').classList.remove('hide');
-            document.querySelector('.body-catalog__column-right').classList.remove('hide');
+            menuConteiner.style.display = 'block';
+            /* document.querySelector('.body-catalog__column-left').classList.remove('hide');
+            document.querySelector('.body-catalog__column-right').classList.remove('hide'); */
             document.querySelector('.search-catalog').classList.remove('show');
             document.querySelector('.result-search-catalog').classList.remove('show-result');
             document.querySelector('.body-catalog__button').style.display = 'block';

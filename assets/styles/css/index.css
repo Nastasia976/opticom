@@ -320,6 +320,11 @@ input[type="number"]:focus {
   margin-right: 8px;
 }
 
+.header.heder-with-box-shadow {
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06);
+}
+
 .header .header__element._compare svg {
   color: #3c3c3c;
   margin-right: 8px;
@@ -1440,6 +1445,10 @@ input[type="number"]:focus {
   height: 100vh;
   position: relative;
   background-color: #fff;
+}
+
+.body-catalog__conteiner {
+  width: 100%;
 }
 
 .body-catalog__body {

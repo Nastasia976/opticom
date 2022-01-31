@@ -196,6 +196,9 @@ input[type="number"]:focus {
         }
     }
 }
+.header.heder-with-box-shadow{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06);
+}
 .header {
     .header__element._compare {
         svg {
@@ -1020,6 +1023,9 @@ input[type="number"]:focus {
     height: 100vh;
     position: relative;
     background-color: #fff;
+    &__conteiner{
+        width: 100%;
+    }
     &__body {
         display: none;
         width: 100%;
