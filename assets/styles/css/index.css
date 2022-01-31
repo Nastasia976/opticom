@@ -261,8 +261,6 @@ input[type="number"]:focus {
   z-index: 100;
   width: 100%;
   background-color: #fff;
-  -webkit-transition: all ease 0.7s;
-  transition: all ease 0.7s;
 }
 
 .header.scrolled a {
@@ -461,8 +459,6 @@ input[type="number"]:focus {
   font-weight: 300;
   line-height: 150%;
   letter-spacing: 0.06em;
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
   position: absolute;
   z-index: 200;
   width: 100%;
@@ -1360,8 +1356,6 @@ input[type="number"]:focus {
   height: 100vh;
   width: calc(100vw - 137px);
   opacity: 0;
-  -webkit-transition: all ease 0.7s;
-  transition: all ease 0.7s;
 }
 
 .catalog-menu__conteiner {
@@ -1377,8 +1371,6 @@ input[type="number"]:focus {
 
 .catalog-menu.active {
   visibility: visible;
-  -webkit-transition: all ease 0.7s;
-  transition: all ease 0.7s;
   opacity: 1;
 }
 
@@ -1618,12 +1610,6 @@ input[type="number"]:focus {
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
   padding-right: calc(20px + (54 - 20) * ((100vw - 1050px) / (1920 -1050)));
-  /* .body-catalog__button.show {
-        display: block;
-    }
-    .body-catalog__button.hide {
-        display: none;
-    } */
 }
 
 .result-search-catalog .body-catalog__item,

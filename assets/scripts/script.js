@@ -322,24 +322,6 @@ $(document).ready(function () {
         $('.search-form__input').focus();
     });
 
-     /* $(document).mouseup(function (e) {
-         var burg = $('.burger, .popup-cooki, .menu-mobile');
-         if (!burg.is(e.target)
-             && burg.has(e.target).length === 0) {
-             $('.burger__conteiner, .burger-menu, .burger, .header__burger ').removeClass('active');
-             $('.menu-mobile').css('display', 'none');
-             $('.menu-mobile__body').slideUp(300);
-             $('.menu-mobile__header').removeClass('active');
-             $('.menu-mobile__item').removeClass('active').next().slideUp(300);
-             $('.menu-mobile__header').show();
-             $('._all-categories').hide();
-         }
-     }); */
-     /* $('.burger__conteiner').click(function(){
-        if(e.target.className != "burger") {
-            $('.burger__conteiner, .burger-menu, .burger, .header__burger ').removeClass('active');
-        }
-     }); */
      $('.burger__conteiner').on('click', function(event){
         let td = event.target.closest('.burger');
         if(!td){
@@ -347,12 +329,6 @@ $(document).ready(function () {
         }
      })
 
-
-    /*  $('.burger__conteiner').click(function(e) {
-        if(e.target.className != ".burger") {
-            $('.burger__conteiner').removeClass('act-ive');
-        }
-    }); */
 
     $('.popup-cooki').click(function () {
         if ($('.burger, .pop-up').hasClass('active')) {
@@ -609,9 +585,9 @@ $(document).ready(function () {
         $('.popup-request').toggleClass('active');
     }); */
 
-    $('.sidebar-catalog__item').click(function () {
+    /* $('.sidebar-catalog__item').click(function () {
         $(this).toggleClass('active');
-    })
+    }) */
     //-------results-search---
 
     $('._icon-grid').click(function () {
@@ -1454,11 +1430,15 @@ $(document).ready(function () {
             $('.body-catalog__body').hide();
             var divId = $(this).data('id');
             $('#' + divId).css('display', 'flex');
-            $('.sidebar-catalog__item').removeClass('active');
-        });
-    
-        $('a.floorplan.initial').trigger('mouseenter');    
+            $('.sidebar-catalog__item').not(this).removeClass('active');
+        });   
     });
+    $(function() {
+        $('.sidebar-catalog__item').hover(function() {
+            $('.sidebar-catalog__item').removeClass('active');
+            $(this).addClass('active');
+        });
+    })
 })
 
 
