@@ -5711,6 +5711,13 @@ input[type="number"]:focus {
             position: relative;
             margin-right: 29px;
             z-index: 5;
+            .select__current{
+                display: flex;
+                align-items: center;
+                img{
+                    margin-left: 5px;
+                }
+            }
             .select__body {
                 position: absolute;
                 z-index: 5;
@@ -5731,6 +5738,11 @@ input[type="number"]:focus {
                     font-size: 16px;
                     line-height: 137%;
                     padding: 3.5px 7px;
+                    display: flex;
+                    align-items: center;
+                    img{
+                        margin-left: 5px;
+                    }
                 }
                 .select__el:hover,
                 .select__el.active {

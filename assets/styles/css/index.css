@@ -7215,6 +7215,19 @@ input[type="number"]:focus {
   z-index: 5;
 }
 
+.body-catalogs__item .item-select .select__current {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.body-catalogs__item .item-select .select__current img {
+  margin-left: 5px;
+}
+
 .body-catalogs__item .item-select .select__body {
   position: absolute;
   z-index: 5;
@@ -7244,6 +7257,16 @@ input[type="number"]:focus {
   font-size: 16px;
   line-height: 137%;
   padding: 3.5px 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.body-catalogs__item .item-select .select__body .select__el img {
+  margin-left: 5px;
 }
 
 .body-catalogs__item .item-select .select__body .select__el:hover,

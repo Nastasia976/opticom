@@ -1210,7 +1210,7 @@ let select = function () {
         let text = this.innerHTML,
             select = this.closest('.select, .item-select'),
             currentText = select.querySelector('.select__current');
-        currentText.innerText = text;
+        currentText.innerHTML = text;
         this.classList.add('active');
         /* this.style.display = 'none'; */
         /* $('.select__el').on('click', function(){
