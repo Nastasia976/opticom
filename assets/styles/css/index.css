@@ -6216,6 +6216,11 @@ input[type="number"]:focus {
   background-color: #00AA95 !important;
 }
 
+.none {
+  font-weight: 500;
+  font-size: 22px;
+}
+
 .pop-up {
   /* width: 100%;
     min-height: 100%;
