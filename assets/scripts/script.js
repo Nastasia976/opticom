@@ -335,10 +335,18 @@ $(document).ready(function () {
              $('._all-categories').hide();
          }
      }); */
-     $('.burger__conteiner::after').click(function(){
-        $('.burger__conteiner, .burger-menu, .burger, .header__burger ').removeClass('active');
-        console.log('okkkkkkkkkk');
-     });
+     /* $('.burger__conteiner').click(function(){
+        if(e.target.className != "burger") {
+            $('.burger__conteiner, .burger-menu, .burger, .header__burger ').removeClass('active');
+        }
+     }); */
+     $('.burger__conteiner').on('click', function(event){
+        let td = event.target.closest('.burger');
+        if(!td){
+            $('.burger__conteiner, .burger-menu, .burger, .header__burger ').removeClass('active');
+        }
+     })
+
 
     /*  $('.burger__conteiner').click(function(e) {
         if(e.target.className != ".burger") {

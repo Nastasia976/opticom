@@ -601,16 +601,7 @@ input[type="number"]:focus {
     transition: 0.5s;
     opacity: 1;
 }
-.burger__conteiner::after{
-    content: '';
-    background-color: blue;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    z-index: 0; 
-}
+
 .burger {
     background-color: #f8f8f8;
     width: 461px;
@@ -619,7 +610,6 @@ input[type="number"]:focus {
     padding: calc(30px + (46 - 30) * ((100vw - 768px) / (1920 - 768))) 0 0px 0;
     display: flex;
     flex-direction: column;
-    position: relative;
     z-index: 1;
     .search-form-burger {
         display: none;
@@ -3952,6 +3942,7 @@ input[type="number"]:focus {
             .button-main {
                 background-color: #00a793 !important;
                 transform: translate(0px, 0.4px);
+                margin: -1px;
             }
         }
     }

@@ -2,9 +2,14 @@ $(document).ready(function () {
     $('.popup-link').magnificPopup({
         type: 'inline',
     });
-    $('.send-sms, .send-response, .request-an-act').magnificPopup({
+    $('.send-sms, .send-response').magnificPopup({
         items: {
             src: '#message-sent',
+        },
+    });
+    $('.request-an-act').magnificPopup({
+        items: {
+            src: '#request-act',
         },
     });
     $('.button-restore').magnificPopup({
