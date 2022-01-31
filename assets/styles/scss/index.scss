@@ -6113,6 +6113,9 @@ input[type="number"]:focus {
         background-color: rgba(0, 170, 149, 0.1);
     }
 }
+.select__el.active {
+    background-color: rgba(0, 170, 149, 0.1);
+}
 .select-product.is-active {
     .select__icon {
         transform: scale(1, -1);

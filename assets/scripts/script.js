@@ -1178,8 +1178,10 @@ counts.forEach(counterFunction);
 $(document).ready(function () {
     $('.select, .item-select').mouseup(function (e) {
         $('.select, .item-select').not(this).removeClass('is-active');
-        $(this).parent().find('.select__item, .select__el').not(this).removeClass('active');
     });
+    $('.select__item, .select__el').click(function (e) {
+        $(this).parent().find('.select__item, .select__el').not(this).removeClass('active');
+    })
 
     $('.close-hide').click(function () {
         $('.text-add-file').text('Прикрепить файл');
@@ -1195,7 +1197,7 @@ let select = function () {
     let selectItem = document.querySelectorAll('.select__item, .select__el');
 
     selectHeader.forEach(item => {
-        item.addEventListener('click', selectToggle)
+        item.addEventListener('click', selectToggle);
     });
 
     selectItem.forEach(item => {
@@ -1212,10 +1214,6 @@ let select = function () {
             currentText = select.querySelector('.select__current');
         currentText.innerHTML = text;
         this.classList.add('active');
-        /* this.style.display = 'none'; */
-        /* $('.select__el').on('click', function(){
-            $('.select__el').css('display', 'block');
-        }) */
         select.classList.remove('is-active');
     }
 };
