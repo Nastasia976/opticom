@@ -9430,22 +9430,13 @@ input[type="number"]:focus {
   display: none !important;
 }
 
-/* .ymaps-2-1-79-balloon__layout {
-    height: 100%;
-    width: 100%;
-}
-.ymaps-2-1-79-balloon__content {
-    width: fit-content;
-    #id_164320147165411888498 {
-        min-height: 100%;
-    }
-} */
-.ymaps-2-1-79-balloon__tail {
-  display: none !important;
+.ymaps-2-1-79-balloon {
+  top: -190px !important;
+  left: 10px !important;
 }
 
-.ymaps-2-1-79-image {
-  opacity: 1 !important;
+.ymaps-2-1-79-balloon__tail {
+  display: none !important;
 }
 
 .balloon {
