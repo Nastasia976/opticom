@@ -18,9 +18,9 @@ function init() {
         `
     }, {
         iconLayout: 'default#image',
-        iconImageHref: 'img/marker-location.png', //расположение
+        iconImageHref: 'img/iconMap.svg', //расположение
         iconImageSize: [45, 54], //размер иконки
-        iconImageOffset: [0, 0], //сдвиг
+        iconImageOffset: [-25, -55], //сдвиг
         hideIconOnBalloonOpen: false,
     });
 
