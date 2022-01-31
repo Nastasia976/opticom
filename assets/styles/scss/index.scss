@@ -4919,8 +4919,11 @@ input[type="number"]:focus {
         transition: 0.3s;
     }
     &__button:hover {
-        background-color: #d89560;
+        background-color: #d89560 !important;
         transition: 0.3s;
+    }
+    &__button.active:hover{
+        background-color: #00AA95 !important;
     }
 }
 //------------POPUP REQUEST---------
@@ -6755,7 +6758,7 @@ input[type="number"]:focus {
             margin-top: 0;
             font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
         }
-        .product__button {
+        .product__button-compare{
             height: 41px;
             display: flex;
             align-items: center;
@@ -6780,9 +6783,12 @@ input[type="number"]:focus {
             transition: 0.2s;
         }
         .product__button-request:hover,
-        .product__button:hover {
+        .product__button-compare:hover {
             transition: 0.2s;
-            background-color: #d89560;
+            background-color: #d89560 !important;
+        }
+        .product__button-compare.active:hover{
+            background-color: #00AA95 !important;
         }
         .none {
             transform: translate(0, 20px);

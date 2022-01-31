@@ -1432,9 +1432,16 @@ $(document).ready(function () {
         }
     });
 
-    $('.product__button, .product__button-compare').click(function () {
+    $('.product__button').click(function () {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active').css('background-color', '#D4AE67').text('В корзину');
+        } else {
+            $(this).addClass('active').css('background-color', '#00AA95').text('В корзине');
+        }
+    });
+    $('.product__button-compare').click(function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active').css('background-color', '#D4AE67').text('').html('<img src="img/Cart-icon.svg" alt="Cart-icon">');
         } else {
             $(this).addClass('active').css('background-color', '#00AA95').text('В корзине');
         }
