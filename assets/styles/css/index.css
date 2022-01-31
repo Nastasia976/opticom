@@ -876,6 +876,17 @@ input[type="number"]:focus {
   opacity: 1;
 }
 
+.burger__conteiner::after {
+  content: '';
+  background-color: blue;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+}
+
 .burger {
   background-color: #f8f8f8;
   width: 461px;
@@ -889,6 +900,8 @@ input[type="number"]:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
 .burger .search-form-burger {
@@ -9430,17 +9443,6 @@ input[type="number"]:focus {
   line-height: 157%;
 }
 
-/* .map {
-    margin-top: 61px;
-    width: 100%;
-    iframe{
-        border: 1px solid blue;
-        .map-placemark{
-            display: none;
-            background-image: url('../../../img/Polygon8.png');
-        }
-    }
-} */
 #map {
   width: 100%;
   height: 400px;
@@ -9514,6 +9516,18 @@ input[type="number"]:focus {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .balloon {
+    max-width: 265px;
+    padding: 15px 0 15px 8px;
+    min-height: 150px;
+    margin: 0;
+  }
+  #id_1643616193137643110028 {
+    min-height: 100%;
   }
 }
 

@@ -322,8 +322,8 @@ $(document).ready(function () {
         $('.search-form__input').focus();
     });
 
-    /*  $(document).mouseup(function (e) {
-         var burg = $('.burger, .popup-cooki');
+     /* $(document).mouseup(function (e) {
+         var burg = $('.burger, .popup-cooki, .menu-mobile');
          if (!burg.is(e.target)
              && burg.has(e.target).length === 0) {
              $('.burger__conteiner, .burger-menu, .burger, .header__burger ').removeClass('active');
@@ -335,6 +335,10 @@ $(document).ready(function () {
              $('._all-categories').hide();
          }
      }); */
+     $('.burger__conteiner::after').click(function(){
+        $('.burger__conteiner, .burger-menu, .burger, .header__burger ').removeClass('active');
+        console.log('okkkkkkkkkk');
+     });
 
     /*  $('.burger__conteiner').click(function(e) {
         if(e.target.className != ".burger") {
