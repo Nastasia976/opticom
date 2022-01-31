@@ -1007,6 +1007,7 @@ input[type="number"]:focus {
         }
     }
     &__item:hover {
+        background-color: #fff;
         a{
             color: #01645c;
             transition: 0.2s;
@@ -1138,11 +1139,13 @@ input[type="number"]:focus {
 }
 .result-search-catalog,
 .search-catalog {
+    margin-top: -5px;
     display: none;
     flex: 0 1 50%;
     padding-right: calc(20px + (54 - 20) * ((100vw - 1050px) / (1920 -1050)));
     .body-catalog__item {
         display: flex;
+        padding: 5px 0;
         .body-catalog__link {
             display: flex;
             flex-direction: column;
@@ -1181,17 +1184,18 @@ input[type="number"]:focus {
         border-radius: 2px;
         margin-top: 33px;
         transition: 0.3s;
+        display: block;
     }
     .body-catalog__button:hover {
         border: 1px solid rgba(0, 0, 0, 0.2);
         transition: 0.3s;
     }
-    .body-catalog__button.show {
+    /* .body-catalog__button.show {
         display: block;
     }
     .body-catalog__button.hide {
         display: none;
-    }
+    } */
 }
 .result-search-catalog.show-result {
     .body-catalog__item:nth-child(3) ~ .body-catalog__item {
@@ -1809,8 +1813,13 @@ input[type="number"]:focus {
         &__wrapper {
             flex-direction: column;
         }
-        .result-search-catalog {
-            display: none;
+        .search-catalog{
+            flex: 0 1 auto;
+        }
+        .result-search-catalog{
+            .body-catalog__item{
+                display: none;
+            }
         }
     }
 }
@@ -6696,6 +6705,13 @@ input[type="number"]:focus {
         bottom: -17px;
     }
 }
+@media(max-width:620px){
+    .compare__top{
+        .scrollbar__item:hover{
+            color: #2B2B2B;
+        }
+    }
+}
 .compare__wrapper {
     padding: 0 5px;
     display: none;
@@ -11307,7 +11323,7 @@ input[type="number"]:focus {
     transition: 0.2s;
 }
 .del-from-matrix:hover {
-    background-color: #f18070;
+    background-color: #c76c5f;
     transition: 0.2s;
 }
 .editing-matrix {
@@ -11917,7 +11933,7 @@ input[type="number"]:focus {
         color: white;
     }
     .product__button_del:hover {
-        background-color: #f18070;
+        background-color: #c76c5f;
         transition: 0.3s;
     }
 }
