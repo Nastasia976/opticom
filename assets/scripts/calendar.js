@@ -15,9 +15,3 @@ flatpickr(document.getElementsByClassName('act-inp-start'), {
     dateFormat: "d.m.Y",
     mode: "range",
 });
-/* flatpickr(document.getElementsByClassName('act-inp-end'), {
-    "locale": "ru",
-    altFormat: "d.m.Y",
-    altInput: true,
-    dateFormat: "d.m.Y",
-}); */
