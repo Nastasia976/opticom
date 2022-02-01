@@ -323,6 +323,17 @@ $(document).ready(function () {
         }
      })
 
+     $('.burger__exit').click(function(){
+        $('.burger__conteiner, .burger-menu, .burger, .header__burger ').removeClass('active');
+        if ($('.menu-mobile').css('display', 'block')) {
+            $('.menu-mobile').css('display', 'none');
+            $('.menu-mobile__body').slideUp(300);
+            $('.menu-mobile__header').removeClass('active');
+            $('.menu-mobile__item').removeClass('active').next().slideUp(300);
+            $('.menu-mobile__header').show();
+            $('._all-categories').hide();
+        }
+     });
 
     $('.popup-cooki').click(function () {
         if ($('.burger, .pop-up').hasClass('active')) {
