@@ -32,7 +32,7 @@ $(document).ready(function () {
             src: '#delite-allproduct',
         },
     });
-    $('.custom').magnificPopup({
+    $('.custom, .feedback__button').magnificPopup({
         items: {
             src: '#custom-approval',
         },
