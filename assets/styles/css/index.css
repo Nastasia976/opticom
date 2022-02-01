@@ -4054,7 +4054,7 @@ mark {
 }
 
 .footer__el:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 11px;
 }
 
 .footer__el._empty {
@@ -4066,14 +4066,11 @@ mark {
   color: #cecece;
   line-height: 143%;
   font-size: 14px;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  padding: 3px 0;
 }
 
 .footer__link:hover {
   opacity: 0.7;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
 }
 
 .footer__bottom {
@@ -4781,6 +4778,9 @@ mark {
   letter-spacing: 0.04em;
   cursor: pointer;
   display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .items-product__packing {

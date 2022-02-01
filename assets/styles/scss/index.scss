@@ -3123,8 +3123,11 @@ mark{
         font-weight: 700;
         font-size: 16px;
     }
+    &__el{
+        
+    }
     &__el:not(:last-child) {
-        margin-bottom: 12px;
+        margin-bottom: 11px;
     }
     &__el._empty {
         visibility: hidden;
@@ -3134,11 +3137,10 @@ mark{
         color: #cecece;
         line-height: 143%;
         font-size: 14px;
-        transition: 0.4s;
+        padding: 3px 0;
     }
-    &__link:hover {
+    &__link:hover{
         opacity: 0.7;
-        transition: 0.4s;
     }
     &__bottom {
         padding: 22px calc(20px + (32 - 20) * ((100vw - 480px) / (1920 - 480))) 22px
@@ -3710,6 +3712,7 @@ mark{
         letter-spacing: 0.04em;
         cursor: pointer;
         display: block;
+        width: fit-content;
     }
 
     &__packing {
