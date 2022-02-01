@@ -14,4 +14,5 @@ flatpickr(document.getElementsByClassName('act-inp-start'), {
     altInput: true,
     dateFormat: "d.m.Y",
     mode: "range",
+    defaultDate: ["01.01.2021", "11.01.2021"],
 });

@@ -15434,7 +15434,7 @@ mark {
 
 .body-lk__body .order-card {
   border: 1px solid #e6e6e6;
-  padding: 28px 20px 35px calc(20px + (26 - 20) * ((100vw - 320px) / (1920 - 320)));
+  padding: 28px 20px 35px calc(20px + (26 - 20) * ((100vw - 320px) / (1920 - 320))) !important;
   width: 100%;
 }
 
